@@ -1,0 +1,6 @@
+
+.icon-arrow-curved:before { content: '\e800'; } /* '' */
+.icon-list:before { content: '\e801'; } /* '' */
+.icon-user:before { content: '\e802'; } /* '' */
+.icon-logout:before { content: '\e803'; } /* '' */
+.icon-export:before { content: '\e804'; } /* '' */
