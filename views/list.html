@@ -1,4 +1,19 @@
 <div class="view">
     <input id="search" type="text" placeholder="Search"/>
-    <p>fwafs</p>
+
+    <div class="item">
+        <div class="expandcollapse-item">
+            <div ng-click="active = !active" 
+            ng-class="{'expandcollapse-heading-collapsed':active, 'expandcollapse-heading-expanded':!active}">
+                <p>Item erhfd1</p>
+            </div>
+
+            <div class="slideDown" ng-hide="active">
+                <div class="expand-collapse-content">
+                    CONTENT HERE ... 
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
