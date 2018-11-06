@@ -29,9 +29,9 @@ a {
     height: 100%;
     width: 160px;
     position: fixed;
-    top: 50px;
+    top: 0;
     left: 0;
-    background-color: rgb(231, 244, 255);
+    background-color: rgb(205, 231, 253);
     overflow-x: hidden;
     padding-top: 15px;
     font-family: 'Krub', sans-serif;
@@ -46,14 +46,38 @@ a {
     display: block;
 }
 
-#side .section:hover {
-    color: #000000;
-}
-
 #side #logout {
     padding: 20px 8px 6px 16px;
+    position: fixed;
+    bottom: 20px;
     text-decoration: none;
     font-size: 16px;
     color: #686868;
     display: block;
+}
+
+#side .section:hover, #side #logout:hover {
+    color: #141414;
+}
+
+.view {
+    margin: 30px auto 0 auto;
+}
+
+#search {
+    margin: auto;
+    border: 2px solid #4eb5f1;
+    border-radius: 40px;
+    height: 35px;
+    padding: 0 11px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: darkgray;
+    background-color: transparent;
+}
+
+#search:focus {
+    outline: none;
 }
