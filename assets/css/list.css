@@ -1,0 +1,112 @@
+#search {
+    margin: 0 auto 50px auto;
+    border: 2px solid #005688;
+    border-radius: 40px;
+    height: 35px;
+    padding: 0 11px;
+    width: 35%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.item {
+    margin: 10px auto 0 auto;
+    border: 1px solid #005688;
+    border-right: 1px solid #005688;
+    border-radius: 3px;
+    width: 70%;
+    font-size: 14px;
+  }
+
+.expandcollapse-item {
+    overflow: hidden;
+    border-top: 1px solid #005688;
+    border-radius: 3px;
+}
+
+.expandcollapse-heading-collapsed {
+    cursor: pointer;
+    padding: 1px 20px;
+    position: relative;
+    z-index: 100000000;
+    color: black; 
+    border-radius: 3px;
+    background-color: rgb(241, 248, 255);
+    transition: background-color 0.5s ease;
+}
+
+.expandcollapse-heading-collapsed:hover {
+    background-color: rgb(203, 229, 255);
+}
+
+.expandcollapse-item:first-of-type {
+    border-top:0px;
+}
+
+.expandcollapse-heading-expanded {
+    cursor: pointer;
+    z-index: 100000000;
+    padding: 1px 20px;
+    position: relative;
+    color: black;
+    border-radius: 3px 3px 0 0;
+    background-color: rgb(154, 205, 255);
+    transition: background-color 0.5s ease;
+}
+
+/*animation*/
+
+.slideDown.ng-hide {
+    height:0;
+    transition:height 0.2s ease;
+    overflow:hidden;
+    position:relative;
+}
+  
+.slideDown {
+    height:141px;
+    transition:height 0.2s ease;
+    overflow:hidden;
+    position:relative;
+}
+  
+.slideDown.ng-hide-remove,
+.slideDown.ng-hide-add {
+    display:block!important;
+}
+  
+.slideDown.ng-hide-add {
+    animation-name: hide;
+    -webkit-animation-name: hide;  
+  
+    animation-duration: .2s; 
+    -webkit-animation-duration: .2s;
+  
+    animation-timing-function: ease-in;  
+    -webkit-animation-timing-function: ease-in;  
+}
+  
+  
+.slideDown.ng-hide-remove {
+    animation-name: show;
+    -webkit-animation-name: show;  
+  
+    animation-duration: .2s; 
+    -webkit-animation-duration: .2s;
+  
+    animation-timing-function: ease-out;  
+    -webkit-animation-timing-function: ease-out;  
+}
+
+/*buttons*/
+
+.slideDown a.button_update, .slideDown a.button_delete {
+    float: right;
+}
