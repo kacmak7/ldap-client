@@ -66,7 +66,7 @@ a {
 }
 
 #search {
-    margin: 0 auto 15px auto;
+    margin: 0 auto 50px auto;
     border: 2px solid #005688;
     border-radius: 40px;
     height: 35px;
@@ -84,11 +84,12 @@ a {
 }
 
 .item {
-    margin: 50px auto 0 auto;
+    margin: 10px auto 0 auto;
     border: 1px solid #005688;
     border-right: 1px solid #005688;
     border-radius: 3px;
     width: 60%;
+    font-size: 14px;
   }
 
 .expandcollapse-item {
@@ -99,16 +100,17 @@ a {
 
 .expandcollapse-heading-collapsed {
     cursor: pointer;
-    padding: 5px 20px;
+    padding: 1px 20px;
     position: relative;
     z-index: 100000000;
     color: black; 
-    background-color: rgb(241, 248, 255);
     border-radius: 3px;
+    background-color: rgb(241, 248, 255);
+    transition: background-color 0.5s ease;
 }
 
 .expandcollapse-heading-collapsed:hover {
-    background-color: rgb(217, 236, 255);
+    background-color: rgb(203, 229, 255);
 }
 
 .expandcollapse-item:first-of-type {
@@ -118,11 +120,12 @@ a {
 .expandcollapse-heading-expanded {
     cursor: pointer;
     z-index: 100000000;
-    padding: 5px 20px;
+    padding: 1px 20px;
     position: relative;
     color: black;
-    background-color: rgb(187, 221, 255);
     border-radius: 3px 3px 0 0;
+    background-color: rgb(154, 205, 255);
+    transition: background-color 0.5s ease;
 }
 
 /*animation*/
