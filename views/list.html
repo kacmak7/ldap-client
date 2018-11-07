@@ -1,16 +1,17 @@
 <div class="view">
     <input id="search" type="text" placeholder="Search"/>
 
-    <div class="item">
-        <div class="expandcollapse-item">
-            <div ng-click="active = !active" 
-            ng-class="{'expandcollapse-heading-collapsed':active, 'expandcollapse-heading-expanded':!active}">
-                <p>Item erhfd1</p>
-            </div>
+    <div ng-repeat="account in accounts">
+        <div class="item">
+            <div class="expandcollapse-item">
+                <div ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed':active, 'expandcollapse-heading-expanded':!active}">
+                    <p>{{account.firstname}} {{account.lastname}}</p>
+                </div>
 
-            <div class="slideDown" ng-hide="active">
-                <div class="expand-collapse-content">
-                    CONTENT HERE ... 
+                <div class="slideDown" ng-hide="active">
+                    <div class="expand-collapse-content">
+                        CONTENT HERE ... 
+                    </div>
                 </div>
             </div>
         </div>

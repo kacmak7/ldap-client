@@ -103,8 +103,12 @@ a {
     position: relative;
     z-index: 100000000;
     color: black; 
-    background-color: aliceblue;
+    background-color: rgb(241, 248, 255);
     border-radius: 3px;
+}
+
+.expandcollapse-heading-collapsed:hover {
+    background-color: rgb(217, 236, 255);
 }
 
 .expandcollapse-item:first-of-type {
@@ -117,7 +121,7 @@ a {
     padding: 5px 20px;
     position: relative;
     color: black;
-    background-color: aliceblue;
+    background-color: rgb(187, 221, 255);
     border-radius: 3px 3px 0 0;
 }
 
@@ -125,14 +129,14 @@ a {
 
 .slideDown.ng-hide {
     height:0;
-    transition:height 0.35s ease;
+    transition:height 0.2s ease;
     overflow:hidden;
     position:relative;
   }
   
   .slideDown {
     height:141px;
-    transition:height 0.35s ease;
+    transition:height 0.2s ease;
     overflow:hidden;
     position:relative;
   }
@@ -147,8 +151,8 @@ a {
     animation-name: hide;
     -webkit-animation-name: hide;  
   
-    animation-duration: .5s; 
-    -webkit-animation-duration: .5s;
+    animation-duration: .2s; 
+    -webkit-animation-duration: .2s;
   
     animation-timing-function: ease-in;  
     -webkit-animation-timing-function: ease-in;  
@@ -160,8 +164,8 @@ a {
     animation-name: show;
     -webkit-animation-name: show;  
   
-    animation-duration: .5s; 
-    -webkit-animation-duration: .5s;
+    animation-duration: .2s; 
+    -webkit-animation-duration: .2s;
   
     animation-timing-function: ease-out;  
     -webkit-animation-timing-function: ease-out;  
