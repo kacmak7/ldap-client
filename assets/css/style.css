@@ -3,6 +3,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
 /*ul {
     position: fixed;
     width: 100%;
@@ -71,7 +81,7 @@ a {
 
 /*buttons*/
 
-a.button_update, a.button_delete {
+.button_update, .button_delete {
     display: inline-block;
     padding: 0.5em 1.2em;
     border-radius: 2em;
@@ -84,19 +94,19 @@ a.button_update, a.button_delete {
     cursor: pointer;
 }
 
-a.button_update {
+.button_update {
     background-color: #4eb5f1;
 }
 
-a.button_update:hover {
+.button_update:hover {
     background-color: #4095c6;
 }
 
-a.button_delete {
+.button_delete {
     background-color: #960000;
 }
 
-a.button_delete:hover {
+.button_delete:hover {
     background-color: #6e001c;
 }
 

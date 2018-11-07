@@ -1,6 +1,5 @@
 <div class="view">
     <input id="search" type="text" placeholder="Search"/>
-
     <div ng-repeat="account in accounts">
         <div class="item">
             <div class="expandcollapse-item">
@@ -10,13 +9,13 @@
 
                 <div class="slideDown" ng-hide="active">
                     <div class="expand-collapse-content">
-                        <a href="#!authors/update" class="button_update">Update</a>
-                        <a href="#!authors/reset" class="button_reset">Reset password</a>
-                        <a href="#!authors/delete" class="button_delete">Delete Account</a>
+                        <a href="#!list/edit" class="button_update" ng-click="change()">Edit Account</a>
+                        <a href="#!list/reset-password" class="button_update">Reset password</a>
+                        <a href="#!delete" class="button_delete">Delete Account</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    {{clicked}}
 </div>

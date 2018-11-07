@@ -6,5 +6,17 @@ app.config(function($routeProvider) {
         templateUrl: "../views/list.html",
         controller: "listCtrl"
     })
-    .otherwise({redirectTo: "/"})
+    .when("/create", {
+        templateUrl: "../views/create.html",
+        controller: "createCtrl"
+    })
+    .when("/list/edit", {
+        templateUrl: "../views/edit.html",
+        controller: "listCtrl"
+    })
+    .when("/list/reset-password", {
+        templateUrl: "../views/reset-password.html",
+        controller: "listCtrl"
+    })
+    .otherwise({redirectTo: "/list"})
 })

@@ -6,4 +6,12 @@ app.controller("listCtrl", function($scope, $http) {
         console.log("getAuthors()");
         $scope.accounts = response.data.authors;
     });
+    
+    $scope.clicked = "click!!!"
+
+    $scope.change = function() {
+        $scope.clicked = $scope.account.lastname;
+        console.log($scope.clicked);
+    }
+
 })

@@ -107,6 +107,8 @@
 
 /*buttons*/
 
-.slideDown a.button_update, .slideDown a.button_delete {
+.slideDown .button_update, .slideDown .button_delete {
     float: right;
+    clear: both;
+    margin: 10px 15px 0 0;
 }
