@@ -64,17 +64,17 @@
 /*animation*/
 
 .slideDown.ng-hide {
-    height:0;
-    transition:height 0.2s ease;
-    overflow:hidden;
-    position:relative;
+    height: 0;
+    transition: height 0.2s ease;
+    overflow: hidden;
+    position: relative;
 }
   
 .slideDown {
-    height:141px;
-    transition:height 0.2s ease;
-    overflow:hidden;
-    position:relative;
+    height: 130px; /*TODO: adjust height to amount of emails*/
+    transition: height 0.2s ease;
+    overflow: hidden;
+    position: relative;
 }
   
 .slideDown.ng-hide-remove,
@@ -86,11 +86,11 @@
     animation-name: hide;
     -webkit-animation-name: hide;  
   
-    animation-duration: .2s; 
+    animation-duration: .2s;
     -webkit-animation-duration: .2s;
   
-    animation-timing-function: ease-in;  
-    -webkit-animation-timing-function: ease-in;  
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
 }
   
   
@@ -105,10 +105,20 @@
     -webkit-animation-timing-function: ease-out;  
 }
 
-/*buttons*/
+.slideDown .email-list {
+    width: 50%;
+    float: left;
+}
 
+.slideDown .buttons {
+    width: 50%;
+    float: right;
+    /*margin-top: 10px;*/
+}
+
+/*buttons*/
 .slideDown .button_update, .slideDown .button_delete {
     float: right;
     clear: both;
-    margin: 10px 15px 0 0;
+    margin: 10px 20px 0 0;
 }

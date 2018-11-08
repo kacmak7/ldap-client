@@ -12,11 +12,15 @@ app.config(function($routeProvider) {
     })
     .when("/list/edit", {
         templateUrl: "../views/edit.html",
-        controller: "listCtrl"
+        controller: "editCtrl"
     })
     .when("/list/reset-password", {
         templateUrl: "../views/reset-password.html",
-        controller: "listCtrl"
+        controller: "resetCtrl"
+    })
+    .when("/list/delete", {
+        templateUrl: "../views/delete.html",
+        controller: "deleteCtrl"
     })
     .otherwise({redirectTo: "/list"})
 })
