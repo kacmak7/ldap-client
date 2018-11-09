@@ -1,6 +1,10 @@
 
-.icon-arrow-curved:before { content: '\e800'; } /* '' */
-.icon-list:before { content: '\e801'; } /* '' */
-.icon-user:before { content: '\e802'; } /* '' */
-.icon-logout:before { content: '\e803'; } /* '' */
-.icon-export:before { content: '\e804'; } /* '' */
+.icon-user:before { content: '\e800'; } /* '' */
+.icon-logout:before { content: '\e801'; } /* '' */
+.icon-export-1:before { content: '\e802'; } /* '' */
+.icon-pencil:before { content: '\e803'; } /* '' */
+.icon-key:before { content: '\e804'; } /* '' */
+.icon-trash:before { content: '\e805'; } /* '' */
+.icon-list-bullet:before { content: '\f0ca'; } /* '' */
+.icon-user-plus:before { content: '\f234'; } /* '' */
+.icon-user-times:before { content: '\f235'; } /* '' */
