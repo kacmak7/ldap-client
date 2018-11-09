@@ -20,4 +20,5 @@ app.controller("listCtrl", function($scope, $http) {
         surnameForm = $scope.accounts[no].lastname;
         console.log(nameForm);
     }
+    
 })

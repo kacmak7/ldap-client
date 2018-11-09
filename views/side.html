@@ -8,7 +8,19 @@
     <a class="section" href="#!export">
         <i class="icon-export"></i>
         Export</a>
-    <a id="logout" href="#!logout">
+    <a id="logout" ng-click="open()">
         <i class="icon-logout"></i>
         Logout</a>
+
+        <div class="modal" id="logoutModal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Are you sure you want to logout ?</p>
+                    <a href="#!list/edit" class="button_update"></a>
+                </div>
+            </div>
+        </div>
+
+
 </div>

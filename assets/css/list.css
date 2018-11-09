@@ -35,7 +35,7 @@
     cursor: pointer;
     padding: 1px 20px;
     position: relative;
-    z-index: 100000000;
+    z-index: 100; /*z*/
     color: black; 
     border-radius: 3px;
     background-color: rgb(241, 248, 255);
@@ -52,7 +52,7 @@
 
 .expandcollapse-heading-expanded {
     cursor: pointer;
-    z-index: 100000000;
+    z-index: 100; /*z*/
     padding: 1px 20px;
     position: relative;
     color: black;
