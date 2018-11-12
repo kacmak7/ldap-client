@@ -20,5 +20,11 @@ app.controller("listCtrl", function($scope, $http) {
         surnameForm = $scope.accounts[no].lastname;
         console.log(nameForm);
     }
+
+    $scope.delete = function(no) {
+        nameForm = $scope.accounts[no].firstname;
+        surnameForm = $scope.accounts[no].lastname;
+        console.log(nameForm);
+    }
     
 })

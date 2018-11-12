@@ -10,17 +10,25 @@ app.config(function($routeProvider) {
         templateUrl: "../views/create.html",
         controller: "createCtrl"
     })
-    .when("/list/edit", {
+    .when("/edit", {
         templateUrl: "../views/edit.html",
         controller: "editCtrl"
     })
+    .when("/delete", {
+        templateUrl: "../views/delete.html",
+        controller: "deleteCtrl"
+    })
+    .when("/list/edit", {
+        templateUrl: "../views/edit.html",
+        controller: "editListCtrl"
+    })
     .when("/list/reset-password", {
         templateUrl: "../views/reset-password.html",
-        controller: "resetCtrl"
+        controller: "resetListCtrl"
     })
     .when("/list/delete", {
         templateUrl: "../views/delete.html",
-        controller: "deleteCtrl"
+        controller: "deleteListCtrl"
     })
     .otherwise({redirectTo: "/list"})
 })

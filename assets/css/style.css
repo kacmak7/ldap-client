@@ -50,6 +50,7 @@ body {
 
 #side #logout:hover {
     color: rgb(177, 0, 0);
+    cursor: pointer;
 }
 
 .view {
