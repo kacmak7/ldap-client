@@ -113,12 +113,16 @@
 .slideDown .buttons {
     width: 50%;
     float: right;
-    /*margin-top: 10px;*/
 }
 
 /*buttons*/
 .slideDown .button_update, .slideDown .button_delete {
     float: right;
-    clear: both;
     margin: 10px 20px 0 0;
+}
+
+@media only screen and (max-width: 660px) {
+    .slideDown .button_update, .slideDown .button_delete {
+        display: none;
+    }
 }

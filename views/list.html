@@ -1,6 +1,6 @@
 <div class="view">
-    <input id="search" type="text" placeholder="Search"/>
-    <div id="list" ng-repeat="account in accounts">
+    <input id="search" type="text" placeholder="Search" ng-model="searchAccount"/>
+    <div id="list" ng-repeat="account in accounts | filter:searchAccount">
         <div class="item">
             <div class="expandcollapse-item">
                 <div ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed':active, 'expandcollapse-heading-expanded':!active}">
@@ -32,7 +32,7 @@
             <span class="close"></span>
             <div class="modal-body">
                 <p>Are you sure you want to logout ?</p>
-                <a href="#!list/edit" class="button_update" ng-click="edit($index)"></a>
+                <a href="#!" class="button_update" ng-click="edit($index)"></a>
             </div>
         </div>
     </div>

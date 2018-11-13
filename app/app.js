@@ -2,6 +2,7 @@ var app = angular.module("app", ["ngRoute", "ngAnimate"]);
 
 app.config(function($routeProvider) {
     $routeProvider
+    .when("/", {redirectTo: "/list"})
     .when("/list", {
         templateUrl: "../views/list.html",
         controller: "listCtrl"
@@ -30,5 +31,5 @@ app.config(function($routeProvider) {
         templateUrl: "../views/delete.html",
         controller: "deleteListCtrl"
     })
-    .otherwise({redirectTo: "/list"})
+    .otherwise({redirectTo: "/error"})
 })

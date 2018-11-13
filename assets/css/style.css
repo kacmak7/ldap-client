@@ -103,18 +103,23 @@ body {
 }
 
 .modal-content {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 25%;
     background-color: rgb(255, 249, 249);
-    margin: auto;
     padding: 0;
     border: 1px solid #005688;
-    border-radius: 10px;
-    width: 60%;
+    border-radius: 0 0 10px 10px;
+    width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
+}
+
+.modal-content .button_delete {
+    margin: 0 0 8px 20px;
 }
 
 /* Add Animation */
