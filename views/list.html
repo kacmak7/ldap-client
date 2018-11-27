@@ -1,10 +1,10 @@
 <div class="view">
-    <input id="search" type="text" placeholder="Search" ng-model="searchAccount"/>
-    <div id="list" ng-repeat="account in accounts | filter:searchAccount">
+    <input id="search" type="text" placeholder="Search" ng-model="searchUser"/>
+    <div id="list" ng-repeat="user in users">
         <div class="item">
             <div class="expandcollapse-item">
                 <div ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed':active, 'expandcollapse-heading-expanded':!active}">
-                    <p class="no-select">{{account.firstname}} {{account.lastname}}</p>
+                    <p class="no-select">{{user.uid[0]}} {{user.cn[0]}}</p>
                 </div>
 
                 <div class="slideDown" ng-hide="active">

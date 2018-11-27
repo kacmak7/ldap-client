@@ -3,10 +3,10 @@ var surnameForm;
 app.controller("listCtrl", function($scope, $http) {
     $scope.active = true;
 
-    $http.get("http://localhost:8080/authors")
+    $http.get("http://accounts.zipper.release11.com/api/users")
     .then(function(response) {
-        console.log("getAuthors()");
-        $scope.accounts = response.data.authors;
+        console.log("getUsers()");
+        $scope.users = response.data;
     });
 
     $scope.emails = [   "example4452@marol.com.pl",
