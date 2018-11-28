@@ -1,3 +1,4 @@
-app.controller("editCtrl", function($scope) {
+app.controller("editCtrl", function($scope, $http) {
+    
     
 })
