@@ -1,8 +1,6 @@
 app.controller("createCtrl", function($scope, $http) {
     $scope.passwordCheck = false;
 
-    // TODO: comparing password fields
-
     $scope.create = function() {
         if ($scope.password != $scope.confirmPassword) {
             $scope.passwordErrorMessage = "Please provide matching passwords";

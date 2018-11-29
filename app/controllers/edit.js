@@ -1,9 +1,9 @@
 app.controller("editCtrl", function($scope, $http) {
     $scope.passwordCheck = false;
-
-    // TODO: comparing password fields
+    $scope.login;
 
     $scope.edit = function() {
+        $scope.passwordCheck = true;
         if ($scope.password != $scope.confirmPassword) {
             $scope.passwordErrorMessage = "Please provide matching passwords";
         } else {$scope.passwordErrorMessage = "";}
@@ -22,7 +22,7 @@ app.controller("editCtrl", function($scope, $http) {
             }
         };
         
-        $http.post("http://accounts.zipper.release11.com/api/user", data, config)
+        $http.put("http://accounts.zipper.release11.com/api/user?uid=" + $scope.login, data, config)
         .then(function(response) {
             console.log("success");
         }, function(response) {
