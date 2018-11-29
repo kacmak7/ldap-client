@@ -16,6 +16,8 @@
         ng-click="passwordCheck = true"
         placeholder="Confirm Password"
         ng-model="confirmPassword">
+
+        <p ng-if="password != confirmPassword" class="error-message">{{passwordErrorMessage}}</p>
         
         <input type="text" class="form-input" placeholder="City"
         ng-model="city">
@@ -23,7 +25,8 @@
         <input type="text" class="form-input" placeholder="Mobile"
         ng-model="mobile">
 
+        
+
         <a ng-click="create()" class="button_update">Submit</a>
-        {{passwordErrorMessage}}
     </div>
 </div>

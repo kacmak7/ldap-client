@@ -27,8 +27,14 @@
 }
 
 .form .button_update {
-    margin: 40px auto 0 auto;
+    margin: 40px auto 35px auto;
     padding: 10px 0 10px 0;
     display: block;
     width: 45%;
+}
+
+.form .error-message {
+    text-align: center;
+    font-size: 11px;
+    color: red;
 }
