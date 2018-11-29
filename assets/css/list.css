@@ -121,6 +121,14 @@
     margin: 10px 20px 0 0;
 }
 
+@media only screen and (max-width: 1500px) {
+    .slideDown .button_update, .slideDown .button_delete {
+        clear: both; 
+        display: block; 
+        position: relative;
+    }
+}
+
 @media only screen and (max-width: 660px) {
     .slideDown .button_update, .slideDown .button_delete {
         display: none;
