@@ -9,11 +9,7 @@ app.controller("listCtrl", function($scope, $http) {
         $scope.users = response.data;
     });
 
-    $scope.emails = [   "example4452@marol.com.pl",
-                        "test1@chatapolska.pl",
-                        /*"case0@marol.com.pl",
-                        "test321@marol.com.pl",
-                        "example21@chatapolska.pl"*/];
+    $scope.mails = 
 
     $scope.edit = function(no) {
         nameForm = $scope.accounts[no].firstname;
@@ -26,5 +22,9 @@ app.controller("listCtrl", function($scope, $http) {
         surnameForm = $scope.accounts[no].lastname;
         console.log(nameForm);
     }
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+      }
     
 })

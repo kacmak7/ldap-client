@@ -71,7 +71,7 @@
 }
   
 .slideDown {
-    height: 130px; /*TODO: adjust height to amount of emails*/
+    height: 130px; /*TODO: adjust height to amount of mails*/
     transition: height 0.2s ease;
     overflow: hidden;
     position: relative;
@@ -105,7 +105,7 @@
     -webkit-animation-timing-function: ease-out;  
 }
 
-.slideDown .email-list {
+.slideDown .mail-list {
     width: 50%;
     float: left;
 }

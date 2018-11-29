@@ -9,9 +9,9 @@
 
                 <div class="slideDown" ng-hide="active">
                     <div class="expand-collapse-content">
-                        <div class="email-list">
-                            <ul ng-repeat="email in emails">
-                                <li>{{email}}</li>
+                        <div class="mail-list">
+                            <ul ng-repeat="mail in user.mail">
+                                <li ng-if="!(mail == '1' || mail == '2' || mail == '3' || mail == '4')">{{mail}}</li>
                             </ul>
                         </div>
                         <div class="buttons">
