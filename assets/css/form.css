@@ -2,12 +2,24 @@
     margin: 42px 0 0 50px;
 }
 
-.form input[type=text] {
+.form input[type=text], .form input[type=password] {
     margin: 40px auto 0 auto;
     display: block;
     width: 45%;
     box-sizing: border-box;
     border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    padding: 12px 25px 12px 25px;
+}
+
+.form .form-input-error[type=password] {
+    margin: 40px auto 0 auto;
+    display: block;
+    width: 45%;
+    box-sizing: border-box;
+    border: 2px solid rgb(173, 0, 0);
     border-radius: 4px;
     font-size: 16px;
     background-color: #f8f8f8;

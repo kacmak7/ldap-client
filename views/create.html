@@ -8,10 +8,13 @@
         <input type="text" class="form-input" placeholder="Surname"
         ng-model="surname">
 
-        <input type="text" class="form-input" placeholder="Password"
+        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[passwordCheck == false || password == confirmPassword]" 
+        placeholder="Password"
         ng-model="password">
-
-        <input type="text" class="form-input" placeholder="Confirm Password"
+        
+        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[passwordCheck == false || password == confirmPassword]" 
+        ng-click="passwordCheck = true"
+        placeholder="Confirm Password"
         ng-model="confirmPassword">
         
         <input type="text" class="form-input" placeholder="City"
@@ -21,5 +24,6 @@
         ng-model="mobile">
 
         <a ng-click="create()" class="button_update">Submit</a>
+        {{passwordErrorMessage}}
     </div>
 </div>

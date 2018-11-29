@@ -1,13 +1,13 @@
 app.controller("createCtrl", function($scope, $http) {
-    $scope.active = true;
+    $scope.passwordCheck = false;
 
     // TODO: comparing password fields
 
-    //$scope.error = 's';
-    //$scope.password = 'sa';
-    //$scope.confirmPassword = 'sa';
-
     $scope.create = function() {
+        if ($scope.password != $scope.confirmPassword) {
+            $scope.passwordErrorMessage = "Please provide matching passwords";
+        } else {$scope.passwordErrorMessage = "";}
+
         var data = {
             name: $scope.name,
             surname: $scope.surname,
@@ -15,6 +15,7 @@ app.controller("createCtrl", function($scope, $http) {
             city: $scope.city,
             mobile: $scope.mobile
         }
+
         var config = {
             headers : {
                 'Content-Type': 'application/json'
