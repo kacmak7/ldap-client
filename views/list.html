@@ -4,14 +4,16 @@
         <div class="item">
             <div class="expandcollapse-item">
                 <div ng-click="active = !active" ng-class="{'expandcollapse-heading-collapsed':active, 'expandcollapse-heading-expanded':!active}">
-                    <p class="no-select">{{user.uid[0]}} {{user.cn[0]}}</p>
+                    <p class="no-select">{{user.cn[0]}}</p>
                 </div>
 
                 <div class="slideDown" ng-hide="active">
                     <div class="expand-collapse-content">
                         <div class="mail-list">
                             <ul ng-repeat="mail in user.mail">
-                                <li ng-if="!(mail == '1' || mail == '2' || mail == '3' || mail == '4')">{{mail}}</li>
+                                <li ng-if="!(mail == '1' || mail == '2' || mail == '3' || mail == '4' || mail == '5')">
+                                    {{mail}}
+                                </li>
                             </ul>
                         </div>
                         <div class="buttons">

@@ -1,33 +1,48 @@
 app.controller("editCtrl", function($scope, $http) {
-    $scope.passwordCheck = false;
-    $scope.login;
+    $scope.name = "";
+    $scope.surname = "";
+    $scope.password = "";
+    $scope.confirmPassword = "";
+    $scope.city = "";
+    $scope.department = "";
 
     $scope.edit = function() {
-        $scope.passwordCheck = true;
         if ($scope.password != $scope.confirmPassword) {
             $scope.passwordErrorMessage = "Please provide matching passwords";
-        } else {$scope.passwordErrorMessage = "";}
+        } else if(  $scope.name == "" ||
+                    $scope.surname == "" ||
+                    $scope.password == "" ||
+                    $scope.confirmPassword == "" ||
+                    $scope.city == "" ||
+                    $scope.department == "") {
+                        $scope.emptyField = true;
+                        $scope.emptyFieldMessage = "All fields are required";
+        } else {
 
-        var data = {
-            name: $scope.name,
-            surname: $scope.surname,
-            password: $scope.password,
-            city: $scope.city,
-            mobile: $scope.mobile
-        }
-
-        var config = {
-            headers : {
-                'Content-Type': 'application/json'
+            var data = {
+                name: $scope.name,
+                surname: $scope.surname,
+                password: $scope.password,
+                city: $scope.city,
+                department: $scope.department
             }
-        };
-        
-        $http.put("http://accounts.zipper.release11.com/api/user?uid=" + $scope.login, data, config)
-        .then(function(response) {
-            console.log("success");
-        }, function(response) {
-            console.log("error");
-            console.log(JSON.stringify(data));
-        })
+
+            var config = {
+                headers : {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            $http.put("http://accounts.zipper.release11.com/api/user?uid=" + $scope.login, data, config)
+            .then(function(response) {
+                console.log("success");
+                setTimeout(function(){
+                    window.location.href = "#!list"
+                }, 1000);
+            }, function(response) {
+                console.log("error");
+                console.log(JSON.stringify(data));
+            })
+        }
     }
 })

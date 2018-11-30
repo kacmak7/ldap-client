@@ -1,5 +1,5 @@
 <div class="view">
-    <div class="form">
+    <form class="form">
         <h2>Create Account</h2>
 
         <input type="text" class="form-input" placeholder="Name"
@@ -8,23 +8,24 @@
         <input type="text" class="form-input" placeholder="Surname"
         ng-model="surname">
 
-        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[passwordCheck == false || password == confirmPassword]" 
+        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[password == confirmPassword]" 
         placeholder="Password"
         ng-model="password">
         
-        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[passwordCheck == false || password == confirmPassword]" 
-        ng-click="passwordCheck = true"
+        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[password == confirmPassword]" 
         placeholder="Confirm Password"
         ng-model="confirmPassword">
 
         <p ng-if="password != confirmPassword" class="error-message">{{passwordErrorMessage}}</p>
         
+        
         <input type="text" class="form-input" placeholder="City"
         ng-model="city">
 
-        <input type="text" class="form-input" placeholder="Mobile"
-        ng-model="mobile">
+        <input type="text" class="form-input" placeholder="Organization"
+        ng-model="organization">
 
-        <a ng-click="create()" class="button_update">Submit</a>
-    </div>
+        <p ng-if="emptyField == true" class="error-message">{{emptyFieldMessage}}</p>
+        <a ng-click="create()" class="button_update" id="submit">Submit</a>
+    </form>
 </div>
