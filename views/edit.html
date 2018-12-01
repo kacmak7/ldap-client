@@ -2,8 +2,8 @@
         <form class="form">
             <h2>Edit Account</h2>
             
-            <input type="text" class="form-input" placeholder="Login"
-            ng-model="login">
+            <input type="text" class="form-input-disabled"
+            ng-model="login" disabled>
 
             <input type="text" class="form-input" placeholder="Name"
             ng-model="name">
@@ -22,7 +22,7 @@
             <p ng-if="password != confirmPassword" class="error-message">{{passwordErrorMessage}}</p>
             
             <input type="text" class="form-input" placeholder="City"
-            ng-model="city" >
+            ng-model="city">
 
             <input type="text" class="form-input" placeholder="Organization"
             ng-model="organization">

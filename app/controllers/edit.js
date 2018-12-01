@@ -4,7 +4,7 @@ app.controller("editCtrl", function($scope, $http) {
     $scope.password = "";
     $scope.confirmPassword = "";
     $scope.city = "";
-    $scope.department = "";
+    $scope.organization = "";
 
     $scope.edit = function() {
         if ($scope.password != $scope.confirmPassword) {
@@ -14,7 +14,7 @@ app.controller("editCtrl", function($scope, $http) {
                     $scope.password == "" ||
                     $scope.confirmPassword == "" ||
                     $scope.city == "" ||
-                    $scope.department == "") {
+                    $scope.organization == "") {
                         $scope.emptyField = true;
                         $scope.emptyFieldMessage = "All fields are required";
         } else {
@@ -24,7 +24,7 @@ app.controller("editCtrl", function($scope, $http) {
                 surname: $scope.surname,
                 password: $scope.password,
                 city: $scope.city,
-                department: $scope.department
+                organization: $scope.organization
             }
 
             var config = {
