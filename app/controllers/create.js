@@ -6,6 +6,21 @@ app.controller("createCtrl", function($scope, $http) {
     $scope.city = "";
     $scope.organization = "";
 
+    // mail fields
+    $scope.mailFields = [   {id: 'mail1', name: 'mail1'}, 
+                            {id: 'mail2', name: 'mail2'}, 
+                            {id: 'mail3', name: 'mail3'}];
+    $scope.addMailField = function() {
+        var newMailNo = $scope.mailFields.length+1;
+        $scope.mailFields.push({'id': 'mail' + newMailNo, 'name': 'mail' + newMailNo});
+    };
+    $scope.removeMailField = function() {
+        var newMailNo = $scope.mailFields.length-1;
+        if (newMailNo !==-1) {
+            $scope.mailFields.pop();
+        }
+    };
+
     $scope.create = function() {
         if ($scope.password != $scope.confirmPassword) {
             $scope.passwordErrorMessage = "Please provide matching passwords";

@@ -1,3 +1,7 @@
+.form {
+
+}
+
 .form h2 {
     margin: 42px 0 0 50px;
 }
@@ -14,6 +18,29 @@
     padding: 12px 25px 12px 25px;
 }
 
+/*mail fields*/
+.form input[type=email] {
+    margin: 40px auto 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    padding: 12px 25px 12px 25px;
+}
+
+.mail-fields {
+    margin: 40px auto 0 auto;
+    width: 45%;
+}
+
+@media only screen and (max-width: 790px) {
+    .mail-fields{
+        display: none;
+    }
+}
+
 .form .form-input-disabled[type=text] {
     background-color: #ccc;
 }
@@ -27,6 +54,11 @@
     padding: 10px 0 10px 0;
     display: block;
     width: 45%;
+}
+
+.form .button-add-mail-field {
+    margin: 20px auto 35px auto;
+    width: 20%;
 }
 
 .form .error-message {
