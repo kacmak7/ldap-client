@@ -10,17 +10,19 @@ app.controller("listCtrl", function($scope, $http) {
         console.log("getUsers()");
         $scope.users = response.data;
         delete $scope.users.count;
-        });
-
-    $scope.mails = 
+        }); 
 
     $scope.edit = function(no) {
-        login = $scope.users[no].uid[0];
+        login = "";
 
         //nameForm = $scope.accounts[no].firstname;
         //surnameForm = $scope.accounts[no].lastname;
         
         console.log(login);
+    };
+
+    $scope.resetPassword = function(no) {
+        login = "";
     }
 
     /*$scope.delete = function(no) {

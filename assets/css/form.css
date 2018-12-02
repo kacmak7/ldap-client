@@ -20,7 +20,6 @@
 
 /*mail fields*/
 .form input[type=email] {
-    margin: 40px auto 0 auto;
     width: 80%;
     box-sizing: border-box;
     border: 2px solid #ccc;

@@ -7,12 +7,10 @@ app.controller("createCtrl", function($scope, $http) {
     $scope.organization = "";
 
     // mail fields
-    $scope.mailFields = [   {id: 'mail1', name: 'mail1'}, 
-                            {id: 'mail2', name: 'mail2'}, 
-                            {id: 'mail3', name: 'mail3'}];
+    $scope.mailFields = ['mail1'];
     $scope.addMailField = function() {
         var newMailNo = $scope.mailFields.length+1;
-        $scope.mailFields.push({'id': 'mail' + newMailNo, 'name': 'mail' + newMailNo});
+        $scope.mailFields.push('mail' + newMailNo);
     };
     $scope.removeMailField = function() {
         var newMailNo = $scope.mailFields.length-1;
@@ -22,6 +20,7 @@ app.controller("createCtrl", function($scope, $http) {
     };
 
     $scope.create = function() {
+        console.log($scope.mailFields);
         if ($scope.password != $scope.confirmPassword) {
             $scope.passwordErrorMessage = "Please provide matching passwords";
         } else if(  $scope.name == "" ||
