@@ -1,9 +1,5 @@
-.form {
-
-}
-
 .form h2 {
-    margin: 42px 0 0 50px;
+    margin: 42px 0 75px 50px;
 }
 
 .form input[type=text], .form input[type=password] {
@@ -58,6 +54,17 @@
 .form .button-add-mail-field {
     margin: 20px auto 35px auto;
     width: 20%;
+}
+
+.form #account-type-choice {
+    top: 25px;
+    left: 85%;
+    position: fixed;
+}
+
+.form .button-account-type-choice {
+    margin: 10px auto 10px auto;
+    width: 150px;
 }
 
 .form .error-message {

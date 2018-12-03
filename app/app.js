@@ -11,6 +11,10 @@ app.config(function($routeProvider) {
         templateUrl: "../views/create.html",
         controller: "createCtrl"
     })
+    .when("/create-generic", {
+        templateUrl: "../views/create-generic.html",
+        controller: "createGenericCtrl"
+    })
     .when("/edit", {
         templateUrl: "../views/edit.html",
         controller: "editCtrl"
