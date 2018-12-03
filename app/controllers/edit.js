@@ -18,7 +18,6 @@ app.controller("editCtrl", function($scope, $http) {
                         $scope.emptyField = true;
                         $scope.emptyFieldMessage = "All fields are required";
         } else {
-
             var data = {
                 name: $scope.name,
                 surname: $scope.surname,

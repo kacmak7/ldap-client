@@ -1,7 +1,15 @@
-var login;
+var loginForm;
 var nameForm;
 var surnameForm;
+var cityForm;
+var organizationForm;
 app.controller("listCtrl", function($scope, $http) {
+    loginForm = "";
+    nameForm = "";
+    surnameForm = "";
+    cityForm = "";
+    organizationForm = "";
+
     $scope.active = true;
 
     $http.get("http://accounts.zipper.release11.com/api/users")
@@ -9,16 +17,21 @@ app.controller("listCtrl", function($scope, $http) {
         
         console.log("getUsers()");
         $scope.users = response.data;
-        delete $scope.users.count;
+        delete $scope.users.count; // to not to show an empty entry
         }); 
 
     $scope.edit = function(no) {
-        login = "";
+        loginForm = $scope.users[no].uid[0];
+        nameForm = $scope.users[no].givenname[0];
+        surnameForm =  $scope.users[no].sn[0]; // TODO: fetch surname from ldap entry
+        cityForm = $scope.users[no].l[0];
+        organizationForm = $scope.users[no].
 
         //nameForm = $scope.accounts[no].firstname;
         //surnameForm = $scope.accounts[no].lastname;
         
-        console.log(login);
+        console.log(loginForm);
+        console.log(cityForm);
     };
 
     $scope.resetPassword = function(no) {

@@ -58,7 +58,7 @@
 
 .form #account-type-choice {
     top: 25px;
-    left: 85%;
+    right: 25px;
     position: fixed;
 }
 
