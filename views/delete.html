@@ -1,7 +1,16 @@
 <div class="view">
     <div class="form">
         <h2>Delete Account</h2>
-        <p>Are you sure you want to delete the following account: </p>
-        <h4>{{name}} {{surname}}</h4>
+        <div id="delete">
+            <p>Are you sure you want to delete the following account: </p>
+            <h3>login: {{login}}</h3>
+            <h3>name: {{name}}</h3>
+            <h3>surname: {{surname}}</h3>
+            <h3 ng-if="city != ''">city: {{city}}</h3>
+            <h3 ng-if="organization != ''">organization: {{organization}}</h3>
+
+            <a ng-click="delete()" class="button_delete">Yes, delete this account</a>
+            <a href="#!list" class="button_update">No</a>
+        </div>
     </div>
 </div>

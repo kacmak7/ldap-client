@@ -78,3 +78,13 @@
     font-size: 11px;
     color: red;
 }
+
+/*deleting accounts*/
+.form #delete {
+    text-align: center;
+}
+
+.form #delete .button_update {
+    width: 70px;
+    display: inline-block;
+}

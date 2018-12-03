@@ -17,30 +17,26 @@ app.controller("listCtrl", function($scope, $http) {
         
         console.log("count: " + response.data.count);
         $scope.users = response.data;
-        delete $scope.users.count; // to not to show an empty entry
+        delete $scope.users.count; // to hide an empty entry
         }); 
 
     $scope.edit = function(no) {
         loginForm = $scope.users[no].uid[0];
         nameForm = $scope.users[no].givenname[0];
-        surnameForm =  $scope.users[no].sn[0]; // TODO: fetch surname from ldap entry
+        surnameForm =  $scope.users[no].sn[0];
         cityForm = $scope.users[no].l[0];
-        organizationForm = $scope.users[no].
-
-        //nameForm = $scope.accounts[no].firstname;
-        //surnameForm = $scope.accounts[no].lastname;
-        
-        console.log(loginForm);
-        console.log(cityForm);
+        organizationForm = $scope.users[no].o[0];
     };
 
     $scope.resetPassword = function(no) {
         loginForm = $scope.users[no].uid[0];
-    }
+    };
 
-    /*$scope.delete = function(no) {
-        nameForm = $scope.accounts[no].uid[0];
-        //surnameForm = $scope.accounts[no].lastname;
-        console.log(nameForm);
-    }*/
+    $scope.delete = function(no) {
+        loginForm = $scope.users[no].uid[0];
+        nameForm = $scope.users[no].givenname[0];
+        surnameForm =  $scope.users[no].sn[0];
+        cityForm = $scope.users[no].l[0];
+        organizationForm = $scope.users[no].o[0];
+    };
 })
