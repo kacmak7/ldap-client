@@ -35,7 +35,7 @@ app.controller("listCtrl", function($scope, $http) {
     };
 
     $scope.resetPassword = function(no) {
-        login = "";
+        loginForm = $scope.users[no].uid[0];
     }
 
     /*$scope.delete = function(no) {

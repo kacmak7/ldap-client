@@ -1,11 +1,17 @@
-app.controller("resetListCtrl", function($scope) {
+app.controller("resetListCtrl", function($scope, $http) {
+    $scope.login = loginForm;
+
     $scope.resetPassword = function() {
         if ($scope.password != $scope.confirmPassword) {
             $scope.passwordErrorMessage = "Please provide matching passwords";
         } else {
 
             var data = {
-                password: $scope.password
+                name: "",
+                surname: "",
+                password: $scope.password,
+                city: "",
+                organization: ""
             }
 
             var config = {
