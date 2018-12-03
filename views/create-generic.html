@@ -1,0 +1,24 @@
+<div class="view">
+    <form class="form">
+        <h2>Create Generic Account</h2>
+        <div id="account-type-choice">
+            <a class="button_update button-account-type-choice" href="#!create">Person Account</a>
+            <a class="button_update button-account-type-choice" href="#!create-generic">Generic Account</a>
+        </div>
+        <input type="text" class="form-input" placeholder="Name"
+        ng-model="name">
+
+        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[password == confirmPassword]" 
+        placeholder="Password"
+        ng-model="password">
+        
+        <input type="password" ng-class="{true: 'form-input', false: 'form-input-error'}[password == confirmPassword]" 
+        placeholder="Confirm Password"
+        ng-model="confirmPassword">
+
+        <p ng-if="password != confirmPassword" class="error-message">{{passwordErrorMessage}}</p>
+        <p ng-if="emptyField == true" class="error-message">{{emptyFieldMessage}}</p>
+
+        <a ng-click="create()" class="button_update" id="submit">Submit</a>
+    </form>
+</div>

@@ -31,7 +31,7 @@
 }
 
 @media only screen and (max-width: 790px) {
-    .mail-fields{
+    .mail-fields {
         display: none;
     }
 }
@@ -60,6 +60,12 @@
     top: 25px;
     right: 25px;
     position: fixed;
+}
+
+@media only screen and (max-width: 790px) {
+    .form #account-type-choice {
+        right: 1px;
+    }
 }
 
 .form .button-account-type-choice {
