@@ -5,19 +5,10 @@ app.controller("createCtrl", function($scope, $http) {
     $scope.confirmPassword = "";
     $scope.city = "";
     $scope.organization = "";
-
-    // mail fields
-    $scope.mailFields = ['mail1'];
-    $scope.addMailField = function() {
-        var newMailNo = $scope.mailFields.length+1;
-        $scope.mailFields.push('mail' + newMailNo);
-    };
-    $scope.removeMailField = function() {
-        var newMailNo = $scope.mailFields.length-1;
-        if (newMailNo !==-1) {
-            $scope.mailFields.pop();
-        }
-    };
+    $scope.mail = "";
+    $scope.mail1 = "";
+    $scope.mail2 = "";
+    $scope.mail3 = "";
 
     $scope.create = function() {
         console.log($scope.mailFields);
@@ -38,7 +29,11 @@ app.controller("createCtrl", function($scope, $http) {
                 surname: $scope.surname,
                 password: $scope.password,
                 city: $scope.city,
-                organization: $scope.organization
+                organization: $scope.organization,
+                mail: $scope.mail,
+                mail1: $scope.mail1,
+                mail2: $scope.mail2,
+                mail3: $scope.mail3
             }
 
             var config = {

@@ -5,6 +5,7 @@
             <a class="button_update button-account-type-choice" href="#!create">Person Account</a>
             <a class="button_update button-account-type-choice" href="#!create-generic">Generic Account</a>
         </div>
+        
         <input type="text" class="form-input" placeholder="Name"
         ng-model="name">
 
@@ -17,9 +18,9 @@
         ng-model="confirmPassword">
 
         <input type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail">
-        <input ng-if="mail != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail1">
-        <input ng-if="mail1 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail2">
-        <input ng-if="mail2 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail3">
+        <input ng-if="mail != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="$parent.mail1"> <!--$parent because of 'ngif'-->
+        <input ng-if="mail1 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="$parent.mail2">
+        <input ng-if="mail2 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="$parent.mail3">
 
         <p ng-if="password != confirmPassword" class="error-message">{{passwordErrorMessage}}</p>
         <p ng-if="emptyField == true" class="error-message">{{emptyFieldMessage}}</p>

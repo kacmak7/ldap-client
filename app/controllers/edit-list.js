@@ -8,6 +8,7 @@ app.controller("editListCtrl", function($scope, $http) {
     $scope.confirmPassword = "";
     $scope.city = cityForm;
     $scope.organization = organizationForm;
+    //TODO: import mails to edit
 
     $scope.edit = function() {
         if ($scope.password != $scope.confirmPassword) {
@@ -18,7 +19,7 @@ app.controller("editListCtrl", function($scope, $http) {
                 surname: $scope.surname,
                 password: $scope.password,
                 city: $scope.city,
-                organization: $scope.organization
+                organization: $scope.organization,
             }
             console.log(data);
 

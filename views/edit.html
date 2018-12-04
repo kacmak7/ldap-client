@@ -26,6 +26,11 @@
 
             <input type="text" class="form-input" placeholder="Organization"
             ng-model="organization">
+
+            <input type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail">
+            <input ng-if="mail != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="$parent.mail1"> <!--$parent because of 'ngif'-->
+            <input ng-if="mail1 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="$parent.mail2">
+            <input ng-if="mail2 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="$parent.mail3">
             
             <p ng-if="emptyField == true" class="error-message">{{emptyFieldMessage}}</p>
             <a ng-click="edit()" class="button_update" type='submit'>Submit</a>
