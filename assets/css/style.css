@@ -53,6 +53,12 @@ body {
     cursor: pointer;
 }
 
+@media only screen and (max-height: 350px) {
+    #side #logout {
+        display: none;
+    }
+}
+
 .view {
     margin: 30px auto 0 160px;
 }

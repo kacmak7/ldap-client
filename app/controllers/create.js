@@ -30,7 +30,7 @@ app.controller("createCtrl", function($scope, $http) {
                     $scope.city == "" ||
                     $scope.organization == "") {
             $scope.emptyField = true;
-            $scope.emptyFieldMessage = "All fields are required";
+            $scope.emptyFieldMessage = "Except mails all fields are required";
         } else {
 
             var data = {

@@ -16,6 +16,11 @@
         placeholder="Confirm Password"
         ng-model="confirmPassword">
 
+        <input type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail">
+        <input ng-if="mail != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail1">
+        <input ng-if="mail1 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail2">
+        <input ng-if="mail2 != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail3">
+
         <p ng-if="password != confirmPassword" class="error-message">{{passwordErrorMessage}}</p>
         <p ng-if="emptyField == true" class="error-message">{{emptyFieldMessage}}</p>
 

@@ -2,6 +2,10 @@ app.controller("createGenericCtrl", function($scope, $http) {
     $scope.name = "";
     $scope.password = "";
     $scope.confirmPassword = "";
+    $scope.mail = "";
+    $scope.mail1 = "";
+    $scope.mail2 = "";
+    $scope.mail3 = "";
 
     $scope.create = function() {
         if ($scope.password != $scope.confirmPassword) {
@@ -10,12 +14,16 @@ app.controller("createGenericCtrl", function($scope, $http) {
                     $scope.password == "" ||
                     $scope.confirmPassword == "") {
             $scope.emptyField = true;
-            $scope.emptyFieldMessage = "All fields are required";
+            $scope.emptyFieldMessage = "Except mails all fields are required";
         } else {
 
             var data = {
                 name: $scope.name,
-                password: $scope.password
+                password: $scope.password,
+                mail: $scope.mail,
+                mail1: $scope.mail1,
+                mail2: $scope.mail2,
+                mail3: $scope.mail3
             }
 
             var config = {
