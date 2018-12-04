@@ -16,7 +16,7 @@ app.controller("listCtrl", function($scope, $http) {
     .then(function(response) {
         
         console.log("count: " + response.data.count);
-        $scope.users = response.data;
+        $scope.users = response.data; 
         delete $scope.users.count; // to hide an empty entry
         }); 
 
