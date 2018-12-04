@@ -27,12 +27,6 @@
         <input type="text" class="form-input" placeholder="Organization"
         ng-model="organization">
 
-        <div class="mail-fields" data-ng-repeat="mailField in mailFields">
-            <input type="email" ng-model="mailField">
-            <a ng-click="removeMailField(mailField)" class="button_delete button-remove-mail-field">&times;</a>
-        </div>
-        <a ng-click="addMailField()" class="button_update button-add-mail-field">&plus;</a>
-        {{mailFields[1]}}
         <p ng-if="emptyField == true" class="error-message">{{emptyFieldMessage}}</p>
         <a ng-click="create()" class="button_update" id="submit">Submit</a>
     </form>

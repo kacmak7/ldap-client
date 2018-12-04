@@ -14,28 +14,6 @@
     padding: 12px 25px 12px 25px;
 }
 
-/*mail fields*/
-.form input[type=email] {
-    width: 80%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: #f8f8f8;
-    padding: 12px 25px 12px 25px;
-}
-
-.mail-fields {
-    margin: 40px auto 0 auto;
-    width: 45%;
-}
-
-@media only screen and (max-width: 790px) {
-    .mail-fields {
-        display: none;
-    }
-}
-
 .form .form-input-disabled[type=text] {
     background-color: #ccc;
 }
