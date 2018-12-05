@@ -3,6 +3,10 @@ var nameForm;
 var surnameForm;
 var cityForm;
 var organizationForm;
+var mail;
+var mail1;
+var mail2;
+var mail3;
 app.controller("listCtrl", function($scope, $http) {
     loginForm = "";
     nameForm = "";
@@ -25,6 +29,10 @@ app.controller("listCtrl", function($scope, $http) {
         surnameForm =  $scope.users[no].sn[0];
         cityForm = $scope.users[no].l[0];
         organizationForm = $scope.users[no].o[0];
+        mail = $scope.users[no].mail[0];
+        mail1 = $scope.users[no].mail[1];
+        mail2 = $scope.users[no].mail[2];
+        mail3 = $scope.users[no].mail[3];
     };
 
     $scope.resetPassword = function(no) {
