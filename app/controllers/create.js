@@ -5,8 +5,6 @@ app.controller("createCtrl", function($scope, $http) {
     $scope.confirmPassword = "";
     $scope.city = "";
     $scope.organization = "";
-    $scope.mail = "";
-    $scope.mail1 = "";
     $scope.mail2 = "";
     $scope.mail3 = "";
 
@@ -39,8 +37,6 @@ app.controller("createCtrl", function($scope, $http) {
                 password: $scope.password,
                 city: $scope.city,
                 organization: $scope.organization,
-                mail: $scope.mail,
-                mail1: $scope.mail1,
                 mail2: $scope.mail2,
                 mail3: $scope.mail3
             }
