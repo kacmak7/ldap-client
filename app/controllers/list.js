@@ -14,7 +14,6 @@ app.controller("listCtrl", function($scope, $http) {
 
     $http.get("http://accounts.zipper.release11.com/api/users")
     .then(function(response) {
-        
         console.log("count: " + response.data.count);
         $scope.users = response.data; 
         delete $scope.users.count; // to hide an empty entry

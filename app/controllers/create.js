@@ -10,6 +10,11 @@ app.controller("createCtrl", function($scope, $http) {
     $scope.mail2 = "";
     $scope.mail3 = "";
 
+    $http.get("http://accounts.zipper.release11.com/api/cities")
+    .then(function(response) {
+        $scope.cities = response.data;
+    })
+
     $scope.create = function() {
         console.log($scope.mailFields);
         if ($scope.password != $scope.confirmPassword) {

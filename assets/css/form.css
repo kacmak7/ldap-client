@@ -2,7 +2,7 @@
     margin: 42px 0 75px 50px;
 }
 
-.form input[type=text], .form input[type=password] {
+.form input[type=text], .form input[type=password], .form select {
     margin: 40px auto 0 auto;
     display: block;
     width: 45%;
