@@ -17,6 +17,10 @@ app.controller("editListCtrl", function($scope, $http) {
     .then(function(response) {
         $scope.cities = response.data;
     })
+    $http.get("http://accounts.zipper.release11.com/api/organizations")
+    .then(function(response) {
+        $scope.organizations = response.data;
+    })
 
     $scope.edit = function() {
         if ($scope.password != $scope.confirmPassword) {

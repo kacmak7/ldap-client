@@ -25,8 +25,9 @@
                     <option ng-repeat="c in cities">{{c}}</option>
             </select>
 
-            <input type="text" class="form-input" placeholder="Organization"
-            ng-model="organization">
+            <select type="text" class="form-input" ng-model="organization">
+                <option ng-repeat="o in organizations">{{o}}</option>
+            </select>    
 
             <input type="text" class="form-input" placeholder="Mail (optionally)" ng-model="mail">
             <input ng-if="mail != ''" type="text" class="form-input" placeholder="Mail (optionally)" ng-model="$parent.mail1"> <!--$parent because of 'ngif'-->
