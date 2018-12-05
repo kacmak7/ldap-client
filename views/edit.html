@@ -21,8 +21,9 @@
 
             <p ng-if="password != confirmPassword" class="error-message">{{passwordErrorMessage}}</p>
             
-            <input type="text" class="form-input" placeholder="City"
-            ng-model="city">
+            <select type="text" class="form-input" ng-model="city">
+                    <option ng-repeat="c in cities">{{c}}</option>
+            </select>
 
             <input type="text" class="form-input" placeholder="Organization"
             ng-model="organization">

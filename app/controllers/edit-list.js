@@ -13,6 +13,11 @@ app.controller("editListCtrl", function($scope, $http) {
     $scope.mail2 = mailForm2;
     $scope.mail3 = mailForm3;
 
+    $http.get("http://accounts.zipper.release11.com/api/cities")
+    .then(function(response) {
+        $scope.cities = response.data;
+    })
+
     $scope.edit = function() {
         if ($scope.password != $scope.confirmPassword) {
             $scope.passwordErrorMessage = "Please provide matching passwords";
