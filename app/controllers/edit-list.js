@@ -8,7 +8,6 @@ app.controller("editListCtrl", function($scope, $http) {
     $scope.confirmPassword = "";
     $scope.city = cityForm;
     $scope.organization = organizationForm;
-    //TODO: import mails to edit
     $scope.mail = mailForm;
     $scope.mail1 = mailForm1;
     $scope.mail2 = mailForm2;
