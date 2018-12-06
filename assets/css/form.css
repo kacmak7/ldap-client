@@ -2,10 +2,23 @@
     margin: 42px 0 75px 50px;
 }
 
-.form input[type=text], .form input[type=password], .form select {
+.form .field {
     margin: 40px auto 0 auto;
     display: block;
     width: 45%;
+}
+
+.form label {
+    font-size: 12px;
+}
+
+.form label span {
+    font-size: 9px;
+}
+
+.form input[type=text], .form input[type=password], .form select {
+    width: 100%;
+    display: block;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
