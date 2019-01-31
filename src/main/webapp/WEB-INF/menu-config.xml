@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MenuConfig>
+    <Displayers>
+        <Displayer name="Velocity" type="net.sf.navigator.displayer.VelocityMenuDisplayer"/>
+    </Displayers>
+    <Menus>
+    	<Menu name="MailMenu" title="menu.mail" description="Mail Menu" roles="ROLE_ADMIN,ROLE_USER" width="120" page="/mail/viewMails.html">
+            <Item name="ListMails" title="menu.mail.list" page="/mail/viewMails.html"/>
+            <Item name="Addressees" title="menu.mail.addressee" page="/mail/addressees.html"/>
+        </Menu>
+        <Menu name="PrintMenu" title="menu.print" description="Print Menu" roles="ROLE_ADMIN,ROLE_USER" page="/print/cards.html">
+            <Item name="Cards" title="menu.print.card" page="/print/cards.html"/>
+            <Item name="Persons" title="menu.print.persons" page="/print/persons.html"/>
+            <Item name="BirthTome" title="menu.print.baptism-tome" page="/tomes/baptismTome.html"/>
+            <Item name="ConfirmationTome" title="menu.print.confirmation-tome" page="/tomes/confirmationTome.html"/>
+            <Item name="DeathTome" title="menu.print.death-tome" page="/tomes/deathTome.html"/>
+            <Item name="FianceesTome" title="menu.print.fiancees-tome" page="/tomes/fianceesTome.html"/>
+            <Item name="IntentionTome" title="menu.print.intention-tome" page="/tomes/intentionTome.html"/>
+            <Item name="OfferingReport" title="menu.print.offering-report" page="/tomes/offeringReport.html"/>
+        </Menu>
+        <!-- <Menu name="FianceesMenu" title="menu.print.fiancees" page="/print/fiancees.html" roles="ROLE_ADMIN,ROLE_USER"/> -->
+        <Menu name="GraveyardMenu" title="menu.graveyard" page="/yard/yard.html" roles="ROLE_ADMIN,ROLE_USER">
+        	<Item name="Graveyard" title="menu.graveyard" page="/yard/yard.html"/>
+        	<Item name="GraveyardSector" title="menu.graveyard-sector" page="/yard/yardSector.html"/>
+        	<Item name="GraveyardFind" title="menu.graveyard-find" page="/yard/yardFind.html"/>
+        	<Item name="GraveyardFindList" title="menu.graveyard-find-list" page="/yard/yardFindList.html"/>
+        	<Item name="GraveyardInvalid" title="menu.graveyard-invalid" page="/yard/yardInvalid.html"/>
+        	<Item name="ParseDxfFile" title="menu.graveyard.dxfparse" page="/yard/parsedxf.html"/>
+        </Menu>
+        <Menu name="ColumbariumMenu" title="menu.columbarium" page="/columbarium/columbarium.html" roles="ROLE_ADMIN,ROLE_USER" width="120">
+        	<Item name="Columbarium" title="menu.columbarium" page="/columbarium/columbarium.html"/>
+        	<Item name="ColumbariumFindList" title="menu.columbarium-find-list" page="/columbarium/findList.html"/>
+        </Menu>
+        <Menu name="UserMenu" title="menu.user" description="User Menu" page="/userform.html" roles="ROLE_ADMIN,ROLE_USER"/>
+        <Menu name="AdminMenu" title="menu.admin" description="Admin Menu" roles="ROLE_ADMIN" width="100" page="/admin/chooseAdminAction.html">
+            <Item name="ViewUsers" title="menu.admin.users" page="/admin/users.html"/>
+            <Item name="ActiveUsers" title="menu.admin.activeUsers" page="/admin/activeUsers.html"/>
+            <!--<Item name="ReloadContext" title="menu.admin.reload" page="/admin/reload.html"/>
+            <Item name="FileUpload" title="menu.selectFile" page="/fileupload.html"/>
+            <Item name="FlushCache" title="menu.flushCache" page="/admin/flushCache.html"/>
+            <Item name="Clickstream" title="menu.clickstream" page="/admin/clickstreams.jsp"/>-->
+        </Menu>
+        <Menu name="Logout" title="user.logout" page="/logout.jsp" roles="ROLE_ADMIN,ROLE_USER"/>
+    </Menus>
+</MenuConfig>

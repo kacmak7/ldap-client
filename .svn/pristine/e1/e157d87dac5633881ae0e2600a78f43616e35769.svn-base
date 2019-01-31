@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"
+	default-lazy-init="true">
+
+	<mvc:annotation-driven/>
+
+	<!-- to taki troche sztuczny servlet - patrz web.xml -->
+	<bean id="GravesJSONBuilder" class="org.parafia.servlet.GravesJSONBuilder">
+		<property name="graveyardManager" ref="graveyardManager" />
+	</bean>
+
+	<!-- For mail settings and future properties files -->
+	<bean id="paginatedListFactory" class="org.parafia.webapp.util.pagination.PaginateListFactory" />
+	
+	<security:http request-matcher="regex" pattern="/styles/.*" security="none" />
+	<security:http request-matcher="regex" pattern="/images/.*" security="none" />
+	<security:http request-matcher="regex" pattern="/login.jsp*" security="none" />
+
+	<security:http auto-config="true">
+		<security:form-login login-page='/login.jsp'
+			default-target-url="/mail/viewMails.html" />
+		<security:intercept-url pattern="/**" access="ROLE_USER" />
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider
+			user-service-ref='userManager'>
+			<security:password-encoder ref="passwordEncoder" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+</beans>

@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content="The Zapatec menu package includes a useful collection of icons to use in your customized menu.You can see some of these icons in this demo.">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Menus with Icons</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Menus with Icons</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		<li>The Zapatec menu package includes a useful collection of icons to use in your customized menu.</li><li>You can see some of these icons in this demo.</li>
+		</ul>
+		</div>
+
+
+	<div class='zpCalSubheader' >Menu with Blue Icons</div>
+	<ul id="myMenu" style="display:none">
+				
+	<li>
+	<IMG src="../themes/icon/transparent/blue/home.gif"> <a href='#'>Home </a>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/blue/products.gif"> Products
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/demo.gif"> 
+		Demo
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/pricing.gif"> Pricing
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/faq.gif"> FAQ
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/blue/services.gif"> Services
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/training.gif"> Training
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/consulting.gif"> Consulting
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/faq.gif"> FAQ
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/blue/support.gif"> Support
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/documentation.gif"> Documentation
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/forum.gif"> Forum
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/liveChat.gif"> Live Chat
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/blue/store.gif"> Store
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/shoppingCart.gif"> Shopping Cart
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/buy.gif"> Buy
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/blue/about.gif"> About Us
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/news.gif"> News
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/blue/jobs.gif"> Jobs
+		</li>
+	</ul>
+	</li>
+	</ul>
+
+	<br/><br/><br/><br/><br/><br/>
+	<div class='zpCalSubheader' >Menu with Black Icons</div>
+	<ul id="myMenu2" style="display:none">
+				
+	<li>
+	<IMG src="../themes/icon/transparent/black/home.gif"> <a href='#'>Home </a>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/black/products.gif"> Products
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/black/demo.gif"> 
+		Demo
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/pricing.gif"> Pricing
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/faq.gif"> FAQ
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/black/services.gif"> Services
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/black/training.gif"> Training
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/consulting.gif"> Consulting
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/faq.gif"> FAQ
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/black/support.gif"> Support
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/black/documentation.gif"> Documentation
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/forum.gif"> Forum
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/liveChat.gif"> Live Chat
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/black/store.gif"> Store
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/black/shoppingCart.gif"> Shopping Cart
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/buy.gif"> Buy
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/transparent/black/about.gif"> About Us
+	<ul>
+		<li>
+		<IMG src="../themes/icon/transparent/black/news.gif"> News
+		</li>
+		<li>
+		<IMG src="../themes/icon/transparent/black/jobs.gif"> Jobs
+		</li>
+	</ul>
+	</li>
+	</ul>
+		<script type="text/javascript">
+		var menu = new Zapatec.Menu({theme: 'office_gray', source: 'myMenu'});
+		var menu2 = new Zapatec.Menu({theme: 'office_gray', source: 'myMenu2'});
+	</script>
+	
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

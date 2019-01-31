@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+       	http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"
+	default-lazy-init="true">
+
+	<context:component-scan base-package="org.parafia.service.impl" />
+
+	<!-- =================================================================== -->
+	<!-- AOP: Configuration and Aspects -->
+	<!-- =================================================================== -->
+	<aop:config>
+		<aop:advisor id="userManagerTx" advice-ref="userManagerTxAdvice"
+			pointcut="execution(* *..service.UserManager.*(..))" order="0" />
+		<aop:advisor id="userManagerSecurity" advice-ref="userSecurityAdvice"
+			pointcut="execution(* *..service.UserManager.saveUser(..))" order="1" />
+		<aop:advisor id="managerTx" advice-ref="txAdvice"
+			pointcut="execution(* *..service.*Manager.*(..))" order="2" />
+	</aop:config>
+
+	<!-- Enable @Transactional support -->
+	<tx:annotation-driven />
+
+	<!-- Fix bug in Spring 2.0.6: http://issues.appfuse.org/browse/APF-887 -->
+	<bean
+		class="org.springframework.transaction.aspectj.AnnotationTransactionAspect"
+		factory-method="aspectOf" lazy-init="false">
+		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+
+	<!-- Enable @AspectJ support -->
+	<aop:aspectj-autoproxy />
+
+	<context:annotation-config />
+
+	<!-- Enable @Configured support -->
+	<!-- <aop:spring-configured/> -->
+
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+			<!-- Read-only commented out to make things easier for end-users -->
+			<!-- http://issues.appfuse.org/browse/APF-556 -->
+			<!--tx:method name="get*" read-only="true"/ -->
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+
+	<tx:advice id="userManagerTxAdvice">
+		<tx:attributes>
+			<tx:method name="save*" rollback-for="UserExistsException" />
+		</tx:attributes>
+	</tx:advice>
+
+	<bean id="userSecurityAdvice" class="org.parafia.service.UserSecurityAdvice" />
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" />
+
+	<!-- =================================================================== -->
+	<!-- Managers: For accessing DAOs -->
+	<!-- =================================================================== -->
+	<!-- <bean id="manager" class="org.parafia.service.impl.UniversalManagerImpl">
+		<property name="dao" ref="universalDao" />
+	</bean> -->
+
+	<!-- <bean id="lookupManager" class="org.parafia.service.impl.LookupManagerImpl">
+		<property name="lookupDao" ref="lookupDao" />
+	</bean> -->
+
+	<!-- <bean id="roleManager" class="org.parafia.service.impl.RoleManagerImpl">
+		<property name="roleDao" ref="roleDao" />
+	</bean> -->
+
+	<!-- Add new Managers here -->
+
+	<!-- <bean id="fileManager" class="org.parafia.service.impl.FileManagerImpl">
+		<constructor-arg ref="fileDao" />
+	</bean> -->
+
+	<!-- <bean id="familyManager" class="org.parafia.service.impl.FamilyManagerImpl">
+		<constructor-arg ref="familyDao" />
+	</bean> -->
+
+	<!-- <bean id="personManager" class="org.parafia.service.impl.PersonManagerImpl">
+		<constructor-arg ref="personDao" />
+	</bean> -->
+
+	<!-- <bean id="fianceeManager" class="org.parafia.service.impl.FianceeManagerImpl">
+		<constructor-arg ref="fianceeDao" index="0" />
+		<constructor-arg ref="personDao" index="1" />
+	</bean> -->
+
+	<!-- <bean id="graveyardManager" class="org.parafia.service.impl.GraveyardManagerImpl">
+		<constructor-arg ref="graveyardDao" />
+	</bean> -->
+
+	<!-- <bean id="intentionManager" class="org.parafia.service.impl.GenericManagerImpl"> 
+		<constructor-arg> <bean class="org.parafia.dao.hibernate.GenericDaoHibernate"> 
+		<constructor-arg value="org.parafia.model.Intention"/> <property name="sessionFactory" 
+		ref="sessionFactory"/> </bean> </constructor-arg> </bean> -->
+
+	
+
+	<!-- <bean id="intentionAnnotationManager" class="org.parafia.service.impl.GenericManagerImpl"> 
+		<constructor-arg ref="intentionAnnotationDao"/> </bean> -->
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.app_user />
+	<public.role />
+	<public.user_role />
+	<public.addressees />
+	<public.addresses />
+	<public.practising />
+	<public.assistance_delagations />
+	<public.baptism_places />
+	<public.baptism_know_acts />
+	<public.baptismes />
+	<public.baptism_preparations />
+	<public.baptism_changes />
+	<public.celebrants />
+	<public.investigation_protocole />
+	<public.marriage_statuses />
+	<public.marriages />
+	<public.certificates />
+	<public.take_part />
+	<public.confirmations />
+	<public.deaths />
+	<public.remainings />
+	<public.persons />
+	
+	<public.families />
+	<public.children />
+	<public.others />
+	<public.others_wo_families />
+	<public.parents />
+	
+	
+	<public.columbariums />
+	<public.dispensations />
+	<public.fiancees />
+	<public.license_assistances />
+	<public.fiancee_pairs />
+	<public.intention_type_duration />
+	<public.intention_types />
+	<public.intentions />
+	<public.intentions_annotations />
+	<public.intentions_celebrants />
+	<public.intentions_confessions />
+	<public.mails />
+	<public.mail_files />
+	<public.priestly_visits />
+	<public.spatial_ref_sys />
+	<public.grave_doubled />
+	<public.grave_grounded />
+	<public.grave_owned />
+	<public.graves />
+	<public.grave_levels />
+	<public.grave_persons />
+	<public.grave_files />
+</dataset>

@@ -1,0 +1,92 @@
+/* $Id: osx.css 6753 2007-03-26 11:27:19Z smaxim $ */
+@import url("layout/basic.css");
+
+.zpMenuOsx .zpMenu-top .zpMenu-label,
+.zpMenuOsx .zpMenu-top a {
+  color: #3A3A3A;
+  padding-left:4px;
+}
+
+.zpMenuOsx .zpMenuContainer {
+  background: url("osx/gray_bg.gif");
+  border-width: 1px 1px 2px 1px;
+  border-style: solid;
+  border-color: #7A7A7A #7A7A7A #6D6D6D #7A7A7A;
+}
+
+.zpMenuOsx .zpMenuContainer .zpMenuContainer .zpMenu {
+  opacity: 0.85;
+  -moz-opacity: 0.85;
+  filter: alpha(opacity=85);
+}
+
+/* Current selected items in top horizontal menu*/
+.zpMenuOsx .zpMenu-top .zpMenu-item-selected .zpMenu-label,
+.zpMenuOsx .zpMenu-top .zpMenu-item-selected a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.zpMenuOsx .zpMenu .zpMenu-item-selected {
+  border: 0;
+  background: #2465B3;
+}
+
+/* Current selected items in vertical menu*/
+.zpMenuOsx .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+  border: 0;
+  background: #2465B3;
+}
+
+/* The arrow that shows up when there's a sub-menu */
+.zpMenuOsx .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label {
+  background: url("osx/arrow_gray.gif") no-repeat right center;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuOsx .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded .zpMenu-label {
+  background: url("osx/arrow_white.gif") #2465B3 no-repeat right center;
+}                                                      
+
+/* Override previously defined background defined in this css for HR */
+.zpMenuOsx .zpMenuContainer .zpMenu-item-hr,
+.zpMenuOsx .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+  padding:0;
+  margin:0;
+  border:none;
+  background:black;
+}
+
+.zpMenuOsx .zpMenuContainer td {
+  padding-right:2px;
+}
+
+.zpMenuOsx .zpMenuContainer td.icon div {
+  margin-left:-5px;
+  margin-right:5px;
+}
+
+*:first-child+html .zpMenuOsx .zpMenuContainer td.icon div img { 
+  padding-right:10px;
+  margin-left:-20px;
+  margin:0px;
+  float:left;
+}
+
+*:first-child+html .zpMenuOsx .zpMenuContainer td.icon div {
+  margin-left:-8px;
+  margin-right:-4px;
+}
+
+* html .zpMenuOsx .zpMenuContainer td.icon div {
+  margin-left:-9px;
+  margin-right:5px;
+}
+
+* html .zpMenuOsx .zpMenuContainer td.icon div img { 
+  padding-right:0px;
+  float:left;
+  clear:right;
+}
+
+

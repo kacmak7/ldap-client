@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.intention_types id="1" name="sample1"
+		color="white" />
+	<public.intention_types id="2" name="sample2"
+		color="red" />
+	<public.intention_types id="3" name="sample3"
+		color="purple" />
+	<public.intention_types id="4" name="sample4"
+		color="pink" />
+	<public.intention_types id="5" name="sample5"
+		color="violet" />
+</dataset>

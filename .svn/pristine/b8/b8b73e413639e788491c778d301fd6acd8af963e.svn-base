@@ -1,0 +1,9 @@
+dir.parafiaFiles=C:/parafiaFiles
+font.ttf.location=C:/parafiaFiles/arialuni.ttf
+dir.yardFiles=C:/parafiaGroby
+geoserver.url=http://192.168.1.245:8081/geoserver/wms
+
+#dir.parafiaFiles=/home/pawel/Workspace/swanny-files/docs
+#font.ttf.location=/home/pawel/Workspace/swanny-files/arialuni.ttf
+#dir.yardFiles=/home/pawel/Workspace/swanny-files/graves
+#geoserver.url=http://localhost:8081/geoserver/wms

@@ -1,0 +1,78 @@
+/* $Id: images.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+/* First level border */
+.zpMenuImages .zpMenu-vertical-mode .zpMenu-level-1,
+.zpMenuImages .zpMenu-horizontal-mode .zpMenu-level-1 {
+	border: 1px solid #EEEEE6;
+	border-color: #EEEEE6 #B0B098 #B0B098 #EEEEE6;
+}
+
+/* Sub level borders left and right */
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	border:none; /* Override and default settings */
+	border-right: 1px solid #B0B098;
+	border-left:  1px solid #B0B098;
+}
+
+/* Sub level borders First item - define TOP border */
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item-first {
+	border-top: 1px solid #EEEEE6;
+}
+
+/* Sub level borders First item - define BOTTOM border */
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item-last {
+	border-bottom: 1px solid #EEEEE6;
+	border-color: #EEEEE6 #B0B098 #B0B098 #EEEEE6;
+}
+
+/* Background image */
+/*
+.zpMenuImages .zpMenu .zpMenu .zpMenu-item,
+.zpMenuImages .zpMenu .zpMenu-item {
+	*/
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item,
+.zpMenuImages .zpMenuContainer  .zpMenu-item{
+	background: url("images/bg_menutitle.gif")  transparent 0 0;
+}
+
+/* All labels, top and sub */
+.zpMenuImages .zpMenu-top .zpMenu-label,
+.zpMenuImages .zpMenu-top a{
+	color:#296C8D;
+}
+
+/* General items that's not a top menu */
+/* NOTE: For drop shadow, Must define DIV container size along with item, NOT just item */
+.zpMenuImages .zpMenuContainer .zpMenuContainer,
+/* Override default sub menu item */
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	margin-top:0px;
+	width: 15em;
+}
+
+/* Current selected items */
+.zpMenuImages .zpMenuContainer .zpMenu-item-selected,
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item-selected
+{
+	background: url("images/bg_menutitle_on.gif")  100% 100%;
+}
+
+/* NOTE: for images, define zpMenu-label and width 100% 
+Original background image will be lost 
+*/
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label {
+	background: url("icon/arrow_right_black.gif")  no-repeat center right;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded .zpMenu-label {
+	background: url("icon/arrow_right_black.gif")  no-repeat center right;
+}
+
+/* Override previously defined background defined in this css for HR */
+/* Controls the behavior of <hr>  it the menu */
+.zpMenuImages .zpMenuContainer .zpMenu-item-hr,
+.zpMenuImages .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	background:black;
+}

@@ -1,0 +1,110 @@
+/* $Id: zebra_red.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+/* Top and Sub menus */
+.zpMenuZebra_red .zpMenu a,
+.zpMenuZebra_red .zpMenu .zpMenu-label {
+  font-family: Arial, Heltvetica, Verdana, sans-serif;
+  color: #ffcccc;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenu-item {
+  background: url("zebra_red/bg2.gif");
+  height:20px
+}
+
+/* Top and Sub menus */
+.zpMenuZebra_red .zpMenu .zpMenu-item-selected .zpMenu-label,
+.zpMenuZebra_red .zpMenu .zpMenu-item-selected a {
+  color: #ffffff;
+}
+
+
+/* Vertical border, 1st level */
+.zpMenuZebra_red .zpMenu-vertical-mode .zpMenu-level-1 {
+  background: url("zebra_red/bg2.gif");
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenuContainer{
+  margin-top: 0px;
+  margin-left:1px;
+}
+
+/* Sub menu */
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item {
+  margin-top:0px;
+  padding-top: 0px;
+  padding:0px;
+  color: #00008B;
+  width: 12.5em;
+}
+
+/* Odd item */
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-odd {
+  background: url("zebra_red/bg1.gif") repeat-x 100%;
+}
+
+/* Even item */
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-even {
+  background: url("zebra_red/bg2.gif") repeat-x 100%;
+}
+
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-even a,
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-even .zpMenu-label {
+  color: ffffff;
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-odd a,
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-odd .zpMenu-label {
+  color: #215CB6;
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-selected a,
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-selected .zpMenu-label {
+  color: black;
+}
+
+.zpMenuZebra_red .zpMenu .zpMenu-item-selected .zpMenu-label,
+.zpMenuZebra_red .zpMenu .zpMenu-item-selected a {
+  color: #ffffff;
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer {
+  margin-top: 1px;
+  width: 12.5em;
+}
+
+.zpMenuZebra_red .zpMenu-vertical-mode .zpMenuContainer {
+  margin-top: 0px;
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label{
+  background: url("zebra_red/arrow1.gif")  transparent no-repeat right center;
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded .zpMenu-label{
+  background: url("zebra_red/arrow1.gif")  transparent no-repeat right center;
+}
+
+/* Sub, HR */
+.zpMenuZebra_red .zpMenuContainer .zpMenu-item-hr,
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+  background: #ffaaaa;
+  margin:0;
+  padding:0;
+  border:none;
+  height:3px
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenu-item-hr {
+  width: 10em;
+  padding-right:5px;
+}
+
+.zpMenuZebra_red .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+  width: 12.5em;
+  padding-right:0;
+}

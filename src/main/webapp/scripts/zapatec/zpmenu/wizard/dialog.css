@@ -1,0 +1,86 @@
+/* $Id: dialog.css 4322 2006-09-04 08:49:33Z shacka $ */
+.dialog {
+  border: 2px outset #00f;
+  padding-bottom: 4px;
+  color: ButtonText;
+  background: ButtonFace;
+}
+
+.dialog .title {
+  cursor: move;
+  background: #039;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.dialog, .dialog button, .dialog input, .dialog select, .dialog textarea, .dialog table {
+  font: 11px Tahoma,Verdana,sans-serif;
+}
+
+.dialog form {
+  margin: 0px;
+}
+
+.dialog fieldset {
+  margin: 0px 3px;
+  padding: 0px 5px;
+}
+
+.dialog fieldset legend {
+  font-weight: bold;
+}
+
+.dialog fieldset table {
+  border-collapse: separate;
+  width: 100%;
+}
+
+.dialog fieldset td {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dialog button {
+  width: 5em;
+  padding: 0px;
+}
+
+.dialog .buttonColor {
+  padding: 1px;
+  cursor: default;
+  border: 1px solid;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+
+.dialog .buttonColor-hilite {
+  border-color: #000;
+}
+
+.dialog .buttonColor .chooser, .dialog .buttonColor .nocolor {
+  height: 0.6em;
+  border: 1px solid;
+  padding: 0px 1em;
+  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+}
+
+.dialog .buttonColor .nocolor {
+  padding: 0px;
+}
+
+.dialog .buttonColor .nocolor-hilite {
+  background-color: #fff;
+  color: #f00;
+}
+
+.dialog .lbl {
+  text-align: right;
+  width: 6.5em;
+}
+
+.dialog .buttons {
+  text-align: right;
+  padding: 2px 4px 0px 4px;
+}

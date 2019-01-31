@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.celebrants id="1" first_name="Adam" surname="Abacki"
+		active="true" />
+	<public.celebrants id="2" first_name="Bartosz"
+		surname="Babacki" active="true" />
+	<public.celebrants id="3" first_name="Cezary"
+		surname="Cacacki" active="true" />
+	<public.celebrants id="4" first_name="Damian"
+		surname="Dadacki" active="true" />
+	<public.celebrants id="5" first_name="Edmund"
+		surname="Edacki" active="true" />
+	<public.intention_types id="1" name="sample"
+		color="red" />
+	<public.intention_type_duration id="1" duration="30" />
+	<public.intentions date="2017-09-24" text="lorem ipsum"
+		offering="0.00" accept_id="1" type_id="1" notices="null" duration_id="1" />
+	<public.intentions date="1970-01-01 01:02:03.456" text="lorem ipsum"
+		offering="1234" accept_id="1" type_id="1" notices="null" duration_id="1" />
+</dataset>

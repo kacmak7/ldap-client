@@ -1,0 +1,66 @@
+/* $Id: csm_winxp.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+.zpMenuCsm_winxp .zpMenuContainer {
+    margin: -3px 0px 0px 0px;
+    border: solid 1px #ACA899;
+    background: url(csm_winxp/bg.gif);
+}
+
+.zpMenuCsm_winxp .zpMenu-vertical-mode {
+  margin-bottom: 5px;
+}
+
+.zpMenuCsm_winxp .zpMenuContainer .zpMenu-item,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenuContainer .zpMenu-item {
+    border: 0px;
+	line-height: 16px;
+    padding: 0;
+    cursor: default;
+    margin-left:2px;
+    margin-right: 2px;
+    background: white;
+}
+
+.zpMenuCsm_winxp .zpMenuContainer .zpMenu-item a {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    cursor: default;
+}
+
+.zpMenuCsm_winxp .zpMenuContainer .zpMenu-item-selected,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background: #316AC5;
+}
+
+.zpMenuCsm_winxp .zpMenuContainer .zpMenu-item-selected .zpMenu-label,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenu-item-selected a{
+    color: white;  
+}
+
+.zpMenuCsm_winxp .zpMenu-vertical-mode .zpMenu-item-first,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenuContainer .zpMenu-item-first {
+    margin-top: 2px;
+}
+
+.zpMenuCsm_winxp .zpMenu-vertical-mode .zpMenu-item-last,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenuContainer .zpMenu-item-last{
+    margin-bottom: 2px;
+}
+
+.zpMenuCsm_winxp .zpMenu-vertical-mode .zpMenu-item-collapsed,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed  {
+	background: url("csm_winxp/arrow_w.gif") white no-repeat right center;
+}
+
+.zpMenuCsm_winxp .zpMenu-vertical-mode .zpMenu-item-expanded,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded  {
+	background: url("csm_winxp/arrow_b.gif") #316AC5 no-repeat right center;
+}
+
+.zpMenuCsm_winxp .zpMenuContainer .zpMenu-item-hr,
+.zpMenuCsm_winxp .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	background: #ACA899;
+	height:1px;
+    padding: 0px;
+	margin: 4px 2px 4px 2px;
+}

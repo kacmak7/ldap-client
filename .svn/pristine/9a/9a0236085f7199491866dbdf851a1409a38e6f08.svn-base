@@ -1,0 +1,2750 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+Zapatec Menu Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="zpmenu-core.js Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>Zapatec Menu</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>zpmenu-core.js</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Zapatec DHTML Menu Widget.
+
+ <pre>
+ Copyright (c) 2004-2007 by Zapatec, Inc.
+ http://www.zapatec.com
+ 1700 MLK Way, Berkeley, California,
+ 94709, U.S.A.
+ All rights reserved.
+ </pre><BR/><BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="Zapatec/Menu.html">Zapatec.Menu</a></b></td>
+    <td>&nbsp;</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">/**
+ * <span class="attrib">@fileoverview</span> Zapatec DHTML Menu Widget.
+ *
+ * &lt;pre&gt;
+ * Copyright (c) 2004-2007 by Zapatec, Inc.
+ * http://www.zapatec.com
+ * 1700 MLK Way, Berkeley, California,
+ * 94709, U.S.A.
+ * All rights reserved.
+ * &lt;/pre&gt;
+ */</span>
+
+<span class="comment">/* $Id: zpmenu-core.js 7390 2007-06-11 15:36:56Z alex $ */</span>
+
+<span class="comment">/**
+ * Extends base Zapatec Widget class (utils/zpwidget.js).
+ *
+ * &lt;pre&gt;
+ * &lt;strong&gt;In addition to config options defined in base Zapatec.Widget class
+ * provides following config options:&lt;/strong&gt;
+ *
+ * &lt;b&gt;container&lt;/b&gt; [object or string] Element or id of element that will hold
+ * the menu. Required when sourceType is other than "html". If sourceType is
+ * "html" and "container" is not specified, menu "source" element will be
+ * replaced with the menu.
+ *
+ * &lt;b&gt;dynamic&lt;/b&gt; [boolean] If true is passed, the tree will use the
+ * "dynamic initialization" technique which greatly improves generation time.
+ * Some functionality is not available in this mode until all the tree was
+ * generated. In "dynamic" mode the tree is initially collapsed and levels are
+ * generated "on the fly" as the end user expands them. You can't retrieve nodes
+ * by ID (which implies you can't synchronize to certain nodes) until they have
+ * been generated.
+ *
+ * &lt;b&gt;showDelay&lt;/b&gt; [number] Delay before a submenu is shown, in milliseconds.
+ *
+ * &lt;b&gt;hideDelay&lt;/b&gt; [number] Delay before a submenu is hidden, in milliseconds.
+ *
+ * &lt;b&gt;onClick&lt;/b&gt; [boolean] Top menu drops on click not on hover.
+ *
+ * &lt;b&gt;vertical&lt;/b&gt; [boolean] Make it a vertical menu.
+ *
+ * &lt;b&gt;scrollWithWindow&lt;/b&gt; [boolean]
+ *
+ * &lt;b&gt;dropShadow&lt;/b&gt; [number]
+ *
+ * &lt;b&gt;drag&lt;/b&gt; [boolean]
+ *
+ * &lt;b&gt;slide&lt;/b&gt; [boolean]
+ *
+ * &lt;b&gt;glide&lt;/b&gt; [boolean]
+ *
+ * &lt;b&gt;fade&lt;/b&gt; [boolean]
+ *
+ * &lt;b&gt;wipe&lt;/b&gt; [boolean]
+ *
+ * &lt;b&gt;unfurl&lt;/b&gt; [boolean]
+ *
+ * &lt;b&gt;animSpeed&lt;/b&gt; [number] percentage animation per frame.
+ *
+ * &lt;b&gt;defaultIcons&lt;/b&gt; [string] If set, all tree items will get an additional TD
+ * element containing that string in the class attribute. This helps you
+ * to include custom default icons without specifying them as IMG tags in
+ * the tree.
+ *
+ * &lt;b&gt;zIndex&lt;/b&gt; [number] Can be used for two menus on the same page. Use higher
+ * value for menu which must be in front of other menus.
+ *
+ * &lt;b&gt;rememberPath&lt;/b&gt; [boolean or string] Used to keep track of previous menu
+ * location. Optional if pathCookie flag value differs from "__zp_item".
+ * Possible values:
+ * 1) true: keep track.
+ * 2) false: do not keep track.
+ * 3) "expand": the menu will open expanded to this previously location.
+ *
+ * &lt;b&gt;pathCookie&lt;/b&gt; [string] Used to keep track of previous menu location. Use
+ * this option with or instead of "rememberPath" when you need to specify which
+ * cookie will contain path information. This is needed e.g. when you have
+ * several menus on a page. If "rememberPath" option is not false and
+ * "pathCookie" option is not set, cookie name "__zp_item" will be used by
+ * default.
+ *
+ * &lt;b&gt;triggerEvent&lt;/b&gt; [string] Event that will trigger showing of the menu.
+ * Possible values:
+ * 1) For mouse click: 'mousedown' or 'mouseup' or 'click' (no matter which, all
+ *    values treated the same).
+ * 2) For keyboard: 'keydown' or 'keyup' or 'keypress' (no matter which, all
+ *    values treated the same).
+ *
+ * &lt;b&gt;triggerKey&lt;/b&gt; [number or string] Decimal keyboard scan code or mouse
+ * button: "left" or "both". Default: right mouse button.
+ * Requires "triggerEvent" to be set.
+ * See keyboard scan codes at:
+ * http://techwww.in.tu-clausthal.de/Dokumentation/Standards_Bussysteme/ASCII-Tabelle/
+ * http://www.nthelp.com/charts.htm
+ *
+ * &lt;b&gt;triggerObject&lt;/b&gt; [string or object] Element id or HTMLElement object
+ * associated with the menu. E.g. div inside which user must click to open the
+ * menu. Default: window.document.
+ * Requires triggerEvent to be set.
+ * Also can be following array (to set trigger on several elements):
+ * [
+ *   [object or string] HTMLElement object or element id ||
+ *   {
+ *     triggerObject: [object or string] HTMLElement object or element id,
+ *     triggerArgs: [any] args that should be available for external scripts
+ *   },
+ *   ...
+ * ]
+ * When trigger menu is shown, its "triggerObject" property contains reference
+ * to trigger object that last invoked the menu, "triggerArgs" property contains
+ * corresponding arguments. External scripts can access those properties.
+ * This gives ability to attach menu to several objects and to pass through some
+ * piece of data from those objects to external scripts. E.g. to determine,
+ * which cell of the grid was clicked, etc.
+ * If array is empty (triggerObject: []), trigger objects are not set initially
+ * and can be set later using setTriggerObject() method.
+ *
+ * &lt;b&gt;top&lt;/b&gt; [string or int] menu initial top offset.
+ * &lt;b&gt;right&lt;/b&gt; [string or int] menu initial right offset.
+ * &lt;b&gt;bottom&lt;/b&gt; [string or int] menu initial bottom offset.
+ * &lt;b&gt;left&lt;/b&gt; [string or int] menu initial left offset.
+ * If set, top_parent div will be absolute positioned. Their values will be
+ * assigned to corresponding CSS properties of top_parent div.
+ * Important: For drag and scroll menus set either "top" or "bottom" and
+ * "right" or "left" options instead of putting menu inside absolute positioned
+ * div. Otherwise menu can be wrong positioned.
+ *
+ * &lt;b&gt;onInit&lt;/b&gt; [function] function reference to call when menu is initialized.
+ * Can be used e.g. to disable certain items, etc.
+ *
+ * &lt;strong&gt;In addition to events fired from base Zapatec.Widget class fires
+ * following events:&lt;/strong&gt;
+ *
+ * &lt;b&gt;menuShown&lt;/b&gt; when menu is shown.
+ *
+ * &lt;b&gt;menuHidden&lt;/b&gt; when menu is hidden.
+ *
+ * &lt;/pre&gt;
+ *
+ * <span class="attrib">@constructor</span>
+ * <span class="attrib">@extends</span> Zapatec.Widget
+ * <span class="attrib">@param</span> {object} objArgs User configuration
+ */</span>
+Zapatec.Menu = <span class="reserved">function</span>(objArgs) {
+  <span class="comment">// For backward compatibility with v1.1</span>
+  <span class="reserved">if</span> (arguments.length &gt; 1) {
+    var objConfig = arguments[1];
+    objConfig.source = arguments[0];
+    objArgs = objConfig;
+  }
+  <span class="comment">// Call constructor of superclass</span>
+  Zapatec.Menu.SUPERconstructor.call(<span class="reserved">this</span>, objArgs);
+};
+
+Zapatec.Menu.id = <span class="literal">"Zapatec.Menu"</span>;
+<span class="comment">// Inherit Widget</span>
+Zapatec.inherit(Zapatec.Menu, Zapatec.Widget);
+
+<span class="comment">/**
+ * Initializes menu.
+ *
+ * <span class="attrib">@param</span> {object} objArgs User configuration
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.init = <span class="reserved">function</span>(objArgs) {
+  <span class="comment">// Define config options</span>
+  <span class="reserved">this</span>.config.container = null;
+  <span class="reserved">this</span>.config.dynamic = false;
+  <span class="reserved">this</span>.config.showDelay = 0;
+  <span class="reserved">this</span>.config.hideDelay = 500;
+  <span class="reserved">this</span>.config.onClick = false;
+  <span class="reserved">this</span>.config.vertical = false;
+  <span class="reserved">this</span>.config.scrollWithWindow = false;
+  <span class="reserved">this</span>.config.dropShadow = 0;
+  <span class="reserved">this</span>.config.drag = false;
+  <span class="reserved">this</span>.config.slide = false;
+  <span class="reserved">this</span>.config.glide = false;
+  <span class="reserved">this</span>.config.fade = false;
+  <span class="reserved">this</span>.config.wipe = false;
+  <span class="reserved">this</span>.config.unfurl = false;
+  <span class="reserved">this</span>.config.animSpeed = 10;
+  <span class="reserved">this</span>.config.defaultIcons = null;
+  <span class="reserved">this</span>.config.zIndex = 0;
+  <span class="reserved">this</span>.config.rememberPath = false;
+  <span class="reserved">this</span>.config.pathCookie = <span class="literal">'__zp_item'</span>;
+  <span class="reserved">this</span>.config.triggerEvent = null;
+  <span class="reserved">this</span>.config.triggerKey = null;
+  <span class="reserved">this</span>.config.triggerObject = null;
+  <span class="reserved">this</span>.config.top = null;
+  <span class="reserved">this</span>.config.right = null;
+  <span class="reserved">this</span>.config.bottom = null;
+  <span class="reserved">this</span>.config.left = null;
+  <span class="reserved">this</span>.config.onInit = null;
+  <span class="reserved">this</span>.config.preventDoubleCall = false;
+  <span class="reserved">this</span>.called = false;
+  <span class="comment">// Call parent init</span>
+  Zapatec.Menu.SUPERclass.init.call(<span class="reserved">this</span>, objArgs);
+  <span class="comment">// Continue initialization after theme is loaded</span>
+};
+
+<span class="comment">/**
+ * Extends parent method. Unregisters scrolling to let JavaScript garbage
+ * collector delete the object.
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.discard = <span class="reserved">function</span>() {
+  Zapatec.ScrollWithWindow.unregister(<span class="reserved">this</span>.rootMenu);
+  <span class="comment">// Call parent method</span>
+  Zapatec.Menu.SUPERclass.discard.call(<span class="reserved">this</span>);
+};
+
+<span class="comment">/**
+ * Extends parent method.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.addStandardEventListeners = <span class="reserved">function</span>() {
+  <span class="comment">// Call parent method</span>
+  Zapatec.Menu.SUPERclass.addStandardEventListeners.call(<span class="reserved">this</span>);
+  <span class="comment">// Add menu specific event listeners</span>
+  <span class="reserved">this</span>.addEventListener(<span class="literal">'loadThemeEnd'</span>, <span class="reserved">function</span>() {
+      <span class="reserved">this</span>.onThemeLoad();
+  <span class="comment">/*
+    if (Zapatec.windowLoaded) {
+      this.onThemeLoad();
+    } else {
+      var objMenu = this;
+      Zapatec.Utils.addEvent(window, 'load', function() {
+        objMenu.onThemeLoad()
+      });
+    }
+    */</span>
+  });
+};
+
+<span class="comment">/**
+ * Holds reference to menu object that is currently on top. When menu is
+ * mouseovered, its top_parent zIndex is changed to max to put it over the rest
+ * of elements. This variable is needed to be able to restore zIndex of previous
+ * top menu.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.onTop = null;
+
+<span class="comment">/**
+ * Restores zIndex of this menu.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.restoreZIndex = <span class="reserved">function</span>() {
+  <span class="reserved">this</span>.top_parent.style.zIndex = <span class="reserved">this</span>.config.zIndex;
+  Zapatec.Menu.onTop = null;
+};
+
+<span class="comment">/**
+ * Puts this menu on top.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.putOnTop = <span class="reserved">function</span>() {
+  <span class="comment">// Restore zIndex of previous top menu</span>
+  var objOnTop = Zapatec.Menu.onTop;
+  <span class="reserved">if</span> (objOnTop) {
+    objOnTop.restoreZIndex();
+  }
+  <span class="comment">// Put this menu over the rest of elements</span>
+  <span class="comment">// Max zIndex in IE and FF: 10737418239, in Opera: 2147483583</span>
+  <span class="reserved">this</span>.top_parent.style.zIndex = 2147483583;
+  Zapatec.Menu.onTop = <span class="reserved">this</span>;
+};
+
+<span class="comment">/**
+ * Called when theme is loaded.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.onThemeLoad = <span class="reserved">function</span>() {
+	var self=<span class="reserved">this</span>;
+  <span class="comment">// Current trigger object that launched menu (menu can be attached to several</span>
+  <span class="comment">// objects).</span>
+  <span class="reserved">this</span>.triggerObject = null;
+  <span class="comment">// Arguments received from current trigger object. Those arguments can be</span>
+  <span class="comment">// accessed from external script, e.g. to determine, which cell of the grid</span>
+  <span class="comment">// was clicked, etc.</span>
+  <span class="reserved">this</span>.triggerArgs = null;
+
+  <span class="reserved">this</span>.animations = [];
+
+  <span class="comment">// Menu container</span>
+  <span class="reserved">this</span>.container = Zapatec.Widget.getElementById(<span class="reserved">this</span>.config.container);
+  <span class="comment">// Call parent method to load data from the specified source</span>
+  <span class="reserved">this</span>.loadData();
+
+  <span class="reserved">this</span>.openMenus = [];
+  <span class="reserved">this</span>.clickDone = false;
+
+  var objMenu = <span class="reserved">this</span>;
+
+  <span class="comment">// Setup triggers</span>
+  <span class="reserved">if</span> (<span class="reserved">this</span>.config.triggerEvent) {
+    <span class="reserved">this</span>.setTriggerObject(<span class="reserved">this</span>.config.triggerObject || window.document);
+    <span class="comment">// Hide menu on click</span>
+    Zapatec.Utils.addEvent(window.document, <span class="literal">'mouseup'</span>,
+      <span class="reserved">function</span>() {
+        objMenu.hideMenu()
+      }
+    );
+    <span class="comment">// Prevent hiding on click inside menu</span>
+    Zapatec.Utils.addEvent(<span class="reserved">this</span>.top_parent, <span class="literal">'mouseup'</span>,
+      <span class="reserved">function</span>(objEvent) {
+        <span class="reserved">return</span> Zapatec.Utils.stopEvent(objEvent);
+      }
+    );
+    <span class="comment">// Hide menu on ESC</span>
+    Zapatec.Utils.addEvent(window.document, <span class="literal">'keypress'</span>,
+      <span class="reserved">function</span>(objEvent) {
+        objEvent || (objEvent = window.event);
+        <span class="reserved">if</span> (objEvent.keyCode == 27) {
+          <span class="reserved">for</span> (var i = 0; i &lt; Zapatec.Menu.selectedItemsStack.length; i++) {
+            <span class="reserved">if</span> (Zapatec.Menu.all[Zapatec.Menu.selectedItemsStack[i].__zp_tree]
+             == objMenu) {
+              <span class="reserved">return</span>;
+            }
+          }
+          <span class="comment">// No more selected items in this menu</span>
+          objMenu.hideMenu();
+        }
+      }
+    );
+  } <span class="reserved">else</span> {
+    <span class="comment">// Dragging and scrolling can't work correctly together with triggers</span>
+    <span class="reserved">if</span> (<span class="reserved">this</span>.config.scrollWithWindow &amp;&amp; <span class="reserved">this</span>.rootMenu) {
+      Zapatec.ScrollWithWindow.register(<span class="reserved">this</span>.rootMenu);
+    }
+    <span class="reserved">if</span> (<span class="reserved">this</span>.config.drag) {
+      <span class="reserved">this</span>.dragging = false;
+
+      Zapatec.Transport.loadJS({
+      	url:Zapatec.zapatecPath+<span class="literal">"zpobjects.js"</span>, 
+        onLoad: <span class="reserved">function</span>() {
+					Zapatec.Transport.loadJS({
+						url:Zapatec.zapatecPath+<span class="literal">"dom.js"</span>, 
+						onLoad: <span class="reserved">function</span>() {
+							Zapatec.Transport.loadJS({
+								url:Zapatec.zapatecPath+<span class="literal">"movable.js"</span>, 
+								onLoad: <span class="reserved">function</span>() {
+									Zapatec.Transport.loadJS({
+										url:Zapatec.zapatecPath+<span class="literal">"draggable.js"</span>, 
+										onLoad: <span class="reserved">function</span>() {
+											new Zapatec.Utils.Draggable({
+												container: objMenu.rootMenu.parentNode, 
+												preserveSizes: false, 
+												eventCapture: true
+											});
+										}, 
+										onError: <span class="reserved">function</span> () {
+											self.config.drag = false;
+										}
+									});
+								}, 
+								onError: <span class="reserved">function</span> () {
+									self.config.drag = false;
+								}
+							});
+						}, 
+						onError: <span class="reserved">function</span> () {
+							self.config.drag = false;
+						}
+					});
+        }, 
+        onError: <span class="reserved">function</span> () {
+        	self.config.drag = false;
+        }
+      });
+
+<span class="comment">/*			
+			Old dragging behavior
+      Zapatec.Utils.addEvent(window.document, "mousedown",
+        function(ev) { return Zapatec.Menu.dragStart(ev, objMenu) });
+      Zapatec.Utils.addEvent(window.document, "mousemove",
+        function(ev) { return Zapatec.Menu.dragMove(ev, objMenu) });
+      Zapatec.Utils.addEvent(window.document, "mouseup",
+        function(ev) { return Zapatec.Menu.dragEnd(ev, objMenu) });
+*/</span>        
+    }
+  }
+  <span class="comment">// Enforce animation mixing rules: fade + any 1 other.</span>
+  <span class="reserved">if</span> (<span class="reserved">this</span>.config.fade) {
+    <span class="reserved">this</span>.addAnimation(<span class="literal">'fade'</span>);
+  }
+  <span class="reserved">if</span> (<span class="reserved">this</span>.config.slide) {
+    <span class="reserved">this</span>.addAnimation(<span class="literal">'slide'</span>);
+  } <span class="reserved">else</span> <span class="reserved">if</span> (<span class="reserved">this</span>.config.glide) {
+    <span class="reserved">this</span>.addAnimation(<span class="literal">'glide'</span>);
+  } <span class="reserved">else</span> <span class="reserved">if</span> (<span class="reserved">this</span>.config.wipe) {
+    <span class="reserved">this</span>.addAnimation(<span class="literal">'wipe'</span>);
+  } <span class="reserved">else</span> <span class="reserved">if</span> (<span class="reserved">this</span>.config.unfurl) {
+    <span class="reserved">this</span>.addAnimation(<span class="literal">'unfurl'</span>);
+  }
+  <span class="comment">// Oninit callback</span>
+  <span class="reserved">if</span> (typeof <span class="reserved">this</span>.config.onInit == <span class="literal">'function'</span>) {
+    <span class="comment">// To be able to reference to this object from onInit function</span>
+    setTimeout(<span class="reserved">function</span>() {
+      objMenu.config.onInit();
+    }, 0);
+  }
+};
+
+<span class="comment">/**
+ * Initializes a menu from the HTML source.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} objSource Source HTMLElement object
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.loadDataHtml = <span class="reserved">function</span>(objSource) {
+  <span class="comment">// Check arguments</span>
+  <span class="reserved">if</span> (!objSource) {
+    <span class="reserved">return</span>;
+  }
+  <span class="reserved">this</span>.list = objSource;
+  <span class="reserved">this</span>.items = {};
+  <span class="reserved">this</span>.trees = {};
+  <span class="reserved">this</span>.selectedItem = null;
+  <span class="comment">// Sub-menu container counter</span>
+  <span class="reserved">this</span>.lastContainerNumber = 0;
+  <span class="reserved">this</span>.menuId = objSource.id || Zapatec.Utils.generateID(<span class="literal">"tree"</span>);
+  var objContainer = <span class="reserved">this</span>.top_parent = Zapatec.Utils.createElement(<span class="literal">"div"</span>);
+  <span class="comment">// Initially menu is hidden and will be shown on triggerEvent</span>
+  objContainer.style.display = <span class="literal">'none'</span>;
+  <span class="comment">// In order to work correctly when menu is put inside &lt;center&gt;&lt;/center&gt;</span>
+  objContainer.style.textAlign = <span class="literal">'left'</span>;
+  objContainer.__zp_menu = Zapatec.Utils.createElement(<span class="literal">"div"</span>, objContainer);
+  objContainer.__zp_menu.className = <span class="literal">'zpMenu'</span>;
+  objContainer.className = <span class="literal">"zpMenuContainer zpMenu-top"</span>;
+  <span class="reserved">if</span> (<span class="reserved">this</span>.config.vertical) {
+    <span class="comment">// vertical:true, set top div container class to</span>
+    <span class="comment">// NOTE:zpMenu-vertical-mode and zpMenu-level-1 defines the top vertical menu</span>
+    Zapatec.Utils.addClass(objContainer, <span class="literal">"zpMenu-vertical-mode"</span>);
+  } <span class="reserved">else</span> {
+    Zapatec.Utils.addClass(objContainer, <span class="literal">"zpMenu-horizontal-mode"</span>);
+  }
+  <span class="comment">// Create menu</span>
+  var strRootMenuId = <span class="reserved">this</span>.createTree(objSource, objContainer, 0);
+  <span class="comment">// Reference to the root menu</span>
+  <span class="reserved">this</span>.rootMenu = <span class="reserved">this</span>.trees[strRootMenuId];
+  <span class="comment">// Associate menu with the theme</span>
+  var objTheme = Zapatec.Utils.createElement(<span class="literal">'div'</span>);
+  objTheme.className = <span class="reserved">this</span>.getClassName({prefix: <span class="literal">'zpMenu'</span>});
+  objTheme.appendChild(objContainer);
+  <span class="comment">// Insert menu into the page</span>
+  <span class="reserved">if</span> (<span class="reserved">this</span>.container) {
+    <span class="comment">// Put menu into the specified container</span>
+    <span class="reserved">this</span>.container.appendChild(objTheme);
+  } <span class="reserved">else</span> {
+    <span class="comment">// Replace source ul element with menu</span>
+    objSource.parentNode.insertBefore(objTheme, objSource);
+    objSource.parentNode.removeChild(objSource);
+  }
+
+  Zapatec.Menu.all[<span class="reserved">this</span>.menuId] = <span class="reserved">this</span>;
+  <span class="comment">// check if we have an initially selected node and sync. the tree if so</span>
+  <span class="reserved">if</span> (<span class="reserved">this</span>.selectedItem) {
+    <span class="reserved">this</span>.sync(<span class="reserved">this</span>.selectedItem.__zp_item);
+  }
+  <span class="comment">// Get path from cookies</span>
+  <span class="reserved">this</span>.path = Zapatec.Utils.getCookie(<span class="reserved">this</span>.config.pathCookie);
+  <span class="reserved">if</span> (<span class="reserved">this</span>.path) {
+    <span class="comment">// Remove path from cookies</span>
+    Zapatec.Utils.writeCookie(<span class="reserved">this</span>.config.pathCookie, <span class="literal">''</span>);
+  }
+  <span class="comment">// Show menu if triggerEvent is not set</span>
+  <span class="reserved">if</span> (!<span class="reserved">this</span>.config.triggerEvent) {
+    <span class="reserved">this</span>.showMenu();
+    
+	<span class="reserved">if</span> (!<span class="reserved">this</span>.config.triggerEvent &amp;&amp; <span class="reserved">this</span>.config.scrollWithWindow &amp;&amp; <span class="reserved">this</span>.rootMenu) {
+		Zapatec.ScrollWithWindow.register(<span class="reserved">this</span>.rootMenu);
+	}
+    
+<span class="comment">/*
+This solves the issue when menu is centered using table, but conflicts with
+dragging:
+    if (this.config.scrollWithWindow) {
+      objTheme.style.position = 'relative';
+      objTheme.style.width = objContainer.offsetWidth + 'px';
+      objTheme.style.height = objContainer.offsetHeight + 'px';
+      objContainer.style.position = 'absolute';
+      objContainer.style.left = '0px';
+      objContainer.style.top = '0px';
+    }
+*/</span>
+  }
+};
+
+<span class="comment">/**
+ *&lt;pre&gt;
+ * This global variable keeps a "hash table" (that is, a plain JavaScript
+ * object) mapping ID-s to references to Zapatec.Menu objects.  It's helpful if
+ * you want to operate on a tree but you don't want to keep a reference to it.
+ * Example:
+ *
+ * // the following makes a tree for the &lt;ul id="tree-id"&gt; element
+ * var tree = new Zapatec.Menu("tree-id");
+ * // ... later
+ * var existing_tree = Zapatec.Menu.all("tree-id");
+ * // and now we can use existing_tree the same as we can use tree
+ * // the following displays true
+ * alert(existing_tree == tree);
+ *
+ * So in short, this variable remembers values returned by "new
+ * Zapatec.Menu(...)" in case you didn't.
+ * &lt;/pre&gt;
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.all = {};
+
+<span class="comment">/**
+ * Function that creates a (sub)tree.  This function walks the UL element,
+ * computes and assigns CSS class names and creates HTML elements for a subtree.
+ * Each time a LI element is encountered, createItem() is called which
+ * effectively creates the item.  Beware that createItem() might call back this
+ * function in order to create the item's subtree. (so createTree and createItem
+ * form an indirect recursion).
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} list UL element
+ * <span class="attrib">@param</span> {object} objContainer Parent element that should hold the (sub)tree
+ * <span class="attrib">@param</span> {number} level Level of this (sub)tree in the main tree
+ * <span class="attrib">@return</span> ID of the (sub)tree
+ * <span class="attrib">@type</span> number
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.createTree = <span class="reserved">function</span>(list, objContainer, level) {
+  <span class="comment">// Set id attribute of the container</span>
+  objContainer.id = <span class="literal">'zpMenu'</span> + <span class="reserved">this</span>.id + <span class="literal">'Container'</span> + <span class="reserved">this</span>.lastContainerNumber;
+  <span class="reserved">this</span>.lastContainerNumber++;
+
+  var id;
+  var intItem=1, bFirst=true;
+
+  <span class="reserved">if</span> (list) id=list.id; <span class="comment">// list can be null</span>
+  <span class="reserved">if</span> (!id)  id=Zapatec.Utils.generateID(<span class="literal">"tree.sub"</span>);
+  var
+    objMenu = <span class="reserved">this</span>;
+  <span class="reserved">function</span> _makeIt() {
+    objMenu.creating_now = true;
+    var last_li = null; <span class="comment">//previous &lt;li&gt;</span>
+    var next_li; <span class="comment">//next &lt;li&gt;</span>
+    var i = (list ? list.firstChild : null);
+    var items = objContainer.__zp_items = [];
+    objMenu.trees[id] = objContainer;
+    objContainer.__zp_level = level;
+    objContainer.__zp_treeid = id;
+    objContainer.__zp_keymap = {};
+    var strOddEven;
+    <span class="reserved">while</span> (i) {
+      <span class="reserved">if</span> (last_li)
+        last_li.className += <span class="literal">" zpMenu-lines-c"</span>;
+      <span class="reserved">if</span> (i.nodeType != 1)
+        i = i.nextSibling;
+      <span class="reserved">else</span> {
+        next_li = Zapatec.Utils.getNextSibling(i, <span class="literal">'li'</span>);
+        <span class="reserved">if</span> (i.tagName.toLowerCase() == <span class="literal">'li'</span>) {
+          last_li = objMenu.createItem(i, objContainer, next_li, level, intItem);
+          <span class="reserved">if</span> (last_li) { <span class="comment">//false when webmaster creates malformed tree</span>
+            <span class="comment">// ONLY do odd/even for NON HR items</span>
+            <span class="comment">// If HR items had odd/even then visual odd/even themes (see zebra) look wrong</span>
+            <span class="reserved">if</span> (!/zpMenu-item-hr/i.test(last_li.className)) 
+            {
+              <span class="comment">// this previously created item is NOT in the HR class, create odd/even class</span>
+              strOddEven=<span class="literal">"zpMenu-item-"</span> + (intItem % 2==1 ? <span class="literal">"odd"</span> : <span class="literal">"even"</span>);
+              Zapatec.Utils.addClass(last_li, strOddEven)
+              intItem++
+            }
+
+            <span class="reserved">if</span> (bFirst)
+            {
+              <span class="comment">// First li for this sub-menu</span>
+              bFirst=false;
+              Zapatec.Utils.addClass(last_li, <span class="literal">"zpMenu-item-first"</span>);
+            }
+            <span class="comment">//adds it to the parent's array of items</span>
+            items[items.length] = last_li.__zp_item;
+          }
+        }
+        i = next_li;
+      }
+    }
+
+    <span class="comment">// Last li for this sub-menu</span>
+    <span class="reserved">if</span> (last_li) Zapatec.Utils.addClass(last_li, <span class="literal">"zpMenu-item-last"</span>);
+
+		<span class="comment">// If item is first and last at one time</span>
+		<span class="reserved">if</span> (last_li &amp;&amp; (last_li.className.indexOf(<span class="literal">"zpMenu-item-first"</span>) &gt;= 0) &amp;&amp; (last_li.className.indexOf(<span class="literal">"zpMenu-item-last"</span>) &gt;= 0)) {
+			Zapatec.Utils.removeClass(last_li, <span class="literal">"zpMenu-item-last"</span>);
+			Zapatec.Utils.removeClass(last_li, <span class="literal">"zpMenu-item-first"</span>);
+			Zapatec.Utils.addClass(last_li, <span class="literal">"zpMenu-item-single"</span>);
+		}
+
+    i = objContainer.firstChild;
+    <span class="reserved">if</span> (i &amp;&amp; !level) {
+      i.className = i.className.replace(/ zpMenu-lines-./g, <span class="literal">""</span>);
+      i.className += (i === last_li) ? <span class="literal">" zpMenu-lines-s"</span> : <span class="literal">" zpMenu-lines-t"</span>;
+    }
+    <span class="reserved">if</span> (last_li &amp;&amp; (level || last_li !=  i)) {
+      last_li.className = last_li.className.replace(/ zpMenu-lines-./g, <span class="literal">""</span>);
+      last_li.className += <span class="literal">" zpMenu-lines-b"</span>;
+    }
+    objMenu.creating_now = false;
+  };
+  <span class="reserved">if</span> (<span class="reserved">this</span>.config.dynamic &amp;&amp; level &gt; 0)
+    <span class="reserved">this</span>.trees[id] = _makeIt;
+  <span class="reserved">else</span>
+    _makeIt();
+  <span class="reserved">return</span> id;
+};
+
+<span class="comment">/**
+ * &lt;pre&gt;
+ * Counter that is increased by 1 before each item added. Next menu item will
+ * have tabIndex property value = current value of Zapatec.Menu.tabIndex + 1.
+ *
+ * Note:
+ * in Opera tabIndex property value of node must be &gt; 0, otherwise it will be
+ * ignored;
+ * Mozilla starts travelling from nodes with tabIndex &gt; 0;
+ * IE starts travelling from nodes with tabIndex == 0;
+ * all nodes without tabIndex set explicitly have tabIndex == 0
+ * &lt;/pre&gt;
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.tabIndex = 1000;
+
+<span class="comment">/**
+ * Walks through a LI element and creates the HTML elements associated with that
+ * tree item. When it encounters an UL element it calls createTree() in order to
+ * create the item's subtree. This function may also call item_addIcon() in
+ * order to add the +/- buttons or icons present in the item definition as IMG
+ * tags, or item_addDefaultIcon() if the tree configuration specifies
+ * "defaultIcons" and no IMG tag was present.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} li LI element
+ * <span class="attrib">@param</span> {object} objContainer Parent element where the HTML elements should be
+ * created
+ * <span class="attrib">@param</span> {object} next_li Next LI element, if this is not the last one
+ * <span class="attrib">@param</span> {number} level Level of this item in the main tree
+ * <span class="attrib">@param</span> {number} intItem Nth item for this sub-tree
+ * <span class="attrib">@return</span> DIV element holding the HTML elements of the created item
+ * <span class="attrib">@type</span> object
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.createItem = <span class="reserved">function</span>(li, objContainer, next_li, level, intItem) {
+  <span class="reserved">if</span> (!li.firstChild) {
+    <span class="reserved">return</span>;
+  }
+  var id = li.id || Zapatec.Utils.generateID(<span class="literal">"tree.item"</span>);
+  var item = <span class="reserved">this</span>.items[id] =
+   Zapatec.Utils.createElement(<span class="literal">"div"</span>, objContainer.__zp_menu);
+  item.id = <span class="reserved">this</span>.formElementId({
+    prefix: <span class="literal">'zpMenu'</span>,
+    suffix: <span class="literal">'Item'</span>
+  });
+  var t = Zapatec.Utils.createElement(<span class="literal">"table"</span>, item);
+  var tb = Zapatec.Utils.createElement(<span class="literal">"tbody"</span>, t);
+  var tr = Zapatec.Utils.createElement(<span class="literal">"tr"</span>, tb);
+  var td = Zapatec.Utils.createElement(<span class="literal">"td"</span>, tr);
+  var has_icon = false;
+
+  <span class="reserved">if</span> (!level) {
+    <span class="comment">// This will allow to have correct item offsetWidth value in Opera</span>
+    td.style.whiteSpace = <span class="literal">'nowrap'</span>;
+  }
+
+  t.className = <span class="literal">"zpMenu-table"</span>;
+  t.cellSpacing = 0;
+  t.cellPadding = 0;
+  td.className = <span class="literal">"zpMenu-label"</span>
+
+  <span class="comment">//If there's a title attribute to the LI</span>
+  var title = li.getAttribute(<span class="literal">'title'</span>);
+  <span class="reserved">if</span> (title) {
+    <span class="comment">//apply it to the menu item</span>
+    td.setAttribute(<span class="literal">'title'</span>, title);
+  }
+
+  <span class="comment">// add the LI's classname to the</span>
+  item.className = <span class="literal">"zpMenu-item"</span> + (li.className ? <span class="literal">' '</span> + li.className : <span class="literal">''</span>);
+  Zapatec.Utils.addClass(item, <span class="literal">"zpMenu-level-"</span> + (level+1));  <span class="comment">// Define the Nth level of a sub-menu, 1 based</span>
+  item.__zp_item = id;
+  item.__zp_tree = <span class="reserved">this</span>.menuId;
+  item.__zp_parent = objContainer.__zp_treeid;
+  item.onmouseover = new Function(<span class="literal">'Zapatec.Widget.callMethod('</span> + <span class="reserved">this</span>.id +
+   <span class="literal">',"mouseOver","'</span> + item.id + <span class="literal">'")'</span>);
+  item.onmouseout = new Function(<span class="literal">'Zapatec.Widget.callMethod('</span> + <span class="reserved">this</span>.id +
+   <span class="literal">',"mouseOut","'</span> + item.id + <span class="literal">'")'</span>);
+  item.onclick = Zapatec.Menu.onItemClick;
+  Zapatec.Utils.addClass(item, <span class="literal">"zpMenu-item-"</span> + (intItem % 2==1 ? <span class="literal">"odd"</span> : <span class="literal">"even"</span>));
+
+  <span class="comment">// Parse li</span>
+  var fc, subtree = false, accessKey = null;
+
+  var getAccessKey = <span class="reserved">function</span>(node) {
+    var key = null;
+    <span class="reserved">if</span> (node.nodeType == 1) { <span class="comment">// ELEMENT_NODE</span>
+      <span class="reserved">if</span> (key = node.getAttribute(<span class="literal">'accesskey'</span>)) {
+        <span class="comment">// Remove accesskey attribute because it will cause duplicate onclick event</span>
+        node.removeAttribute(<span class="literal">'accesskey'</span>, false);
+        <span class="reserved">if</span> (/^[a-z0-9]$/i.test(key)) {
+          <span class="reserved">return</span> key;
+        } <span class="reserved">else</span> {
+          key = null;
+        }
+      }
+      var childNodes = node.childNodes;
+      <span class="reserved">for</span> (var i = 0; i &lt; childNodes.length; i++) {
+        <span class="reserved">if</span> (key = getAccessKey(childNodes[i])) {
+          break;
+        }
+      }
+    } <span class="reserved">else</span> <span class="reserved">if</span> (node.nodeType == 3) { <span class="comment">// TEXT_NODE</span>
+      var label = node.data.replace(/(^\s+|\s+$)/g, <span class="literal">''</span>);
+      <span class="reserved">if</span> (/_([a-z0-9])/i.test(label)) {
+        label = label.replace(/_([a-z0-9])/i, <span class="literal">'&lt;span style="text-decoration:underline"&gt;$1&lt;/span&gt;'</span>);
+        key = RegExp.$1;
+        var span = Zapatec.Utils.createElement(<span class="literal">"span"</span>);
+        span.innerHTML = label;
+        var objParentNode = node.parentNode;
+        objParentNode.insertBefore(span, node);
+        objParentNode.removeChild(node);
+      }
+    }
+    <span class="reserved">return</span> key;
+  };
+
+  <span class="reserved">while</span> (fc = li.firstChild) {
+    <span class="reserved">if</span> (fc.nodeType == 1 &amp;&amp; (/^[ou]l$/i.test(fc.tagName.toLowerCase()))) {
+      <span class="comment">// Subtree</span>
+      <span class="reserved">if</span> (!subtree) {
+        <span class="reserved">this</span>.item_addIcon(item, null);
+        var np = Zapatec.Utils.createElement(<span class="literal">"div"</span>, objContainer);
+        <span class="comment">// The following to be able to position menu at the bottom right corner</span>
+        <span class="comment">// of the screen without appearing of scrollbars</span>
+        <span class="comment">// Also Opera zIndex requires absolute positioning</span>
+        np.style.position = <span class="literal">'absolute'</span>;
+        <span class="reserved">if</span> (!<span class="reserved">this</span>.config.triggerEvent) {
+          np.style.left = <span class="literal">'-9999px'</span>;
+          np.style.top = <span class="literal">'-9999px'</span>;
+        }
+        <span class="reserved">if</span> (<span class="reserved">this</span>.config.dropShadow) {
+          var ds = np.__zp_dropshadow = Zapatec.Utils.createElement(<span class="literal">'div'</span>);
+          objContainer.insertBefore(ds, np);
+          ds.style.position = <span class="literal">'absolute'</span>;
+          <span class="reserved">if</span> (!<span class="reserved">this</span>.config.triggerEvent) {
+            ds.style.left = <span class="literal">'-9999px'</span>;
+            ds.style.top = <span class="literal">'-9999px'</span>;
+          }
+          ds.style.backgroundColor = <span class="literal">'#000'</span>;
+          <span class="reserved">if</span> (window.opera) {
+            ds.style.backgroundColor = <span class="literal">'#666'</span>; <span class="comment">// opacity doesn't work in Opera</span>
+          } <span class="reserved">else</span> {
+            ds.style.filter = <span class="literal">'alpha(opacity='</span> + <span class="reserved">this</span>.config.dropShadow + <span class="literal">')'</span>;
+          }
+          ds.style.opacity = <span class="reserved">this</span>.config.dropShadow / 100;
+        }
+        np.__zp_item = id;
+        np.__zp_menu = Zapatec.Utils.createElement(<span class="literal">"div"</span>, np);
+        np.__zp_menu.className = <span class="literal">'zpMenu'</span> + (fc.className ? <span class="literal">' '</span> + fc.className : <span class="literal">''</span>);
+        np.className = <span class="literal">'zpMenuContainer'</span>;
+        np.__zp_menu.onmouseover = Zapatec.Menu.onItemMouseOver;
+        np.__zp_menu.onmouseout = Zapatec.Menu.onItemMouseOut;
+        <span class="reserved">if</span> (next_li) {
+          np.__zp_menu.className += <span class="literal">" zpMenu-lined"</span>;
+        }
+        <span class="comment">// Will hold sub-menu icons</span>
+        np.__zp_icons = [];
+        <span class="comment">// Build submenu</span>
+        item.__zp_subtree = <span class="reserved">this</span>.createTree(fc, np, level+1);
+        <span class="comment">// Align captions in the sub-menu</span>
+        <span class="reserved">if</span> (np.__zp_icons.length) {
+          <span class="reserved">this</span>.alignSubMenu(np);
+        }
+        <span class="comment">// We don't need this any more</span>
+        np.__zp_icons = null;
+        item.className += <span class="literal">" zpMenu-item-collapsed"</span>;
+        <span class="reserved">this</span>.toggleItem(id);
+        <span class="reserved">if</span> (/(^|\s)selected(\s|$)/i.test(li.className)) {
+          <span class="reserved">this</span>.selectedItem = item;
+        }
+        subtree = true;
+      }
+      li.removeChild(fc);
+    } <span class="reserved">else</span> {
+      <span class="comment">// Label</span>
+      li.removeChild(fc);
+      <span class="reserved">if</span> (fc.nodeType == 3) {
+        <span class="comment">// Text</span>
+        var label = fc.data.replace(/(^\s+|\s+$)/g, <span class="literal">''</span>);
+        <span class="reserved">if</span> (label) {
+          var strInnerHtml = label;
+          <span class="reserved">if</span> (Zapatec.Menu.onDocumentKeyDown &amp;&amp; !accessKey) {
+            strInnerHtml = label.replace(/_([a-z0-9])/i,
+             <span class="literal">'&lt;span style="text-decoration:underline"&gt;$1&lt;/span&gt;'</span>);
+            accessKey = RegExp.$1;
+          }
+          var span = Zapatec.Utils.createElement(<span class="literal">"span"</span>, td);
+          <span class="comment">// IE 6.0 doesn't escape correctly plain text when it is assigned to</span>
+          <span class="comment">// innerHTML property</span>
+          <span class="reserved">if</span> (strInnerHtml == label) {
+            <span class="comment">// Plain text</span>
+            span.appendChild(document.createTextNode(strInnerHtml));
+          } <span class="reserved">else</span> {
+            <span class="comment">// Contains &lt;span&gt;</span>
+            span.innerHTML = strInnerHtml;
+          }
+          <span class="reserved">if</span> (title) span.setAttribute(<span class="literal">'title'</span>, title); <span class="comment">// To make title work in Opera</span>
+        }
+      } <span class="reserved">else</span> <span class="reserved">if</span> (fc.tagName) { <span class="comment">// Skip comments, etc.</span>
+        <span class="reserved">if</span> (fc.tagName.toLowerCase() == <span class="literal">'img'</span>) {
+          <span class="comment">// Icon</span>
+          <span class="reserved">this</span>.item_addIcon(item, fc);
+          has_icon = true;
+          <span class="reserved">if</span> (objContainer.__zp_icons instanceof Array) {
+            objContainer.__zp_icons.push(fc);
+          }
+        } <span class="reserved">else</span> {
+          <span class="comment">// Other stuff</span>
+          <span class="reserved">if</span> (fc.tagName.toLowerCase() == <span class="literal">'hr'</span>) {
+            Zapatec.Utils.addClass(item, <span class="literal">"zpMenu-item-hr"</span>);
+          } <span class="reserved">else</span> <span class="reserved">if</span> (fc.tagName.toLowerCase() == <span class="literal">'input'</span> &amp;&amp; fc.getAttribute(<span class="literal">'type'</span>) == <span class="literal">'checkbox'</span>) {
+            fc.onmousedown = <span class="reserved">function</span>(ev){
+              <span class="reserved">if</span> (<span class="reserved">this</span>.checked) {
+                <span class="reserved">this</span>.checked = false;
+              } <span class="reserved">else</span> {
+                <span class="reserved">this</span>.checked = true;
+              }
+              <span class="reserved">return</span> Zapatec.Utils.stopEvent(ev);
+            };
+          } <span class="reserved">else</span> <span class="reserved">if</span> (fc.tagName.toLowerCase() == <span class="literal">'input'</span> &amp;&amp; fc.getAttribute(<span class="literal">'type'</span>) == <span class="literal">'radio'</span>) {
+            fc.onmousedown = <span class="reserved">function</span>(ev){
+              <span class="reserved">this</span>.checked = true;
+              <span class="reserved">return</span> Zapatec.Utils.stopEvent(ev);
+            };
+          } <span class="reserved">else</span> <span class="reserved">if</span> (fc.tagName.toLowerCase() == <span class="literal">'a'</span>) {
+            <span class="reserved">if</span> (Zapatec.Menu.onDocumentKeyDown &amp;&amp; !accessKey) {
+              accessKey = getAccessKey(fc);
+            }
+            <span class="comment">// Tab navigation support</span>
+            fc.tabIndex = ++Zapatec.Menu.tabIndex;
+            fc.onfocus = Zapatec.Menu.onItemMouseOver;
+            fc.onblur = Zapatec.Menu.onItemMouseOut;
+          }
+          td.appendChild(fc);
+          <span class="reserved">if</span> (title &amp;&amp; !fc.getAttribute(<span class="literal">'title'</span>)) fc.setAttribute(<span class="literal">'title'</span>, title); <span class="comment">// To make title work in Opera</span>
+        }
+      }
+    }
+  }
+
+  <span class="reserved">if</span> (accessKey) {
+    accessKey = accessKey.toUpperCase().charCodeAt(0);
+    objContainer.__zp_keymap[accessKey] = item;
+  }
+
+  <span class="reserved">if</span> (!has_icon &amp;&amp; !/zpMenu-item-hr/i.test(item.className))
+    <span class="comment">// No icons for this non-HR menu item</span>
+    <span class="reserved">if</span> (<span class="reserved">this</span>.config.defaultIcons)
+      <span class="comment">// Use user config setting defaultIcons className</span>
+      <span class="reserved">this</span>.item_addDefaultIcon(item, <span class="reserved">this</span>.config.defaultIcons);
+    <span class="reserved">else</span>
+      <span class="comment">// No icons default className</span>
+      <span class="reserved">this</span>.item_addDefaultIcon(item, <span class="literal">"zpMenu-noicon"</span>);
+
+  <span class="reserved">return</span> item;
+};
+
+<span class="comment">/**
+ * Aligns captions in the sub-menu.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} objSubMenu Sub-menu container
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.alignSubMenu = <span class="reserved">function</span>(objSubMenu) {
+  <span class="comment">// Get icons array</span>
+  var arrIcons = objSubMenu.__zp_icons;
+  var arrIconsSrc = [];
+  <span class="reserved">for</span> (var iIcon = 0; iIcon &lt; arrIcons.length; iIcon++) {
+    arrIconsSrc.push(arrIcons[iIcon].src);
+  }
+  <span class="comment">// Wait while icons are loading</span>
+  var objMenu = <span class="reserved">this</span>;
+  Zapatec.Transport.preloadImages({
+    urls: arrIconsSrc,
+    onLoad: <span class="reserved">function</span>() {
+      <span class="comment">// Get max icon width</span>
+      var iMaxIconWidth = 0;
+      <span class="reserved">for</span> (var iIcon = 0; iIcon &lt; arrIcons.length; iIcon++) {
+        var iIconWidth = arrIcons[iIcon].width;
+        <span class="reserved">if</span> (iIconWidth &amp;&amp; iMaxIconWidth &lt; iIconWidth) {
+          iMaxIconWidth = iIconWidth;
+        }
+      }
+      <span class="comment">// Get stylesheet</span>
+      <span class="reserved">if</span> (!objMenu.styleSheet) {
+        objMenu.styleSheet = new Zapatec.StyleSheet();
+      }
+      <span class="comment">// Set caption width</span>
+      objMenu.styleSheet.addRule(<span class="literal">'#'</span> + objSubMenu.id + <span class="literal">' .icon div'</span>,
+       <span class="literal">'width:'</span> + iMaxIconWidth + <span class="literal">'px'</span>);
+    },
+    timeout: 60000 <span class="comment">// 1 minute</span>
+  });
+};
+
+<span class="comment">/**
+ * &lt;pre&gt;
+ * Adds a TD element having a certain class attribute which helps having a tree
+ * containing icons without defining IMG tags for each item. The class name will
+ * be "tgb icon className" (where "className" is the specified parameter).
+ * Further, in order to customize the icons, one should add some CSS lines like
+ * this:
+ *
+ * div.tree-item td.customIcon {
+ *   background: url("themes/img/fs/document2.png") no-repeat 0 50%;
+ * }
+ * div.tree-item-expanded td.customIcon {
+ *   background: url("themes/img/fs/folder-open.png") no-repeat 0 50%;
+ * }
+ * div.tree-item-collapsed td.customIcon {
+ *   background: url("themes/img/fs/folder.png") no-repeat 0 50%;
+ * }
+ *
+ * As you can see, it's very easy to customize the default icons for a normal
+ * tree item (that has no subtrees) or for expanded or collapsed items.  For
+ * the above example to work, one has to pass { defaultIcons: "customIcon" } in
+ * the tree configuration object.
+ *
+ * This function does nothing if the className parameter has a false logical
+ * value (i.e. is null).
+ * &lt;/pre&gt;
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} item DIV element holding the item
+ * <span class="attrib">@param</span> {string} className Additional class name
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.item_addDefaultIcon = <span class="reserved">function</span>(item, className) {
+  <span class="reserved">if</span> (!className) {
+    <span class="reserved">return</span>;
+  }
+  var last_td = item.firstChild.firstChild.firstChild.lastChild, td;
+  var td = Zapatec.Utils.createElement(<span class="literal">"td"</span>);
+  td.className = <span class="literal">"tgb icon "</span> + className;
+  last_td.parentNode.insertBefore(td, last_td);
+  <span class="comment">// To be able to set table cell width</span>
+  Zapatec.Utils.createElement(<span class="literal">'div'</span>, td);
+};
+
+<span class="comment">/**
+ * If img is passed, adds it as an icon for the given item. If not passed,
+ * creates a "+/-" button for the given item.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} item DIV holding the item elements
+ * <span class="attrib">@param</span> {object} img Optional. IMG element; normally one found in the &lt;LI&gt;
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.item_addIcon = <span class="reserved">function</span>(item, img) {
+  var last_td = item.firstChild.firstChild.firstChild;
+  var td;
+  last_td = img ? last_td.lastChild : last_td.firstChild;
+  <span class="reserved">if</span> (!img || !item.__zp_icon) {
+    td = Zapatec.Utils.createElement(<span class="literal">"td"</span>);
+    td.className = <span class="literal">"tgb "</span> + (img ? <span class="literal">"icon"</span> : <span class="literal">"minus"</span>);
+    last_td.parentNode.insertBefore(td, last_td);
+  } <span class="reserved">else</span> {
+    td = item.__zp_icon;
+    img.style.display = <span class="literal">"none"</span>;
+  }
+  <span class="comment">// To be able to set table cell width</span>
+  var objDiv = Zapatec.Utils.createElement(<span class="literal">'div'</span>, td);
+  <span class="reserved">if</span> (!img) {
+    objDiv.innerHTML = <span class="literal">"&amp;nbsp;"</span>;
+    item.className += <span class="literal">" zpMenu-item-more"</span>;
+    item.__zp_state = true; <span class="comment">// expanded</span>
+    item.__zp_expand = td;
+  } <span class="reserved">else</span> {
+    objDiv.appendChild(img);
+    item.__zp_icon = td;
+  }
+};
+
+<span class="comment">/**
+ * This function gets called from a global event handler when some item was
+ * clicked.  It selects the item and toggles it if it has a subtree (expands or
+ * collapses it).
+ *
+ * <span class="attrib">@param</span> {string} item_id Item ID
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.itemClicked = <span class="reserved">function</span>(item_id) {
+  <span class="reserved">this</span>.selectedItem = <span class="reserved">this</span>.toggleItem(item_id);
+  <span class="reserved">if</span> (<span class="reserved">this</span>.selectedItem) {
+    Zapatec.Menu.selectItem(<span class="reserved">this</span>.selectedItem);
+  }
+  <span class="reserved">this</span>.onItemSelect(item_id);
+};
+
+<span class="comment">/**
+ * This function toggles an item if the state parameter is not specified.
+ * If state is true then it expands the item, and if state is false
+ * then it collapses the item.
+ *
+ * <span class="attrib">@param</span> {string} item_id Item ID
+ * <span class="attrib">@param</span> {boolean} state Optional. Desired item state
+ * <span class="attrib">@return</span> Item element if found, null otherwise
+ * <span class="attrib">@type</span> object
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.toggleItem = <span class="reserved">function</span>(item_id, state) {
+  <span class="reserved">if</span> (!item_id) {
+    <span class="reserved">return</span> null;
+  }
+  <span class="reserved">if</span> (<span class="reserved">this</span>.selectedItem) {
+    Zapatec.Menu.unselectItem(<span class="reserved">this</span>.selectedItem);
+  }
+  var item = <span class="reserved">this</span>.items[item_id];
+  <span class="reserved">if</span> (typeof state == <span class="literal">"undefined"</span>)
+    state = !item.__zp_state;
+  <span class="reserved">if</span> (state != item.__zp_state) {
+    var subtree = <span class="reserved">this</span>._getTree(item.__zp_subtree, <span class="reserved">this</span>.creating_now);
+    <span class="reserved">if</span> (subtree) {
+      <span class="reserved">if</span> (state) {
+        <span class="comment">// Unselect all children</span>
+        <span class="reserved">for</span> (var i = 0; i &lt; subtree.__zp_items.length; i++) {
+          var subItemID = subtree.__zp_items[i];
+          Zapatec.Menu.unselectItem(<span class="reserved">this</span>.items[subItemID]);
+          <span class="reserved">if</span> (subtree.__zp_activeitem == subItemID) subtree.__zp_activeitem = <span class="literal">''</span>;
+        }
+      } <span class="reserved">else</span> {
+        <span class="comment">// Recursively hide all children</span>
+        <span class="reserved">for</span> (var i = 0; i &lt; subtree.__zp_items.length; i++) {
+          var subItemID = subtree.__zp_items[i];
+          <span class="reserved">this</span>.toggleItem(subItemID, state);
+          Zapatec.Menu.unselectItem(<span class="reserved">this</span>.items[subItemID]);
+          <span class="reserved">if</span> (subtree.__zp_activeitem == subItemID) subtree.__zp_activeitem = <span class="literal">''</span>;
+        }
+      }
+      <span class="reserved">this</span>.treeSetDisplay(subtree, state);
+      Zapatec.Utils.removeClass(item, <span class="literal">"zpMenu-item-expanded"</span>);
+      Zapatec.Utils.removeClass(item, <span class="literal">"zpMenu-item-collapsed"</span>);
+      Zapatec.Utils.addClass(item, state ? <span class="literal">"zpMenu-item-expanded"</span> : <span class="literal">"zpMenu-item-collapsed"</span>);
+    }
+    var img = item.__zp_expand;
+    <span class="reserved">if</span> (img)
+      img.className = <span class="literal">"tgb "</span> + (state ? <span class="literal">"minus"</span> : <span class="literal">"plus"</span>);
+    item.__zp_state = state;
+    <span class="reserved">if</span> (state) {
+      var hideItems = <span class="reserved">this</span>._getTree(item.__zp_parent).__zp_items;
+      <span class="reserved">for</span> (var i = hideItems.length; --i &gt;= 0;) {
+        <span class="reserved">if</span> (hideItems[i] != item_id &amp;&amp; hideItems[i].__zp_state) {
+          <span class="reserved">this</span>.toggleItem(hideItems[i], false);
+        }
+      }
+    }
+  }
+  <span class="reserved">return</span> item;
+};
+
+<span class="comment">/**
+ * Call this function to collapse all items in the tree.
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.collapseAll = <span class="reserved">function</span>() {
+  <span class="reserved">for</span> (var i in <span class="reserved">this</span>.trees)
+    <span class="reserved">this</span>.toggleItem(<span class="reserved">this</span>._getTree(i).__zp_item, false);
+};
+
+<span class="comment">/**
+ * Call this function to expand all items in the tree.
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.expandAll = <span class="reserved">function</span>() {
+  <span class="reserved">for</span> (var i in <span class="reserved">this</span>.trees)
+    <span class="reserved">this</span>.toggleItem(<span class="reserved">this</span>._getTree(i).__zp_item, true);
+};
+
+<span class="comment">/**
+ * Call this function to toggle all items in the tree.
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.toggleAll = <span class="reserved">function</span>() {
+  <span class="reserved">for</span> (var i in <span class="reserved">this</span>.trees)
+    <span class="reserved">this</span>.toggleItem(<span class="reserved">this</span>._getTree(i).__zp_item);
+};
+
+<span class="comment">/**
+ * Call this function to synchronize the tree to a given item.  This means that
+ * all items will be collapsed, except that item and the full path to it.
+ *
+ * <span class="attrib">@param</span> {string} item_id ID of the item to sync to
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.sync = <span class="reserved">function</span>(item_id) {
+  var item = <span class="reserved">this</span>.items[item_id];
+  <span class="reserved">if</span> (item) {
+    <span class="reserved">this</span>.collapseAll();
+    <span class="reserved">this</span>.selectedItem = item;
+    var path = [];
+    <span class="reserved">while</span> (item.__zp_parent) {
+      path[path.length] = item;
+      var parentItem = <span class="reserved">this</span>._getTree(item.__zp_parent);
+      <span class="reserved">if</span> (parentItem.__zp_item) {
+        item = <span class="reserved">this</span>.items[parentItem.__zp_item];
+      } <span class="reserved">else</span> {
+        break;
+      }
+    }
+    <span class="reserved">for</span> (var ii = path.length; --ii &gt;= 0;) {
+      var item = path[ii];
+      var item_id = item.__zp_item;
+      <span class="reserved">this</span>.itemShow(item_id);
+      var menu = <span class="reserved">this</span>._getTree(item.__zp_parent);
+      menu.__zp_activeitem = item_id;
+      Zapatec.Menu.selectItem(item);
+    }
+  }
+};
+
+<span class="comment">/**
+ * Highlight specified item and all higher items.
+ *
+ * <span class="attrib">@param</span> {string} item_id ID of the item
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.highlightPath = <span class="reserved">function</span>(item_id) {
+  <span class="comment">// Put this menu on top</span>
+  <span class="reserved">this</span>.putOnTop();
+  <span class="comment">// Highlight path</span>
+  var item = <span class="reserved">this</span>.items[item_id];
+  <span class="reserved">if</span> (item) {
+    var a = [];
+    <span class="reserved">while</span> (item.__zp_parent) {
+      a[a.length] = item;
+      var pt = <span class="reserved">this</span>._getTree(item.__zp_parent);
+      <span class="reserved">if</span> (pt.__zp_item)
+        item = <span class="reserved">this</span>.items[pt.__zp_item];
+      <span class="reserved">else</span>
+        break;
+    }
+    <span class="reserved">for</span> (var i = a.length; --i &gt;= 0;) {
+      Zapatec.Utils.addClass(a[i], <span class="literal">'zpMenuPath'</span>);
+    }
+  }
+};
+
+<span class="comment">/**
+ * Destroys the tree.  Removes all elements.  Does not destroy the Zapatec.Menu
+ * object itself (actually there's no proper way in JavaScript to do that).
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.destroy = <span class="reserved">function</span>() {
+  var p = <span class="reserved">this</span>.top_parent;
+  p.parentNode.removeChild(p);
+};
+
+<span class="comment">/**
+ * Used when "dynamic initialization" is on. Retrieves a reference to a subtree
+ * if already created, or creates it if it wasn't yet and dont_call is false
+ * (returns null in that case).
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {string} tree_id ID of the subtree
+ * <span class="attrib">@param</span> {boolean} dont_call Pass true here if you don't want the subtree to be
+ * created
+ * <span class="attrib">@return</span> Reference to the tree if it was found or created, null otherwise
+ * <span class="attrib">@type</span> object
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>._getTree = <span class="reserved">function</span>(tree_id, dont_call) {
+  var tree = <span class="reserved">this</span>.trees[tree_id];
+  <span class="reserved">if</span> (typeof tree == <span class="literal">"function"</span>) {
+    <span class="reserved">if</span> (dont_call) {
+      tree = null;
+    } <span class="reserved">else</span> {
+      tree();
+      tree = <span class="reserved">this</span>.trees[tree_id];
+      <span class="reserved">this</span>.treeSetDisplay(tree, false);
+    }
+  }
+  <span class="reserved">return</span> tree;
+};
+
+<span class="comment">// CUSTOMIZABLE EVENT HANDLERS; default action is "do nothing"</span>
+
+<span class="comment">/**
+ * Third party code can override this member in order to add an event handler
+ * that gets called each time a tree item is selected.  It receives a single
+ * string parameter containing the item ID.
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.onItemSelect = <span class="reserved">function</span>() {};
+
+<span class="comment">// GLOBAL EVENT HANDLERS (to workaround the stupid Microsoft memory leak)</span>
+
+<span class="comment">/**
+ * Global event handler that gets called when a tree item is clicked.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.onItemToggle = <span class="reserved">function</span>() {
+  var item = <span class="reserved">this</span>;
+  var body = document.body;
+  <span class="reserved">while</span> (item &amp;&amp; item !=  body &amp;&amp; !/zpMenu-item/.test(item.className))
+    item = item.parentNode;
+  Zapatec.Menu.all[item.__zp_tree].itemClicked(item.__zp_item);
+};
+
+<span class="comment">/**
+ * Sets additional trigger object or several trigger objects at once.
+ *
+ * <span class="attrib">@param</span> {object} triggerObject One of the following:
+ * &lt;pre&gt;
+ * element id [string] ||
+ * HTMLElement object [object] ||
+ * [
+ *   element id [string] ||
+ *   HTMLElement object [object] ||
+ *   {
+ *     triggerObject: element id [string] || HTMLElement object [object],
+ *     triggerArgs: any args that should be available to external scripts [any]
+ *   },
+ *   ...
+ * ]
+ * &lt;/pre&gt;
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.setTriggerObject = <span class="reserved">function</span>(triggerObject) {
+  <span class="reserved">if</span> (!<span class="reserved">this</span>.config.triggerEvent) {
+    <span class="comment">// This method is applicable only to trigger menus</span>
+    <span class="reserved">return</span>;
+  }
+  var strTriggerEvent = <span class="reserved">this</span>.config.triggerEvent;
+  var strTriggerKey = <span class="reserved">this</span>.config.triggerKey;
+  <span class="comment">// Get trigger objects</span>
+  var objTriggerElements = [];
+  <span class="reserved">if</span> (triggerObject) {
+    <span class="reserved">if</span> (typeof triggerObject == <span class="literal">'string'</span>) {
+      <span class="comment">// Element id</span>
+      var objElement = document.getElementById(triggerObject);
+      <span class="reserved">if</span> (objElement) {
+        objTriggerElements.push({
+          triggerObject: objElement,
+          triggerArgs: null
+        });
+      }
+    } <span class="reserved">else</span> <span class="reserved">if</span> (typeof triggerObject == <span class="literal">'object'</span>) {
+      <span class="reserved">if</span> (triggerObject == window.document ||
+       typeof triggerObject.length == <span class="literal">'undefined'</span>) {
+        <span class="comment">// HTMLElement object</span>
+        objTriggerElements.push({
+          triggerObject: triggerObject,
+          triggerArgs: null
+        });
+      } <span class="reserved">else</span> {
+        <span class="comment">// Array</span>
+        <span class="reserved">for</span> (var iObj = 0; iObj &lt; triggerObject.length; iObj++) {
+          var triggerElement = triggerObject[iObj];
+          <span class="reserved">if</span> (triggerElement) {
+            <span class="reserved">if</span> (typeof triggerElement == <span class="literal">'string'</span>) {
+              <span class="comment">// Element id</span>
+              var objElement = document.getElementById(triggerElement);
+              <span class="reserved">if</span> (objElement) {
+                objTriggerElements.push({
+                  triggerObject: objElement,
+                  triggerArgs: null
+                });
+              }
+            } <span class="reserved">else</span> <span class="reserved">if</span> (typeof triggerElement == <span class="literal">'object'</span>) {
+              <span class="reserved">if</span> (typeof triggerElement.triggerObject != <span class="literal">'undefined'</span> &amp;&amp;
+               typeof triggerElement.triggerArgs != <span class="literal">'undefined'</span>) {
+                <span class="comment">// Arguments passed</span>
+                <span class="reserved">if</span> (typeof triggerElement.triggerObject == <span class="literal">'string'</span>) {
+                  <span class="comment">// Element id</span>
+                  var objElement =
+                   document.getElementById(triggerElement.triggerObject);
+                  <span class="reserved">if</span> (objElement) {
+                    objTriggerElements.push({
+                      triggerObject: objElement,
+                      triggerArgs: triggerElement.triggerArgs
+                    });
+                  }
+                } <span class="reserved">else</span> <span class="reserved">if</span> (typeof triggerElement.triggerObject == <span class="literal">'object'</span>) {
+                  <span class="comment">// HTMLElement object</span>
+                  objTriggerElements.push(triggerElement);
+                }
+              } <span class="reserved">else</span> {
+                <span class="comment">// HTMLElement object</span>
+                objTriggerElements.push({
+                  triggerObject: triggerElement,
+                  triggerArgs: null
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  <span class="reserved">if</span> (objTriggerElements.length == 0) {
+    <span class="comment">// Nothing to set up</span>
+    <span class="reserved">return</span>;
+  }
+  <span class="comment">// Set up trigger objects</span>
+  var objMenu = <span class="reserved">this</span>;
+  <span class="reserved">if</span> (strTriggerEvent == <span class="literal">'mousedown'</span> || strTriggerEvent == <span class="literal">'mouseup'</span> ||
+   strTriggerEvent == <span class="literal">'click'</span>) {
+    <span class="comment">// Mouse trigger</span>
+    <span class="comment">// Need this function to be able to set current trigger object and arguments</span>
+    var funcSetupTriggerEvent = <span class="reserved">function</span>(objTriggerElement) {
+    	<span class="reserved">if</span> (strTriggerKey == null || strTriggerKey == <span class="literal">"right"</span> || strTriggerKey == <span class="literal">"both"</span>){
+	      objTriggerElement.triggerObject.oncontextmenu = <span class="reserved">function</span>() {<span class="reserved">return</span> false};
+      }
+      Zapatec.Utils.addEvent(objTriggerElement.triggerObject, <span class="literal">'mouseup'</span>,
+        <span class="reserved">function</span>(objEvent) {
+          objEvent || (objEvent = window.event);
+          <span class="comment">// Get mouse position</span>
+          var objMousePos = Zapatec.Utils.getMousePos(objEvent);
+          <span class="comment">// Get mouse button</span>
+          var button;
+          <span class="reserved">if</span> (objEvent.button) {
+            button = objEvent.button;
+          } <span class="reserved">else</span> {
+            button = objEvent.which;
+          }
+          <span class="reserved">if</span> (window.opera) {
+            <span class="comment">// Button 1 is used for both showing and hiding menu in Opera</span>
+            <span class="comment">// because Opera doesn't allow to disable context menu</span>
+            <span class="reserved">if</span> (button == 1 &amp;&amp; objMenu.top_parent.style.display == <span class="literal">'none'</span>) {
+              setTimeout(<span class="reserved">function</span>() {
+                <span class="comment">// Set current trigger object</span>
+                objMenu.triggerObject = objTriggerElement.triggerObject;
+                <span class="comment">// Set arguments received from current trigger object</span>
+                objMenu.triggerArgs = objTriggerElement.triggerArgs;
+                <span class="comment">// Show menu at mouse position</span>
+                objMenu.popupMenu(objMousePos.pageX, objMousePos.pageY);
+              }, 100);
+              <span class="reserved">return</span> Zapatec.Utils.stopEvent(objEvent);
+            }
+          } <span class="reserved">else</span> {
+            <span class="comment">// In Safari Meta (Alt) Key + left click is used because it doesn't</span>
+            <span class="comment">// react on right mouse button</span>
+            <span class="reserved">if</span> (strTriggerKey == <span class="literal">'both'</span> ||
+             (strTriggerKey == <span class="literal">'left'</span> &amp;&amp; button == 1) ||
+             ((!strTriggerKey || strTriggerKey == <span class="literal">'right'</span>) &amp;&amp;
+              (button &gt; 1 || objEvent.metaKey))) {
+              setTimeout(<span class="reserved">function</span>() {
+                <span class="comment">// Set current trigger object</span>
+                objMenu.triggerObject = objTriggerElement.triggerObject;
+                <span class="comment">// Set arguments received from current trigger object</span>
+                objMenu.triggerArgs = objTriggerElement.triggerArgs;
+                <span class="comment">// Show menu at mouse position</span>
+                objMenu.popupMenu(objMousePos.pageX, objMousePos.pageY);
+              }, 100);
+              Zapatec.Utils.stopEvent(objEvent);
+              <span class="comment">// Safari bug workaround</span>
+              objEvent.returnValue = true;
+              <span class="reserved">return</span> false;
+            }
+          }
+        }
+      );
+    };
+    <span class="reserved">for</span> (var iEl = 0; iEl &lt; objTriggerElements.length; iEl++) {
+      funcSetupTriggerEvent(objTriggerElements[iEl]);
+    }
+    <span class="comment">// Disable context menu</span>
+    <span class="comment">// window.document.oncontextmenu = function() {return false};</span>
+  } <span class="reserved">else</span> <span class="reserved">if</span> (strTriggerEvent == <span class="literal">'keydown'</span> || strTriggerEvent == <span class="literal">'keyup'</span> ||
+   strTriggerEvent == <span class="literal">'keypress'</span>) {
+    <span class="comment">// Keyboard trigger</span>
+    <span class="comment">// Need this function to be able to set current trigger object and arguments</span>
+    var funcSetupTriggerEvent = <span class="reserved">function</span>(objTriggerElement) {
+      Zapatec.Utils.addEvent(objTriggerElement.triggerObject, <span class="literal">'keydown'</span>,
+        <span class="reserved">function</span>(objEvent) {
+          objEvent || (objEvent = window.event);
+          <span class="reserved">if</span> (objEvent.keyCode == strTriggerKey) {
+            <span class="comment">// Set current trigger object</span>
+            objMenu.triggerObject = objTriggerElement.triggerObject;
+            <span class="comment">// Set arguments received from current trigger object</span>
+            objMenu.triggerArgs = objTriggerElement.triggerArgs;
+            <span class="comment">// Show menu</span>
+            objMenu.popupMenu();
+            <span class="reserved">return</span> Zapatec.Utils.stopEvent(objEvent);
+          }
+        }
+      );
+    };
+    <span class="reserved">for</span> (var iEl = 0; iEl &lt; objTriggerElements.length; iEl++) {
+      funcSetupTriggerEvent(objTriggerElements[iEl])
+    }
+  }
+};
+
+<span class="comment">//Constants</span>
+Zapatec.Menu.MOUSEOUT = 0;
+Zapatec.Menu.MOUSEOVER = 1;
+Zapatec.Menu.CLICK = 2;
+
+<span class="comment">/**
+ * Collection of animations (function references).
+ * These are called to progressively style the DOM elements as menus show
+ * and hide. They do not have to set item visibility, but may want to set DOM
+ * properties like clipping, opacity and position to create custom effects.
+ *
+ * <span class="attrib">@param</span> {object} ref HTMLElement object that contains the menu items
+ * <span class="attrib">@param</span> {number} counter Animation progress value, from 0 (start) to 100 (end)
+ */</span>
+Zapatec.Menu.animations = {};
+
+Zapatec.Menu.animations.fade = <span class="reserved">function</span>(ref, counter) {
+  var f = ref.filters, done = (counter==100);
+  <span class="reserved">if</span> (f) {
+    <span class="reserved">if</span> (!done &amp;&amp; ref.style.filter.indexOf(<span class="literal">"alpha"</span>) == -1) {
+      ref.style.filter += <span class="literal">' alpha(opacity='</span> + counter + <span class="literal">')'</span>;
+    }
+    <span class="reserved">else</span> <span class="reserved">if</span> (f.length &amp;&amp; f.alpha) with (f.alpha) {
+      <span class="reserved">if</span> (done) enabled = false;
+      <span class="reserved">else</span> { opacity = counter; enabled=true }
+    }
+  }
+  <span class="reserved">else</span> {
+    ref.style.opacity = ref.style.MozOpacity = counter/100.1;
+  }
+};
+
+Zapatec.Menu.animations.slide = <span class="reserved">function</span>(ref, counter) {
+  <span class="reserved">if</span> (counter != 100) {
+    var cP = Math.pow(Math.sin(Math.PI * counter / 200), 0.75);
+    <span class="reserved">if</span> (typeof ref.__zp_origmargintop == <span class="literal">'undefined'</span>) {
+      ref.__zp_origmargintop = ref.style.marginTop;
+    }
+    ref.style.marginTop = <span class="literal">'-'</span> + parseInt(ref.offsetHeight * (1 - cP)) + <span class="literal">'px'</span>;
+    ref.style.clip = <span class="literal">'rect('</span> + parseInt(ref.offsetHeight * (1 - cP)) + <span class="literal">'px,'</span> +
+     ref.offsetWidth + <span class="literal">'px,'</span> + ref.offsetHeight + <span class="literal">'px,0)'</span>;
+  } <span class="reserved">else</span> {
+    <span class="reserved">if</span> (typeof ref.__zp_origmargintop != <span class="literal">'undefined'</span>) {
+      ref.style.marginTop = ref.__zp_origmargintop;
+    }
+    try {
+      ref.style.clip = <span class="literal">''</span>;
+    } catch (objException) {
+      <span class="comment">// IE 6.0</span>
+      ref.style.clip = <span class="literal">'rect(auto,auto,auto,0)'</span>;
+    }
+  }
+};
+
+Zapatec.Menu.animations.glide = <span class="reserved">function</span>(ref, counter) {
+  <span class="reserved">if</span> (counter != 100) {
+    var cP = Math.pow(Math.sin(Math.PI * counter / 200), 0.75);
+    ref.style.clip = <span class="literal">'rect(0,'</span> + ref.offsetWidth + <span class="literal">'px,'</span> +
+     parseInt(ref.offsetHeight * cP) + <span class="literal">'px,0)'</span>;
+  } <span class="reserved">else</span> {
+    try {
+      ref.style.clip = <span class="literal">''</span>;
+    } catch (objException) {
+      <span class="comment">// IE 6.0</span>
+      ref.style.clip = <span class="literal">'rect(0,auto,auto,0)'</span>;
+    }
+  }
+};
+
+Zapatec.Menu.animations.wipe = <span class="reserved">function</span>(ref, counter) {
+  <span class="reserved">if</span> (counter != 100) {
+    ref.style.clip = <span class="literal">'rect(0,'</span> + parseInt(ref.offsetWidth * (counter / 100)) +
+     <span class="literal">'px,'</span> + parseInt(ref.offsetHeight * (counter / 100)) + <span class="literal">'px,0)'</span>;
+  } <span class="reserved">else</span> {
+    try {
+      ref.style.clip = <span class="literal">''</span>;
+    } catch (objException) {
+      <span class="comment">// IE 6.0</span>
+      ref.style.clip = <span class="literal">'rect(0,auto,auto,0)'</span>;
+    }
+  }
+};
+
+Zapatec.Menu.animations.unfurl = <span class="reserved">function</span>(ref, counter) {
+  <span class="reserved">if</span> (counter &lt;= 50) {
+    ref.style.clip = <span class="literal">'rect(0,'</span> + parseInt(ref.offsetWidth * (counter / 50)) +
+     <span class="literal">'px,10px,0)'</span>;
+  } <span class="reserved">else</span> <span class="reserved">if</span> (counter &lt; 100) {
+    ref.style.clip =  <span class="literal">'rect(0,'</span> + ref.offsetWidth + <span class="literal">'px,'</span> +
+     parseInt(ref.offsetHeight * ((counter - 50) / 50)) + <span class="literal">'px,0)'</span>;
+  } <span class="reserved">else</span> {
+    try {
+      ref.style.clip = <span class="literal">''</span>;
+    } catch (objException) {
+      <span class="comment">// IE 6.0</span>
+      ref.style.clip = <span class="literal">'rect(0,auto,auto,0)'</span>;
+    }
+  }
+};
+
+<span class="comment">/**
+ * Called with the name of an animation (in the Zapatec.Menu.animations[] array)
+ * to apply that animation to this menu object.
+ *
+ * <span class="attrib">@param</span> {string} animation Name of the animation
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.addAnimation = <span class="reserved">function</span>(animation) {
+ <span class="reserved">this</span>.animations[<span class="reserved">this</span>.animations.length] = Zapatec.Menu.animations[animation];
+};
+
+<span class="comment">/**
+ * Sets the display/visibility of a specified menu, calling defined animation
+ * functions and repeatedly calling itself.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} menu HTMLElement object
+ * <span class="attrib">@param</span> {boolean} show True shows, false hides
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.treeSetDisplay = <span class="reserved">function</span>(menu, show) {
+  <span class="comment">// First pass on menu creation: just hide.</span>
+  <span class="reserved">if</span> (!menu.__zp_initialized) {
+    menu.style.visibility = <span class="literal">'hidden'</span>;
+    menu.style.left = <span class="literal">'-9999px'</span>;
+    menu.style.top = <span class="literal">'-9999px'</span>;
+    <span class="reserved">if</span> (menu.__zp_dropshadow) {
+      menu.__zp_dropshadow.style.visibility = <span class="literal">'hidden'</span>;
+      menu.__zp_dropshadow.style.left = <span class="literal">'-9999px'</span>;
+      menu.__zp_dropshadow.style.top = <span class="literal">'-9999px'</span>;
+    }
+    menu.__zp_initialized = true;
+    <span class="reserved">return</span>;
+  }
+
+  var treeId = menu.__zp_tree || menu.__zp_menu.firstChild.__zp_tree;
+  var tree;
+  <span class="reserved">if</span> (treeId) {
+    tree = Zapatec.Menu.all[treeId];
+  }
+  <span class="reserved">if</span> (!tree) {
+    <span class="reserved">return</span>;
+  }
+  <span class="reserved">if</span> (tree.animations.length == 0) {
+    <span class="reserved">if</span> (show) {
+      menu.style.visibility = <span class="literal">'inherit'</span>;
+      <span class="reserved">if</span> (menu.__zp_dropshadow) {
+        menu.__zp_dropshadow.style.visibility = <span class="literal">'inherit'</span>;
+      }
+    } <span class="reserved">else</span> {
+      menu.style.visibility = <span class="literal">'hidden'</span>;
+      menu.style.left = <span class="literal">'-9999px'</span>;
+      menu.style.top = <span class="literal">'-9999px'</span>;
+      <span class="reserved">if</span> (menu.__zp_dropshadow) {
+        menu.__zp_dropshadow.style.visibility = <span class="literal">'hidden'</span>;
+        menu.__zp_dropshadow.style.left = <span class="literal">'-9999px'</span>;
+        menu.__zp_dropshadow.style.top = <span class="literal">'-9999px'</span>;
+      }
+    }
+    <span class="reserved">return</span>;
+  }
+
+  <span class="comment">// Otherwise animate.</span>
+  menu.__zp_anim_timer |= 0;
+  clearTimeout(menu.__zp_anim_timer);
+  menu.__zp_anim_counter |= 0;
+
+  <span class="reserved">if</span> (show &amp;&amp; !menu.__zp_anim_counter) {
+    menu.style.visibility = <span class="literal">'inherit'</span>;
+    <span class="reserved">if</span> (menu.__zp_dropshadow) {
+      menu.__zp_dropshadow.style.visibility = <span class="literal">'inherit'</span>;
+    }
+  }
+
+  <span class="reserved">for</span> (var ii = 0; ii &lt; tree.animations.length; ii++) {
+    tree.animations[ii](menu, menu.__zp_anim_counter);
+    <span class="reserved">if</span> (menu.__zp_dropshadow
+     &amp;&amp; tree.animations[ii] != Zapatec.Menu.animations.fade) {
+      tree.animations[ii](menu.__zp_dropshadow, menu.__zp_anim_counter);
+    }
+  }
+
+  <span class="comment">// Iterate</span>
+  <span class="reserved">if</span> (!(show &amp;&amp; menu.__zp_anim_counter == 100)) { <span class="comment">// Prevent infinite loop</span>
+    menu.__zp_anim_counter += tree.config.animSpeed * (show ? 1 : -1);
+    <span class="reserved">if</span> (menu.__zp_anim_counter &gt; 100) {
+      <span class="comment">// Correction to show menu properly</span>
+      menu.__zp_anim_counter = 100;
+      menu.__zp_anim_timer = setTimeout(<span class="reserved">function</span>() {
+        tree.treeSetDisplay(menu, show);
+      }, 50);
+    } <span class="reserved">else</span> <span class="reserved">if</span> (menu.__zp_anim_counter &lt;= 0) {
+      <span class="comment">// Hide menu</span>
+      menu.__zp_anim_counter = 0;
+      menu.style.visibility = <span class="literal">'hidden'</span>;
+      menu.style.left = <span class="literal">'-9999px'</span>;
+      menu.style.top = <span class="literal">'-9999px'</span>;
+      <span class="reserved">if</span> (menu.__zp_dropshadow) {
+        menu.__zp_dropshadow.style.visibility = <span class="literal">'hidden'</span>;
+        menu.__zp_dropshadow.style.left = <span class="literal">'-9999px'</span>;
+        menu.__zp_dropshadow.style.top = <span class="literal">'-9999px'</span>;
+      }
+    } <span class="reserved">else</span> {
+      <span class="comment">// Next iteration</span>
+      menu.__zp_anim_timer = setTimeout(<span class="reserved">function</span>() {
+        tree.treeSetDisplay(menu, show);
+      }, 50);
+    }
+  }
+};
+
+<span class="comment">/**
+ * Attached to mouseover event of top menu items.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.mouseOver = <span class="reserved">function</span>(sId) {
+  <span class="comment">// Get item</span>
+  var oEl = document.getElementById(sId);
+  <span class="reserved">if</span> (oEl) {
+    <span class="comment">// Get tree</span>
+    var oTree = oEl.__zp_tree || oEl.firstChild.__zp_tree;
+    <span class="reserved">if</span> (oTree) {
+      oTree = Zapatec.Menu.all[oTree];
+      <span class="reserved">if</span> (oTree) {
+        oTree.itemMouseHandler(oEl.__zp_item, Zapatec.Menu.MOUSEOVER);
+      }
+    }
+  }
+};
+
+<span class="comment">/**
+ * Global event handler that gets called when a menu item is moused over.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.onItemMouseOver = <span class="reserved">function</span>() {
+  <span class="comment">// Loop up the DOM, dispatch event to correct source item.</span>
+  var item = <span class="reserved">this</span>, tree = null;
+  <span class="reserved">while</span> (item &amp;&amp; item != document.body) {
+    var t_id = item.__zp_tree || item.firstChild.__zp_tree;
+    <span class="reserved">if</span> (t_id) tree = Zapatec.Menu.all[t_id];
+    var itemClassName = item.className;
+    <span class="reserved">if</span> (/zpMenu-item/.test(itemClassName) &amp;&amp; !/zpMenu-item-hr/.test(itemClassName)) {
+      tree.itemMouseHandler(item.__zp_item, Zapatec.Menu.MOUSEOVER);
+    }
+    item = tree &amp;&amp; item.__zp_treeid ?
+      tree.items[item.__zp_item] : item.parentNode;
+  }
+  <span class="reserved">return</span> true; <span class="comment">// To make tooltips work in Opera</span>
+};
+
+<span class="comment">/**
+ * Attached to mouseout event of top menu items.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.mouseOut = <span class="reserved">function</span>(sId) {
+  <span class="comment">// Get item</span>
+  var oEl = document.getElementById(sId);
+  <span class="reserved">if</span> (oEl) {
+    <span class="comment">// Get tree</span>
+    var oTree = oEl.__zp_tree || oEl.firstChild.__zp_tree;
+    <span class="reserved">if</span> (oTree) {
+      oTree = Zapatec.Menu.all[oTree];
+      <span class="reserved">if</span> (oTree) {
+        oTree.itemMouseHandler(oEl.__zp_item, Zapatec.Menu.MOUSEOUT);
+      }
+    }
+  }
+};
+
+<span class="comment">/**
+ * Global event handler that gets called when a menu item is moused out.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.onItemMouseOut = <span class="reserved">function</span>() {
+  var item = <span class="reserved">this</span>, tree = null;
+  <span class="reserved">while</span> (item &amp;&amp; item != document.body) {
+    var t_id = item.__zp_tree || item.firstChild.__zp_tree;
+    <span class="reserved">if</span> (t_id) tree = Zapatec.Menu.all[t_id];
+    var itemClassName = item.className;
+    <span class="reserved">if</span> (
+     /zpMenu-item/.test(itemClassName) &amp;&amp; !/zpMenu-item-hr/.test(itemClassName) &amp;&amp;
+     <span class="comment">// Top item was not unselected with Esc button</span>
+     !(/zpMenu-level-1/.test(itemClassName) &amp;&amp; !/zpMenu-item-selected/.test(itemClassName))
+    ) {
+      tree.itemMouseHandler(item.__zp_item, Zapatec.Menu.MOUSEOUT);
+    }
+    item = tree &amp;&amp; item.__zp_treeid ?
+      tree.items[item.__zp_item] : item.parentNode;
+  }
+  <span class="reserved">return</span> false;
+};
+
+<span class="comment">/**
+ * Global event handler that gets called when a menu item is clicked, to make
+ * the whole item clickable.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.onItemClick = <span class="reserved">function</span>(ev) {
+  var item = <span class="reserved">this</span>;
+	
+	  <span class="reserved">if</span> (!/zpMenuDisabled/.test(item.className)) {
+	    <span class="reserved">while</span> (item &amp;&amp; item != document.body) {
+	      <span class="reserved">if</span> (item.nodeName &amp;&amp; item.nodeName.toLowerCase() == <span class="literal">'a'</span>) {
+	        <span class="reserved">return</span> true;
+	      }
+	      <span class="reserved">if</span> (/zpMenu-item/.test(item.className)) {
+	        var objMenu = Zapatec.Menu.all[item.__zp_tree];
+			<span class="reserved">if</span> (!objMenu.config.preventDoubleCall){
+				objMenu.called = false;
+			}
+			<span class="reserved">if</span> (!objMenu.called) {
+		        <span class="comment">// Show-on-click mode</span>
+		        <span class="reserved">if</span> (objMenu.config.onClick &amp;&amp; item.__zp_subtree &amp;&amp;
+		          (/zpMenu-top/.test(objMenu.trees[item.__zp_parent].className))) {
+		            objMenu.itemMouseHandler(item.__zp_item, Zapatec.Menu.CLICK);
+		            <span class="reserved">return</span> Zapatec.Utils.stopEvent(ev);
+		        }
+		        <span class="comment">// Otherwise navigate the page</span>
+		        var itemLink = item.getElementsByTagName(<span class="literal">'a'</span>);
+		        var itemInput = item.getElementsByTagName(<span class="literal">'input'</span>);
+		        var itemSelect = item.getElementsByTagName(<span class="literal">'select'</span>);
+		        <span class="reserved">if</span> (itemLink &amp;&amp; itemLink.item(0)
+		         &amp;&amp; itemLink.item(0).getAttribute(<span class="literal">'href'</span>)
+		         &amp;&amp; itemLink.item(0).getAttribute(<span class="literal">'href'</span>) != <span class="literal">'#'</span>
+		         &amp;&amp; itemLink.item(0).getAttribute(<span class="literal">'href'</span>) != window.document.location.href + <span class="literal">'#'</span>
+		         &amp;&amp; itemLink.item(0).getAttribute(<span class="literal">'href'</span>) != <span class="literal">'javascript:void(0)'</span>) {
+		          var href = itemLink.item(0).getAttribute(<span class="literal">'href'</span>);
+		          var target = itemLink.item(0).getAttribute(<span class="literal">'target'</span>);
+		          <span class="reserved">if</span> (objMenu.config.rememberPath || objMenu.config.pathCookie != <span class="literal">'__zp_item'</span>) {
+		            <span class="comment">// Save path in cookies</span>
+		            Zapatec.Utils.writeCookie(objMenu.config.pathCookie, item.__zp_item);
+		          }
+		          try {
+								ev || (ev = window.event);
+		            <span class="reserved">if</span> (target) {
+		              window.open(href, target);
+								} <span class="reserved">else</span> <span class="reserved">if</span> (ev &amp;&amp; ev.shiftKey) {
+		              window.open(href, <span class="literal">"_blank"</span>);
+		            } <span class="reserved">else</span> {
+		              window.location.href = href; <span class="comment">// may raise exception in Mozilla</span>
+		            }
+		          } catch(e) {};
+		          <span class="reserved">if</span> (objMenu.config.triggerEvent) {
+		            objMenu.hideMenu();
+		          } <span class="reserved">else</span> {
+		            <span class="comment">// Collapse all submenus</span>
+		            objMenu.collapseAll();
+		            <span class="comment">// Unselect top item</span>
+		            <span class="reserved">while</span> (Zapatec.Menu.selectedItemsStack.length) {
+		              var oTopItem = Zapatec.Menu.selectedItemsStack.pop();
+		              oTopItem.onmouseout();
+		            }
+		          }
+		        } <span class="reserved">else</span> <span class="reserved">if</span> (itemInput &amp;&amp; itemInput.item(0)) {
+		          var inp = itemInput.item(0);
+		          var type = inp.getAttribute(<span class="literal">'type'</span>);
+		          <span class="reserved">if</span> (type == <span class="literal">'checkbox'</span>) {
+		            <span class="reserved">if</span> (inp.checked) {
+		              inp.checked = false;
+		            } <span class="reserved">else</span> {
+		              inp.checked = true;
+		            }
+		          } <span class="reserved">else</span> <span class="reserved">if</span> (type == <span class="literal">'radio'</span>) {
+		            inp.checked = true;
+		          }
+		        } <span class="reserved">else</span> <span class="reserved">if</span> (itemSelect &amp;&amp; itemSelect.item(0)) {
+		          <span class="reserved">return</span> true; <span class="comment">// Pass through</span>
+		        } <span class="reserved">else</span> <span class="reserved">if</span> (item.__zp_subtree) {
+		          objMenu.itemMouseHandler(item.__zp_item, Zapatec.Menu.CLICK);
+		        } <span class="reserved">else</span> <span class="reserved">if</span> (objMenu.config.triggerEvent) {
+		          objMenu.hideMenu();
+		        }
+				<span class="reserved">if</span> (objMenu.config.preventDoubleCall){
+					objMenu.called = true;
+				}
+		        <span class="reserved">return</span> Zapatec.Utils.stopEvent(ev);
+			}
+	      }
+	      item = item.parentNode;
+	    }
+	  }
+  <span class="reserved">return</span> false;
+};
+
+<span class="comment">/**
+ * Called from the mouse over/out event handlers to process the mouse event and
+ * correctly manage timers.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {string} item_id Item ID
+ * <span class="attrib">@param</span> {number} type 0 = mouseout, 1 = mouseover, 2 = click
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.itemMouseHandler = <span class="reserved">function</span>(item_id, type) {
+  <span class="reserved">if</span> (type) {
+    <span class="comment">// Mouseover or click</span>
+    <span class="comment">// Put this menu on top</span>
+    <span class="reserved">this</span>.putOnTop();
+  } <span class="reserved">else</span> {
+    <span class="comment">// Mouseout</span>
+    <span class="comment">// Restore zIndex</span>
+    <span class="reserved">this</span>.restoreZIndex();
+  }
+
+  var item = <span class="reserved">this</span>.items[item_id];
+  <span class="reserved">if</span> (!item) <span class="reserved">return</span>;
+  var menu = <span class="reserved">this</span>._getTree(item.__zp_parent);
+
+  <span class="comment">// If slide animation and Opera, skip mouseover and mouseout events while</span>
+  <span class="comment">// animating subtree because current item may receive fake mouseout even when</span>
+  <span class="comment">// mouse pointer is over it and loose cursor. Other solution is needed because</span>
+  <span class="comment">// submenu may stay expanded due to missing real mouseout event.</span>
+  <span class="reserved">if</span> (type &lt; 2 &amp;&amp; window.opera &amp;&amp; <span class="reserved">this</span>.config.slide) {
+    var objSubtree = <span class="reserved">this</span>._getTree(item.__zp_subtree);
+    <span class="reserved">if</span> (objSubtree &amp;&amp; objSubtree.__zp_anim_counter &amp;&amp;
+     objSubtree.__zp_anim_counter &lt; 100) {
+      <span class="reserved">return</span>;
+    }
+  }
+
+  <span class="comment">// Record an item as lit/shown, and dim/hide any previously lit items.</span>
+  <span class="reserved">if</span> (menu &amp;&amp; menu.__zp_activeitem != item_id) {
+    <span class="reserved">if</span> (menu.__zp_activeitem) {
+      var lastItem = <span class="reserved">this</span>.items[menu.__zp_activeitem];
+      clearTimeout(lastItem.__zp_dimtimer);
+      clearTimeout(lastItem.__zp_mousetimer);
+      var objMenu = <span class="reserved">this</span>;
+      setTimeout(<span class="reserved">function</span>() {
+        Zapatec.Menu.unselectItem(lastItem);
+        <span class="comment">// Threading bugfix for some menus remaining visible.</span>
+        <span class="reserved">if</span> (lastItem.__zp_state) objMenu.toggleItem(lastItem.__zp_item, false);
+        Zapatec.Menu.selectItem(item);
+      }, 0);
+    } <span class="reserved">else</span> {
+      setTimeout(<span class="reserved">function</span>() {
+        Zapatec.Menu.selectItem(item);
+      }, 0);
+    }
+    menu.__zp_activeitem = item_id;
+  }
+
+  <span class="comment">// Set a timer to dim this item when the whole menu hides.</span>
+  clearTimeout(item.__zp_dimtimer);
+  <span class="reserved">if</span> (type == Zapatec.Menu.MOUSEOUT) {
+    item.__zp_dimtimer = setTimeout(<span class="reserved">function</span>() {
+      Zapatec.Menu.unselectItem(item);
+      <span class="reserved">if</span> (menu.__zp_activeitem == item_id) menu.__zp_activeitem = <span class="literal">''</span>;
+    }, <span class="reserved">this</span>.config.hideDelay);
+  }
+
+  <span class="comment">// Stop any pending show/hide action.</span>
+  clearTimeout(item.__zp_mousetimer);
+  <span class="comment">// Check if this is a click on a first-level menu item.</span>
+  <span class="reserved">if</span> (<span class="reserved">this</span>.config.onClick &amp;&amp; !<span class="reserved">this</span>.clickDone) {
+    <span class="reserved">if</span> (/zpMenu-top/.test(<span class="reserved">this</span>.trees[item.__zp_parent].className) &amp;&amp;
+      (type == Zapatec.Menu.MOUSEOVER)) <span class="reserved">return</span>;
+    <span class="comment">// Set the flag that enables further onmouseover activity.</span>
+    <span class="reserved">if</span> (type == Zapatec.Menu.CLICK) <span class="reserved">this</span>.clickDone = true;
+  }
+
+  <span class="comment">// Setup show/hide timers.</span>
+  <span class="reserved">if</span> (!item.__zp_state &amp;&amp; type) {
+    item.__zp_mousetimer = setTimeout(<span class="literal">'Zapatec.Menu.all["'</span> +
+      item.__zp_tree + <span class="literal">'"].itemShow("'</span> + item.__zp_item + <span class="literal">'")'</span>,
+      (<span class="reserved">this</span>.config.showDelay || 1));
+  } <span class="reserved">else</span> <span class="reserved">if</span> (item.__zp_state &amp;&amp; !type) {
+    item.__zp_mousetimer = setTimeout(<span class="literal">'Zapatec.Menu.all["'</span> +
+      item.__zp_tree + <span class="literal">'"].itemHide("'</span> + item.__zp_item + <span class="literal">'")'</span>,
+      (<span class="reserved">this</span>.config.hideDelay || 1));
+  }
+};
+
+<span class="comment">/**
+ * Called from the itemMouseHandler() after a timeout; positions and shows
+ * a designated item's branch of the menu.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {string} item_id Item ID to show
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.itemShow = <span class="reserved">function</span>(item_id) {
+  var item = <span class="reserved">this</span>.items[item_id];
+  <span class="reserved">if</span> (/zpMenuDisabled/.test(item.className)) {
+    <span class="reserved">return</span>;
+  }
+  var subMenu = <span class="reserved">this</span>._getTree(item.__zp_subtree);
+  <span class="reserved">if</span> (!subMenu) {
+    <span class="reserved">return</span>;
+  }
+  var parMenu = <span class="reserved">this</span>._getTree(item.__zp_parent);
+  <span class="comment">// Setting visible here works around MSIE bug where</span>
+  <span class="comment">// offsetWidth/Height are initially zero.</span>
+  <span class="reserved">if</span> (!subMenu.offsetHeight) {
+    subMenu.style.visibility = <span class="literal">'visible'</span>;
+  }
+
+  <span class="comment">// In Opera z-index is not inherited by default</span>
+  <span class="reserved">if</span> (subMenu.style.zIndex === <span class="literal">''</span>) {
+    subMenu.style.zIndex = <span class="literal">'inherit'</span>;
+  }
+
+  var subMenuBorderLeft, subMenuBorderTop;
+  <span class="reserved">if</span> (typeof subMenu.clientLeft != <span class="literal">'undefined'</span>) { <span class="comment">// IE &amp; Opera</span>
+    subMenuBorderLeft = subMenu.clientLeft;
+    subMenuBorderTop = subMenu.clientTop;
+  } <span class="reserved">else</span> { <span class="comment">// Mozilla</span>
+    subMenuBorderLeft = (subMenu.offsetWidth - subMenu.clientWidth) / 2;
+    subMenuBorderTop = (subMenu.offsetHeight - subMenu.clientHeight) / 2;
+  }
+
+  var fc = subMenu.firstChild;
+  var subMenuMarginLeft = fc.offsetLeft;
+  var subMenuMarginTop = fc.offsetTop;
+
+  <span class="comment">// Acquire browser dimensions</span>
+  var scrollX = window.pageXOffset || document.body.scrollLeft ||
+    document.documentElement.scrollLeft || 0;
+  var scrollY = window.pageYOffset || document.body.scrollTop ||
+    document.documentElement.scrollTop || 0;
+  var objWindowSize = Zapatec.Utils.getWindowSize();
+  var winW = objWindowSize.width;
+  var winH = objWindowSize.height;
+
+  <span class="comment">// Adjust sub-menu width and height</span>
+  <span class="reserved">if</span> (!subMenu.style.width || !subMenu.style.height) {
+    var maxHeight = winH - 7;
+    <span class="reserved">if</span> (subMenu.offsetHeight &gt; maxHeight) {
+      <span class="comment">// Need scrolling</span>
+      <span class="comment">// iSubMenuOffsetHeight is needed because IE 5.0 delays with offsetHeight</span>
+      <span class="comment">// calculation after element is changed</span>
+      var iSubMenuOffsetHeight = subMenu.offsetHeight;
+      fc.__zp_first = fc.firstChild;
+      fc.__zp_last = fc.lastChild;
+      var objUp = Zapatec.Utils.createElement(<span class="literal">"div"</span>);
+      objUp.__zp_tree = fc.firstChild.__zp_tree;
+      objUp.className = <span class="literal">'zpMenuScrollUpInactive'</span>;
+      objUp.__zp_mouseover = false;
+      objUp.__zp_timer = null;
+      <span class="comment">// Up arrow handler</span>
+      var funcMoveUp = <span class="reserved">function</span>() {
+        var objContainer = objUp.parentNode;
+        var iContainerHeight = objContainer.parentNode.clientHeight;
+        var objUpArrow = objContainer.firstChild;
+        var objDownArrow = objContainer.lastChild;
+        <span class="comment">// Check if we can move up</span>
+        <span class="reserved">if</span> (objContainer.__zp_first.previousSibling != objUpArrow) {
+          <span class="comment">// Show first item</span>
+          <span class="reserved">if</span> (objContainer.__zp_first.style.height) {
+            <span class="comment">// Partly hidden</span>
+            objContainer.__zp_first.style.height = <span class="literal">''</span>;
+            objContainer.__zp_first.style.overflow = <span class="literal">''</span>;
+          } <span class="reserved">else</span> {
+            <span class="comment">// Completely hidden</span>
+            objContainer.__zp_first = objContainer.__zp_first.previousSibling;
+            objContainer.__zp_first.style.display = <span class="literal">'block'</span>;
+          }
+          var iNewHeight = objContainer.offsetHeight;
+          <span class="comment">// Hide last item</span>
+          <span class="reserved">while</span> (iNewHeight &gt; iContainerHeight) {
+            objContainer.__zp_last.style.display = <span class="literal">'none'</span>;
+            <span class="reserved">if</span> (objContainer.__zp_last.style.height) {
+              objContainer.__zp_last.style.height = <span class="literal">''</span>;
+              objContainer.__zp_last.style.overflow = <span class="literal">''</span>;
+            }
+            objContainer.__zp_last = objContainer.__zp_last.previousSibling;
+            iNewHeight = objContainer.offsetHeight;
+          }
+          <span class="comment">// Correct height</span>
+          var iSpace = iContainerHeight - iNewHeight;
+          <span class="reserved">if</span> (iSpace &gt; 0) {
+            <span class="comment">// Return last item back and cut it off</span>
+            objContainer.__zp_last = objContainer.__zp_last.nextSibling;
+            objContainer.__zp_last.style.display = <span class="literal">'block'</span>;
+            var iItemHeight = iSpace - (objContainer.__zp_last.offsetHeight -
+             objContainer.__zp_last.clientHeight);
+            <span class="reserved">if</span> (iItemHeight &gt;= 0) {
+              objContainer.__zp_last.style.display = <span class="literal">'none'</span>;
+              objContainer.__zp_last.style.height = iItemHeight + <span class="literal">'px'</span>;
+              objContainer.__zp_last.style.overflow = <span class="literal">'hidden'</span>;
+              objContainer.__zp_last.style.display = <span class="literal">'block'</span>;
+              iNewHeight = objContainer.offsetHeight;
+              <span class="comment">// Check height</span>
+              <span class="reserved">if</span> (iNewHeight != iContainerHeight) {
+                <span class="comment">// May be non-standards-compliant mode</span>
+                iItemHeight -= iNewHeight - iContainerHeight;
+                <span class="reserved">if</span> (iItemHeight &gt; 0) {
+                  objContainer.__zp_last.style.height = iItemHeight + <span class="literal">'px'</span>;
+                } <span class="reserved">else</span> {
+                  objContainer.__zp_last.style.display = <span class="literal">'none'</span>;
+                  objContainer.__zp_last.style.height = <span class="literal">''</span>;
+                  objContainer.__zp_last.style.overflow = <span class="literal">''</span>;
+                  objContainer.__zp_last = objContainer.__zp_last.previousSibling;
+                }
+              }
+            } <span class="reserved">else</span> {
+              objContainer.__zp_last.style.display = <span class="literal">'none'</span>;
+              objContainer.__zp_last = objContainer.__zp_last.previousSibling;
+            }
+          }
+          <span class="comment">// Show down arrow</span>
+          objDownArrow.className = <span class="literal">'zpMenuScrollDownActive'</span>;
+          <span class="comment">// Hide up arrow if needed</span>
+          <span class="reserved">if</span> (objContainer.__zp_first.previousSibling == objUpArrow) {
+            objUpArrow.className = <span class="literal">'zpMenuScrollUpInactive'</span>;
+          }
+          <span class="comment">// Continue scrolling</span>
+          <span class="reserved">if</span> (objUp.__zp_timer) clearTimeout(objUp.__zp_timer);
+          <span class="reserved">if</span> (objUp.__zp_mouseover) {
+            objUp.__zp_timer = setTimeout(funcMoveUp, 50);
+          }
+        }
+        <span class="reserved">return</span> true;
+      };
+      objUp.onmouseover = <span class="reserved">function</span>() {
+        objUp.__zp_mouseover = true;
+        <span class="reserved">return</span> funcMoveUp();
+      }
+      objUp.onmouseout = <span class="reserved">function</span>() {
+        objUp.__zp_mouseover = false;
+        <span class="reserved">if</span> (objUp.__zp_timer) {
+          clearTimeout(objUp.__zp_timer);
+          objUp.__zp_timer = null;
+        }
+      };
+      fc.insertBefore(objUp, fc.firstChild);
+      var objDown = Zapatec.Utils.createElement(<span class="literal">"div"</span>);
+      objDown.__zp_tree = fc.firstChild.__zp_tree;
+      objDown.className = <span class="literal">'zpMenuScrollDownActive'</span>;
+      objDown.__zp_mouseover = false;
+      objDown.__zp_timer = null;
+      <span class="comment">// Down arrow handler</span>
+      var funcMoveDown = <span class="reserved">function</span>() {
+        var objContainer = objDown.parentNode;
+        var iContainerHeight = objContainer.parentNode.clientHeight;
+        var objUpArrow = objContainer.firstChild;
+        var objDownArrow = objContainer.lastChild;
+        <span class="comment">// Check if we can move down</span>
+        <span class="reserved">if</span> (objContainer.__zp_last.nextSibling != objDownArrow) {
+          <span class="comment">// Show last item</span>
+          <span class="reserved">if</span> (objContainer.__zp_last.style.height) {
+            <span class="comment">// Partly hidden</span>
+            objContainer.__zp_last.style.height = <span class="literal">''</span>;
+            objContainer.__zp_last.style.overflow = <span class="literal">''</span>;
+          } <span class="reserved">else</span> {
+            <span class="comment">// Completely hidden</span>
+            objContainer.__zp_last = objContainer.__zp_last.nextSibling;
+            objContainer.__zp_last.style.display = <span class="literal">'block'</span>;
+          }
+          var iNewHeight = objContainer.offsetHeight;
+          <span class="comment">// Hide first item</span>
+          <span class="reserved">while</span> (iNewHeight &gt; iContainerHeight) {
+            objContainer.__zp_first.style.display = <span class="literal">'none'</span>;
+            <span class="reserved">if</span> (objContainer.__zp_first.style.height) {
+              objContainer.__zp_first.style.height = <span class="literal">''</span>;
+              objContainer.__zp_first.style.overflow = <span class="literal">''</span>;
+            }
+            objContainer.__zp_first = objContainer.__zp_first.nextSibling;
+            iNewHeight = objContainer.offsetHeight;
+          }
+          <span class="comment">// Correct height</span>
+          var iSpace = iContainerHeight - iNewHeight;
+          <span class="reserved">if</span> (iSpace &gt; 0) {
+            <span class="comment">// Return first item back and cut it off</span>
+            objContainer.__zp_first = objContainer.__zp_first.previousSibling;
+            objContainer.__zp_first.style.display = <span class="literal">'block'</span>;
+            var iItemHeight = iSpace - (objContainer.__zp_first.offsetHeight -
+             objContainer.__zp_first.clientHeight);
+            <span class="reserved">if</span> (iItemHeight &gt; 0) {
+              objContainer.__zp_first.style.display = <span class="literal">'none'</span>;
+              objContainer.__zp_first.style.height = iItemHeight + <span class="literal">'px'</span>;
+              objContainer.__zp_first.style.overflow = <span class="literal">'hidden'</span>;
+              objContainer.__zp_first.style.display = <span class="literal">'block'</span>;
+              iNewHeight = objContainer.offsetHeight;
+              <span class="comment">// Check height</span>
+              <span class="reserved">if</span> (iNewHeight != iContainerHeight) {
+                <span class="comment">// May be non-standards-compliant mode</span>
+                iItemHeight -= iNewHeight - iContainerHeight;
+                <span class="reserved">if</span> (iItemHeight &gt; 0) {
+                  objContainer.__zp_first.style.height = iItemHeight + <span class="literal">'px'</span>;
+                } <span class="reserved">else</span> {
+                  objContainer.__zp_first.style.display = <span class="literal">'none'</span>;
+                  objContainer.__zp_first.style.height = <span class="literal">''</span>;
+                  objContainer.__zp_first.style.overflow = <span class="literal">''</span>;
+                  objContainer.__zp_first = objContainer.__zp_first.nextSibling;
+                }
+              }
+            } <span class="reserved">else</span> {
+              objContainer.__zp_first.style.display = <span class="literal">'none'</span>;
+              objContainer.__zp_first = objContainer.__zp_first.nextSibling;
+            }
+          }
+          <span class="comment">// Show up arrow</span>
+          objUpArrow.className = <span class="literal">'zpMenuScrollUpActive'</span>;
+          <span class="comment">// Hide down arrow if needed</span>
+          <span class="reserved">if</span> (objContainer.__zp_last.nextSibling == objDownArrow) {
+            objDownArrow.className = <span class="literal">'zpMenuScrollDownInactive'</span>;
+          }
+          <span class="comment">// Continue scrolling</span>
+          <span class="reserved">if</span> (objDown.__zp_timer) clearTimeout(objDown.__zp_timer);
+          <span class="reserved">if</span> (objDown.__zp_mouseover) {
+            objDown.__zp_timer = setTimeout(funcMoveDown, 50);
+          }
+        }
+        <span class="reserved">return</span> true;
+      };
+      objDown.onmouseover = <span class="reserved">function</span>() {
+        objDown.__zp_mouseover = true;
+        <span class="reserved">return</span> funcMoveDown();
+      }
+      objDown.onmouseout = <span class="reserved">function</span>() {
+        objDown.__zp_mouseover = false;
+        <span class="reserved">if</span> (objDown.__zp_timer) {
+          clearTimeout(objDown.__zp_timer);
+          objDown.__zp_timer = null;
+        }
+      };
+      fc.appendChild(objDown);
+      var lc = fc.__zp_last;
+      iSubMenuOffsetHeight += objUp.offsetHeight + objDown.offsetHeight;
+      <span class="reserved">while</span> (iSubMenuOffsetHeight &gt; maxHeight) {
+        iSubMenuOffsetHeight -= lc.offsetHeight;
+        lc.style.display = <span class="literal">'none'</span>;
+        lc = lc.previousSibling;
+        fc.__zp_last = lc;
+      }
+    }
+    var width = fc.offsetWidth;
+    var height = fc.offsetHeight;
+    <span class="reserved">if</span> (typeof subMenu.clientLeft != <span class="literal">'undefined'</span> &amp;&amp; !window.opera &amp;&amp;
+     !(document.compatMode &amp;&amp; document.compatMode == <span class="literal">'CSS1Compat'</span>)) {
+      <span class="comment">// IE in non-standards-compliant mode</span>
+      width += subMenuBorderLeft * 2 + subMenuMarginLeft * 2;
+      height += subMenuBorderTop * 2 + subMenuMarginTop * 2;
+    }
+    subMenu.style.width = width + <span class="literal">'px'</span>;
+    subMenu.style.height = height + <span class="literal">'px'</span>;
+    <span class="reserved">if</span> (subMenu.__zp_dropshadow) {
+      subMenu.__zp_dropshadow.style.width = subMenu.offsetWidth + <span class="literal">'px'</span>;
+      subMenu.__zp_dropshadow.style.height = subMenu.offsetHeight + <span class="literal">'px'</span>;
+    }
+    fc.style.position = <span class="literal">'absolute'</span>;
+    fc.style.visibility = <span class="literal">'inherit'</span>;
+  }
+
+  <span class="comment">// Calculate new menu position &amp; check document boundaries.</span>
+  var newLeft = 0, newTop = 0;
+  var menuPos = Zapatec.Utils.getAbsolutePos(parMenu);
+  <span class="reserved">if</span> ((/zpMenu-top/.test(<span class="reserved">this</span>.trees[item.__zp_parent].className)) &amp;&amp; (!(<span class="reserved">this</span>.config.vertical))) {
+    <span class="comment">// Drop Down menus</span>
+    newLeft = item.offsetLeft;
+    newTop = item.offsetHeight;
+    <span class="comment">// Adjust menu direction if it will display outside visible area</span>
+    <span class="reserved">if</span> (menuPos.x + newLeft + subMenu.offsetWidth + subMenuMarginLeft + 7 &gt; scrollX + winW) {
+      newLeft += item.offsetWidth - subMenu.offsetWidth - subMenuMarginLeft;
+      <span class="reserved">if</span> (subMenu.__zp_dropshadow) newLeft -= 6;
+    } <span class="reserved">else</span> {
+      newLeft -= subMenuBorderLeft;
+    }
+    <span class="reserved">if</span> (menuPos.y + newTop + subMenu.offsetHeight + subMenuMarginTop + 7 &gt; scrollY + winH) {
+      newTop = -subMenu.offsetHeight;
+      <span class="reserved">if</span> (subMenu.__zp_dropshadow) newTop -= 5;
+    }
+  } <span class="reserved">else</span> {
+    <span class="comment">// Vertical menus</span>
+    newLeft = item.offsetWidth;
+    newTop = item.offsetTop;
+    <span class="comment">// Adjust menu direction if it will display outside visible area</span>
+    <span class="reserved">if</span> (menuPos.x + newLeft + subMenu.offsetWidth + subMenuMarginLeft + 7 &gt; scrollX + winW) {
+      newLeft = -subMenu.offsetWidth;
+      <span class="reserved">if</span> (subMenu.__zp_dropshadow) newLeft -= 5;
+    }
+    <span class="reserved">if</span> (menuPos.y + newTop + subMenu.offsetHeight + subMenuMarginTop + 7 &gt; scrollY + winH) {
+      newTop -= subMenu.offsetHeight - item.offsetHeight;
+      <span class="reserved">if</span> (subMenu.__zp_dropshadow) newTop -= 5;
+    } <span class="reserved">else</span> {
+      newTop -= subMenuBorderTop;
+    }
+  }
+  <span class="reserved">if</span> (menuPos.x + newLeft &lt; 0) {
+    newLeft = 0 - menuPos.x;
+  }
+  <span class="reserved">if</span> (menuPos.y + newTop &lt; 0) {
+    newTop = 0 - menuPos.y;
+  }
+  subMenu.style.left = newLeft + <span class="literal">'px'</span>;
+  subMenu.style.top = newTop + <span class="literal">'px'</span>;
+  <span class="reserved">if</span> (subMenu.__zp_dropshadow) {
+    subMenu.__zp_dropshadow.style.left = newLeft + 5 + <span class="literal">'px'</span>;
+    subMenu.__zp_dropshadow.style.top = newTop + 5 + <span class="literal">'px'</span>;
+  }
+
+  <span class="comment">// Apply MSIE 5.5+ Select Box fix last, so it corrects the dropshadow.</span>
+  <span class="reserved">if</span> (Zapatec.is_ie &amp;&amp; !Zapatec.is_ie5 &amp;&amp; !Zapatec.is_ie7) {
+    <span class="reserved">if</span> (!subMenu.__zp_wch) {
+      subMenu.__zp_wch = Zapatec.Utils.createWCH(subMenu);
+    }
+		<span class="reserved">if</span> (subMenu.__zp_wch) {
+	   	subMenu.__zp_wch.style.zIndex = -1;
+	    <span class="reserved">if</span> (<span class="reserved">this</span>.config.dropShadow) {
+	      Zapatec.Utils.setupWCH(subMenu.__zp_wch, -subMenuBorderLeft, -subMenuBorderTop, subMenu.offsetWidth + 6, subMenu.offsetHeight + 5);
+	    } <span class="reserved">else</span> {
+	      Zapatec.Utils.setupWCH(subMenu.__zp_wch, -subMenuBorderLeft, -subMenuBorderTop, subMenu.offsetWidth, subMenu.offsetHeight);
+	    }
+		}
+  }
+
+  <span class="reserved">this</span>.toggleItem(item_id, true);
+};
+
+<span class="comment">/**
+ * Called from the itemMouseHandler() after a timeout; hides a designated item's
+ * branch of the tree.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {string} item_id Item ID to hide
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.itemHide = <span class="reserved">function</span>(item_id) {
+  var item = <span class="reserved">this</span>.items[item_id];
+  var subMenu = <span class="reserved">this</span>._getTree(item.__zp_subtree);
+  var parMenu = <span class="reserved">this</span>._getTree(item.__zp_parent);
+  <span class="reserved">if</span> (subMenu) {
+    <span class="reserved">this</span>.toggleItem(item_id, false);
+    parMenu.__zp_activeitem = <span class="literal">''</span>;
+    subMenu.__zp_activeitem = <span class="literal">''</span>;
+    <span class="comment">// Go no further if some items are still expanded.</span>
+    <span class="reserved">for</span> (var i in <span class="reserved">this</span>.items) {
+      <span class="reserved">if</span> (<span class="reserved">this</span>.items[i].__zp_state) <span class="reserved">return</span>;
+    }
+    <span class="comment">// Another click is necessary to activate menu again.</span>
+    <span class="reserved">this</span>.clickDone = false;
+  }
+};
+
+<span class="comment">/*
+ * dndmove Drag'n'drop (move menu) functions
+ *
+ * Contains some functions that implement menu "drag'n'drop" facility which
+ * allows one to move the menu around the browser's view.
+ *
+ */</span>
+<span class="comment">//@{</span>
+
+<span class="comment">/**
+ * Starts dragging the element.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} ev Event object
+ * <span class="attrib">@param</span> {object} menu Zapatec.Menu object
+ * <span class="attrib">@return</span> Always true
+ * <span class="attrib">@type</span> boolean
+ */</span>
+Zapatec.Menu.dragStart = <span class="reserved">function</span> (ev, menu) {
+  ev || (ev = window.event);
+  <span class="reserved">if</span> (menu.dragging) {
+    <span class="reserved">return</span> true;
+  }
+  var rootMenu = menu.rootMenu;
+  <span class="reserved">if</span> (!(/(absolute|fixed)/).test(rootMenu.style.position)) {
+    rootMenu.style.position = <span class="literal">'absolute'</span>;
+    var pos = Zapatec.Utils.getAbsolutePos(rootMenu);
+    rootMenu.style.left = pos.x + <span class="literal">'px'</span>;
+    rootMenu.style.top = pos.y + <span class="literal">'px'</span>;
+  }
+  var testElm = ev.srcElement || ev.target;
+  <span class="reserved">while</span> (1) {
+    <span class="reserved">if</span> (testElm == rootMenu) break;
+    <span class="reserved">else</span> testElm = testElm.parentNode;
+    <span class="reserved">if</span> (!testElm) <span class="reserved">return</span> true;
+  }
+  menu.dragging = true;
+  var posX = ev.pageX || ev.clientX + window.document.body.scrollLeft || 0;
+  var posY = ev.pageY || ev.clientY + window.document.body.scrollTop || 0;
+  var L = parseInt(rootMenu.style.left) || 0;
+  var T = parseInt(rootMenu.style.top) || 0;
+  menu.xOffs = (posX - L);
+  menu.yOffs = (posY - T);
+  <span class="comment">// Unregister from scroll</span>
+  <span class="reserved">if</span> (menu.config.scrollWithWindow) {
+    Zapatec.ScrollWithWindow.unregister(menu.rootMenu);
+  }
+};
+
+<span class="comment">/**
+ * Called at mouseover and/or mousemove on document, this function repositions
+ * the menu according to the current mouse position.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} ev Event object
+ * <span class="attrib">@param</span> {object} menu Zapatec.Menu object
+ * <span class="attrib">@return</span> Always false
+ * <span class="attrib">@type</span> boolean
+ */</span>
+Zapatec.Menu.dragMove = <span class="reserved">function</span> (ev, menu) {
+  ev || (ev = window.event);
+  var rootMenu = menu.rootMenu;
+  <span class="reserved">if</span> (!(menu &amp;&amp; menu.dragging)) {
+    <span class="reserved">return</span> false;
+  }
+  var posX = ev.pageX || ev.clientX + window.document.body.scrollLeft || 0;
+  var posY = ev.pageY || ev.clientY + window.document.body.scrollTop || 0;
+  var st = rootMenu.style, L = posX - menu.xOffs, T = posY - menu.yOffs;
+  st.left = L + <span class="literal">"px"</span>;
+  st.top = T + <span class="literal">"px"</span>;
+  <span class="reserved">return</span> Zapatec.Utils.stopEvent(ev);
+};
+
+<span class="comment">/**
+ * Gets called when the drag and drop operation is finished; thus, at onmouseup
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} ev Event object
+ * <span class="attrib">@param</span> {object} menu Zapatec.Menu object
+ */</span>
+Zapatec.Menu.dragEnd = <span class="reserved">function</span> (ev, menu) {
+  <span class="reserved">if</span> (!menu) {
+    <span class="reserved">return</span> false;
+  }
+  <span class="reserved">if</span> (menu.dragging) {
+    menu.dragging = false;
+    <span class="comment">// Adjust menu position if it will display outside visible area</span>
+    var rootMenu = menu.rootMenu;
+    var st = rootMenu.style, L = parseInt(st.left), T = parseInt(st.top);
+    var scrollX = window.pageXOffset || document.body.scrollLeft ||
+      document.documentElement.scrollLeft || 0;
+    var scrollY = window.pageYOffset || document.body.scrollTop ||
+      document.documentElement.scrollTop || 0;
+    var objWindowSize = Zapatec.Utils.getWindowSize();
+    var winW = objWindowSize.width;
+    var winH = objWindowSize.height;
+    <span class="reserved">if</span> (L &lt; 0) {
+      st.left = <span class="literal">'0px'</span>;
+    } <span class="reserved">else</span> <span class="reserved">if</span> (L + rootMenu.offsetWidth &gt; scrollX + winW) {
+      st.left = scrollX + winW - rootMenu.offsetWidth + <span class="literal">'px'</span>;
+    }
+    <span class="reserved">if</span> (T &lt; 0) {
+      st.top = <span class="literal">'0px'</span>;
+    } <span class="reserved">else</span> <span class="reserved">if</span> (T + rootMenu.offsetHeight &gt; scrollY + winH) {
+      st.top = scrollY + winH - rootMenu.offsetHeight + <span class="literal">'px'</span>;
+    }
+    <span class="comment">// Restore to scroll</span>
+    <span class="reserved">if</span> (menu.config.scrollWithWindow) {
+      Zapatec.ScrollWithWindow.register(rootMenu);
+    }
+  }
+};
+
+<span class="comment">//@}</span>
+
+<span class="comment">/**
+ * Disables item from an external script.
+ *
+ * &lt;xmp&gt;
+ * Example:
+ * &lt;ul id="myMenu"&gt;
+ *  &lt;li id="itemToDisable"&gt;Menu Item&lt;/li&gt;
+ * &lt;/ul&gt;
+ * &lt;script type="text/javascript"&gt;
+ *  var menu = new Zapatec.Menu('myMenu', {});
+ *  menu.itemDisable('itemToDisable');
+ * &lt;/script&gt;
+ * &lt;/xmp&gt;
+ *
+ * <span class="attrib">@param</span> {string} item_id Item ID to disable
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.itemDisable = <span class="reserved">function</span>(item_id) {
+  var item = <span class="reserved">this</span>.items[item_id];
+  <span class="reserved">if</span> (item) {
+    <span class="comment">// item_id exists</span>
+    Zapatec.Utils.addClass(item, <span class="literal">"zpMenuDisabled"</span>);
+  }
+};
+
+<span class="comment">/**
+ * Enables previously disabled item from an external script.
+ *
+ * <span class="attrib">@param</span> {string} item_id Item ID to enable
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.itemEnable = <span class="reserved">function</span>(item_id) {
+  var item = <span class="reserved">this</span>.items[item_id];
+  <span class="reserved">if</span> (item) {
+    <span class="comment">// item_id exists</span>
+    Zapatec.Utils.removeClass(item, <span class="literal">"zpMenuDisabled"</span>);
+  }
+};
+
+<span class="comment">/**
+ * Hides previously open trigger menu and shows trigger menu. Called from
+ * trigger event handler.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {number} iLeft Optional. Left position of trigger menu
+ * <span class="attrib">@param</span> {number} iTop Optional. Top position of trigger menu
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.popupMenu = <span class="reserved">function</span>(iLeft, iTop) {
+  <span class="comment">// Hide previously open trigger menu</span>
+  <span class="reserved">for</span> (var menuId in Zapatec.Menu.all) {
+    <span class="comment">// Needed for IE 5.0</span>
+    <span class="reserved">if</span> (!Zapatec.Menu.all.hasOwnProperty(menuId)) {
+      continue;
+    }
+    var menu = Zapatec.Menu.all[menuId];
+    <span class="reserved">if</span> (menu.config.triggerEvent) { <span class="comment">// Is trigger menu</span>
+      menu.hideMenu();
+    }
+  }
+  <span class="comment">// Show trigger menu</span>
+  <span class="reserved">if</span> (arguments.length &gt; 1) {
+    <span class="reserved">this</span>.showMenu(iLeft, iTop);
+  } <span class="reserved">else</span> {
+    <span class="reserved">this</span>.showMenu();
+  }
+};
+
+<span class="comment">/**
+ * Shows menu.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {number} iLeft Optional. Left position of trigger menu
+ * <span class="attrib">@param</span> {number} iTop Optional. Top position of trigger menu
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.showMenu = <span class="reserved">function</span>(iLeft, iTop) {
+  var objTopParent = <span class="reserved">this</span>.top_parent;
+  var objMenu = objTopParent.__zp_menu;
+  <span class="comment">// Get window dimensions</span>
+  var objWindowSize = Zapatec.Utils.getWindowSize();
+  var iScrollX = Zapatec.Utils.getPageScrollX();
+  var iScrollY = Zapatec.Utils.getPageScrollY();
+  <span class="comment">// Set position</span>
+  <span class="reserved">if</span> (arguments.length &gt; 1) {
+    objTopParent.style.position = <span class="literal">'absolute'</span>;
+    objTopParent.style.left = iLeft + <span class="literal">'px'</span>;
+    objTopParent.style.top = iTop + <span class="literal">'px'</span>;
+  }
+  <span class="comment">// Show menu</span>
+  objTopParent.style.display = <span class="literal">'block'</span>;
+  <span class="comment">// Prevent showing of horizontal menu in several lines</span>
+  <span class="comment">// and fix different items width in vertical menu Mozilla issue</span>
+  <span class="reserved">if</span> (!objMenu.style.width) {
+    <span class="reserved">if</span> (objMenu.childNodes) {
+      <span class="comment">// Calculate menu width</span>
+      var iMenuWidth = 0;
+      <span class="reserved">for</span> (var iItem = 0; iItem &lt; objMenu.childNodes.length; iItem++) {
+        var objItem = objMenu.childNodes[iItem];
+        var iItemMargin = 0;
+        <span class="reserved">if</span> (iItem == 0) {
+          <span class="comment">// Assume margin-right is 0 because we can't determine it</span>
+          iItemMargin = objItem.offsetLeft;
+        }
+        <span class="reserved">if</span> (<span class="reserved">this</span>.config.vertical) {
+          <span class="reserved">if</span> (objItem.offsetWidth &gt; iMenuWidth) {
+            iMenuWidth = objItem.offsetWidth + iItemMargin;
+          }
+        } <span class="reserved">else</span> {
+          iMenuWidth += objItem.offsetWidth + iItemMargin;
+        }
+      }
+      <span class="comment">// + menu border</span>
+      <span class="reserved">if</span> (typeof objMenu.clientLeft != <span class="literal">'undefined'</span>) { <span class="comment">// IE &amp; Opera</span>
+        iMenuWidth += objMenu.clientLeft * 2;
+      } <span class="reserved">else</span> { <span class="comment">// Mozilla</span>
+        iMenuWidth += objMenu.offsetWidth - objMenu.clientWidth;
+      }
+      <span class="comment">// Set menu width</span>
+      <span class="reserved">if</span> (objMenu.clientWidth &gt; iMenuWidth) {
+        objMenu.style.width = objMenu.clientWidth + <span class="literal">'px'</span>;
+      } <span class="reserved">else</span> {
+        objMenu.style.width = iMenuWidth + <span class="literal">'px'</span>;
+      }
+    }
+  }
+  <span class="comment">// Adjust position</span>
+  <span class="reserved">if</span> (arguments.length &gt; 1) {
+    <span class="reserved">if</span> (iLeft + objTopParent.offsetWidth &gt; iScrollX + objWindowSize.width) {
+      objTopParent.style.left =
+       iScrollX + objWindowSize.width - objTopParent.offsetWidth + <span class="literal">'px'</span>;
+    }
+    <span class="reserved">if</span> (iTop + objTopParent.offsetHeight &gt; iScrollY + objWindowSize.height) {
+      objTopParent.style.top =
+       iScrollY + objWindowSize.height - objTopParent.offsetHeight + <span class="literal">'px'</span>;
+    }
+  } <span class="reserved">else</span> {
+    <span class="reserved">if</span> (typeof <span class="reserved">this</span>.config.top != <span class="literal">'object'</span> ||
+     typeof <span class="reserved">this</span>.config.right != <span class="literal">'object'</span> ||
+     typeof <span class="reserved">this</span>.config.bottom != <span class="literal">'object'</span> ||
+     typeof <span class="reserved">this</span>.config.left != <span class="literal">'object'</span>) { <span class="comment">// null is of object type </span>
+      objTopParent.style.position = <span class="literal">'absolute'</span>;
+      <span class="reserved">if</span> (typeof <span class="reserved">this</span>.config.top != <span class="literal">'object'</span>) {
+        objTopParent.style.top = parseInt(<span class="reserved">this</span>.config.top) + <span class="literal">'px'</span>;
+      } <span class="reserved">else</span> <span class="reserved">if</span> (typeof <span class="reserved">this</span>.config.bottom != <span class="literal">'object'</span>) {
+        objTopParent.style.top =
+         (objWindowSize.height - parseInt(<span class="reserved">this</span>.config.bottom) -
+         objMenu.offsetHeight -
+         (objTopParent.offsetHeight - objTopParent.clientHeight)) + <span class="literal">'px'</span>;
+      }
+      <span class="reserved">if</span> (typeof <span class="reserved">this</span>.config.left != <span class="literal">'object'</span>) {
+        objTopParent.style.left = parseInt(<span class="reserved">this</span>.config.left) + <span class="literal">'px'</span>;
+      } <span class="reserved">else</span> <span class="reserved">if</span> (typeof <span class="reserved">this</span>.config.right != <span class="literal">'object'</span>) {
+        objTopParent.style.left =
+         (objWindowSize.width - parseInt(<span class="reserved">this</span>.config.right) -
+         objMenu.offsetWidth -
+         (objTopParent.offsetWidth - objTopParent.clientWidth)) + <span class="literal">'px'</span>;
+      }
+    } <span class="reserved">else</span> <span class="reserved">if</span> (window.opera &amp;&amp;
+     (<span class="reserved">this</span>.config.drag || <span class="reserved">this</span>.config.scrollWithWindow)) {
+      objTopParent.style.position = <span class="literal">'absolute'</span>;
+      var pos = Zapatec.Utils.getElementOffset(objTopParent);
+      objTopParent.style.left = pos.left + <span class="literal">'px'</span>;
+      objTopParent.style.top = pos.top + <span class="literal">'px'</span>;
+    }
+  }
+  <span class="comment">// Set z-index</span>
+  objTopParent.style.zIndex = <span class="reserved">this</span>.config.zIndex;
+  <span class="comment">// Highlight path</span>
+  <span class="reserved">if</span> ((<span class="reserved">this</span>.config.rememberPath || <span class="reserved">this</span>.config.pathCookie != <span class="literal">'__zp_item'</span>) &amp;&amp;
+   <span class="reserved">this</span>.path) {
+    <span class="reserved">this</span>.highlightPath(<span class="reserved">this</span>.path);
+    <span class="reserved">if</span> (<span class="reserved">this</span>.config.rememberPath == <span class="literal">'expand'</span>) {
+      <span class="reserved">this</span>.sync(<span class="reserved">this</span>.path);
+    }
+  }
+  <span class="comment">// Apply MSIE 5.5+ Select Box fix</span>
+  <span class="reserved">if</span> (Zapatec.is_ie &amp;&amp; !Zapatec.is_ie5 &amp;&amp; !Zapatec.is_ie7) {
+    <span class="reserved">if</span> (!objTopParent.__zp_wch) {
+      objTopParent.__zp_wch = Zapatec.Utils.createWCH(objTopParent);
+    }
+		<span class="reserved">if</span> (objTopParent.__zp_wch){
+	    objTopParent.__zp_wch.style.zIndex = -1;
+	    Zapatec.Utils.setupWCH(objTopParent.__zp_wch,
+	     -objTopParent.clientLeft, -objTopParent.clientTop,
+	     objTopParent.offsetWidth, objTopParent.offsetHeight);
+		 }
+  }
+  <span class="comment">// Fire event</span>
+  <span class="reserved">this</span>.fireEvent(<span class="literal">'menuShown'</span>);
+};
+
+<span class="comment">/**
+ * Hides trigger menu.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.<span class="reserved">prototype</span>.hideMenu = <span class="reserved">function</span>() {
+  <span class="reserved">this</span>.collapseAll();
+  <span class="reserved">this</span>.top_parent.style.display = <span class="literal">'none'</span>;
+  <span class="comment">// Fire event</span>
+  <span class="reserved">this</span>.fireEvent(<span class="literal">'menuHidden'</span>);
+};
+
+<span class="comment">/**
+ * Array that keeps mouseovered items of all menus on the page. It is used to
+ * determine which menu and which item is active now to be able to use keyboard
+ * arrows, Enter, Esc buttons for menu navigation. Used in keyboard navigation
+ * module.
+ * <span class="attrib">@private</span>
+ */</span>
+Zapatec.Menu.selectedItemsStack = [];
+
+<span class="comment">/**
+ * Adds item to zpMenu-item-selected class and selectedItemsStack.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} item DIV element holding the item
+ */</span>
+Zapatec.Menu.selectItem = <span class="reserved">function</span>(item) {
+  Zapatec.Utils.addClass(item, <span class="literal">"zpMenu-item-selected"</span>);
+  <span class="reserved">if</span> (/zpMenu-item-collapsed/i.test(item.className)) {
+    Zapatec.Utils.addClass(item, <span class="literal">"zpMenu-item-selected-collapsed"</span>);
+  }
+  <span class="comment">// Remove item from stack</span>
+  <span class="reserved">for</span> (var i = Zapatec.Menu.selectedItemsStack.length - 1; i &gt;= 0; i--) {
+    <span class="reserved">if</span> (Zapatec.Menu.selectedItemsStack[i] == item) {
+      Zapatec.Menu.selectedItemsStack.splice(i, 1);
+    }
+  }
+  <span class="comment">// Add item to stack</span>
+  Zapatec.Menu.selectedItemsStack.push(item);
+};
+
+<span class="comment">/**
+ * Removes item from zpMenu-item-selected class and selectedItemsStack.
+ *
+ * <span class="attrib">@private</span>
+ * <span class="attrib">@param</span> {object} item DIV element holding the item
+ */</span>
+Zapatec.Menu.unselectItem = <span class="reserved">function</span>(item) {
+  Zapatec.Utils.removeClass(item, <span class="literal">"zpMenu-item-selected"</span>);
+  Zapatec.Utils.removeClass(item, <span class="literal">"zpMenu-item-selected-collapsed"</span>);
+  <span class="comment">// Remove item from stack</span>
+  <span class="reserved">for</span> (var i = Zapatec.Menu.selectedItemsStack.length - 1; i &gt;= 0; i--) {
+    <span class="reserved">if</span> (Zapatec.Menu.selectedItemsStack[i] == item) {
+      Zapatec.Menu.selectedItemsStack.splice(i, 1);
+    }
+  }
+};
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>Zapatec Menu</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Thu Aug 16 12:19:01 2007</div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.app_user
+		id="-2" username="admin" first_name="admin"
+		last_name="user" account_expired="false"
+		account_locked="false" credentials_expired="false"
+		account_enabled="true" version="3"
+		password="47d2059098f276ba789a340931f58a9e94f11a21"
+		delete_code="47d2059098f276ba789a340931f58a9e94f11a21"/>
+	<public.app_user
+		id="-1" username="user" first_name="tomcat"
+		last_name="user" account_expired="false"
+		account_locked="false" credentials_expired="false"
+		account_enabled="true" version="3"
+		password="47d2059098f276ba789a340931f58a9e94f11a21"/>
+	<public.role id="-2" name="ROLE USER"/>
+	<public.role id="-1" name="ROLE ADMIN"/>
+	<public.user_role user_id="-2" role_id="-1"/>
+	<public.user_role user_id="-1" role_id="-2"/>
+	<public.user_role user_id="-1" role_id="-1"/>
+	<public.addressees
+		id="76220" post="02-930 Warszawa" first_name="Kazimierz"
+		last_name="Lorek" institution="Parafia pw. Św. Antoniego M. Zaccarii"
+		street="Ul. Sobieskiego 15"/>
+	<public.addresses id="4161" street="Katalonska" 
+		place="Warszawa" postcode="02-763" first_number="3"
+		last_number="83"/>
+	<public.addresses id="5" street="Biedronki" 
+		place="" postcode="02-946" first_number="3"
+		last_number="13"/>
+	<public.addresses id="3996" street="Obornicka" 
+		place="Warszawa" postcode="02-948"
+		first_number="20" last_number=""/>
+	<public.practising id="1" name="Praktykujacy"/>
+	<public.practising id="2" name="Niepraktykuj"/>
+	<public.assistance_delagations 
+		id="33238" priest_first_name="Arkadiusz" priest_surname="Krol"/>
+	<public.baptism_places id="1"
+		second_name="kosciele" name="Kosciol"/>
+	<public.baptism_places id="2"
+		second_name="domu" name="Dom"/>
+	<public.baptism_places id="3"
+		second_name="szpitalu" name="Szpital"/>
+	<public.baptism_know_acts id="11" priest_first_name="Marek"
+		priest_surname="Kizdud" acquaintance_from="urodzenia"
+		relationship="syn/matka" baptism_place="0x1604"
+		baptism_place_additionals="Lipowa" baptism_giver="marynarz"
+		godfather="Kamil" godmother="Anna" baptism_know="byl przy chrzcie obecny"
+		reason_not_act="zabraklo papieru i kosciol sie spalil"
+		additional="brak" first_name="Karol" surname="Lipnicki"
+		birth_date="2009-02-01 00:00:00" job="dekarz"
+		mothers_first_name="Karolina" mothers_last_name="Dowbor"
+		fathers_first_name="Marek" fathers_last_name="Dowbor"
+		religion="Jehowa" address="ul. Lipna 34 03-234 Stara Lipna"
+		date="2009-02-01 00:00:00" practising_id="1"/>
+	<public.baptismes id="54640" file_number="20"
+		place="par. tut." date="2002-04-01" reason="Do I KOMUNII ŚW. "/>
+	<public.baptismes id="54646" file_number="30"
+		place="par. tut." date="2002-06-02" reason="Do I KOMUNII ŚW. "/>
+	<public.baptismes id="33035" file_number="30"
+		place="par. tut." date="2002-06-02" reason="Do I KOMUNII ŚW. "/>
+	<public.baptism_preparations id="76196" prepared_by="Waldemar R. Macko"/>
+	<public.baptism_changes id="33036"
+		personal_data="Marek Łukasz Dybowski ur. 12.03.1987r. Warszawa, s. Krzysztof Dybowski i Dorota Tarnogrodzka"
+		civil_personal_data="Marek Łukasz Dybowski ur.  20.03. Warszawa, s.Krzysztof Marek Dybowski i Dorota Agnieszka Tarnogrodzka"
+		civil_documents="akcie USC Nr.VII/982/1987"/>
+	<public.celebrants id="145347" first_name="Ks. Robert"
+		surname="Mikos" active="true"/>
+	<public.celebrants id="145328" first_name="Ks. Michal"
+		surname="Dubicki" active="true"/>
+	<public.investigation_protocole id="25"
+	answers="\254\355\000\005ur\000\023[Ljava.lang.String;\255\322V\347\351\035{G\002\000\000xp\000\000\000\033t\000\000q\000~\000\002q\000~\000\002q\000~\000\002q\000~\000\002q\000~\000\002q\000~\000\002q\000~\000\002q\000~\000\002q\000~\000\002q\000~\000\002q\000~\00 (...)"/>
+	<public.investigation_protocole id="140259"
+		answers="\254\355\000\005ur\000\023[Ljava.lang.String;\255\322V\347\351\035{G\002\000\000xp\000\000\000\033t\0006Aleksandra Justyna Holc\015\012menager artyst\303\263w\015\012AYR695195 t\000^Przemys\305\202aw Janusz Holc\015\012Urszula Kraciuk\015\012o-ul.Droga Hra (...)"/>
+	<public.marriage_statuses id="1" name="--"/>
+	<public.marriage_statuses id="2" name="Brak danych"/>
+	<public.marriage_statuses id="3" name="Sakramentalny"/>
+	<public.marriage_statuses id="4" name="Niesakramentalny"/>
+	<public.marriage_statuses id="5" name="Bez zwiazku"/>
+	<public.marriage_statuses id="6" name="Inne"/>
+	<public.marriages id="140256" parish="tutejsza"
+		religion="rzymskokatolickie" baptism_date="20-04-1987"
+		baptism_church="Dzieciatka Jezus" baptism_church_in="Warszawa"
+		baptism_number="30" church_post_address="ul.Czarnieckiego 15,01-548 Warszawa"
+		confirmation_date="2002-03-16 00:00:00" confirmation_church="Warszawa"
+		protocole_id="140259"/>
+	<public.marriages id="77753"/>
+	<public.marriages id="79558"/>
+	<public.marriages id="79557"/>
+	<public.marriages id="79559"/>
+		 
+	<public.certificates id="33152" number="123/09"
+		priest_full_name="Andrzejem Krzysznym" first_witness_first_name="Jozef"
+		first_witness_surname="Kowalski" second_witness_first_name="Regina"
+		second_witness_surname="Kubecka" priest_position="wikariuszem"
+		marriage_number="231/09"/>
+	<public.take_part id="1" name="--"/>
+	<public.take_part id="2" name="Brak danych"/>
+	<public.take_part id="3" name="Czesto"/>
+	<public.take_part id="4" name="Rzadko"/>
+	<public.take_part id="5" name="Nie"/>
+	<public.confirmations id="33143" file_number="11/11"
+		place="Gliwice" confirmation_name="Karolina"
+		bishop="kk" date="1880-10-10 00:00:00"/>
+	<public.confirmations id="77752" file_number=""
+		place="" confirmation_name="" bishop=""
+		 date="1900-11-01 00:00:00"/>
+	<public.confirmations id="33207" file_number=""
+		place="" confirmation_name="" bishop=""
+		 date="1900-11-01 00:00:00"/>
+	<public.deaths id="151514" file_number="150" place="Warszawa"
+		burial_place="Cm. Wilanowski 3839/XII" date="2017-09-03 00:00:00"
+		burial_date="2017-09-07 00:00:00"/>
+	<public.remainings id="54645" mothers_first_name="Wioletta Agnieszka"
+		mothers_maidens_name="Suchenek" fathers_first_name="Krzysztof Tadeusz"
+		fathers_last_name="Salwowski" birth_place="Warszawa"
+		baptism_id="54646" confirmation_id="77752" marriage_id="77753"/>
+	<public.remainings id="33034" mothers_first_name="Dorota"
+		mothers_maidens_name="Tarnogrodzka" fathers_first_name="Krzysztof"
+		fathers_last_name="Dybowski" birth_place="Warszawa"
+		baptism_id="33035" confirmation_id="33207"/>
+	<public.remainings id="79458" mothers_first_name="Anna Weronika"
+		mothers_maidens_name="Jurkiewicz" fathers_first_name="Krzysztof Stanislaw"
+		fathers_last_name="Kirylak" birth_place="Warszawa" marriage_id="79558"/>
+	<public.remainings id="79487" mothers_first_name="Maryla Emilia"
+		mothers_maidens_name="Placha" fathers_first_name="Wojciech"
+		fathers_last_name="Kot" birth_place="Warszawa" marriage_id="79559"/>
+	
+	<public.persons id="33033" first_name="Marek Lukasz"
+		surname="Dybowski" remaining_id="33034" is_woman="true"/>
+	<public.persons id="79486" first_name="Maciej"
+		surname="Kot" remaining_id="79458" is_woman="false"/>
+	<public.persons id="79488" first_name="Karolina Maryla"
+		surname="Kirylak" remaining_id="79487" is_woman="true"/>
+	<public.persons id="139" first_name="Ryszard"
+		surname="Wiszowata" is_woman="true"/>
+	<public.persons id="140" first_name="Ela"
+		surname="Wiszowata" is_woman="true"/>
+	<public.persons id="141" first_name="Jolanta"
+		surname="Wiszowata" is_woman="true"/>
+	
+	<public.families id="138" surname="Wiszowata"
+		priest_remarks="'01 Nie maja slubu koscielnego, w tym roku zamierzaja zawrzec./ZK Jolanta: Schola, Kolko misyjne."
+		wife_id="140" marriage_status_id="4" husband_id="139"
+		address_id="5"/>
+	<public.children id="141"
+		take_part_mass_id="3" take_part_sacrament_id="3"
+		family_id="138"/>
+	<public.others/>
+	<public.others_wo_families id="33033" street="Obornicka"
+		place="Warszawa" postcode="02-948"
+		first_number="20" address_id="3996"/>
+	<public.parents id="139" job="Warex"
+		take_part_sacrament_id="1" take_part_mass_id="1"/>
+	<public.parents id="140" job=""
+		take_part_sacrament_id="1" take_part_mass_id="1"/>
+	
+	
+	<public.columbariums id="1" name="Kolumbarium 1"/>
+	<public.dispensations id="76131" sacrament="zwolnienie z wygłoszenia 2 zapowiedzi"
+		reason="nupturienci od 15 lat żyją w związku nieformalnym, o czym nie wiedzą ich dzieci, jak i sąsiedzi"
+		under_age="false"/>
+	<public.fiancees />
+	<public.license_assistances id="33101"/>
+	
+	<public.fiancee_pairs id="79557" marriage_date="2009-10-24 00:00:00"
+		fiancee_he_id="79486" fiancee_she_id="79488"
+		file_number="130" place="par. tut."/>
+	<public.fiancee_pairs id="79559" fiancee_he_id="79486" fiancee_she_id="79488"/>
+	
+	<public.intention_type_duration id="1" duration="30"/>
+	<public.intention_type_duration id="2" duration="60"/>
+	
+	<public.intention_types id="1" name="nabozenstwo" color="lightskyblue"/>
+	<public.intention_types id="2" name="slub" color="red"/>
+	<public.intention_types id="3" name="pogrzeb" color="mediumpurple"/>
+	<public.intention_types id="4" name="chrzest" color="yellow"/>
+	<public.intention_types id="5" name="msza sw." color="darkorange"/>
+	<public.intention_types id="6" name="inne" color="midnightblue"/>
+	<public.intention_types id="7" name="protokol" color="forestgreen"/>
+	<public.intention_types id="8" name="akt slubu" color="forestgreen"/>
+	<public.intention_types id="9" name="eksporta" color="mediumpurple"/>
+	<public.intention_types id="10" name="importa" color="mediumpurple"/>
+	
+	<public.intentions id="145330" date="2017-03-19 13:00:00+01"
+		text="w 2 r. urodz. o potrzebne łaski dla Ewy" offering="50"
+		accept_id="145328" type_id="1" duration_id="1"/>
+	<public.intentions_annotations id="145343" date="2017-03-14"
+		annotation="ŚWIĘTO - --- xx; ;a;;a;a"/>
+	<public.intentions_celebrants />
+	<public.intentions_confessions intention_id="145330"
+		celebrant_id="145328"/>
+	<public.mails />
+	<public.mail_files />
+	
+	<public.priestly_visits id="149" remarks="nb/xTM"
+		family_id="138" date="2009"/>
+	<public.priestly_visits id="77840" remarks="- xDK"
+		family_id="138" date="25-01-2010"/>
+	<public.priestly_visits id="106540" remarks="- xDPK"
+		family_id="138" date="07-01-2012"/>
+	<public.priestly_visits id="123483" remarks="zamk. xMD"
+		family_id="138" date="2014"/>
+	<public.priestly_visits id="137407" remarks="- xRM"
+		family_id="138" date="2016"/>
+	
+	<public.spatial_ref_sys />
+	
+	<public.grave_doubled id="1" name="Pojedynczy"/>
+	<public.grave_doubled id="2" name="Podwjny"/>
+	
+	<public.grave_grounded id="1" name="Murowany"/>
+	<public.grave_grounded id="2" name="Ziemny"/>
+	
+	<public.grave_owned id="1" name="Wasnosciowy"/>
+	<public.grave_owned id="2" name="Pokladny"/>
+	
+	<public.graves id="130023" street="Melomanow" place="Warszawa"
+		postcode="00-712" first_number="6" last_number="17"
+		first_name="Helena" surname="Kaminska" phone="508-005-131"
+		valid_to="2114" grave_doubled_id="1" grave_grounded_id="1"
+		grave_owned_id="1" number="43" notices="rezerwujący +Andrzej Kamiński zmarł, dysponentem jest pełnomocnik (wdowa)"
+		type="0" columbarium_id="1"/>
+	<public.graves id="73192" street="Skolimowska" place="Warszawa"
+		postcode="00-795" first_number="6" last_number="12"
+		first_name="Iwona" surname="Cepek" phone="503-15-20-59"
+		valid_to="236" grave_doubled_id="1" grave_grounded_id="2"
+		grave_owned_id="2" number="2452" notices="KP#116/16"
+		type="1"/>
+	
+	<public.grave_levels />
+	<public.grave_persons id="139507" first_name="Andrzej"
+		surname="Kaminski" grave_id="130023"
+		death_date="02-05-2016"/>
+	<public.grave_files />
+</dataset>

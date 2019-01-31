@@ -1,0 +1,24 @@
+table.inputsToLinks tr td input {
+	background:none!important;
+	border:none; 
+	padding:0!important;
+	font: inherit;
+	/*border is optional*/
+	border-bottom:1px solid #444;
+	cursor: pointer;
+	color: #1465B7;
+	border-color: #1465B7;
+}
+
+table.inputsToLinks tr td input:hover {
+	color: #DC0063;
+	border-color: #DC0063;
+}
+
+table.inputsToLinks {
+	margin-bottom: 20px;
+}
+
+div.calendar {
+	z-index: 1;
+}

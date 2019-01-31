@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd
+    	http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+	default-lazy-init="true">
+
+	<context:component-scan base-package="org.parafia.webapp.controller,org.parafia.util" />
+	<mvc:annotation-driven validator="globalValidator" />
+
+	<bean
+		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="order" value="0" />
+	</bean>
+
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.springframework.dao.DataAccessException">
+					dataAccessFailure
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<context:property-placeholder location="classpath:jdbc.properties,classpath:config.properties" />
+
+	<bean id="filenameController"
+		class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+
+	<!-- <bean id="familyListController" class="org.parafia.webapp.controller.FamilyListController">
+		<property name="familyManager" ref="familyManager" />
+		<property name="paginateListFactory" ref="paginatedListFactory" />
+		<property name="formView" value="print/cards" />
+		<property name="successView" value="print/cards" />
+	</bean> -->
+
+
+<!-- 	<bean id="tomeBaptismListController" class="org.parafia.webapp.controller.TomeBaptismListController">
+		<property name="personManager" ref="personManager" />
+	</bean>
+ -->
+<!-- 	<bean id="tomeConfirmationListController"
+		class="org.parafia.webapp.controller.TomeConfirmationListController">
+		<property name="personManager" ref="personManager" />
+	</bean> -->
+
+<!-- 	<bean id="tomeDeathListController" class="org.parafia.webapp.controller.TomeDeathListController">
+		<property name="personManager" ref="personManager" />
+	</bean> -->
+
+<!-- 	<bean id="tomeFianceesListController"
+		class="org.parafia.webapp.controller.TomeFianceesListController">
+		<property name="personManager" ref="personManager" />
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="paginateListFactory" ref="paginatedListFactory" />
+	</bean> -->
+
+	<bean id="personListController" class="org.parafia.webapp.controller.PersonListController">
+		<property name="personManager" ref="personManager" />
+	</bean>
+
+	<!-- <bean id="fianceeEditController" class="org.parafia.webapp.controller.FianceeEditController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="userManager" ref="userManager" />
+		<property name="personManager" ref="personManager" />
+		<property name="formView" value="print/fianceeEdit" />
+		<property name="successView" value="redirect:/print/fianceesform.html" />
+		<property name="cancelView" value="redirect:/print/persons.html" />
+	</bean> -->
+
+	<bean id="printFamilyController" class="org.parafia.webapp.controller.PrintFamilyController">
+		<property name="familyManager" ref="familyManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printMoralityCertificateController"
+		class="org.parafia.webapp.controller.PrintMoralityCertificateController">
+		<property name="personManager" ref="personManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printBapConDeaCertificateController"
+		class="org.parafia.webapp.controller.PrintBapConDeaCertificateController">
+		<property name="personManager" ref="personManager" />
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printBaptismPreparationController"
+		class="org.parafia.webapp.controller.PrintBaptismPreparationController">
+		<property name="personManager" ref="personManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printInvestigationController"
+		class="org.parafia.webapp.controller.PrintInvestigationController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printCertificateController"
+		class="org.parafia.webapp.controller.PrintCertificateController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printCertificateOnlyPriestController"
+		class="org.parafia.webapp.controller.PrintCertificateOnlyPriestController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printDispensationController"
+		class="org.parafia.webapp.controller.PrintDispensationController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printDelegationController" class="org.parafia.webapp.controller.PrintDelegationController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printLicenseAssistanceController"
+		class="org.parafia.webapp.controller.PrintLicenseAssistanceController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printLicenceController" class="org.parafia.webapp.controller.PrintLicenceController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="printBaptismChangesController"
+		class="org.parafia.webapp.controller.PrintBaptismChangesController">
+		<property name="personManager" ref="personManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<!-- <bean id="baptismChangesController" class="org.parafia.webapp.controller.BaptismChangesController">
+		<property name="personManager" ref="personManager" />
+		<property name="formView" value="print/baptismChangesEdit" />
+		<property name="successView" value="print/baptismChangesEdit" />
+		<property name="cancelView" value="redirect:/print/personform.html" />
+	</bean> -->
+
+<!-- 	<bean id="baptismKnowActController" class="org.parafia.webapp.controller.BaptismKnowActController">
+		<property name="personManager" ref="personManager" />
+		<property name="familyManager" ref="familyManager" />
+		<property name="formView" value="print/baptismKnowActEdit" />
+		<property name="successView" value="print/baptismKnowActEdit" />
+		<property name="cancelView" value="redirect:/print/personform.html" />
+	</bean> -->
+
+	<bean id="printBaptismKnowActController"
+		class="org.parafia.webapp.controller.PrintBaptismKnowActController">
+		<property name="personManager" ref="personManager" />
+		<constructor-arg index="0" value="${font.ttf.location}" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<!-- <bean id="baptismPreparationEditController"
+		class="org.parafia.webapp.controller.BaptismPreparationEditController">
+		<property name="personManager" ref="personManager" />
+		<property name="formView" value="print/baptismPreparationEdit" />
+		<property name="successView" value="print/baptismPreparationEdit" />
+		<property name="cancelView" value="redirect:/print/personform.html" />
+	</bean> -->
+
+	<!-- <bean id="familyEditController" class="org.parafia.webapp.controller.FamilyEditController">
+		<property name="familyManager" ref="familyManager" />
+		<property name="formView" value="print/familyEdit" />
+		<property name="successView" value="redirect:/print/cards.html" />
+		<property name="cancelView" value="redirect:/print/cards.html" />
+	</bean> -->
+
+	<bean id="personEditController" class="org.parafia.webapp.controller.PersonFormController">
+		<property name="personManager" ref="personManager" />
+		<property name="userManager" ref="userManager" />
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="formView" value="print/personEdit" />
+		<property name="successView" value="redirect:/print/personform.html" />
+		<property name="cancelView" value="/print/persons.html" />
+	</bean>
+
+	<bean id="investigationController" class="org.parafia.webapp.controller.InvestigationController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="formView" value="print/investigationEdit" />
+		<property name="successView" value="redirect:/print/fianceesform.html" />
+		<property name="cancelView" value="redirect:/print/fianceesform.html" />
+	</bean>
+
+	<!-- <bean id="certificateController" class="org.parafia.webapp.controller.CertificateController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="formView" value="print/certificateEdit" />
+		<property name="successView" value="redirect:/print/fianceesform.html" />
+		<property name="cancelView" value="redirect:/print/fianceesform.html" />
+	</bean> -->
+
+	<!-- <bean id="dispensationController"
+		class="org.parafia.webapp.controller.DispensationEditController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="formView" value="print/dispensationEdit" />
+		<property name="successView" value="redirect:/print/fianceesform.html" />
+		<property name="cancelView" value="redirect:/print/fianceesform.html" />
+	</bean> -->
+
+	<!-- <bean id="delegationController" class="org.parafia.webapp.controller.DelegationEditController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="formView" value="print/delegationEdit" />
+		<property name="successView" value="redirect:/print/fianceesform.html" />
+		<property name="cancelView" value="redirect:/print/fianceesform.html" />
+	</bean> -->
+
+	<bean id="licenseAssistanceController"
+		class="org.parafia.webapp.controller.LicenseAssistanceEditController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="formView" value="print/licenseAssistanceEdit" />
+		<property name="successView" value="redirect:/print/fianceesform.html" />
+		<property name="cancelView" value="redirect:/print/fianceesform.html" />
+	</bean>
+
+
+	<!-- <bean id="baptismEditController" class="org.parafia.webapp.controller.BaptismEditController">
+		<property name="personManager" ref="personManager" />
+		<property name="userManager" ref="userManager" />
+		<property name="formView" value="print/baptism" />
+		<property name="cancelView" value="print/personform.html" />
+		<property name="successView" value="editBaptism.html" />
+	</bean> -->
+
+	<!-- <bean id="confirmationEditController"
+		class="org.parafia.webapp.controller.ConfirmationEditController">
+		<property name="personManager" ref="personManager" />
+		<property name="userManager" ref="userManager" />
+		<property name="formView" value="print/confirmation" />
+		<property name="cancelView" value="print/personform.html" />
+	</bean> -->
+
+	<bean id="marriageEditController" class="org.parafia.webapp.controller.MarriageEditController">
+		<property name="fianceeManager" ref="fianceeManager" />
+		<property name="formView" value="print/marriage" />
+		<property name="cancelView" value="/print/fianceeEdit.html" />
+	</bean>
+
+	<!-- <bean id="deathEditController" class="org.parafia.webapp.controller.DeathEditController">
+		<property name="personManager" ref="personManager" />
+		<property name="userManager" ref="userManager" />
+		<property name="formView" value="print/death" />
+		<property name="cancelView" value="print/personform.html" />
+	</bean> -->
+
+	<bean id="uploadDisplayController" class="org.parafia.webapp.controller.UploadDisplayController">
+		<property name="fileManager" ref="fileManager" />
+	</bean>
+
+	<!-- <bean id="addresseeEditController" class="org.parafia.webapp.controller.AddresseeEditController">
+		<property name="addresseeManager" ref="addresseeManager" />
+		<property name="formView" value="mail/addresseeEdit" />
+		<property name="successView" value="common/closeReloadParent" />
+		<property name="cancelView" value="common/closeReloadParent" />
+	</bean> -->
+
+	<bean id="fileUploadController" class="org.parafia.webapp.controller.FileUploadController">
+		<property name="validator" ref="beanValidator" />
+		<property name="cancelView" value="common/closeReloadParent" />
+		<property name="formView" value="mail/newMail" />
+		<property name="successView" value="common/closeReloadParent" />
+		<property name="fileManager" ref="fileManager" />
+		<property name="addresseeManager" ref="addresseeManager" />
+		<property name="uploadDir" value="${dir.parafiaFiles}" />
+	</bean>
+
+
+	<bean id="reloadController" class="org.parafia.webapp.controller.ReloadController" />
+
+	<bean id="parseDxfController" class="org.parafia.webapp.controller.ParseDxfController">
+		<property name="successView" value="redirect:/yard/yard.html" />
+		<property name="graveyardManager" ref="graveyardManager" />
+	</bean>
+
+	<!-- Add additional controller beans here -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="33554432" />
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames" value="ApplicationResources,ValidationMessages" />
+		<property name="useCodeAsDefaultMessage" value="true" />
+	</bean>
+
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				/admin/activeUsers.html=filenameController
+				/admin/flushCache.html=filenameController
+				/admin/reload.html=reloadController
+				/admin/chooseAdminAction.html=filenameController
+				/common/closeReloadParent.html=filenameController
+				/common/closeRedirectParent.html=filenameController
+				/mail/chooseMailAction.html=filenameController
+				/mail/fileupload.html=fileUploadController
+				/mail/newMail.html=fileUploadController
+				/mail/uploadDisplay.html=uploadDisplayController
+				<!-- /mail/addresseeEdit.html=addresseeEditController -->
+				<!-- /print/cards.html=familyListController -->
+				<!-- /print/familyform.html=familyEditController -->
+				/printfiles.html=printFamilyController
+				/printbaptismchanges.html=printBaptismChangesController
+				/printbaptismchangesfile.html=printBaptismChangesController
+				<!-- /print/fianceesform.html=fianceeEditController -->
+				/printinvestigation.html=printInvestigationController
+				/investigation.html=investigationController
+				/printcertificate.html=printCertificateController
+				/printcertificateonlypriest.html=printCertificateOnlyPriestController
+				/printlicence.html=printLicenceController
+				/printmoralitycertificate.html=printMoralityCertificateController
+				/printbapcondeacertificate.html=printBapConDeaCertificateController
+				<!-- /print/baptismchangesEdit.html=baptismChangesController -->
+				<!-- /editBaptism.html=baptismEditController -->
+				<!-- /editConfirmation.html=confirmationEditController -->
+				/editMarriage.html=marriageEditController
+				<!-- /editDeath.html=deathEditController -->
+				/print/baptismKnowActEdit.html=baptismKnowActController
+				/printbaptismknowact.html=printBaptismKnowActController
+				<!-- /baptismPreparationEdit.html=baptismPreparationEditController -->
+				/printbaptismpreparation.html=printBaptismPreparationController
+				/certificate.html=certificateController
+				/print/dispensationEdit.html=dispensationController
+				/printdispensation.html=printDispensationController
+				/delegation.html=delegationController
+				/printdelegation.html=printDelegationController
+				/licenseAssistance.html=licenseAssistanceController
+				/printLicenseAssistance.html=printLicenseAssistanceController
+
+				<!-- /tomes/baptismTome.html=tomeBaptismListController -->
+				<!-- /tomes/confirmationTome.html=tomeConfirmationListController -->
+				<!-- /tomes/deathTome.html=tomeDeathListController -->
+				<!-- /tomes/fianceesTome.html=tomeFianceesListController -->
+
+				/tomes/editCelebrant.html=celebrantController
+				/tomes/celebrantsList.html=celebrantController
+
+				/print/personform.html=personEditController
+				/print/persons.html=personListController
+
+				/yard/parsedxf.html=parseDxfController
+			</value>
+		</property>
+		<property name="order" value="0" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+		<property name="order" value="1" />
+	</bean>
+
+	<!-- View Resolver for JSPs -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="requestContextAttribute" value="rc" />
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+</beans>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"
+	default-lazy-init="true">
+
+	<context:component-scan
+		base-package="org.parafia.dao.hibernate, org.parafia.service.impl, org.parafia.webapp.controller, org.parafia.model, org.parafia.util" />
+
+	<mvc:annotation-driven />
+
+	<context:property-placeholder location="classpath*:config.properties" />
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxActive" value="100" />
+		<property name="maxWait" value="1000" />
+		<property name="poolPreparedStatements" value="true" />
+		<property name="defaultAutoCommit" value="true" />
+	</bean>
+
+	<bean id="dbUnitDatabaseConfig" class="com.github.springtestdbunit.bean.DatabaseConfigBean">
+		<property name="qualifiedTableNames" value="true" />
+		<property name="caseSensitiveTableNames" value="true" />
+	</bean>
+	<bean id="dbUnitDatabaseConnection"
+		class="com.github.springtestdbunit.bean.DatabaseDataSourceConnectionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="databaseConfig" ref="dbUnitDatabaseConfig" />
+		<property name="schema" value="public" />
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames" value="ApplicationResources,ValidationMessages" />
+		<property name="useCodeAsDefaultMessage" value="true" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+				hibernate.query.substitutions=true 'Y', false 'N'
+				hibernate.cache.use_second_level_cache=true
+				hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
+			</value>
+			<!-- Turn batching off for better error messages under PostgreSQL -->
+			<!-- hibernate.jdbc.batch_size=0 -->
+		</property>
+	</bean>
+
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" />
+
+	<security:http request-matcher="regex" pattern="/styles/.*" security="none" />
+	<security:http request-matcher="regex" pattern="/images/.*" security="none" />
+	<security:http request-matcher="regex" pattern="/login.jsp*" security="none" />
+
+	<security:http auto-config="true">
+		<security:form-login login-page='/login.jsp'
+			default-target-url="/mail/viewMails.html" />
+		<security:intercept-url pattern="/**" access="ROLE_USER" />
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider
+			user-service-ref='userManager'>
+			<security:password-encoder ref="passwordEncoder" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<!-- <bean id="userController" class="org.parafia.webapp.controller.UserController"> 
+		<property name="userManager" ref="userManager" /> </bean> -->
+		
+	<!-- For mail settings and future properties files -->
+	<bean id="paginatedListFactory" class="org.parafia.webapp.util.pagination.PaginateListFactory" />
+
+</beans>

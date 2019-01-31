@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content=" You can navigate this menu using keystroke shortcuts. For each item having an underlined letter or number, press Alt + the underlined character to perform the item's action or expand its submenu. For each active submenu item having an underlined letter or number, press either Alt + the underlined character or simply the underlined character to perform the item's action or expand its submenu. If there is an active item, you can navigate the menu by pressing the arrows, or the ESC or ENTER keys, or the SPACE bar. You can traverse the menu items in order by pressing the TAB key. If you're using IE6, it will work only in single window. In Opera this feature is overridden by its own interface shortcuts. ">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Shortcuts</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+<script type="text/javascript" src="../src/zpmenu-kbd.js"></script>
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Shortcuts</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		
+<li>You can navigate this menu using keystroke shortcuts.</li>
+<li>For each item having an <u>underlined letter or number</u>, press <b>Alt</b> + the <u>underlined character</u> to perform the item's action or expand its submenu.</li>
+<li>For each active submenu item having an <u>underlined letter or number</u>, press either <b>Alt</b> + the <u>underlined character</u> or simply the  underlined character to perform the item's action or expand its submenu.</li>
+<li>If there is an active item, you can navigate the menu by pressing the  arrows, or the ESC or ENTER keys, or the SPACE bar.
+<li>You can traverse the menu items in order  by pressing the TAB key. If you're using IE6, it will work only in single window.</li>
+<li>In Opera this feature is overridden by its own interface shortcuts.</li>
+
+		</ul>
+		</div>
+
+
+<ul id="myMenu" style="display:none">
+		<li>
+	<a href="#">_Arts</a><br>
+	<ul>
+		<li> <a href="http://www.dmoz.org/Arts/Movies/">_Movies</a> </li>
+		<li> 
+		<img border='0' align='middle' width='20' height='18' src='http://www.zapatec.com/website/main/zpcal/themes/icons/calendar1.gif' alt='Javascript Tree'>
+		<a href='http://www.zapatec.com'> _Calendar </a>
+		</li>
+		<li> <a href="http://www.dmoz.org/Arts/Television/">_Television</a> </li>
+		<li>
+		<hr/>
+		</li>
+		<li id="music">
+		<a href="#">M_usic</a>
+		<ul>
+			<li> <a href="http://www.dmoz.org/Arts/Music/Bands_and_Artists/">_Bands</a> </li>
+			<li> <a href="http://www.dmoz.org/Arts/Music/Instruments/">_Instruments</a> </li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+
+	<li>
+	<a href="#">_Business</a><br>
+	<ul>
+		<li> <a href="http://www.dmoz.org/Business/Real_Estate/">_Real Estate</a> </li>
+		<li> <a href="http://www.dmoz.org/Business/Investing/">_Investing</a> </li>
+	</ul>
+	</li>
+
+	<li>
+	<a href="#" accesskey="c"><span style="text-decoration:underline">C</span>omputers</a><br>
+	<ul>
+		<li> <a href="http://www.dmoz.org/Computers/Internet/">_Internet</a> </li>
+		<li id="software"> <a href="http://www.dmoz.org/Computers/Software/">_Software</a> </li>
+		<li> <a href="http://www.dmoz.org/Computers/Hardware/">_Hardware</a> </li>
+	</ul>
+	</li>
+	<li><a href="#">_Many Levels</a>
+	<ul>
+		<li><a href="javascript:alert('Level-1a')">Level-1_a</a></li>
+		<li><a href="#">Level-1_b</a>
+		<ul>
+			<li><a href="javascript:alert('Level-2a')">Level-2_a</a></li>
+			<li><a href="#">Level-2_b</a>
+			<ul>
+				<li><a href="javascript:alert('Level-3a')">Level-3_a</a></li>
+				<li><a href="#">Level-3_b</a>
+				<ul>
+					<li><a href="javascript:alert('Level-4a')">Level-4_a</a></li>
+					<li><a href="javascript:alert('Level-4b')">Level-4_b</a></li>
+				</ul> <!-- Level-3b sub-menu -->
+				</li> <!-- Level-3b -->
+			</ul> <!-- Level-2b sub-menu -->
+			</li> <!-- Level-2b -->
+		</ul> <!-- Level-1b sub-menu -->
+		</li> <!-- Level-1b -->
+	</ul> <!-- Many Levels sub-menu -->
+	</li> <!-- Many Levels -->
+</ul> <!-- myMenu -->
+<br/><br/><br/>
+<ul id="myOtherMenu">
+		<li>  
+	<img align='middle' style='margin-right:1em' border='0' src='../doc/images/favicon.gif' alt='Zapatec Home'>
+	<a href="http://www.zapatec.com/website/main/products/prod1/">_Home</a> 
+	</li>
+	<li>
+	<a href="#">_Products</a>
+	<ul>
+		<li> 
+		<a href="#">_Menu</a>
+
+		<ul>
+			<li>  <a href="http://www.zapatec.com/website/main/products/prod3/">_Overview</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">_Demo</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">_Features</a> </li>
+
+			<li>  <a href="http://www.zapatec.com/website/main">_Wizard</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">Dow_nload</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">_License</a> </li>
+
+		</ul>
+
+		</li>
+
+		<li>
+		<a href="#">_Calendar</a>
+		<img style='margin-left:1em' align='middle' border='0' src='http://www.zapatec.com/website/main/zpcal/themes/icons/calendar4.gif' alt='Zapatec Calendar'>
+		<ul>
+			<li>  <a href="http://www.zapatec.com/website/main/products/prod1/">_Overview</a> </li>
+
+			<li>  <a href="http://www.zapatec.com/website/main/demo.jsp">_Demo</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main/features.jsp">_Features</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main/coding.jsp">_Wizard</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main/download.jsp">Dow_nload</a> </li>
+
+			<li>  <a href="http://www.zapatec.com/website/main/pricing.jsp">_Pricing</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main/buy.jsp">_Buy</a> </li>
+		</ul>
+		</li>
+		<li> 
+		<a href="#">_Tree</a>
+
+		<ul>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/">_Overview</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">_Demo</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">_Features</a> </li>
+
+			<li>  <a href="http://www.zapatec.com/website/main">_Wizard</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">Dow_nload</a> </li>
+			<li>  <a href="http://www.zapatec.com/website/main">_License</a> </li>
+		</ul>
+
+		</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/prod3/">Con_sulting</a> </li>
+
+	</ul>
+	<li >
+	<a href="#">_Support</a>
+	<ul>
+		<li>  <a href="http://www.zapatec.com/website/main">_Overview</a> </li>
+
+		<li>  <a href="http://www.zapatec.com/website/main">_Forum</a> </li>
+		<li>  <a href="http://www.zapatec.com/website/main">_Quick Guide</a> </li>
+		<li>  <a href="http://www.zapatec.com/website/main">Reference _Manual</a> </li>
+		<li>  <a href="http://www.zapatec.com/website/main">Request _Help</a> </li>
+
+	</ul>
+	</li>
+	<li>
+	<a href="#">Abo_ut</a>
+	<ul>
+		<li>  <a href="http://www.zapatec.com/website/main/about.jsp">_Company</a> </li>
+
+		<li>  <a href="http://www.zapatec.com/website/main/management.jsp">Management _Team</a> </li>
+		<li>  <a href="http://www.zapatec.com/website/main/mission.jsp">_Mission Statement</a> </li>
+		<li>  <hr/> </li>
+		<li>  <a href="http://www.zapatec.com/website/main/employment.jsp">_Jobs</a> </li>
+		<li>  <a href="http://www.zapatec.com/website/main/contact.jsp">Contact _Us</a> </li>
+
+	</ul>
+	</li>
+</ul>
+		<script type="text/javascript">
+		var menu = new Zapatec.Menu({source: 'myMenu', zIndex: 20, theme: 'office_blue', hideDelay: 2000});
+		var menu2 = new Zapatec.Menu({source: 'myOtherMenu', zIndex: 10, theme: 'osx', hideDelay: 2000})
+	</script>
+	
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

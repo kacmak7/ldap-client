@@ -1,0 +1,64 @@
+/* $Id: greengray.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+/* Menu and Top menu */
+.zpMenuGreengray .zpMenuContainer .zpMenu-item,
+.zpMenuGreengray .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	border-top: 2px solid #DAF4C0;		/* lighter green */
+	border-right: 2px solid #B2D98C;	/* darker green */
+	border-bottom: 2px solid #B2D98C;
+	border-left: 2px solid #DAF4C0;
+}
+
+.zpMenuGreengray .zpMenuContainer .zpMenu-item {
+	background: #C7ECA2;			/* light green */
+}
+
+.zpMenuGreengray .zpMenu-item table.zpMenu-table {
+	font: 11px verdana, tahoma, sans-serif;
+}
+
+/* Color not selected */
+.zpMenuGreengray .zpMenu-top .zpMenu-label,
+.zpMenuGreengray .zpMenu-top a { 
+	color: #38571A;
+}
+
+/* Color Selected */
+.zpMenuGreengray .zpMenu-item-selected, zpMenu-label,
+.zpMenuGreengray .zpMenu-item-selected a {
+	color: #FFF;
+}
+
+/* Current selected items in top horizontal menu*/
+.zpMenuGreengray .zpMenuContainer .zpMenu-item-selected,
+.zpMenuGreengray .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background: #8F8F8F;
+	border-top: 2px solid #7A7A7A;
+	border-right: 2px solid #DBDBDB;
+	border-bottom: 2px solid #DBDBDB;
+	border-left: 2px  solid #7A7A7A;
+	background: #8F8F8F;
+}
+
+
+/* The arrow that shows up when there's a sub-menu */
+.zpMenuGreengray .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed  {
+	background-image: url("greengray/arrow.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuGreengray .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded  {
+	background: url("greengray/arrow-hover.gif") #8F8F8F no-repeat right center; 
+}
+/* Override previously defined background defined in this css for HR */
+.zpMenuGreengray .zpMenuContainer .zpMenu-item-hr,
+.zpMenuGreengray .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	padding:0;
+	margin:0;
+	border:none;
+	background:black;
+	width:auto;
+}

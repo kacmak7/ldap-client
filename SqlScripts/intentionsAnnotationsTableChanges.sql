@@ -1,0 +1,1 @@
+ALTER TABLE public.intentions_annotations DROP CONSTRAINT "intentions_annotations_unique";

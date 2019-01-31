@@ -1,0 +1,1 @@
+ALTER TABLE intentions ALTER COLUMN duration_id SET NOT NULL;

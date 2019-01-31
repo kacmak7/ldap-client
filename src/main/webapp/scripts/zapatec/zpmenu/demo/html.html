@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content=" This menu shows the different HTML elements that you can include in your menu. You can use different fonts sizes and effects and include form elements such as checkboxes, radio buttons, and text input boxes. Notice the Scrolling List sub-menu under Forms, which is a long, scrollable list of menu-items. ">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Menu with Different HTML Elements</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+
+	<style>
+	/* Adjust width of div so only vertical scroll, IE fix */
+	.zpMenuContainer .zpMenuContainer .zpScroll .zpMenu-item { width:50px; }
+	.zpScroll {height:8em;  overflow: auto;width: 100%;}
+	</style>
+
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Menu with Different HTML Elements</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		
+	<li>This menu shows the different HTML elements that you can include in your menu.</li>
+	<li>You can use different fonts sizes and effects and include form elements such as checkboxes, radio buttons, and text input boxes.</li>
+	<li>Notice the Scrolling List sub-menu under Forms, which is a long, scrollable list of menu-items.</li>
+
+		</ul>
+		</div>
+
+
+<form action="">
+	<ul id="myMenu" style="display:none">
+				<li>
+		Font effects
+		<ul>
+			<li> <strong> bold</strong> </li>
+			<li> <i>italic</i> </li>
+			<li> <u>Underline</u> </li>
+			<li>  
+			<div>
+				multiple <br/>
+				lines
+			</div>
+			</li>
+			<li>
+			Sizes
+			<ul>
+				<li> <h1 style='margin-bottom:0'> H1 </h1> </li>
+				<li> <h2 style='margin-bottom:0'> H2 </h2> </li>
+				<li> <h3 style='margin-bottom:0'> H3 </h3> </li>
+				<li> <h4 style='margin-bottom:0'> H4 </h4> </li>
+				<li> <h5 style='margin-bottom:0'> H5 </h5> </li>
+			</ul>
+			</li>
+			<li>
+			Colors
+			<ul>
+				<li> <font style='color:red'> red </font> </li>
+				<li> <font style='color:blue'> blue </font> </li>
+				<li> <font style='color:green'> green </font> </li>
+				<li> <font style='color:yellow'> yellow </font> </li>
+				<li> <font style='color:purple'> purple </font> </li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+		<div>
+			Forms
+		</div>
+		<ul>
+			<li>
+			Name
+			<ul>
+				<li>
+				First Name: <input class="input" type="text" name="first" size='5'> 
+				</li>
+				<li>
+				Last Name: <input class="input" type="text" name="last" size='5'> 
+				</li>
+			</ul>
+			</li>
+			<li>
+			Radio buttons
+			<ul>
+				<li>
+				<input type="radio" name="gender" value="male" > I am male
+				</li>
+				<li>
+				<input type="radio" name="gender" value="female" > I am female
+				</li>
+				<li>
+				<input type="radio" name="gender" value="neither" > I am neither	
+				</li>
+			</ul>
+			<li>
+			Checkboxes
+			<ul>
+				<li>
+				<input type="checkbox" name="bike" /> Red
+				</li>
+				<li>
+				<input type="checkbox" name="car1" /> Orange
+				</li>
+				<li>
+				<input type="checkbox" name="car2" /> Yellow
+				</li>
+				<li>
+				<input type="checkbox" name="car3" /> Green
+				</li>
+				<li>
+				<input type="checkbox" name="car4" /> Blue
+				</li>
+				<li>
+				<input type="checkbox" name="car5" /> Indigo
+				</li>
+				<li>
+				<input type="checkbox" name="car6" /> Violet
+				</li>
+
+			</ul>
+			</li>
+			<li>
+			Select box
+			<ul>
+				<li>
+				Rate this menu
+				<select class="input" id="f_subMenus">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5" selected>5</option>
+				</select>
+				</li>
+			</ul>
+			</li>
+			<li>
+			Scrolling List
+				<ul  class='zpScroll'>
+					<li> 1 </li>
+					<li> 2 </li>
+					<li> 3 </li>
+					<li> 4 </li>
+					<li> 5 </li>
+					<li> 6 </li>
+					<li> 7 </li>
+					<li> 8 </li>
+					<li> 9 </li>
+					<li> 10 </li>
+				</ul>
+			</li>
+		</ul>
+		<li>
+		Other
+		<ul>
+			<li>
+
+			Links
+			<ul>
+				<li> <a href='http://www.zapatec.com'> A regular link</a></li>
+				<li> <a href='http://www.zapatec.com'><img border='0' src='../doc/images/favicon.gif'  alt='Javascript Menu'></a> Small image</li>
+				<li>
+				Larger image
+				<br/>
+				<a href='http://www.zapatec.com'><img src='../doc/images/logoNew.gif' alt='Zapatec logo' border='0' width='110'></a>
+				</li>
+			</ul>
+			</li>
+			<li>
+			Javascript
+			<ul>
+				<li> <a href='javascript:alert("Hello World")'> A javascript Alert</a> </li>
+				<li> <a href='javascript:alert(new Date())'> Date and Time</a> </li>
+			</ul>
+			</li>
+		</ul>
+	</ul>
+</form>
+		<script type="text/javascript">
+		var menu = new Zapatec.Menu({theme: 'winxp1', source: 'myMenu'});
+		
+	</script>
+	
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

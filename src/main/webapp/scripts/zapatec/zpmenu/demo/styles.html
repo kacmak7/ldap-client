@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content="It applies a custom style to the &quot;My Account&quot; header.It applies a custom style to items under the &quot;Products&quot; header.">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Different Styles for Different Menu Items</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+
+	<style type="text/css">
+	.myAccount { background-color:#C8EBFF !important; }
+	.myProducts .zpMenu-item { background-color:#d2d2d2 !important; }
+	</style>
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Different Styles for Different Menu Items</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		<li>It applies a custom style to the &quot;My Account&quot; header.</li><li>It applies a custom style to items under the &quot;Products&quot; header.</li>
+		</ul>
+		</div>
+
+
+<ul id="myMenu" style="display:none">
+	<li>
+	<IMG src="../themes/icon/blue/About_blue.gif"> About Us <ul>
+		<li>
+		<IMG src="../themes/icon/blue/Jobs_blue.gif"> Jobs
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/blue/Products_blue.gif"> Products
+	<ul class='myProducts'>
+		<li>
+		<IMG src="../themes/icon/blue/Demo_blue.gif"> Demo
+		</li>
+		<li>
+		<IMG src="../themes/icon/blue/Pricing_blue.gif"> Pricing
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/blue/Services_blue.gif"> Services
+	<ul>
+		<li>
+		<IMG src="../themes/icon/blue/Training_blue.gif"> Training
+		</li>
+		<li>
+		<IMG src="../themes/icon/blue/Consulting_blue.gif"> Consulting
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/blue/Support_blue.gif"> Support
+	<ul>
+		<li>
+		<IMG src="../themes/icon/blue/Services_blue.gif"> Customer Service
+		</li>
+		<li>
+		<IMG src="../themes/icon/blue/Documentation_blue.gif"> Documentation
+		</li>
+		<li>
+		<IMG src="../themes/icon/blue/Forum_blue.gif"> Forum
+		</li>
+		<li>
+		<IMG src="../themes/icon/blue/LiveChat_blue.gif"> Live Chat
+		</li>
+	</ul>
+	</li>
+	<li>
+	<IMG src="../themes/icon/blue/Store_blue.gif"> Store
+	<ul>
+		<li>
+		<IMG src="../themes/icon/blue/ShoppingCart_blue.gif"> Shopping Cart
+		</li>
+		<li>
+		<IMG src="../themes/icon/blue/Buy_blue.gif"> Buy
+		</li>
+	</ul>
+	</li>
+	<li class='myAccount'>
+	<IMG src="../themes/icon/blue/Privacy_blue.gif"> My Account
+	</li>
+</ul>
+		<script type="text/javascript">
+		var menu = new Zapatec.Menu({theme: 'lightblue', source: 'myMenu'});
+		
+	</script>
+	
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

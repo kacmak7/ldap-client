@@ -1,0 +1,67 @@
+/* $Id: win2k.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+
+/* Default Border */
+.zpMenuWin2k .zpMenuContainer {
+	border-top:    2px solid #F8F8EF;
+	border-right:  2px solid #404040;
+	border-bottom: 2px solid #404040;
+	border-left:   2px solid #B0B098;
+}
+
+/* Top Background Color */
+.zpMenuWin2k .zpMenuContainer .zpMenu-item {
+	background-color:#c0c0c0;
+}
+
+/* properties of a drop down menu */
+.zpMenuWin2k .zpMenu-vertical-mode .zpMenu-level-1, 
+.zpMenuWin2k .zpMenu-horizontal-mode .zpMenu-level-1 
+{
+	border:2px solid #c0c0c0; /* Match the border when selected */
+}
+
+
+/* Sub, Background */
+.zpMenuWin2k .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	background: #c0c0c0;
+}
+
+/* Top, Selected */
+.zpMenuWin2k .zpMenuContainer .zpMenu-item-selected {
+	border-top:    2px solid #808080;
+	border-right:  2px solid #ffffff;
+	border-bottom: 2px solid #ffffff;
+	border-left:   2px solid #808080;
+ 	background:    #c0c0c0;
+}
+
+
+/* Sub, Selected */
+.zpMenuWin2k .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background: #BDCFFD repeat; 
+	color: #ffffff;
+	border:0px none #000000;
+}
+
+/* The arrow that shows up when there's a sub-menu */
+.zpMenuWin2k .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed {
+	background-image: url("icon/arrow_right_black.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuWin2k .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded {
+	background: url("icon/arrow_right_black.gif") #BDCFFD no-repeat center right;
+}
+
+/* Override previously defined background defined in this css for HR */
+.zpMenuWin2k .zpMenuContainer .zpMenu-item-hr,
+.zpMenuWin2k .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	padding:0;
+	margin:0;
+	border:none;
+	background:black;
+}

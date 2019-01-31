@@ -1,0 +1,65 @@
+/* $Id: contrast_blue.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+/* Top and Sub menus */
+.zpMenuContrast_blue .zpMenu {
+	background:  #B0C4DE;
+	border: 1px solid blue;
+}
+
+/* Top and Sub menus */
+.zpMenuContrast_blue .zpMenu a,
+.zpMenuContrast_blue .zpMenu .zpMenu-label {
+	color:  #0002B9;
+	font-weight: normal;
+}
+
+/* Top and Sub menus */
+.zpMenuContrast_blue .zpMenu .zpMenu-item-selected .zpMenu-label,
+.zpMenuContrast_blue .zpMenu .zpMenu-item-selected a {
+	color:#00FFFF;
+}
+
+
+/* Vertical border, 1st level */
+.zpMenuContrast_blue .zpMenu-vertical-mode .zpMenu-level-1 {
+	border-color: rgb(255,242,245);
+}
+
+/* Sub menu */
+.zpMenuContrast_blue .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	margin-top:0px;
+	padding-top: 0px;
+	background:   #CADBE7;
+	border-bottom: 1px solid rgb(255,242,245);
+	padding:0px;
+	color: #00008B;
+}
+
+/* Top and Sub, Selected */
+.zpMenuContrast_blue .zpMenuContainer .zpMenu-item-selected,
+.zpMenuContrast_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background:  #000099;
+}
+
+/* Sub, Has Sub, NOT Selected */
+.zpMenuContrast_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed{
+	background-image: url("contrast_blue/arrow.gif");
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+/* Sub, Has Sub, Selected */
+.zpMenuContrast_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded{
+	background: url("contrast_blue/arrow.gif")  #000099 no-repeat right center; 
+}
+
+
+/* Override previously defined background defined in this css for HR */
+.zpMenuContrast_blue .zpMenuContainer .zpMenu-item-hr,
+.zpMenuContrast_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	padding:0;
+	margin:0;
+	border:none;
+	background: #00FFFF;
+}

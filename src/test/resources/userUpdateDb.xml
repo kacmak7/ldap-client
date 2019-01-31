@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<public.app_user username="admin" first_name="Robert"
+		last_name="Grzesiak" account_expired="false" account_locked="false"
+		credentials_expired="false" account_enabled="true"
+		password="d033e22ae348aeb5660fc2140aec35850c4da997" delete_code="null" />
+	<public.app_user username="test" first_name="Robert"
+		last_name="Grzesiak" account_expired="false" account_locked="false"
+		credentials_expired="false" account_enabled="true"
+		password="a94a8fe5ccb19ba61c4c0873d391e987982fbbd3" delete_code="null" />
+	<public.app_user username="123" first_name="Tester"
+		last_name="Test" account_expired="false" account_locked="false"
+		credentials_expired="false" account_enabled="false"
+		password="40bd001563085fc35165329ea1ff5c5ecbdbbeef" delete_code="da39a3ee5e6b4b0d3255bfef95601890afd80709" />
+</dataset>

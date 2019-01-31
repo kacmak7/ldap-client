@@ -1,0 +1,79 @@
+/* $Id: office_blue.css 6485 2007-02-28 13:19:06Z roman $ */
+@import url("layout/basic.css");
+
+/* Default Border for top and sub menus */
+.zpMenuOffice_blue .zpMenuContainer {
+	border: 1px solid #002C94;
+}
+
+/* Default Background Color of ALL menu items */
+.zpMenuOffice_blue .zpMenuContainer .zpMenu-item {
+	background: #ADCBF7;
+}
+
+/* TOP Menu - covers icons also */
+.zpMenuOffice_blue .zpMenuContainer .zpMenu-item-selected {
+	background: url("office_blue/bg_top_on.gif") repeat 100% 100%;
+}
+
+/* SUB Menu - NOT Top menu */
+/* Sub, Selected, Background for icons */
+.zpMenuOffice_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-selected .icon,
+/* Sub, Selected, Background for menu label */
+.zpMenuOffice_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background: #FFEFC6; 
+}
+
+/* Sub, Has Sub Arrow, NOT Selected */
+.zpMenuOffice_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed {
+	background-image: url("icon/arrow_right_black.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+/* Sub, Has Sub Arrow, Selected */
+.zpMenuOffice_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded {
+	background: url("icon/arrow_right_black.gif") #FFEFC6 no-repeat center right;
+}
+
+/* Sub, Left ICON */
+.zpMenuOffice_blue .zpMenuContainer .zpMenuContainer  .icon {
+	background: url("office_blue/bg_left.gif") #ADCBF7  repeat-y 0 0;
+}
+
+/* Override previously defined background defined in this css for HR */
+.zpMenuOffice_blue .zpMenuContainer .zpMenu-item-hr,
+.zpMenuOffice_blue .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	padding:0;
+	margin:0;
+	border:none;
+	background:black;
+}
+
+.zpMenuOffice_blue .zpMenuContainer .zpMenuContainer .icon div {
+	width: 23px !important;
+}
+
+
+.zpMenuOffice_blue .zpMenu-vertical-mode .zpMenu-item-collapsed .zpMenu-table {
+	width: 100%;
+	background-image: url("icon/arrow_right_black.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+	text-align: left;
+}
+.zpMenuOffice_blue .zpMenu-vertical-mode .zpMenu-item-expanded .zpMenu-table {
+	width: 100%;
+	background-image: url("icon/arrow_right_black.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+	text-align: left;
+}
+.zpMenuOffice_blue .zpMenu-vertical-mode .zpMenu-item-collapsed .zpMenu-label {
+	width: 100%;
+	text-align: left;
+}
+.zpMenuOffice_blue .zpMenu-vertical-mode .zpMenu-item-expanded .zpMenu-label {
+	width: 100%;
+	text-align: left;
+}

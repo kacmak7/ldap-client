@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- users -->
+	<public.app_user id="1" username="admin" first_name="Robert"
+		last_name="Grzesiak" account_expired="false" account_locked="false"
+		credentials_expired="false" account_enabled="true" version="1"
+		password="d033e22ae348aeb5660fc2140aec35850c4da997" delete_code="null" />
+	<public.app_user id="2" username="test" first_name="Robert"
+		last_name="Grzesiak" account_expired="false" account_locked="false"
+		credentials_expired="false" account_enabled="true" version="1"
+		password="a94a8fe5ccb19ba61c4c0873d391e987982fbbd3" delete_code="null" />
+</dataset>

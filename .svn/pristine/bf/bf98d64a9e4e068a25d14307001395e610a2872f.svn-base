@@ -1,0 +1,974 @@
+    <div id="content" style="display:none">
+      <div id="tab-bar"></div>
+				<div id="tabs" style='visibility:hidden'>
+
+        <div id="pane-introduction">
+          <label accesskey="i"><u>I</u>ntroduction</label>
+          <h1>Introduction to the Zapatec DHTML Menu Wizard</h1>
+          <blockquote>
+            Using the Zapatec <b> Javascript Menu Wizard </b> you can construct a menu and choose the
+            various configuration options. When you are done, the Wizard will generate the 
+            necessary Javascript code and you can just paste the code into your HTML page.
+            <hr/>
+            Use the Next and Previous buttons to navigate through the tabs. To go to a specific tab, just click on the tab
+            header on top.
+            <br/>
+            Move your mouse over the question marks 
+            <dfn title="Tooltip Sample">
+              These tooltips provide additional information in the Wizard. To make them go away, just move the mouse away from
+              the question mark and outside the tooltip box.
+            </dfn>
+            to see the help for specific items. 
+            <hr/>
+            <table>
+              <tr>
+                <td class="lbl">
+                  <label for="f_subMenus">Number of Sub-Menus:</label>
+                </td>
+                <td>
+                  <dfn title="Number of Sub-Menus">
+                    Number of top sub-menus in a tree.
+                  </dfn>
+                </td>
+                <td>
+                  <select id="f_subMenus">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="lbl">
+                  <label for="f_itemsInSubMenus">Number of Items:</label>
+                </td>
+                <td>
+                  <dfn title="Number of Items in Sub-Menus">
+                    Number of items, in each sub-menu.
+                  </dfn>
+                </td>
+                <td>
+                  <select id="f_itemsInSubMenus">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="lbl">
+                  <label for="f_vertical">Vertical Menu:</label>
+                </td>
+                <td>
+                  <dfn title="Vertical Menu">
+                    The wizard generates, by default, horizontal drop down menus. Click here if you want
+                    your menu to be a vertical menu where the menu items pop to the right of the
+                    menu.
+                  </dfn>
+                </td>
+                <td>
+                  <input type="checkbox" id="f_vertical" />
+                </td>
+              </tr>
+              <tr>
+                <td class="lbl">
+                  <label for="f_onclick">Click Menu:</label>
+                </td>
+                <td>
+                  <dfn title="Click Menu">
+                    Normally you will see the drop down menus when you hover
+                    over them. Check this option to have the menus drop when
+                    you click on the items. This is how desktop application
+                    behave.	Choosing this option only affects the top menu
+                    items. In the wizard, Click Menu is ONLY active in the Effects pane.
+                  </dfn>
+                </td>
+                <td>
+                  <input type="checkbox" id="f_onclick" onclick='do_click_menu()'/>
+                </td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td class="lbl">
+                  <label for="f_trigger">Trigger Menu:</label>
+                </td>
+                <td>
+                  <dfn title="Trigger Menu">
+                    Menu will be associated with mouse click or key press event.
+                  </dfn>
+                </td>
+                <td>
+                  <input type="checkbox" id="f_trigger" onclick="if(this.checked){document.getElementById('triggerOptions').style.display='block'}else{document.getElementById('triggerOptions').style.display='none'}" />
+                </td>
+              </tr>
+            </table>
+            <div id="triggerOptions" style="display:none">
+              <table>
+                <tr>
+                  <td class="lbl">
+                    <label for="f_triggerevent">Trigger Event:</label>
+                  </td>
+                  <td>
+                    <dfn title="Trigger Event">
+                      Event menu associated with.
+                    </dfn>
+                  </td>
+                  <td>
+                    <select id="f_triggerevent" onchange="if(this.value==4){document.getElementById('triggerEventOptions').style.display='block'}else{document.getElementById('triggerEventOptions').style.display='none'}">
+                      <option value="1" selected>Right Mouse Button</option>
+                      <option value="2">Left Mouse Button</option>
+                      <option value="3">Any Mouse Button</option>
+                      <option value="4">Keyboard</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+	            <div id="triggerEventOptions" style="display:none">
+	              <table>
+	                <tr>
+	                  <td class="lbl">
+	                    <label for="f_triggerkey">Trigger Key Scan Code:</label>
+	                  </td>
+	                  <td>
+	                    <dfn title="Trigger Key Scan Code">
+	                      Decimal scan code of key menu associated with.
+	                      E.g. 113 for "F2", etc.
+	                      Required for keyboard trigger event.
+	                    </dfn>
+	                  </td>
+	                  <td>
+	                  	<input type="text" id="f_triggerkey" value="" />
+	                  </td>
+	                </tr>
+	              </table>
+	            </div>
+              <table>
+                <tr>
+                  <td class="lbl">
+                    <label for="f_triggerobject">Trigger Object:</label>
+                  </td>
+                  <td>
+                    <dfn title="Trigger Object">
+                      You may optionally enter object id associated with the menu.
+                      E.g. div inside which you should click to show menu.
+                      Leave this field blank to associate menu with whole document.
+                    </dfn>
+                  </td>
+                  <td>
+                  	<input type="text" id="f_triggerobject" value="" />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <table>
+              <tr>
+                <td class="lbl">
+                  <label for="f_keeptrack">Keep Track of Previous<br />Menu Location:</label>
+                </td>
+                <td>
+                  <dfn title="Keep Track of Previous Menu Location">
+                    When you click on an item, it will be saved into cookie.
+                    When the menu is redisplayed on the target page,
+                    this item and path to it is highlighted.
+                  </dfn>
+                </td>
+                <td>
+                  <input type="checkbox" id="f_keeptrack" onclick="if(this.checked){document.getElementById('keepTrackOptions').style.display='block'}else{document.getElementById('keepTrackOptions').style.display='none'}" />
+                </td>
+              </tr>
+            </table>
+            <div id="keepTrackOptions" style="display:none">
+              <table>
+                <tr>
+                  <td class="lbl">
+                    <label for="f_keeptrackexpand">Expand Previous<br />Location:</label>
+                  </td>
+                  <td>
+                    <dfn title="Expand Previous Location">
+                      Menu will open expanded to previous location.
+                    </dfn>
+                  </td>
+                  <td>
+                    <input type="checkbox" id="f_keeptrackexpand" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="lbl">
+                    <label for="f_keeptrackcookie">Cookie Name:</label>
+                  </td>
+                  <td>
+                    <dfn title="Cookie Name">
+                      Enter cookie name that will hold previous menu location.
+                      If you have several menus on a page, you should use different cookie for each menu.
+                    </dfn>
+                  </td>
+                  <td>
+                  	<input type="text" id="f_keeptrackcookie" value="__zp_item" />
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </blockquote>
+        </div>
+
+        <div id="pane-contents">
+          <label onclick="doContents()" accesskey="c"><u>C</u>ontents</label>
+          <dfn title="Menu contents" style="float: right">
+            You will most probably like to generate a menu
+            dynamically from a database.  However, for the purpose
+            of our wizard, the generated content will be a simple
+            static list that shows you how the generation should be
+            done.
+          </dfn>
+          <h1>
+            Menu contents
+          </h1>
+          <blockquote>
+            Here you can define the layout of your your menu. 
+            First click an item on the right to select it.
+            Then, use the links on the left to create/remove items and
+            sub-items relative to the selected item. You can also change
+            the text of the item in the box. 
+            <br/>
+            Since the Generated menu layout is done in HTML, you may find
+            it easier to focus here on the menu features and then finish
+            moving the nodes around in your editor.
+          </blockquote>
+          <blockquote>
+            <div style="float:left;width:380px">
+              <table class="form">
+                <tr>
+                  <td>
+                    <label for="theme">Item Text</label>
+                  </td>
+                  <td>
+                    <input disabled="disabled" type="text" id="f_design_label" />
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="theme">Item Link</label>
+                  </td>
+                  <td>
+                    <input disabled="disabled" type="text" id="f_design_link" />
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="theme">Link Target</label>
+                  </td>
+                  <td>
+                    <input disabled="disabled" type="text" id="f_design_target" />
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <a accesskey="b" href="javascript:void(0)" onclick="return designInsert(false)">Insert Item <u>B</u>efore</a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <a accesskey="a" href="javascript:void(0)" onclick="return designInsert(true)">Insert Item <u>A</u>fter</a>
+                  </td>
+                  <td>
+                    <dfn title="Keyboard saves time" style="float: right">
+                      - <tt>ALT-B</tt>: insert new item before the current one<br />
+                      - <tt>ALT-A</tt>: insert new item after the current one<br />
+                      - <tt>ALT-S</tt>: add a submenu to the current item<br />
+                      - <tt>ENTER</tt>: shorthand for <tt>ALT-A</tt>
+                    </dfn>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <a href="javascript:void(0)" onclick="return designRemove()">Remove Item</a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <a accesskey="s" href="javascript:void(0)" onclick="return designAddSubtree()">Add <u>S</u>ubtree</a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <div id="designAddIcon">
+                      <a href="javascript:void(0)" onclick="return designAddIcon()">Add Icon</a>
+                    </div>
+                    <div id="designRemoveIcon" style="display:none">
+                      <a href="javascript:void(0)" onclick="return designRemoveIcon()">Remove Icon</a>
+                    </div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+
+              <div id="iconBox" class="dialog" style="position:absolute;left:85px;top:190px;width:200px;display:none" class="content">
+                <div id="iconBoxTitle" class="title"></div>
+                <form name="iconForm">
+                  <fieldset><legend>Gallery</legend>
+                    <div style="padding:3px 0px">
+                      <div id="iconGallery">
+                        <ul id="iconTree">
+                          <li>
+                            Basic Icons
+                            <ul>
+                              <li><img src="../themes/icon/icon_copy.gif" /></li>
+                              <li><img src="../themes/icon/icon_cut.gif" /></li>
+                              <li><img src="../themes/icon/icon_docmap.gif" /></li>
+                              <li><img src="../themes/icon/icon_exchange.gif" /></li>
+                              <li><img src="../themes/icon/icon_filesearch.gif" /></li>
+                              <li><img src="../themes/icon/icon_find.gif" /></li>
+                              <li><img src="../themes/icon/icon_help.gif" /></li>
+                              <li><img src="../themes/icon/icon_hf.gif" /></li>
+                              <li><img src="../themes/icon/icon_mailrecipient.gif" /></li>
+                              <li><img src="../themes/icon/icon_new.gif" /></li>
+                              <li><img src="../themes/icon/icon_normal.gif" /></li>
+                              <li><img src="../themes/icon/icon_office.gif" /></li>
+                              <li><img src="../themes/icon/icon_open.gif" /></li>
+                              <li><img src="../themes/icon/icon_outline.gif" /></li>
+                              <li><img src="../themes/icon/icon_paste.gif" /></li>
+                              <li><img src="../themes/icon/icon_powerpoint.gif" /></li>
+                              <li><img src="../themes/icon/icon_print.gif" /></li>
+                              <li><img src="../themes/icon/icon_printpreview.gif" /></li>
+                              <li><img src="../themes/icon/icon_reading.gif" /></li>
+                              <li><img src="../themes/icon/icon_routing.gif" /></li>
+                              <li><img src="../themes/icon/icon_save.gif" /></li>
+                              <li><img src="../themes/icon/icon_save_asweb.gif" /></li>
+                              <li><img src="../themes/icon/icon_thumb.gif" /></li>
+                              <li><img src="../themes/icon/icon_web.gif" /></li>
+                              <li><img src="../themes/icon/icon_blank.gif" /></li>
+                              <li><img src="../themes/icon/zpcal.gif" /></li>
+                              <li><img src="../themes/icon/zpcomp.gif" /></li>
+                              <li><img src="../themes/icon/zpcont.gif" /></li>
+                              <li><img src="../themes/icon/zpdoc.gif" /></li>
+                              <li><img src="../themes/icon/zpdown.gif" /></li>
+                              <li><img src="../themes/icon/zpforum.gif" /></li>
+                              <li><img src="../themes/icon/zphelp.gif" /></li>
+                              <li><img src="../themes/icon/zpmenu.gif" /></li>
+                              <li><img src="../themes/icon/zptree.gif" /></li>
+                              <li><img src="../themes/icon/zpwiz.gif" /></li>
+                            </ul>
+                          </li>
+                          <li>
+                            Blue Icons
+                            <ul>
+                              <li><img src="../themes/icon/blue/About_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Buy_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Consulting_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Demo_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Documentation_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Faq_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Forum_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Home_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Jobs_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/LiveChat_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/News_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Pricing_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Privacy_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Products_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Search_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Services_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/ShoppingCart_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Store_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Support_blue.gif" /></li>
+                              <li><img src="../themes/icon/blue/Training_blue.gif" /></li>
+                            </ul>
+                          </li>
+                          <li>
+                            Transparent Icons
+                            <ul>
+                              <li>
+                                Black
+                                <ul>
+                                  <li><img src="../themes/icon/transparent/black/about.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/buy.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/consulting.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/demo.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/documentation.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/faq.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/forum.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/home.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/jobs.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/liveChat.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/news.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/pricing.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/privacy.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/products.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/search.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/services.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/shoppingCart.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/store.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/support.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/black/training.gif" /></li>
+                                </ul>
+                              </li>
+                              <li>
+                                Blue
+                                <ul>
+                                  <li><img src="../themes/icon/transparent/blue/about.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/buy.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/consulting.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/demo.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/documentation.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/faq.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/forum.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/home.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/jobs.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/liveChat.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/news.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/pricing.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/privacy.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/products.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/search.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/services.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/shoppingCart.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/store.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/support.gif" /></li>
+                                  <li><img src="../themes/icon/transparent/blue/training.gif" /></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset><legend>URL</legend>
+                    <div style="padding:3px 0px">Icon URL: <input name="i_url" type="text"></div>
+                  </fieldset>
+                  <div class="buttons"><button type="submit" id="iconButtonOk">OK</button><button id="iconButtonCancel">Cancel</button></div>
+                </form>
+              </div>
+
+            </div>
+            <div style="display:none"><ul id="designMenu"></ul></div>
+            <div id="designcontents" style="margin-left:380px"></div>
+          </blockquote>
+        </div>
+
+        <div id="pane-look">
+          <label onclick="doLook()" accesskey="l"><u>L</u>ook and Feel</label>
+          <h1>Look and Feel</h1>
+          <blockquote>
+            <p>Specify your menu's properties, and see the generated menu.</p>
+            <div style="float:left;width:380px">
+              <table class="form">
+                <tr>
+                  <td>
+                    <label for="theme">Theme</label>
+                  </td>
+                  <td>
+                    <select id="theme" onchange="setActiveTheme(this)">
+                    include(`../demo/share/themes_sel.m4')
+                    </select>
+                  </td>
+                  <td>
+                    <dfn title="Menu Theme">
+                      Use this menu to choose the theme of your menu.
+                    </dfn>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <a href="javascript:void(0)" onclick="return designCustomize()">Menu Properties</a><br />
+                  </td>
+                  <td>
+                    <dfn title="Menu Properties">
+                      Customize appearance of ALL menu items.
+                    </dfn>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <a href="javascript:void(0)" onclick="return designItemProperties()">Item Properties</a><br />
+                  </td>
+                  <td>
+                    <dfn title="Item Properties">
+                      Customize appearance of selected menu item ONLY.
+                    </dfn>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:right">
+                    ::
+                  </td>
+                  <td>
+                    <a href="javascript:void(0)" onclick="return designSubmenuProperties()">Sub-Menu Properties</a><br />
+                  </td>
+                  <td>
+                    <dfn title="Sub-Menu Properties">
+                      Use this link to customize appearance of selected sub-menu.
+                    </dfn>
+                  </td>
+                </tr>
+              </table>
+
+              <div id="propertiesBox" class="dialog" style="position:absolute;left:100px;top:190px;width:340px;display:none" class="content">
+                <div id="propertiesBoxTitle" class="title"></div>
+                <form name="propertiesForm">
+                  <fieldset style="display:none"><legend>Example</legend><!-- DO NOT REMOVE THIS FIELDSET -->
+                    <table>
+                      <tr>
+                        <td style="padding:3px 5px">
+                          <div id="propertiesExample">
+                            <table cellpadding="0" cellspacing="0" style="width:100%;height:100%">
+                              <tr>
+                                <td id="propertiesExampleLabel" style="height:100%">Example</td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="propertiesExampleHi">
+                            <table cellpadding="0" cellspacing="0" style="width:100%;height:100%">
+                              <tr>
+                                <td id="propertiesExampleLabelHi" style="height:100%">Highlighted Example</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </fieldset>
+                  <fieldset><legend>Font</legend>
+                    <table width="100%">
+                      <tr>
+                        <td class="lbl">Font Family:</td>
+                        <td><select style="margin-right:0.5em" name="p_fontFamily" onchange="document.getElementById('propertiesExampleLabel').style.fontFamily=this.value">
+                            <option value="">default</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="impact">impact</option>
+                            <option value="serif">serif</option>
+                            <option value="sans-serif">sans-serif</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Verdana">Verdana</option>
+                          </select>
+						  		</td>
+							 </tr>
+						    <tr>
+                       	<td class="lbl">Font Style:</td>
+								<td>
+                          <input id="p_fontBold" name="p_fontBold" type="checkbox" onclick="if(this.checked)document.getElementById('propertiesExampleLabel').style.fontWeight='bold';else document.getElementById('propertiesExampleLabel').style.fontWeight='normal'">
+                          <label for="p_fontBold">Bold</label>
+                          <input id="p_fontItalic" name="p_fontItalic" type="checkbox" onclick="if(this.checked)document.getElementById('propertiesExampleLabel').style.fontStyle='italic';else document.getElementById('propertiesExampleLabel').style.fontStyle='normal'">
+                          <label for="p_fontItalic">Italic</label>
+						  		</td>
+							 </tr>
+                      <tr>
+                        <td class="lbl">Font Size:</td>
+                        <td><input name="p_fontSize" size="3" type="text" onchange="if(this.value>0)document.getElementById('propertiesExampleLabel').style.fontSize=this.value+'px';else document.getElementById('propertiesExampleLabel').style.fontSize=''"> pixels</td>
+                      </tr>
+                    </table>
+                  </fieldset>
+                  <fieldset><legend>Style</legend>
+                    <table>
+                      <tr>
+                        <td class="lbl">Background:</td>
+                        <td>
+                          <span><input name="p_backgroundColor" id="p_backgroundColor" type="hidden">
+                          <span style="margin-right:0.5em" class="buttonColor" onmouseover="this.className+=' buttonColor-hilite'" onmouseout="this.className='buttonColor'"
+                          ><span class="chooser" title='Background color for non-image based themes' id="p_backgroundColorChooser" onclick="chooseColor('p_backgroundColor')">&nbsp;</span
+                          ><span title="Unset color" class="nocolor" onmouseover="this.className+=' nocolor-hilite'" onmouseout="this.className='nocolor'" onclick="unsetColor('p_backgroundColor')">&#215;</span
+                          ></span>
+                          </span>
+                          Image URL: <input name="p_backgroundImage" type="text" onchange="if(this.value&&this.value!='none')document.getElementById('propertiesExample').style.backgroundImage='url('+this.value+')';else document.getElementById('propertiesExample').style.backgroundImage='none'"></td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Color:</td>
+                        <td>
+                          <span><input name="p_color" id="p_color" type="hidden">
+                          <span style="margin-right:0.5em" class="buttonColor" onmouseover="this.className+=' buttonColor-hilite'" onmouseout="this.className='buttonColor'"
+                          ><span class="chooser" title='Font color' id="p_colorChooser" onclick="chooseColor('p_color')">&nbsp;</span
+                          ><span title="Unset color" class="nocolor" onmouseover="this.className+=' nocolor-hilite'" onmouseout="this.className='nocolor'" onclick="unsetColor('p_color')">&#215;</span
+                          ></span>
+                          </span>
+                          <input style="visibility:hidden" type="text"></td>
+                      </tr>
+                    </table>
+                  </fieldset>
+                  <fieldset id="propertiesHighlighted"><legend>Highlighted Style</legend>
+                    <table>
+                      <tr>
+                        <td class="lbl">Background:</td>
+                        <td>
+                          <span><input name="p_backgroundColorHi" id="p_backgroundColorHi" type="hidden">
+                          <span style="margin-right:0.5em" class="buttonColor" onmouseover="this.className+=' buttonColor-hilite'" onmouseout="this.className='buttonColor'"
+                          ><span class="chooser" title='Background color for non-image based themes' id="p_backgroundColorHiChooser" onclick="chooseColor('p_backgroundColorHi')">&nbsp;</span
+                          ><span title="Unset color" class="nocolor" onmouseover="this.className+=' nocolor-hilite'" onmouseout="this.className='nocolor'" onclick="unsetColor('p_backgroundColorHi')">&#215;</span
+                          ></span>
+                          </span>
+                          Image URL: <input name="p_backgroundImageHi" type="text"></td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Color:</td>
+                        <td>
+                          <span><input name="p_colorHi" id="p_colorHi" type="hidden">
+                          <span style="margin-right:0.5em" class="buttonColor" onmouseover="this.className+=' buttonColor-hilite'" onmouseout="this.className='buttonColor'"
+                          ><span class="chooser" title='Font color' id="p_colorHiChooser" onclick="chooseColor('p_colorHi')">&nbsp;</span
+                          ><span title="Unset color" class="nocolor" onmouseover="this.className+=' nocolor-hilite'" onmouseout="this.className='nocolor'" onclick="unsetColor('p_colorHi')">&#215;</span
+                          ></span>
+                          </span>
+                          <input style="visibility:hidden" type="text"></td>
+                      </tr>
+                    </table>
+                  </fieldset>
+                  <fieldset><legend>Border</legend>
+                    <table width="100%">
+                      <tr>
+                        <td class="lbl">Width:</td>
+                        <td><input name="p_borderWidth" size="3" type="text" onchange="if(this.value>0)document.getElementById('propertiesExample').style.borderWidth=this.value+'px';else document.getElementById('propertiesExample').style.borderWidth=''"> pixels</td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Style:</td>
+                        <td>
+                          <select style="margin-right:0.5em" name="p_borderStyle" onchange="document.getElementById('propertiesExample').style.borderStyle=this.value">
+                            <option value="">default</option>
+                            <option value="none">none</option>
+                            <option value="dotted">dotted</option>
+                            <option value="dashed">dashed</option>
+                            <option value="solid">solid</option>
+                            <option value="double">double</option>
+                            <option value="groove">groove</option>
+                            <option value="ridge">ridge</option>
+                            <option value="inset">inset</option>
+                            <option value="outset">outset</option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Color:</td>
+                        <td>
+                          <span><input name="p_borderColor" id="p_borderColor" type="hidden">
+                          <span style="margin-right:0.5em" class="buttonColor" onmouseover="this.className+=' buttonColor-hilite'" onmouseout="this.className='buttonColor'"
+                          ><span class="chooser" title='Border color' id="p_borderColorChooser" onclick="chooseColor('p_borderColor')">&nbsp;</span
+                          ><span title="Unset color" class="nocolor" onmouseover="this.className+=' nocolor-hilite'" onmouseout="this.className='nocolor'" onclick="unsetColor('p_borderColor')">&#215;</span
+                          ></span>
+                          </span>
+                          <input style="visibility:hidden" type="text"></td>
+                      </tr>
+                    </table>
+                  </fieldset>
+                  <fieldset><legend>Dimensions & Align</legend>
+                    <table width="100%">
+                      <tr>
+                        <td class="lbl">Width:</td>
+                        <td><input name="p_width" size="3" type="text" onchange="if(this.value>0)document.getElementById('propertiesExample').style.width=this.value+'px';else document.getElementById('propertiesExample').style.width=''"> pixels</td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Height:</td>
+                        <td><input name="p_height" size="3" type="text" onchange="if(this.value>0)document.getElementById('propertiesExample').style.height=this.value+'px';else document.getElementById('propertiesExample').style.height=''"> pixels</td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Text align:</td>
+                        <td><select style="margin-right:0.5em" name="p_textAlign" onchange="document.getElementById('propertiesExampleLabel').style.textAlign=this.value">
+                            <option value="">default</option>
+                            <option value="left">left</option>
+                            <option value="right">right</option>
+                            <option value="center">center</option>
+                            <option value="justify">justify</option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <td class="lbl">Vertical align:</td>
+                        <td><select style="margin-right:0.5em" name="p_verticalAlign" onchange="document.getElementById('propertiesExampleLabel').style.verticalAlign=this.value">
+                            <option value="">default</option>
+                            <option value="baseline">baseline</option>
+                            <option value="sub">sub</option>
+                            <option value="super">super</option>
+                            <option value="top">top</option>
+                            <option value="text-top">text-top</option>
+                            <option value="middle">middle</option>
+                            <option value="bottom">bottom</option>
+                            <option value="text-bottom">text-bottom</option>
+                          </select></td>
+                      </tr>
+                    </table>
+                  </fieldset>
+                  <div class="buttons">
+                    <button id="propertiesButtonApply">Apply</button><button id="propertiesButtonReset">Reset</button>&nbsp;
+                    <button id="propertiesButtonOk">OK</button><button id="propertiesButtonCancel">Cancel</button></div>
+                </form>
+              </div>
+
+            </div>
+            <div id="designlook" style="margin-left:380px"></div>
+          </blockquote>
+        </div>
+
+        <div id="pane-effects">
+          <label onclick="doPreview()" accesskey="e"><u>E</u>ffects</label>
+          <h1>Menu effects</h1>
+          <blockquote>
+            <p>Specify your menu's effects, and see the generated menu.
+	            <span id='p_click_menu' style='display:none'></span>
+				</p>
+            <div style="float:left;width:380px">
+              <table class="form">
+                <tr>
+                  <td>
+                    <label for="f_scroll">Scroll Menu:</label>
+                  </td>
+                  <td>
+                    <dfn title="Scroll Menu">
+                      When the user scrolls down the page, the menu scrolls
+                      and stays in the same original position on the page.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_scroll" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="f_drag">Draggable Menu:</label>
+                  </td>
+                  <td>
+                    <dfn title="Draggable Menu">
+                      The user can click anywhere in the menu and drag
+                      the menu in the window.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_drag" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="f_glide">Glide Sub-Menus:</label>
+                  </td>
+                  <td>
+                    <dfn title="Glide Sub-Menus">
+                      Instead of the menu appearing and disappearing immediately
+                      it GLIDES in and out creating a more pleasant effect.
+						  	The top of the sub-menu will appear first and will expand from the top down.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_glide" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="f_fade">Fade Sub-Menus:</label>
+                  </td>
+                  <td>
+                    <dfn title="Fade Sub-Menus">
+                      Instead of the menu appearing and disappearing immediately
+                      it FADES in and out creating a more pleasent effect.
+		      This option does not work in Opera.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_fade" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="f_slide">Slide Sub-Menus:</label>
+                  </td>
+                  <td>
+                    <dfn title="Slide Sub-Menus">
+                      Instead of the menu appearing and disappearing immediately
+                      it SLIDES in and out creating a more pleasent effect.
+						  Sub-Menu will slide down while expanding and slide up while collapsing.
+						  The bottom of the sub-menu will appear first and will expand from the bottom up.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_slide" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="f_wipe">Wipe Sub-Menus:</label>
+                  </td>
+                  <td>
+                    <dfn title="Wipe Sub-Menus">
+                      Instead of the menu appearing and disappearing immediately
+                      it WIPES in and out creating a more pleasent effect.
+						  The width and height of the sub-menu will expand and collpase at the same rate.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_wipe" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="f_unfurl">Unfurl Sub-Menus:</label>
+                  </td>
+                  <td>
+                    <dfn title="Unfurl Sub-Menus">
+                      Instead of the menu appearing and disappearing immediately
+                      it UNFURLS in and out creating a more pleasent effect.
+						  The width expands first and then the height.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_unfurl" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="f_dropshadow">Drop Shadow Sub-Menus:</label>
+                  </td>
+                  <td>
+                    <dfn title="Drop Shadow Sub-Menus">
+							Sub-Menu has a shadow.
+							The right and bottom part of the sub-menu will have a shadow.
+                    </dfn>
+                  </td>
+                  <td class="lbl">
+                    <input type="checkbox" id="f_dropshadow" onclick="doPreview()" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="javascript:void(0)" id="advanced" class="plus" onclick="if(this.className=='plus'){this.className='minus';document.getElementById('advancedOptions').style.display='block'}else{this.className='plus';document.getElementById('advancedOptions').style.display='none'}">Advanced Options</a>
+                  </td>
+                  <td>
+                    <dfn title="Advanced Options">
+                      Choose menu advanced options: animation speed, sow delay and hide delay.
+                    </dfn>
+                  </td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+              <div id="advancedOptions" style="display:none">
+                <table class="form">
+                  <tr>
+                    <td>
+                      <label for="f_animspeed">Animation Speed:</label>
+                    </td>
+                    <td>
+                      <dfn title="Animation Speed">
+                        Choose animation speed for effects above.
+                      </dfn>
+                    </td>
+                    <td>
+                      <select id="f_animspeed" onchange="doPreview()">
+                        <option value="2">Very Slow</option>
+                        <option value="5">Slow</option>
+                        <option value="10" selected="selected">Normal</option>
+                        <option value="15">Medium</option>
+                        <option value="20">Fast</option>
+                        <option value="30">Very Fast</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">
+                      <label for="f_showdelay">Show Delay:</label>
+                    </td>
+                    <td>
+                      <dfn title="Show Delay">
+                        Change the speed at which sub menus show.
+                      </dfn>
+                    </td>
+                    <td>
+                      <select id="f_showdelay" onchange="doPreview()">
+                        <option value="0" selected>Immediately</option>
+                        <option value="100">.1 Second</option>
+                        <option value="250">.25 Second</option>
+                        <option value="500">.5 Second</option>
+                        <option value="1000">One Second</option>
+                        <option value="2000">Two Seconds</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">
+                      <label for="f_hidedelay">Hide Delay:</label>
+                    </td>
+                    <td>
+                      <dfn title="Hide Delay">
+                        Change the speed at which sub menus hide.
+                      </dfn>
+                    </td>
+                    <td>
+                      <select id="f_hidedelay" onchange="doPreview()">
+                        <option value="0">Immediately</option>
+                        <option value="100">.1 Second</option>
+                        <option value="250">.25 Second</option>
+                        <option value="500" selected>.5 Second</option>
+                        <option value="1000">One Second</option>
+                        <option value="2000">Two Seconds</option>
+                        <option value="5000">Five Seconds</option>
+                        <option value="10000">Ten Seconds</option>
+                        <option value="86400000">Never</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id="designpreview" style="margin-left:380px"></div>
+          </blockquote>
+        </div>
+
+        <div id="pane-code">
+          <label onclick="makeCode()" accesskey="g"><u>G</u>et Your Code</label>
+          <h1>Your code is below</h1>
+          Click on <strong> select all </strong> and then <strong>copy</strong> the code into the
+          clipboard.  Go into your editor paste and save it.<br/> The paths
+          in the code assume that the pages with the menu will be in the
+          zpmenu folder.  If you would like them to be in a different folder,
+          you will need to adjust the paths accordingly.
+
+          <div style="text-align: right; padding-bottom: 5px;"><button onclick="document.getElementById('f_code').select()">Select all</button></div>
+          <div style="width:100%"><textarea id="f_code" rows="20" cols="80" style="width: 100%"></textarea></div>
+        </div>
+
+      </div>
+    </div>
+    <div align="center">
+      <br />
+      <a href='http://www.zapatec.com/website/main/contact.jsp' class='lnkblue'>Contact Us</a> | 
+      <a href='http://www.zapatec.com/website/main/employment.jsp' class='lnkblue'>Employment</a>
+      <br />
+      <br />
+      &copy; 2004-2007
+      <strong>Zapatec, Inc.</strong>
+    </div>
+ </body>

@@ -1,0 +1,1 @@
+ALTER TABLE deaths ADD COLUMN burial_date timestamp without time zone;

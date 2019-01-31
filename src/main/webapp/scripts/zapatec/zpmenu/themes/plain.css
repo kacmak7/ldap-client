@@ -1,0 +1,46 @@
+/* $Id: plain.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+/* Applies to submenus */
+
+.zpMenuPlain .zpMenu-item table.zpMenu-table {
+ font: 11px "Tahoma", "Verdana", sans-serif;
+ border: 1px solid black;
+ background: #EEE;
+}
+.zpMenuPlain .zpMenu-item table.zpMenu-table td.zpMenu-label {
+ padding: 3px;
+ border: 1px solid black;
+ background: #EEE;
+}
+
+.zpMenuPlain .zpMenu-item-selected td {
+ background: Highlight;
+}
+.zpMenuPlain .zpMenu-item-selected a {
+ color: HighlightText;
+}
+
+
+/* Icons */
+
+.zpMenuPlain .zpMenu .zpMenu .zpMenu .zpMenu-item{
+	padding-left:5px;
+}
+
+.zpMenuPlain .zpMenu-top {
+	margin-bottom:5px;
+}
+
+/* hrefs in the Menu */
+.zpMenuPlain .zpMenu .zpMenu-item table.zpMenu-table td.zpMenu-label a {
+text-decoration: none;
+}
+
+/* Current selected items href*/
+
+.zpMenuPlain .zpMenu-item-selected table.zpMenu-table td.zpMenu-label { 
+	background-color: 
+	Highlight; color: 
+	HighlightText; 
+}

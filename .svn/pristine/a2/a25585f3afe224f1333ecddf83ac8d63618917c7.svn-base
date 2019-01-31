@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content=" Right click (left click in Opera) on a square to see menu. If you are using Safari, right-click doesn't work. Use alt + left-click instead. Click on sub-menu item 'Click Me' to show alert with square number from which menu was invoked. ">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Origin of Click</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+
+	<style type="text/css">
+		#squares td {
+			padding: 20px;
+		}
+		#squares div {
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			text-align: center;
+			font: bold 12px sans-serif;
+		}
+	</style>
+
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Origin of Click</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		
+		<li>Right click (left click in Opera) on a square to see menu.</li>
+		<li>If you are using Safari, right-click doesn't work. Use alt + left-click instead.</li>
+		<li>Click on sub-menu item 'Click Me' to show alert with square number from which menu was invoked.</li>
+
+		</ul>
+		</div>
+
+
+
+	<ul id="myMenu" style="display:none">
+		<li>
+			Demo Menu
+			<ul>
+				<li> <a href="javascript:alert(objMenu.triggerArgs)">Click Me</a> </li>
+			</ul>
+		</li>
+		<li>
+			Demo Menu
+			<ul>
+				<li> <a href="javascript:alert(objMenu.triggerArgs)">Click Me</a> </li>
+			</ul>
+		</li>
+		<li>
+			Demo Menu
+			<ul>
+				<li> <a href="javascript:alert(objMenu.triggerArgs)">Click Me</a> </li>
+			</ul>
+		</li>
+	</ul>
+
+	<table id="squares">
+		<tr>
+			<td><div id="area1">This is Area 1</div></td>
+			<td><div id="area2">This is Area 2</div></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+
+	  var objMenu = null;
+
+		var funcOnInit = function() {
+  		objMenu.setTriggerObject([
+  			{
+  				triggerObject: 'area1',
+  				triggerArgs: 'Menu was invoked from Area 1'
+  			},
+  			{
+  				triggerObject: 'area2',
+  				triggerArgs: 'Menu was invoked from Area 2'
+  			}
+  		]);
+  	}
+
+		objMenu = new Zapatec.Menu({
+		  source: 'myMenu',
+		  vertical: true,
+		  theme: 'winxp1',
+		  triggerEvent: 'mouseup',
+		  triggerObject: [],
+		  onInit: funcOnInit
+		});
+
+	</script>
+
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

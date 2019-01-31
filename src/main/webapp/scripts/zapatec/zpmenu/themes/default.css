@@ -1,0 +1,111 @@
+/* $Id: default.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+/* top level, vertical and horizontal */
+.zpMenuDefault .zpMenu-horizontal-mode .zpMenu-level-1,
+.zpMenuDefault .zpMenu-vertical-mode .zpMenu-level-1 {
+	height: 24px;
+	width: 100px;
+	padding: 0;
+	background: url(zapatec_theme/bg1_blank.jpg) repeat-y; /* Top Menu,No Sub */
+}
+
+/* Top Menu,Has SUB */
+.zpMenuDefault .zpMenuContainer .zpMenu-item-collapsed { background: url(zapatec_theme/bg1.jpg) repeat-y 0 0; }
+/* Top Menu,Selected,No Sub */
+.zpMenuDefault .zpMenuContainer .zpMenu-item-selected { background: url(zapatec_theme/bg1_on_blank.jpg) repeat-y 0 0; }
+.zpMenuDefault .zpMenuContainer .zpMenu-item-selected-collapsed { background: url(zapatec_theme/bg1_selected.jpg) repeat-y 0 0; }
+/* Top Menu,selected,Has Sub */
+.zpMenuDefault .zpMenuContainer .zpMenu-item-expanded { background: url(zapatec_theme/bg1_on.jpg) repeat-y 0 0; }
+
+/* Top Menu,Selected,No Sub */
+.zpMenuDefault .zpMenu-horizontal-mode .zpMenu-level-1 {
+	padding-left: 5px;
+}
+
+.zpMenuDefault .zpMenu-vertical-mode .zpMenu-level-1 {
+	padding-left: 5px;
+	text-align:left;
+	border:none;
+}
+
+.zpMenuDefault .zpMenu-top .zpMenu-item-selected a,
+.zpMenuDefault .zpMenu-top .zpMenu-item-selected .zpMenu-label,
+.zpMenuDefault .zpMenuContainer a, 
+.zpMenuDefault .zpMenuContainer span, 
+.zpMenuDefault .zpMenuContainer .zpMenu-label,
+.zpMenuDefault .zpMenuContainer .zpMenuContainer a,
+.zpMenuDefault .zpMenuContainer .zpMenuContainer span,
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-label {
+	color: rgb(0, 48, 102);
+	font-family: Verdana,  Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 24px;
+}
+
+.zpMenuDefault .zpMenuContainer .zpMenuContainer {
+	margin-top:1px;
+	margin-left:0px;
+	background:  transparent;
+	min-width: 12em;
+	padding-top:0px;
+}
+
+
+
+/* General items that's not a top menu */
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item,
+.zpMenuDefault .zpMenuContainer .zpMenuContainer {
+	width: 170px;
+}
+
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	background-image: url(zapatec_theme/bg2.gif);
+	background-repeat: repeat-y;
+	margin-top:0px;
+	padding-top: 0px;
+	height: 24px;
+	/*border-bottom: 1px solid rgb(235,235,235);*/
+	margin-left:0px;	
+	margin-bottom: 1px;
+	background-position:right;
+}
+
+
+/* Current selected items in vertical menu*/
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background: url(zapatec_theme/bg2_on.gif) repeat-y;
+}
+
+.zpMenuDefault .zpMenu-top .zpMenu-item-selected a,
+.zpMenuDefault .zpMenu-top .zpMenu-item-selected .zpMenu-label,
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item-selected a,
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item-selected .zpMenu-label {
+	font-weight: bold; 
+}
+
+
+/* The arrow that shows up when there's a sub-menu */
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label {
+	background: url(zapatec_theme/arrow_light.gif)  no-repeat center right;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded .zpMenu-label {
+	background: url("zapatec_theme/arrow_dark.gif")  no-repeat center right;
+}
+
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .icon {
+	padding-left: 3px;
+}
+
+/* Controls the behavior of <hr>  it the menu */
+.zpMenuDefault .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	border:none;
+	margin:0;
+	background:#98BCD5;
+	height:6px;
+	padding:0px 0px 0px 0px;
+	margin-left:3px;
+	width:158px;
+}
