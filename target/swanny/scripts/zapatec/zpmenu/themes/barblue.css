@@ -1,0 +1,136 @@
+/* $Id: barblue.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/3d.css");
+
+.zpMenuBarblue .zpMenuContainer {
+border: solid 1px #516d9d;
+}
+/* top level, vertical and horizontal */
+.zpMenuBarblue .zpMenu-horizontal-mode .zpMenu-level-1,
+.zpMenuBarblue .zpMenu-vertical-mode .zpMenu-level-1 {
+	width: 100px;
+	padding: 0;
+	background: url(barblue/bg_menu.gif) #a5cbda repeat-x 0 0; 
+	height: 24px;
+}
+
+
+/* Top Menu,Has SUB */
+.zpMenuBarblue .zpMenuContainer .zpMenu-item-collapsed { 
+	background: url(barblue/bg_menu.gif) #a5cbda repeat-x 0 0; 
+}
+
+/* Top Menu,Selected,No Sub */
+.zpMenuBarblue .zpMenuContainer .zpMenu-item-selected {
+	background: url(barblue/bg_menu_sel.gif) #bad7e3 repeat-x 0 0;
+}
+
+.zpMenuBarblue .zpMenuContainer .zpMenu-item-selected-collapsed {
+	background: url(barblue/bg_menu_sel.gif) #bad7e3 repeat-x 0 0; 
+}
+
+/* Top Menu,selected,Has Sub */
+.zpMenuBarblue .zpMenuContainer .zpMenu-item-expanded {
+	background: url(barblue/bg_menu_sel.gif) #bad7e3 repeat-x 0 0; 
+}
+
+/* Top Menu,Selected,No Sub */
+.zpMenuBarblue .zpMenu-horizontal-mode .zpMenu-level-1 {
+	padding-left: 5px;
+}
+
+.zpMenuBarblue .zpMenu-vertical-mode .zpMenu-level-1 {
+	padding-left: 5px;
+	text-align:left;
+}
+
+.zpMenuBarblue .zpMenu-top .zpMenu-item-selected a,
+.zpMenuBarblue .zpMenu-top .zpMenu-item-selected .zpMenu-label,
+.zpMenuBarblue .zpMenuContainer a, 
+.zpMenuBarblue .zpMenuContainer span, 
+.zpMenuBarblue .zpMenuContainer .zpMenu-label{
+	color: #51729b;
+	font-family: Arial, Verdana,  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;  
+	line-height: 22px;
+}
+
+
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer a,
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer span,
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-label {
+	color: #51729b;
+	font-family: Arial, Verdana,  Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;  
+	line-height: 22px;
+}
+
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded{
+	background: white;
+}
+
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer {
+	margin-top:1px;
+	margin-left:0px;
+	background:  #e4eff3;
+	padding-top:0px;
+	border: solid 1px #a5cbda;
+	border-bottom: solid 3px #a5cbda;
+}
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenuContainer {	
+	border-top: solid 3px #a5cbda;
+}
+
+
+
+/* General items that's not a top menu */
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item,
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer {
+	width: 170px;
+}
+
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	margin-top:0px;
+	padding-top: 0px;
+	height: 22px;
+	margin-left:0px;	
+	margin-bottom: 0px;
+	background: url(barblue/hr.gif) repeat-x bottom left #e7f0f5;
+}
+
+/* Current selected items in vertical menu*/
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background-color: #c9d7e2;
+}
+
+.zpMenuBarblue .zpMenu-top .zpMenu-item-selected a,
+.zpMenuBarblue .zpMenu-top .zpMenu-item-selected .zpMenu-label,
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item-selected a,
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item-selected .zpMenu-label {
+	font-weight: bold; 
+}
+
+
+/* The arrow that shows up when there's a sub-menu */
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label {
+	background: url(barblue/arrow_li.gif)  no-repeat center right;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded .zpMenu-label {
+	background: url("barblue/arrow_da.gif")  no-repeat center right;
+}
+
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .icon {
+	padding-left: 3px;
+}
+
+/* Controls the behavior of <hr>  it the menu */
+.zpMenuBarblue .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	border:none;
+	margin:0;
+	background: url(barblue/hr.gif) repeat-x bottom left #98BCD5;
+	height:5px;
+	padding:0px;	
+}

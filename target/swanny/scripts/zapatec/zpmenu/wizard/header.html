@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<title>Zapatec Menu Wizard</title>
+
+<script type="text/javascript">
+var tick = (new Date).getTime();
+function do_click_menu() 
+{
+	// id of P tag in Effects for click menu is ON
+	var ep=document.getElementById('p_click_menu')
+	var ec=document.getElementById('f_onclick')
+	if (ec.checked)
+	{
+		ep.innerHTML='<b>NOTE: Click Menu selected - click on menu for menu drop down.</b>';
+		ep.style.display='inline';
+	}
+	else
+		ep.style.display='none';
+}
+
+</script>
+
+<link class="not-in-output" rel="stylesheet" href="../../utils/wizard.css" >
+<link class="not-in-output" rel="stylesheet" href="../wizard/icon-tree.css" >
+<link class="not-in-output" rel="stylesheet" href="../wizard/menu-wizard.css" >
+<link class="not-in-output" rel="stylesheet" href="../wizard/dialog.css" >
+
+</head>
+<body onload="initWizard()">
+
+   <div id="loading" style="margin-top:200px;text-align:center;font:bold 14px Verdana,sans-serif">Menu Wizard is loading...</div>
+
+   <script type="text/javascript" src="../../utils/zapatec.js"></script>
+   <script type="text/javascript" src="../../utils/wizard.js"></script>
+   <script type="text/javascript" src="../../zptooltip/src/zptooltip.js"></script>
+   <script type="text/javascript" src="../../utils/tree.js"></script>
+   <script type="text/javascript" src="../../utils/dialog.js"></script>
+   <script type="text/javascript" src="../../utils/stylesheet.js"></script>
+   <script type="text/javascript" src="../src/zpmenu.js"></script>
+   <script type="text/javascript" src="../wizard/menu-wizard.js"></script>

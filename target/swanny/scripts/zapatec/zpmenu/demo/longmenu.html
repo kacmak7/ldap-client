@@ -1,0 +1,473 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content=" When a long sub-menu has more items than can be displayed in a page, you can view the hidden items by moving the mouse to the up arrow at the top of the sub-menu or to the down arrow at the bottom of the sub-menu. This demo works incorrect because of parent IFRAME size, but it works OK on separate page. See an example below under Products &gt; Menu. ">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Long Scrolling Menu</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Long Scrolling Menu</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		
+		<li>When a long sub-menu has more items than can be displayed in a page,
+			you can view the hidden items by moving the mouse to the up arrow at the top of the sub-menu or to the down arrow at the bottom of the sub-menu.</li>
+		<li>This demo works incorrect because of parent IFRAME size, but it works OK on <a href="../demo/longmenu.html" target="_blank">separate page</a>.</li>
+		<li>See an example below under <b>Products &gt; Menu</b>.</li>
+		
+		</ul>
+		</div>
+
+
+<ul id="myMenu" style="display:none">
+
+	<li>  
+	<a href="http://www.zapatec.com/website/main/products/prod1/">Home</a> 
+	</li>
+	<li>
+	<a href="http://www.zapatec.com/website/main/services.jsp">Products</a>
+	<ul>
+		<li> 
+		<a href="#">Menu</a>
+
+		<img src='../themes/icon/zpmenu.gif' alt='Zapatec Menu'>
+		<ul>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+			<li> <hr/> </li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+			<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+			</li>
+		</ul>
+
+		</li>
+
+		<li>
+		<a href="#">Calendar</a>
+		<img src='../themes/icon/zpcal.gif' alt='Zapatec Calendar'>
+		<ul>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/prod1/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/features.jsp">Features</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/coding.jsp">Wizard</a> 
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Calendar Wizard'>
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Calendar Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/pricing.jsp">Pricing</a> 
+			</li>
+		</ul>
+		</li>
+		<li> 
+		<a href="#">Tree</a>
+		<img src='../themes/icon/zptree.gif' alt='Zapatec Tree'>
+
+		<ul>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/prod3/">Overview</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/prod3/demo.jsp">Demo</a> 
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/prod3/features.jsp">Features</a> 
+			</li>
+
+			<li>  
+			<img src='../themes/icon/zpwiz.gif' alt='Zapatec Tree Wizard'>
+			<a href="http://www.zapatec.com/website/main/products/prod3/wizard.jsp">Wizard</a> 
+			</li>
+			<li>  <a href="http://www.zapatec.com/website/main/products/prod3/download.jsp">Download</a> 
+			<img src='../themes/icon/zpdown.gif' alt='Zapatec Tree Download'>
+			</li>
+			<li>  
+			<img border='0' src='../themes/icon/icon_blank.gif'>
+			<a href="http://www.zapatec.com/website/main/products/prod3/license.jsp">License</a> 
+			</li>
+		</ul>
+
+		<li>
+		<hr/>
+		</li>
+		<li>  
+		<img border='0' src='../themes/icon/icon_blank.gif'>
+		<a href="http://www.zapatec.com/website/main/products/menu/">Consulting</a> 
+		</li>
+
+	</ul>
+	<li >
+	<a href="http://www.zapatec.com/website/main/support.jsp">Support</a>
+	<ul>
+		<li>  
+		<img border='0' src='../themes/icon/icon_blank.gif'>
+		<a href="http://www.zapatec.com/website/main/support.jsp">Overview</a> 
+		</li>
+
+		<li>  <a href="http://www.zapatec.com/website/main/tutorial.jsp">Quick Guide</a> 
+		<img src='../themes/icon/zpdoc.gif' alt='Zapatec Calendar Quick Guide'>
+		</li>
+		<li>  <a href="http://www.zapatec.com/website/main/docs.jsp">Reference Manual</a> 
+		<img src='../themes/icon/zpdoc.gif' alt='Zapatec Calendar Manual'>
+		</li>
+		<li> <hr/> </li>
+		<li>  <a href="http://www.zapatec.com/website/main/website/forums/index.php">Forum</a> 
+		<img src='../themes/icon/zpforum.gif' alt='Zapatec Forum'>
+		</li>
+		<li>  <a href="http://www.zapatec.com/website/main/support-request.jsp">Request Help</a> 
+		<img src='../themes/icon/zphelp.gif' alt='Zapatec Request Help'>
+		</li>
+
+	</ul>
+	</li>
+	<li>
+		<a href="http://www.zapatec.com/website/main/about.jsp">About</a> 
+	<ul>
+		<li>  
+		<a href="http://www.zapatec.com/website/main/about.jsp">Company</a> 
+		<img src='../themes/icon/zpcomp.gif' alt='Zapatec Company'>
+		</li>
+
+		<li>  
+		<img border='0' src='../themes/icon/icon_blank.gif'>
+		<a href="http://www.zapatec.com/website/main/management.jsp">Management Team</a> 
+		</li>
+		<li>  
+		<img border='0' src='../themes/icon/icon_blank.gif'>
+		<a href="http://www.zapatec.com/website/main/mission.jsp">Mission Statement</a> 
+		</li>
+		<li>  <hr/> </li>
+		<li>  
+		<img border='0' src='../themes/icon/icon_blank.gif'>
+		<a href="http://www.zapatec.com/website/main/employment.jsp">Jobs</a> 
+		</li>
+		<li>  <a href="http://www.zapatec.com/website/main/contact.jsp">Contact Us</a> 
+		<img src='../themes/icon/zpcont.gif' alt='Zapatec Contact Us'>
+		</li>
+	</ul>
+	</li>
+
+</ul>
+		<script type="text/javascript">
+		var menu = new Zapatec.Menu({theme: 'greengray', source: 'myMenu', hideDelay: 500, showDelay: 0});
+		
+	</script>
+	
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

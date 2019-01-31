@@ -1,0 +1,13 @@
+<web-app id="swanny">
+    <jsp fast-jstl="false"/>
+
+    <!--database>
+        <jndi-name>jdbc/appfuse</jndi-name>
+        <driver type="org.postgresql.Driver">
+            <url>jdbc:postgresql://titov/parafia</url>
+            <user>parafia</user>
+            <password>parafia</password>
+        </driver>
+    </database-->
+</web-app>
+

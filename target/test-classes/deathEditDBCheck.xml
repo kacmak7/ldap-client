@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- addressee -->
+	<public.addresses id="1" street="Marynarska" place="null" postcode="02-946"
+		first_number="1" last_number="2" />		
+	<!-- practising -->
+	<public.practising id="1" name="tak" />
+	<!-- delagations -->
+	<public.assistance_delagations id="1"
+		priest_first_name="Adrian" priest_surname="Abacki" />
+	<!-- baptism places -->
+	<public.baptism_places id="1" second_name="Babacki"
+		name="Bartosz" />
+	<!-- baptism acts -->
+	<public.baptism_know_acts id="1"
+		priest_first_name="Adrian" priest_surname="Abacki" acquaintance_from="2015-10-10"
+		relationship="good" baptism_place="1" baptism_place_additionals="null"
+		baptism_giver="abp Adrian Abacki" godfather="Godfather" godmother="Godmother"
+		baptism_know="yes" reason_not_act="null" additional="null" first_name="Bartosz"
+		surname="Babacki" birth_date="2010-12-31" job="Bankier"
+		mothers_first_name="Anna" mothers_last_name="Babacka"
+		fathers_first_name="Benedykt" fathers_last_name="Babacki" religion="rzymskokatolicka"
+		address="1" date="2017-09-19" practising_id="1" />
+	<!-- baptismes -->
+	<public.baptismes id="1" file_number="1" place="A"
+		confirmation_remarks="A" marriage_remarks="A" other_remarks="A"
+		date="1-01-1970" reason="A" />
+	<public.baptismes id="2" file_number="2" place="A"
+		confirmation_remarks="A" marriage_remarks="A" other_remarks="A"
+		date="1-01-1970" reason="A" />
+	<!-- baptism preparations -->
+	<public.baptism_preparations id="1"
+		prepared_by="1" />
+	<!-- baptism changes -->
+	<public.baptism_changes id="1" personal_data="1"
+		civil_personal_data="1" civil_documents="1" differences="1" />
+	<!-- celebrants -->
+	<public.celebrants id="1" first_name="Cezary"
+		surname="Cacacki" active="true" />
+	<!-- protocoles -->
+	<public.investigation_protocole id="1"
+		answers="yes" />
+	<!-- marriage statuses -->
+	<public.marriage_statuses id="1" name="tak" />
+	<public.marriage_statuses id="2" name="nie" />
+		<!-- marriages -->
+	<public.marriages id="14" parish="Św Ducha"
+		religion="Rzymskokatolickie" baptism_date="16-11-1990" baptism_church="Św Ducha"
+		baptism_church_in="Warszawa" baptism_number="1584234"
+		church_post_address="?" confirmation_date="2005-10-16 00:00:00.0"
+		confirmation_church="Św Ducha" protocole_id="1"/>
+	<!-- taking parts -->
+	<public.take_part id="1" name="tak" />
+	<!-- confirmations -->
+	<public.confirmations id="1" file_number="1"
+		place="1" confirmation_name="sample" bishop="abp Adrian Abacki" date="2015-04-12" />
+	
+	<!-- deaths -->
+	<public.deaths file_number="1" place="1"
+		burial_place="1" date="2010-05-15" />
+	<public.deaths file_number="test" place="test"
+		burial_place="test" date="1970-01-01 01:00:00.001" />
+	
+	
+	<!-- remainings -->
+	<public.remainings id="1" mothers_first_name="Katarzyna"
+		mothers_last_name="Dzi&#281;giel" mothers_maidens_name="Kowalska"
+		fathers_first_name="Wac&#322;aw" fathers_last_name="Dzi&#281;giel"
+		birth_place="Warszawa" baptismpreparation_id="1" baptism_id="1"
+    	confirmation_id="1" baptismchanges_id="1"
+    	baptismknowact_id="1" marriage_id="14" />
+
+	<public.persons id="1" first_name="Andrzej"
+		surname="Dr&#261;&#380;y&#324;ski" remaining_id="1" birth_date="02-01-1942"
+		/>
+</dataset>

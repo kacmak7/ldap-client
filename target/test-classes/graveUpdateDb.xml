@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.columbariums id="1" name="sample" />
+
+	<public.grave_doubled id="1" name="Pojedynczy" />
+	<public.grave_doubled id="2" name="Podwójny" />
+
+	<public.grave_grounded id="1" name="Murowany" />
+	<public.grave_grounded id="2" name="Ziemny" />
+
+	<public.grave_owned id="1" name="Własnościowy" />
+	<public.grave_owned id="2" name="Pokładny" />
+
+	<public.graves id="1" street="Paderewskiego" place="Warszawa"
+		postcode="02-929" first_number="9" last_number="2" first_name="ElÅ¼bieta"
+		surname="Smutna" phone="" valid_to="2036" grave_doubled_id="1"
+		grave_grounded_id="1" grave_owned_id="1" number="34"
+		notices="dopÅ‚ata za wieczystÄ… dzierÅ¼awÄ™ " type="0" columbarium_id="1" />
+	<public.graves id="2" street="DÄ™bowa" place="Warszawa"
+		postcode="02-708" first_number="98" last_number="2" first_name="MichaÅ"
+		surname="Chmielewski" phone="" valid_to="2115" grave_doubled_id="1"
+		grave_grounded_id="1" grave_owned_id="1" number="2" notices="" type="0"
+		columbarium_id="1" />
+	<public.graves id="60307" street="Zielona" place="Nadarzyn"
+		postcode="04-914" first_number="38" last_number="" first_name="Maria"
+		surname="Kownacka" phone="" valid_to="4096" sector="I"
+		grave_doubled_id="2" grave_grounded_id="1" grave_owned_id="1" number="2"
+		the_geom="010300000001000000050000001F85EB51B809B340B81E85EB5102BFC014AE47E1BA07B340C3F5285C8F01BFC0CDCCCCCC8C08B340CDCCCCCC4CFFBEC0295C8FC2750AB340B81E85EB1100BFC01F85EB51B809B340B81E85EB5102BFC0"
+		notices="JakieÅ› dodatkowe informacje" type="1" />
+	<public.graves id="71092" street="" place="" postcode=""
+		first_number="" last_number="" first_name="Piotr" surname="Nowacki"
+		phone="" valid_to="2034" sector="I" grave_doubled_id="2"
+		grave_grounded_id="2" grave_owned_id="2" number="1"
+		the_geom="010300000001000000050000009A9999999907B340333333337301BFC0F6285C8F4205B3403D0AD7A37000BFC07B14AE472106B340F6285C8F42FEBEC01F85EB517808B340EC51B81E45FFBEC09A9999999907B340333333337301BFC0"
+		notices="brak potwierdzenia statusu i opÅ‚at grobu " type="1" />
+</dataset>

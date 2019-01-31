@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content=" You can position a menu at an absolute position anywhere on the page using the top, bottom, left and right configuration options. The first menu is positioned with the top and left options. It uses the osx theme. The second menu is positioned with the bottom and right options. It uses the rounded theme. ">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Absolute Position</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Absolute Position</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		
+	<li>You can position a menu at an absolute position anywhere on the page using the top, bottom, left and right configuration options.</li>
+	<li>The first menu is positioned with the top and left options. It uses the  osx theme.</li>
+	<li>The second menu is positioned with the bottom and right options. It uses the rounded theme.</li>
+	
+		</ul>
+		</div>
+
+
+	<ul id="myMenu" style="display:none">
+											<li>
+					<a href="http://www.dmoz.org/Arts/">Arts</a><br>
+					<ul>
+						<li> <a href="http://www.dmoz.org/Arts/Movies/">Movies</a> </li>
+						<li> 
+						<a href='http://www.zapatec.com/website/main/products/prod1/'> Calendar </a>
+						</li>
+						<li> <a href="http://www.dmoz.org/Arts/Television/">Television</a> </li>
+						<li>
+						<hr/>
+						</li>
+						<li id="music">
+						<a href="http://www.dmoz.org/Arts/Music/">Music</a>
+						<ul>
+							<li> <a href="http://www.dmoz.org/Arts/Music/Bands_and_Artists/">Bands</a> </li>
+							<li> <a href="http://www.dmoz.org/Arts/Music/Instruments/">Instruments</a> </li>
+						</ul>
+						</li>
+					</ul>
+					</li>
+
+					<li>
+					<a href="http://www.dmoz.org/Business/">Business</a><br>
+					<ul>
+						<li> <a href="http://www.dmoz.org/Business/Real_Estate/">Real Estate</a> </li>
+						<li> <a href="http://www.dmoz.org/Business/Investing/">Investing</a> </li>
+					</ul>
+					</li>
+
+					<li>
+					<a href="http://www.dmoz.org/Computers/">Computers</a><br>
+					<ul>
+						<li> <a href="http://www.dmoz.org/Computers/Internet/">Internet</a> </li>
+						<li id="software"> <a href="http://www.dmoz.org/Computers/Software/">Software</a> </li>
+						<li> <a href="http://www.dmoz.org/Computers/Hardware/">Hardware</a> </li>
+					</ul>
+					</li>
+					<li><a href="#">Many Levels</a>
+					<ul>
+						<li><a href="#">Level-1a</a></li>
+						<li><a href="#">Level-1b</a>
+						<ul>
+							<li><a href="#">Level-2a</a></li>
+							<li><a href="#">Level-2b</a>
+							<ul>
+								<li><a href="#">Level-3a</a></li>
+								<li><a href="#">Level-3b</a>
+								<ul>
+									<li><a href="#">Level-4a</a></li>
+									<li><a href="#">Level-4b</a></li>
+								</ul> <!-- Level-3b sub-menu -->
+								</li> <!-- Level-3b -->
+							</ul> <!-- Level-2b sub-menu -->
+							</li> <!-- Level-2b -->
+						</ul> <!-- Level-1b sub-menu -->
+						</li> <!-- Level-1b -->
+					</ul> <!-- Many Levels sub-menu -->
+					</li> <!-- Many Levels -->
+	</ul>
+
+	<ul id="myOtherMenu" style="display:none">
+							<li title='Zapatec home page'>  
+						<IMG src="../themes/icon/transparent/blue/home.gif" alt='Zapatec Home'> 
+						<a href="http://www.zapatec.com/website/main/">Home</a> 
+						</li>
+
+						<li title='Zapatec products'>
+						<img align='middle' border='0' src='../themes/icon/transparent/blue/products.gif' alt='Zapatec products'> <a href="http://www.zapatec.com/website/main/services.jsp">Products</a>
+						<ul>
+							<li title='The Zapatec DHTML Menu' > 
+							<a href="http://www.zapatec.com/website/main/products/menu/">Menu</a> 
+
+							<img src='../themes/icon/zpmenu.gif' alt='Zapatec Menu'>
+							<ul>
+								<li title='Overview of the Zapatec DHTML Menu'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='blank'>
+
+								<a href="http://www.zapatec.com/website/main/products/menu/">Overview</a> 
+								</li>
+								<li title='Demos showing different options of the Zapatec DHTML Menu'>  
+								<img src="../themes/icon/transparent/blue/demo.gif" alt='Javascript Menu Demos'>  
+								<a href="http://www.zapatec.com/website/main/products/menu/demo.jsp">Demos</a> 
+								</li>
+								<li title='Features of the Zapatec DHTML Menu'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Menu Features'>
+								<a href="http://www.zapatec.com/website/main/products/menu/features.jsp">Features</a> 
+								</li>
+
+								<li title='Configure a custom menu with the DHTML Menu Wizard'>  
+									<a href="http://www.zapatec.com/website/main/products/menu/wizard.jsp">Wizard</a> 
+									<img src='../themes/icon/zpwiz.gif' alt='Zapatec Menu Wizard'>
+								</li>
+								<li title='Screen shots of various DHTML Menu options'>  
+									<a href="http://www.zapatec.com/website/main/products/menu/shots.jsp">Screen Shots</a> 
+									<img src='../themes/icon/icon_blank.gif' alt='Zapatec Menu Screen Shots'>
+								</li>
+								<li title='Download the Zapatec DHTML Menu'>  
+									<a href="http://www.zapatec.com/website/main/products/menu/download.jsp">Download</a> 
+									<img src='../themes/icon/zpdown.gif' alt='Zapatec Menu Download'>
+
+								</li>
+								<li title='License pricing for the Zapatec DHTML Menu'>  
+								<a href="http://www.zapatec.com/website/main/products/menu/pricing.jsp">Pricing</a> 
+								<img src='../themes/icon/transparent/blue/pricing.gif' alt='Zapatec Menu Pricing'>
+								</li>
+								<li title='Purchase a license for the Zapatec DHTML Menu'>  
+								<a href="http://www.zapatec.com/website/main/buy.jsp">Buy</a> 
+								<img src='../themes/icon/transparent/blue/buy.gif' alt='Zapatec Menu Buy'>
+								</li>
+								<li title='View the license for the Zapatec DHTML Menu'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Menu License'>
+
+								<a href="http://www.zapatec.com/website/main/products/menu/license.jsp">License</a> 
+								</li>
+
+							</ul>
+
+							</li>
+
+							<li title='The Zapatec DHTML Calendar'>
+							<a href="http://www.zapatec.com/website/main/products/prod1/">Calendar</a> 
+							<img src='../themes/icon/zpcal.gif' alt='Zapatec Calendar'>
+
+							<ul>
+								<li title='Overview of the Zapatec DHTML Calendar'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Calendar Overview'>
+								<a href="http://www.zapatec.com/website/main/products/prod1/">Overview</a> 
+								</li>
+
+								<li title='Demos showing different options of the Zapatec DHTML Calendar'>  
+								<img src="../themes/icon/transparent/blue/demo.gif" alt='Javascript Calendar demos'> 
+								<a href="http://www.zapatec.com/website/main/demo.jsp">Demos</a> 
+								</li>
+								<li title='Features of the Zapatec DHTML Calendar'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Calendar Features'>
+
+								<a href="http://www.zapatec.com/website/main/features.jsp">Features</a> 
+								</li>
+								<li title='Configure a custom calendar with the DHTML Calendar Wizard'>  
+								<a href="http://www.zapatec.com/website/main/coding.jsp">Wizard</a> 
+								<img src='../themes/icon/zpwiz.gif' alt='Zapatec Calendar Wizard'>
+								</li>
+								<li title='Download The Zapatec DHTML Calendar'>  
+								<a href="http://www.zapatec.com/website/main/download.jsp">Download</a> 
+								<img src='../themes/icon/zpdown.gif' alt='Zapatec Calendar Download'>
+								</li>
+
+								<li title='License Pricing for the Zapatec DHTML Calendar'>  
+								<a href="http://www.zapatec.com/website/main/pricing.jsp">Pricing</a> 
+								<img src='../themes/icon/transparent/blue/pricing.gif' alt='Zapatec Calendar Pricing'>
+								</li>
+								<li title='Purchase a license for the Zapatec DHTML Calendar'>  
+								<a href="http://www.zapatec.com/website/main/buy.jsp">Buy</a> 
+								<img src='../themes/icon/transparent/blue/buy.gif' alt='Zapatec Calendar Buy'>
+								</li>
+								<li title='View the license for the Zapatec DHTML Calendar'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Calendar License'>
+
+								<a href="http://www.zapatec.com/website/main/products/prod1/license.jsp">License</a> 
+								</li>
+							</ul>
+							</li>
+
+							<li title='The Zapatec DHTML Tree'> 
+							<a href="http://www.zapatec.com/website/main/products/prod3/">Tree</a> 
+							<img src='../themes/icon/zptree.gif' alt='Zapatec Tree'>
+
+							<ul>
+
+								<li title='Overview of the Zapatec DHTML Tree'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Tree Overview'>
+								<a href="http://www.zapatec.com/website/main/products/prod3/">Overview</a> 
+								</li>
+								<li title='Demos showing different options of the Zapatec DHTML Tree'>  
+								<img src="../themes/icon/transparent/blue/demo.gif" alt='Javascript Tree demos'> 
+								<a href="http://www.zapatec.com/website/main/products/prod3/demo.jsp">Demos</a> 
+								</li>
+								<li title='Features of the Zapatec DHTML Tree'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Tree Features'>
+								<a href="http://www.zapatec.com/website/main/products/prod3/features.jsp">Features</a> 
+								</li>
+
+								<li title='Configure a custom tree with the DHTML Calendar Tree'>  
+								<img src='../themes/icon/zpwiz.gif' alt='Zapatec Tree Wizard'>
+								<a href="http://www.zapatec.com/website/main/products/prod3/wizard.jsp">Wizard</a> 
+								</li>
+								<li title='Download the Zapatec DHTML Tree'>  
+								<a href="http://www.zapatec.com/website/main/products/prod3/download.jsp">Download</a> 
+								<img src='../themes/icon/zpdown.gif' alt='Zapatec Tree Download'>
+								</li>
+								<li title='License pricing for the Zapatec DHTML Tree'>  
+								<a href="http://www.zapatec.com/website/main/products/prod3/pricing.jsp">Pricing</a> 
+								<img src='../themes/icon/transparent/blue/pricing.gif' alt='Zapatec Tree Pricing'>
+
+								</li>
+								<li title='Purchase a license for the Zapatec DHTML Tree'>  
+								<a href="http://www.zapatec.com/website/main/buy.jsp">Buy</a> 
+								<img src='../themes/icon/transparent/blue/buy.gif' alt='Zapatec Tree Buy'>
+								</li>
+								<li title='View the license for the Zapatec DHTML Tree'>  
+								<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Tree License'>
+								<a href="http://www.zapatec.com/website/main/products/prod3/license.jsp">License</a> 
+								</li>
+							</ul>
+
+							<li>
+							<hr/>
+							</li>
+							<li>  
+							<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript/DHTML Consulting'>
+							<a href="http://www.zapatec.com/website/main/products/consulting.jsp">Consulting</a> 
+							</li>
+
+						</ul>
+
+						<li title='Zapatec support services'>
+						<IMG src="../themes/icon/transparent/blue/support.gif" alt='Zapatec Support'> 
+						<a href="http://www.zapatec.com/website/main/support.jsp">Support</a>
+						<ul>
+							<li title='Overview of the Zapatec support services'>
+							<img border='0' src='../themes/icon/icon_blank.gif' alt='Zapatec Support'>
+							<a href="http://www.zapatec.com/website/main/support.jsp">Overview</a> 
+							</li>
+
+							<li title='Zapatec Calendar Support'>  
+							<img src='../themes/icon/zpcal.gif' alt='Zapatec Calendar'>
+							Calendar
+							<ul>
+								<li title='The Zapatec Calendar Quick Guide'>
+								<a href="http://www.zapatec.com/website/main/tutorial.jsp">Quick Guide</a> 
+								<img src="../themes/icon/transparent/blue/documentation.gif"  alt='Zapatec Calendar Quick Guide'>
+								</li>
+								<li title='The Zapatec Calendar Reference Manual'>  
+								<a href="http://www.zapatec.com/website/main/docs.jsp">Reference</a> 
+								<img src="../themes/icon/transparent/blue/documentation.gif"  alt='Zapatec Calendar Manual'>
+
+								</li>
+							</ul>
+
+							<li title='Zapatec Menu Support'>  
+							<img src='../themes/icon/zpmenu.gif' alt='Zapatec Menu'>
+							Menu
+							<ul>
+								<li>  <a href="http://www.zapatec.com/website/main/products/menu/docs.jsp">Manual</a> 
+								<img src="../themes/icon/transparent/blue/documentation.gif"  alt='Zapatec Menu Manual'>
+
+								</li>
+							</ul>
+							</li>
+
+							<li title='Zapatec Tree Support'>  
+							<img src='../themes/icon/zptree.gif' alt='Zapatec Tree'>
+							Tree
+							<ul>
+
+								<li>  <a href="http://www.zapatec.com/website/main/products/prod3/docs.jsp">Manual</a> 
+								<img src="../themes/icon/transparent/blue/documentation.gif"  alt='Zapatec Tree Manual'>
+								</li>
+							</ul>
+							</li>
+
+							<li> <hr/> </li>
+							<li title='The Zapatec Forums'>  
+							<a href="http://www.zapatec.com/website/forums/index.php">Forum</a> 
+							<IMG src="../themes/icon/transparent/blue/forum.gif" alt='Zapatec Forum'>
+							</li>
+							<li title='Send us a support request'>
+							<a href="http://www.zapatec.com/website/main/support-request.jsp">Request Help</a> 
+							<img src='../themes/icon/zphelp.gif' alt='Zapatec Request Help'>
+
+							</li>
+
+						</ul>
+						</li>
+						<li title='About Zapatec'>
+						<IMG src="../themes/icon/transparent/blue/about.gif" alt='About the Company'> 
+						<a href="http://www.zapatec.com/website/main/about.jsp">About</a>
+						<ul>
+							<li title='Our company'>  
+							<a href="http://www.zapatec.com/website/main/about.jsp">Company</a> 
+							<img src='../themes/icon/zpcomp.gif' alt='Zapatec Company'>
+
+							</li>
+
+							<li title='The management team'>  
+							<img border='0' src='../themes/icon/icon_blank.gif' alt='Zapatec Management Team'>
+							<a href="http://www.zapatec.com/website/main/management.jsp">Management</a> 
+							</li>
+							<li title='Our mission statement and core values'>  
+							<img border='0' src='../themes/icon/icon_blank.gif' alt='Javascript Mission Statement'>
+							<a href="http://www.zapatec.com/website/main/mission.jsp">Mission</a> 
+							</li>
+
+							<li>  <hr/> </li>
+							<li title='Employment opportunities at Zapatec'>  
+							<IMG src="../themes/icon/transparent/blue/jobs.gif" alt='Zapatec Jobs'> 
+							<a href="http://www.zapatec.com/website/main/employment.jsp">Jobs</a> 
+							</li>
+							<li title='Various ways to contact us'>  <a href="http://www.zapatec.com/website/main/contact.jsp">Contact Us</a> 
+							<img src='../themes/icon/zpcont.gif' alt='Zapatec Contact Us'>
+							</li>
+
+						</ul>
+						</li>
+						<li title="Login and change your account's setting">  
+						<a href="http://www.zapatec.com/website/main/account_maintenance.jsp">My Account</a> 
+						<img src='../themes/icon/icon_blank.gif' alt='Zapatec My Account'>
+						</li>
+	</ul>
+	<script type="text/javascript">
+		window.onresize = function () {
+			menu2.hideMenu();
+			menu2.showMenu();	
+		}
+	</script>
+		<script type="text/javascript">
+		var menu = new Zapatec.Menu({source: 'myMenu', theme: 'osx', glide: true, top: '0px', left: '0px'});
+		var menu2 = new Zapatec.Menu({source: 'myOtherMenu', theme: 'rounded', bottom: '0px', right: '0px', fade: true});
+	</script>
+	
+
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

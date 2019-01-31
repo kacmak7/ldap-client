@@ -1,0 +1,45 @@
+/* $Id: icon-tree.css 4322 2006-09-04 08:49:33Z shacka $ */
+#iconGallery {
+	width: 100%;
+	height: 247px;
+	overflow: auto;
+}
+
+#iconGallery img {
+	border: none;
+}
+
+#iconGallery .minus {
+	width: 10px;
+	padding-right: 2px;
+	background: url('minus.gif') no-repeat center left;
+	cursor: pointer;
+}
+
+#iconGallery .plus {
+	width: 10px;
+	padding-right: 2px;
+	background: url('plus.gif') no-repeat center left;
+	cursor: pointer;
+}
+
+#iconGallery .icon {
+	padding: 1px 0px 1px 2px;
+	cursor: pointer;
+}
+
+#iconGallery .label .label {
+	cursor: pointer;
+}
+
+#iconGallery .tree-item-selected {
+	background: #ffefc6;
+}
+
+#iconGallery .tree .tree-item-more {
+	background: none;
+}
+
+#iconGallery .tree .tree {
+	padding-left: 10px;
+}

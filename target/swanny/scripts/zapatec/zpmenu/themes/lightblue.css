@@ -1,0 +1,79 @@
+/* $Id: lightblue.css 5657 2006-12-15 12:13:19Z smaxim $ */
+@import url("layout/basic.css");
+
+/* First level border */
+.zpMenuLightblue .zpMenu-horizontal-mode .zpMenu-item,
+.zpMenuLightblue .zpMenu-vertical-mode .zpMenu-item,
+.zpMenuLightblue .zpMenuContainer .zpMenuContainer .zpMenu-item {
+  border: 1px solid #3399FF;
+}
+
+.zpMenuLightblue .zpMenu-vertical-mode .zpMenu-item {
+  border-bottom: none;
+}
+
+/* first level border */
+.zpMenuLightblue .zpMenu-vertical-mode .zpMenu-item-last {
+  border-bottom: 1px solid #3399FF;
+}
+
+/* Top horizontal - clip right border so left/right 2px not formed */
+.zpMenuLightblue .zpMenu-horizontal-mode .zpMenu-item {
+  border-right:none;
+}
+/* Top horizontal - add right most border */
+.zpMenuLightblue .zpMenu-horizontal-mode .zpMenu-item-last {
+  border-right: 1px solid #3399FF;
+}
+
+/* Sub level borders left and right */
+.zpMenuLightblue .zpMenuContainer .zpMenuContainer .zpMenu-item {
+  border-top:none;
+}
+
+/* Sub level borders First item - define TOP border */
+.zpMenuLightblue .zpMenuContainer .zpMenuContainer .zpMenu-item-first {
+  border-top:  1px solid #3399FF;
+}
+
+/* Default Background Color of ALL menu items */
+.zpMenuLightblue .zpMenuContainer .zpMenu-item {
+  background-color:#9ac8e2;
+}
+
+/* Current selected items in top horizontal menu*/
+.zpMenuLightblue .zpMenuContainer .zpMenuContainer .zpMenu-item-selected,
+.zpMenuLightblue .zpMenuContainer .zpMenu-item-selected {
+  background-color:#fcc112;
+}
+
+/* All hrefs in the Menu color black */
+.zpMenuLightblue .zpMenu-top .zpMenu-label, 
+.zpMenuLightblue .zpMenu-top a{
+  color:#ffffff;
+}
+
+.zpMenuLightblue .zpMenu-item table.zpMenu-table {
+  font: 12px "Arial", "Verdana", sans-serif;
+}
+
+/* The arrow that shows up when there's a sub-menu */
+.zpMenuLightblue .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed  {
+  background-image: url("icon/arrow_right_black.gif");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuLightblue .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded  {
+  background: url("icon/arrow_right_black.gif") #fcc112 no-repeat center right;
+}                                  
+
+/* Override previously defined background defined in this css for HR */
+.zpMenuLightblue .zpMenuContainer .zpMenu-item-hr,
+.zpMenuLightblue .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+  padding:0;
+  margin:0;
+  border:none;
+  background:black;
+}

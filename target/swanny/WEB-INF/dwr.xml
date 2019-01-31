@@ -1,0 +1,25 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.ltd.uk/dwr/dwr20.dtd">
+<dwr>
+    <allow>
+    	<create creator="spring" javascript="FileManager">
+            <param name="beanName" value="fileManager"/>
+        </create>
+        <create creator="spring" javascript="AddresseeManager">
+            <param name="beanName" value="addresseeManager"/>
+        </create>
+        <create creator="spring" javascript="GraveyardManager">
+            <param name="beanName" value="graveyardManager"/>
+        </create>
+        <create creator="spring" javascript="UserManager">
+            <param name="class" value="org.parafia.service.UserManager"/>
+            <param name="beanName" value="userManager"/>
+            <include method="getUsers"/>
+        </create>
+        <convert converter="bean" match="org.parafia.model.User"/>
+        <convert converter="bean" match="org.parafia.model.Mail" javascript="Mail"/>
+        <convert converter="bean" match="org.parafia.model.MailFile" javascript="MailFile"/>
+        <convert converter="bean" match="org.parafia.model.Addressee" javascript="Addressee"/>
+    </allow>
+</dwr>

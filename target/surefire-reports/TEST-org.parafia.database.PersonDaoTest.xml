@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="6.958" errors="1" skipped="0" tests="1" name="org.parafia.database.PersonDaoTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\bin"/>
+    <property name="java.vm.version" value="24.80-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\swanny"/>
+    <property name="java.runtime.version" value="1.7.0_80-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\KACPER~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="classworlds.conf" value="C:\Users\Kacper Makuch\Documents\apache-maven-3.0.4-bin\apache-maven-3.0.4\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_80\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0_80\bin;C:\orac\bin;F:\app\oracle1\product\12.1.0\dbhome_1\bin;C:\oracle_database\product\12.1.0\dbhome_1\bin;C:\oracle_db\product\12.1.0\dbhome_1\bin;C:\app\oracle\product\12.1.0\dbhome_2\bin;C:\app\oracle\product\12.1.0\dbhome_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Liquid Technologies\Liquid Studio 2018\XmlDataBinder16\Redist16\cpp\win32\bin;C:\Program Files\Liquid Technologies\Liquid Studio 2018\XmlDataBinder16\Redist16\cpp\win64\bin;C:\Program Files (x86)\BaseX\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\bin;C:\Users\Kacper Makuch\Documents\php-7.2.12-Win32-VC15-x64;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Java\jdk1.7.0_80\bin;C:\Users\Kacper Makuch\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Kacper Makuch\AppData\Local\Programs\Python\Python37-32\;C:\Users\Kacper Makuch\scoop\shims;C:\Users\Kacper Makuch\AppData\Local\Microsoft\WindowsApps;C:\Users\Kacper Makuch\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jre7;C:\Users\Kacper Makuch\Documents\apache-tomcat-8.5.37-windows-x64\apache-tomcat-8.5.37\bin;C:\Users\Kacper Makuch\Documents\gradle-4.10-all\bin;C:\Program Files\Git\bin;C:\Users\Kacper Makuch\Documents\php-7.2.12-Win32-VC15-x64;C:\Users\Kacper Makuch\AppData\Roaming\Composer\vendor\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\Kacper Makuch\AppData\Local\Microsoft\WindowsApps;C:\Users\Kacper Makuch\Documents\apache-maven-3.0.4-bin\apache-maven-3.0.4\bin;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\Kacper Makuch"/>
+    <property name="user.timezone" value="GMT"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Kacper Makuch"/>
+    <property name="java.class.path" value="C:\Users\Kacper Makuch\Documents\apache-maven-3.0.4-bin\apache-maven-3.0.4\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_80\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_80"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\Kacper Makuch\Documents\apache-maven-3.0.4-bin\apache-maven-3.0.4"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="6.664" classname="org.parafia.database.PersonDaoTest" name="getPersons">
+    <error message="Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Cannot open connection" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Cannot open connection
+	at org.springframework.orm.hibernate3.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:598)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.hibernate.exception.GenericJDBCException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.handledNonSpecificException(SQLStateConverter.java:126)
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:114)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:142)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:85)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1354)
+	at org.springframework.orm.hibernate3.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:556)
+	... 31 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 36 more
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:215)
+	at org.postgresql.Driver.makeConnection(Driver.java:404)
+	at org.postgresql.Driver.connect(Driver.java:272)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:61)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:144)
+	... 47 more
+</error>
+    <system-out>[main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [DbTest-context.xml]
+[main] INFO  org.springframework.security.core.SpringSecurityCoreVersion  - You are running with Spring Security Core 3.2.8.RELEASE
+[main] INFO  org.springframework.security.config.SecurityNamespaceHandler  - Spring Security &apos;config&apos; module version is 3.2.8.RELEASE
+[main] INFO  org.springframework.security.config.http.HttpSecurityBeanDefinitionParser  - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, &lt;org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0&gt;, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, &lt;org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0&gt;, order = 2300]
+[main] INFO  org.springframework.web.context.support.GenericWebApplicationContext  - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4d7cca20: startup date [Thu Jan 31 09:21:14 GMT 2019]; root of context hierarchy
+[main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer  - Loading properties file from URL [file:/C:/swanny/target/test-classes/config.properties]
+[main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer  - Loading properties file from URL [file:/C:/swanny/target/classes/config.properties]
+[main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory  - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2c45e3ec: defining beans [addresseeDao,celebrantDao,familyDao,fianceeDao,fileDao,graveyardDao,intentionAnnotationDao,intentionDao,lookupDao,personDao,roleDao,universalDao,userDao,addresseeManager,celebrantManager,familyManager,fianceeManager,fileManager,graveyardManager,intentionAnnotationManager,intentionManager,lookupManager,personManager,roleManager,manager,userManager,addresseeEditController,addresseesController,baptismChangesController,baptismEditController,baptismKnowActController,baptismPreparationEditController,baseControllerTemp,basePrintController,celebrantController,certificateController,columbariumController,confirmationEditController,deathEditController,delegationController,dispensationController,familyEditController,familyListController,fianceeEditController,graveyardController,graveyardSectorController,intentionController,mailListController,offeringReportListController,tomeBaptismListController,tomeConfirmationListController,tomeDeathListController,tomeFianceesListController,userController,errors,messages,printUtil,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.validation.beanvalidation.LocalValidatorFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,dbUnitDatabaseConfig,dbUnitDatabaseConnection,messageSource,sessionFactory,transactionManager,passwordEncoder,org.springframework.security.filterChains,org.springframework.security.filterChainProxy,org.springframework.security.web.DefaultSecurityFilterChain#0,org.springframework.security.web.DefaultSecurityFilterChain#1,org.springframework.security.web.DefaultSecurityFilterChain#2,org.springframework.security.web.PortMapperImpl#0,org.springframework.security.web.PortResolverImpl#0,org.springframework.security.config.authentication.AuthenticationManagerFactoryBean#0,org.springframework.security.authentication.ProviderManager#0,org.springframework.security.web.context.HttpSessionSecurityContextRepository#0,org.springframework.security.web.authentication.session.CompositeSessionAuthenticationStrategy#0,org.springframework.security.web.savedrequest.HttpSessionRequestCache#0,org.springframework.security.access.vote.AffirmativeBased#0,org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0,org.springframework.security.web.access.DefaultWebInvocationPrivilegeEvaluator#0,org.springframework.security.authentication.AnonymousAuthenticationProvider#0,org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint#0,org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0,org.springframework.security.userDetailsServiceFactory,org.springframework.security.web.DefaultSecurityFilterChain#3,org.springframework.security.authentication.dao.DaoAuthenticationProvider#0,org.springframework.security.authentication.DefaultAuthenticationEventPublisher#0,org.springframework.security.authenticationManager,paginatedListFactory,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/mail/addresseeEdit/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.AddresseeEditController.delete(org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Addressee) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/mail/addresseeEdit],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.AddresseeEditController.onSubmit(org.parafia.model.Addressee,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;,org.springframework.validation.BindingResult) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/mail/addresseeEdit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.AddresseeEditController.formBackingObject(org.parafia.model.Messages&lt;java.lang.String&gt;,java.lang.String) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/mail/addressees],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.AddresseesController.listAddresses()
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/printbaptismchanges],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismChangesController.showForm(org.parafia.model.Person,org.parafia.model.Errors&lt;java.lang.String&gt;,java.lang.Long) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/baptismchangesEdit],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismChangesController.onSubmit(org.parafia.model.Person,java.lang.Long,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/editBaptism],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismEditController.showForm(org.parafia.model.Errors&lt;java.lang.String&gt;,java.lang.Long) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/baptism],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismEditController.onSubmit(org.parafia.model.Person,java.lang.Long,java.lang.String,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/baptismKnowActEdit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismKnowActController.showForm(org.parafia.model.Person,java.lang.Long,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/baptismKnowActEdit],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismKnowActController.onSubmit(org.parafia.model.Person,java.lang.Long,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/baptismPreparationEdit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismPreparationEditController.showForm(java.lang.Long,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/baptismPreparationEdit],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.BaptismPreparationEditController.onSubmit(org.parafia.model.Person,java.lang.Long,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/editCelebrant],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.CelebrantController.saveCelebrant(org.parafia.model.Celebrant,org.springframework.validation.BindingResult)
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/editCelebrant],methods=[GET],params=[edit],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.CelebrantController.editCelebrant(java.lang.Long)
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/celebrantsList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public java.lang.String org.parafia.webapp.controller.CelebrantController.celebrantsList()
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/certificate],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.CertificateController.onSubmit(org.parafia.model.FianceePair,java.lang.Long,org.parafia.model.Messages&lt;java.lang.String&gt;,org.springframework.validation.BindingResult) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/certificate],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.CertificateController.formBackingObject(java.lang.String) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/columbarium/nicheDetails],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.ColumbariumController.showForm(org.parafia.model.Niche,java.lang.String,java.lang.String) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/columbarium/submitList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.ColumbariumController.onSubmit(org.parafia.webapp.controller.commands.NicheFindFilter,java.util.List&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/columbarium/columbarium],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.ColumbariumController.handleRequest(java.lang.String,java.lang.String) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/columbarium/findList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.ColumbariumController.showList(org.parafia.webapp.controller.commands.NicheFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/columbarium/submitNiche],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.ColumbariumController.submit(java.util.List&lt;java.lang.String&gt;,java.util.List&lt;java.lang.String&gt;,org.parafia.model.Niche,java.lang.String,org.springframework.web.multipart.MultipartFile[],org.springframework.validation.BindingResult) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/editConfirmation],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.ConfirmationEditController.onSubmit(org.parafia.model.Person,java.lang.Long,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/editConfirmation],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.ConfirmationEditController.formBackingObject(org.parafia.model.Errors&lt;java.lang.String&gt;,java.lang.String) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/editDeath],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.DeathEditController.showForm(java.lang.Long,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/editDeath],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.DeathEditController.onSubmit(org.parafia.model.Person,java.lang.Long,org.parafia.model.Errors&lt;java.lang.String&gt;,org.parafia.model.Messages&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/delegation],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.DelegationEditController.showForm(java.lang.Long) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/delegation],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.DelegationEditController.onSubmit(org.parafia.model.FianceePair,java.lang.Long,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/dispensation],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.DispensationEditController.showForm(java.lang.Long) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/dispensation],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.DispensationEditController.onSubmit(org.parafia.model.FianceePair,java.lang.Long,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/print/familyform],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.FamilyEditController.onSubmit(org.parafia.model.Family,org.springframework.validation.BindingResult,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;,java.util.Map&lt;java.lang.String, java.lang.String&gt;,java.lang.String) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/print/familyform],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.FamilyEditController.formBackingObject(java.lang.String) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/print/cards],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.FamilyListController.onSubmit(org.parafia.webapp.controller.commands.FamilyFindFilter,javax.servlet.http.HttpServletRequest,org.springframework.validation.BindingResult) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/print/cards],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.FamilyListController.formBackingObject(org.parafia.webapp.controller.commands.FamilyFindFilter,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/print/fianceesform],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.FianceeEditController.showForm(java.lang.Long,java.lang.Long,java.lang.Long) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/print/fianceesform],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.FianceeEditController.onSubmit(java.lang.Long,org.parafia.model.FianceePair,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/print/fianceesform/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.FianceeEditController.processFormSubmission(java.lang.Long,java.lang.String,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yard],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.drawYard()
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yardInvalid],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.yardInwalid() throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yardFind],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.yardFind()
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/graveDetails],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.onSubmit(org.parafia.model.Grave,org.springframework.web.multipart.MultipartFile[],org.parafia.model.Errors&lt;java.lang.String&gt;,java.lang.String,org.parafia.model.Messages&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yardFind],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.onSubmit(org.parafia.webapp.controller.commands.GraveFindFilter,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yardFindList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.formBackingObject(org.parafia.webapp.controller.commands.GraveFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/graveDetails],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.graveDetails(java.lang.Long,java.lang.Integer,java.lang.Object) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yardFindList],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardController.onSubmitList(org.parafia.webapp.controller.commands.GraveFindFilter,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yardSector],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardSectorController.onSubmit(org.parafia.webapp.controller.commands.Sector) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/yard/yardSector],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.GraveyardSectorController.initGraveSector()
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/editIntention],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.IntentionController.saveIntention(org.parafia.model.Intention,org.springframework.validation.BindingResult,java.util.List&lt;java.lang.String&gt;,java.util.List&lt;java.lang.String&gt;,java.lang.String)
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/intentionTome],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public java.lang.String org.parafia.webapp.controller.IntentionController.drawCalendar()
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/editIntention],methods=[GET],params=[edit],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.IntentionController.addIntention(java.lang.Long,java.lang.Long,java.lang.Boolean)
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/intentions.json],methods=[GET],params=[start &amp;&amp; end &amp;&amp; _],headers=[],consumes=[],produces=[application/json],custom=[]}&quot; onto public java.util.List&lt;org.parafia.model.JsonFeed&gt; org.parafia.webapp.controller.IntentionController.getJsonFeed(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/intentionTome],methods=[GET],params=[delete],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.IntentionController.deleteIntention(java.lang.Long,long,java.lang.Boolean) throws java.text.ParseException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/intentionsList],methods=[GET],params=[list],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.IntentionController.listIntentions(long) throws java.text.ParseException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/editIntention],methods=[POST],params=[allDay],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.IntentionController.saveIntentionAnnotation(org.parafia.model.IntentionAnnotation,org.springframework.validation.BindingResult,java.lang.String)
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/editIntention],methods=[GET],params=[print],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.IntentionController.printIntention(java.lang.Long,javax.servlet.http.HttpServletResponse) throws java.text.ParseException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/annotationsList],methods=[GET],params=[list],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.IntentionController.listAnnotations(long) throws java.text.ParseException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/mail/viewMails],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.MailListController.handleRequest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/offeringReport],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.OfferingReportListController.showForm(org.parafia.webapp.controller.commands.OfferingFilter,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.text.ParseException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/offeringReport],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.OfferingReportListController.onSubmit(org.parafia.webapp.controller.commands.OfferingFilter,org.parafia.model.Messages&lt;java.lang.String&gt;,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.text.ParseException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/baptismTome],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeBaptismListController.onSubmit(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/baptismTome],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeBaptismListController.formBackingObject(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/confirmationTome],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeConfirmationListController.onSubmit(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/confirmationTome],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeConfirmationListController.formBackingObject(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/deathTome],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeDeathListController.onSubmit(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/deathTome],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeDeathListController.formBackingObject(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/fianceesTome],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeFianceesListController.onSubmit(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/tomes/fianceesTome],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto protected org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.TomeFianceesListController.formBackingObject(javax.servlet.http.HttpServletRequest,org.parafia.webapp.controller.commands.BapConDeaFindFilter) throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/deleteUser],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.view.RedirectView org.parafia.webapp.controller.UserController.deleteUser(org.parafia.model.User,org.parafia.model.Messages&lt;java.lang.String&gt;)
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/submitUser],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.UserController.submitUser(org.parafia.model.User,java.lang.String,java.util.List&lt;java.lang.String&gt;,org.parafia.model.Messages&lt;java.lang.String&gt;) throws org.parafia.service.exceptions.ObjectExistsException
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/admin/users*],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.UserController.handleRequest() throws java.lang.Exception
+[main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping  - Mapped &quot;{[/userform*],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.parafia.webapp.controller.UserController.showUserForm(org.parafia.model.User,java.lang.String,java.lang.String,java.lang.String,org.parafia.model.Messages&lt;java.lang.String&gt;,java.lang.String,org.parafia.model.Errors&lt;java.lang.String&gt;) throws java.lang.Exception
+[main] INFO  org.hibernate.validator.internal.util.Version  - HV000001: Hibernate Validator 4.3.2.Final
+[main] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: org.springframework.security.web.util.matcher.RegexRequestMatcher@4a7c6e3a, []
+[main] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: org.springframework.security.web.util.matcher.RegexRequestMatcher@26749cf7, []
+[main] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: org.springframework.security.web.util.matcher.RegexRequestMatcher@12fa8880, []
+[main] INFO  org.hibernate.cfg.annotations.Version  - Hibernate Annotations 3.3.0.GA
+[main] INFO  org.hibernate.cfg.Environment  - Hibernate 3.3.2.GA
+[main] INFO  org.hibernate.cfg.Environment  - hibernate.properties not found
+[main] INFO  org.hibernate.cfg.Environment  - Bytecode provider name : javassist
+[main] INFO  org.hibernate.cfg.Environment  - using JDK 1.4 java.sql.Timestamp handling
+[main] INFO  org.hibernate.cfg.Configuration  - configuring from url: file:/C:/swanny/target/classes/hibernate.cfg.xml
+[main] INFO  org.hibernate.cfg.Configuration  - Configured SessionFactory: null
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.User
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.User on table app_user
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Role
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Role on table role
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Mail
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Mail on table mails
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.MailFile
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.MailFile on table mail_files
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Addressee
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Addressee on table addressees
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Family
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Family on table families
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Person
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Person on table persons
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Other
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Other on table others
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Child
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Child on table children
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Parent
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Parent on table parents
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.OtherWoFamily
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.OtherWoFamily on table others_wo_families
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Intention
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Intention on table intentions
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.IntentionType
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.IntentionType on table intention_types
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.IntentionTypeDuration
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.IntentionTypeDuration on table intention_type_duration
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.IntentionAnnotation
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.IntentionAnnotation on table intentions_annotations
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Celebrant
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Celebrant on table celebrants
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.Remaining
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.Remaining on table remainings
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.Baptism
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.Baptism on table baptismes
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.BaptismChanges
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.BaptismChanges on table baptism_changes
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.BaptismKnowAct
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.BaptismKnowAct on table baptism_know_acts
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.BaptismPreparation
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.BaptismPreparation on table baptism_preparations
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.Confirmation
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.Confirmation on table confirmations
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.Marriage
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.Marriage on table marriages
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printcards.Death
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printcards.Death on table deaths
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printfiancees.AssistanceDelegation
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printfiancees.AssistanceDelegation on table assistance_delagations
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printfiancees.Dispensation
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printfiancees.Dispensation on table dispensations
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printfiancees.Certificate
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printfiancees.Certificate on table certificates
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.printfiancees.LicenseAssistance
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.printfiancees.LicenseAssistance on table license_assistances
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.PriestlyVisit
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.PriestlyVisit on table priestly_visits
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Address
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Address on table addresses
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.dictionary.MarriageStatus
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.dictionary.MarriageStatus on table marriage_statuses
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.dictionary.TakePart
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.dictionary.TakePart on table take_part
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.dictionary.Practising
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.dictionary.Practising on table practising
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.dictionary.BaptismPlace
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.dictionary.BaptismPlace on table baptism_places
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.FianceePair
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.FianceePair on table fiancee_pairs
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.InvestigationProtocole
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.InvestigationProtocole on table investigation_protocole
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.GraveNiche
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.GraveNiche on table graves
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Niche
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Columbarium
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.Columbarium on table columbariums
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.Grave
+[main] INFO  org.hibernate.cfg.annotations.QueryBinder  - Binding named native query: findGraveWithGeometryLikeSQL =&gt; select * from graves g where ST_Equals(g.the_geom, ST_GeomFromText(:postgisString))
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.dictionary.GraveDoubled
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.dictionary.GraveDoubled on table grave_doubled
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.dictionary.GraveGrounded
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.dictionary.GraveGrounded on table grave_grounded
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.dictionary.GraveOwned
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.dictionary.GraveOwned on table grave_owned
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.GraveFile
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.GraveFile on table grave_files
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.GraveLevel
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.GraveLevel on table grave_levels
+[main] INFO  org.hibernate.cfg.AnnotationBinder  - Binding entity from annotated class: org.parafia.model.GravePerson
+[main] INFO  org.hibernate.cfg.annotations.EntityBinder  - Bind entity org.parafia.model.GravePerson on table grave_persons
+[main] INFO  org.hibernate.cfg.annotations.CollectionBinder  - Mapping collection: org.parafia.model.Mail.files -&gt; mail_files
+[main] INFO  org.hibernate.cfg.annotations.CollectionBinder  - Mapping collection: org.parafia.model.Family.children -&gt; children
+[main] INFO  org.hibernate.cfg.annotations.CollectionBinder  - Mapping collection: org.parafia.model.Family.others -&gt; others
+[main] INFO  org.hibernate.cfg.annotations.CollectionBinder  - Mapping collection: org.parafia.model.Family.visits -&gt; priestly_visits
+[main] INFO  org.hibernate.cfg.annotations.CollectionBinder  - Mapping collection: org.parafia.model.GraveNiche.files -&gt; grave_files
+[main] INFO  org.hibernate.cfg.annotations.CollectionBinder  - Mapping collection: org.parafia.model.GraveNiche.persons -&gt; grave_persons
+[main] INFO  org.hibernate.cfg.annotations.CollectionBinder  - Mapping collection: org.parafia.model.Grave.levels -&gt; grave_levels
+[main] INFO  org.hibernate.cfg.AnnotationConfiguration  - Hibernate Validator not found: ignoring
+[main] INFO  org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean  - Building new Hibernate SessionFactory
+[main] INFO  org.hibernate.cfg.AnnotationConfiguration  - Hibernate Validator not found: ignoring
+[main] INFO  org.hibernate.connection.ConnectionProviderFactory  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[main] WARN  org.hibernate.util.JDBCExceptionReporter  - SQL Error: 0, SQLState: null
+[main] ERROR org.hibernate.util.JDBCExceptionReporter  - Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+[main] WARN  org.hibernate.cfg.SettingsFactory  - Could not obtain connection to query metadata
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:111)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2119)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2115)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1339)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:915)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:863)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:782)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:188)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:817)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:745)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1077)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:981)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:921)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:864)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:779)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:503)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1148)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:358)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:637)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:145)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1077)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:981)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.security.config.authentication.AuthenticationManagerFactoryBean.getObject(AuthenticationManagerFactoryBean.java:28)
+	at org.springframework.security.config.authentication.AuthenticationManagerFactoryBean.getObject(AuthenticationManagerFactoryBean.java:20)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:166)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:102)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1467)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:637)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:145)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1077)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:981)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:358)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:637)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:145)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1077)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:981)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:358)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:618)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:938)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:128)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:102)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:246)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:69)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:95)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:122)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:284)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:215)
+	at org.postgresql.Driver.makeConnection(Driver.java:404)
+	at org.postgresql.Driver.connect(Driver.java:272)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 164 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:61)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:144)
+	... 172 more
+[main] INFO  org.hibernate.dialect.Dialect  - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[main] INFO  org.hibernate.transaction.TransactionFactoryFactory  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[main] INFO  org.hibernate.transaction.TransactionManagerLookupFactory  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Automatic flush during beforeCompletion(): disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Automatic session close at end of transaction: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Scrollable result sets: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - JDBC3 getGeneratedKeys(): disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Connection release mode: auto
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Default batch fetch size: 1
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Generate SQL with comments: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Order SQL updates by primary key: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Order SQL inserts for batching: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[main] INFO  org.hibernate.hql.ast.ASTQueryTranslatorFactory  - Using ASTQueryTranslatorFactory
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Query language substitutions: {false=&apos;N&apos;, true=&apos;Y&apos;}
+[main] INFO  org.hibernate.cfg.SettingsFactory  - JPA-QL strict compliance: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Second-level cache: enabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Query cache: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Cache region factory : org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge
+[main] INFO  org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge  - Cache provider: org.hibernate.cache.EhCacheProvider
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Optimize cache for minimal puts: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Structured second-level cache entries: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Statistics: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Deleted entity synthetic identifier rollback: disabled
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Default entity-mode: pojo
+[main] INFO  org.hibernate.cfg.SettingsFactory  - Named query checking : enabled
+[main] INFO  org.hibernate.impl.SessionFactoryImpl  - building session factory
+[main] INFO  org.hibernate.impl.SessionFactoryObjectFactory  - Not binding factory to JNDI, no JNDI name configured
+[main] INFO  org.springframework.security.web.DefaultSecurityFilterChain  - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.SecurityContextPersistenceFilter@4293a96c, org.springframework.security.web.authentication.logout.LogoutFilter@6c581399, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@a6ed961, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@738174a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@380fef9e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e3c8ad3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18be3227, org.springframework.security.web.session.SessionManagementFilter@6eceab21, org.springframework.security.web.access.ExceptionTranslationFilter@42453c5c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f7dde01]
+[main] INFO  org.springframework.security.config.http.DefaultFilterChainValidator  - Checking whether login URL &apos;/login.jsp&apos; is accessible with your configuration
+[main] INFO  org.springframework.orm.hibernate3.HibernateTransactionManager  - Using DataSource [org.apache.commons.dbcp.BasicDataSource@31bfee8] of Hibernate SessionFactory for HibernateTransactionManager
+[main] WARN  org.hibernate.util.JDBCExceptionReporter  - SQL Error: 0, SQLState: null
+[main] ERROR org.hibernate.util.JDBCExceptionReporter  - Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+[main] WARN  org.hibernate.util.JDBCExceptionReporter  - SQL Error: 0, SQLState: null
+[main] ERROR org.hibernate.util.JDBCExceptionReporter  - Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+[main] WARN  org.springframework.test.context.TestContextManager  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@289bab59] to process &apos;before&apos; execution of test method [public void org.parafia.database.PersonDaoTest.getPersons()] for test instance [org.parafia.database.PersonDaoTest@40e74e3]
+org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.GenericJDBCException: Cannot open connection
+	at org.springframework.orm.hibernate3.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:598)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:358)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.hibernate.exception.GenericJDBCException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.handledNonSpecificException(SQLStateConverter.java:126)
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:114)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:142)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:85)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1354)
+	at org.springframework.orm.hibernate3.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:556)
+	... 31 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:83)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 36 more
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:215)
+	at org.postgresql.Driver.makeConnection(Driver.java:404)
+	at org.postgresql.Driver.connect(Driver.java:272)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.postgresql.core.PGStream.&lt;init&gt;(PGStream.java:61)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:144)
+	... 47 more
+</system-out>
+    <system-err>SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/Kacper%20Makuch/.m2/repository/org/slf4j/slf4j-log4j12/1.5.6/slf4j-log4j12-1.5.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/Kacper%20Makuch/.m2/repository/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+</system-err>
+  </testcase>
+</testsuite>

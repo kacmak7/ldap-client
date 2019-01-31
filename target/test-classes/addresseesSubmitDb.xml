@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.addressees post="A" first_name="A" last_name="A"
+		institution="A" street="A" country="A" title="A" />
+	<public.addressees post="C" first_name="C" last_name="C"
+		institution="C" street="C" country="C" title="C" />
+	<public.addressees post="B" first_name="B" last_name="B"
+		institution="B" street="B" country="B" title="B" />
+</dataset>

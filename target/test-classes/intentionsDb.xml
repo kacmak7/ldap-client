@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.celebrants id="1" first_name="Cezary"
+		surname="Cacacki" active="true" />
+	<public.intention_type_duration id="1" duration="30" />
+	<public.intention_types id="1" name="sample"
+		color="red" />
+	<public.intentions id="1" date="1970-01-02 10:17:36" text="lorem ipsum"
+		offering="0.00" accept_id="1" type_id="1" notices="null" duration_id="1"/>
+	<public.intentions id="2" date="1970-01-02 10:17:36" text="lorem ipsum"
+		offering="0.00" accept_id="1" type_id="1" notices="null" duration_id="1"/>
+	<public.intentions id="3" date="1970-01-02 10:17:36" text="lorem ipsum"
+		offering="0.00" accept_id="1" type_id="1" notices="null" duration_id="1"/>
+	<public.intentions id="4" date="1970-01-02 10:17:36" text="lorem ipsum"
+		offering="0.00" accept_id="1" type_id="1" notices="null" duration_id="1"/>
+</dataset>

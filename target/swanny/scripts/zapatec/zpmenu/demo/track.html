@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+	<meta name="description" content=" You can keep track of previously-visited menu items. This feature is useful for a navigational menu. If your menu has Home, Products, and About Us items and the user clicks Home, the menu automatically highlights the Home menu item, letting users know they previously clicked there. The first menu below tracks previous menu locations in cookie path1, using the pathCookie option does not open in the expanded state The second menu tracks previous menu locations in cookie path2, using the pathCookie option opens expanded to View &gt; Document Map, using the rememberPath:'expand' option When the user clicks an item, the current menu location on the target page is highlighted. All links point to target.html. When the user clicks a menu item, the previous menu location is visibly tracked. To use the rememberPath option, the menu should exist on both the source and target pages, and both pages should be in the same domain. This feature works for several menus on the same page. All menus should be present on both source and target pages. The menu items must be initialized in the same order on all pages. ">
+	<meta name="keywords" content="dhtml tools,javascript,DHTML Tools,Javascript,ajax,AJAX,Ajax,ajax tools,AJAX Tools,tools controls,simple javascript tools">
+	<title>Zapatec DHTML Menu Widget - Track Previous Menu Location</title>
+
+	<!-- Common JS files -->
+	<script type='text/javascript' src='../../utils/zapatec.js'></script>
+
+	<!-- Custom includes -->	
+	<script type="text/javascript" src="../src/zpmenu.js"></script>
+
+	<!-- ALL demos need these css -->
+	<link href="../../website/css/zpcal.css" rel="stylesheet" type="text/css">
+	<link href="../../website/css/template.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			width: 778px;
+		}
+	</style>
+	<link rel="SHORTCUT ICON" href="http://www.zapatec.com/website/main/favicon.ico">
+	
+
+
+</head>
+<body>	<div class='zpCalSubHeader' style='text-align:center;'>Track Previous Menu Location</div>
+
+		<div class='zpCalDemoText'>
+		<ul>
+		
+		
+				<li>You can keep track of previously-visited menu items.</li>
+				<li>This feature is useful for a navigational menu.  If your menu has Home, Products, and About Us items and the user clicks Home, the menu automatically highlights the Home menu item, letting users know they previously clicked there.</li>
+				<li>The first menu below
+					<ul>
+					<li>tracks previous menu locations in cookie <b>path1</b>, using the pathCookie option</li>
+					<li>does not open in the expanded state</li>
+					</ul>
+				</li>
+				<li>The second menu
+					<ul>
+					<li>tracks previous menu locations in cookie <b>path2</b>, using the pathCookie option</li>
+					<li>opens expanded to View &gt; Document Map, using the rememberPath:'expand' option</li>
+
+					</ul>
+				</li>
+
+				<li>When the user clicks an item, the current menu location on the target page is highlighted. All links point to target.html.</li>
+				<li>When the user clicks a menu item, the previous menu location is visibly tracked.</li>
+				<li>To use the rememberPath option, the menu should exist on both the source and target pages, and both pages should be in the same domain.</li>
+				<li>This feature works for several menus on the same page.
+					  All menus should be present on both source and target pages. The menu items must be initialized in the same order on all pages.</li>
+
+	  
+		</ul>
+		</div>
+
+
+	<div style="display:none">
+			<ul id="myMenu" style="display:none">
+				<li id='file'>
+				<a href="track.html">File</a><br>
+				<ul>
+					<li id='new'> <img border='0' src='../themes/icon/icon_new.gif'> <a href='track.html'>New...</a> </li>
+					<li> <img border='0' src='../themes/icon/icon_open.gif'> <a href="track.html">Open</a></li>
+					<li><hr> </li>
+					<li> <a href="track.html">Send To</a><img border='0' src='../themes/icon/icon_blank.gif'> 
+					<ul>
+						<li><img border='0' src='../themes/icon/icon_mailrecipient.gif'><a href="track.html">Mail Recipient</a></li>
+						<li><img border='0' src='../themes/icon/icon_routing.gif'><a href="track.html">Routing Recipient</a></li>
+						<li><img border='0' src='../themes/icon/icon_exchange.gif'><a href="track.html">Exchange Folder</a></li>
+						<li><hr> </li>
+						<li><img border='0' src='../themes/icon/icon_powerpoint.gif'><a href="track.html">Microsoft Power Point</a></li>
+					
+					</ul>
+					
+					</li>
+					<li><img border='0' src='../themes/icon/icon_save.gif'> <a href="track.html">Save</a></li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href="track.html">Save As</a></li>
+					<li><img border='0' src='../themes/icon/icon_save_asweb.gif'> <a href="track.html">Save As Web Page</a> </li>
+					<li><img border='0' src='../themes/icon/icon_filesearch.gif'> <a href="track.html">File Search</a></li>
+					<li><hr> </li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href="track.html">Page Setup...</a></li>
+					<li><img border='0' src='../themes/icon/icon_printpreview.gif'> <a href="track.html">Print Preview</a> </li>
+					<li><img border='0' src='../themes/icon/icon_print.gif'> <a href="track.html">Print...</a></li>
+					<li><hr> </li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href="track.html">Exit</a></li>
+
+				</ul>
+				</li>
+				<li id='edit'>
+				<a href="track.html">Edit</a><br>
+				<ul>
+					<li><img border='0' src='../themes/icon/icon_cut.gif'> <a href='track.html'>Cut</a>  </li>
+					<li><img border='0' src='../themes/icon/icon_copy.gif'> <a href="track.html">Copy</a> </li>
+					<li><img border='0' src='../themes/icon/icon_office.gif'> <a href='track.html'>Office Clipboard...</a>  </li>
+					<li><img border='0' src='../themes/icon/icon_paste.gif'> <a href="track.html">Paste</a> </li>
+					<li><hr> </li>
+					<li><img border='0' src='../themes/icon/icon_find.gif'> <a href="track.html">Find...</a> </li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href="track.html">Clear</a>
+					<ul>
+						<li><img border='0' src='../themes/icon/icon_blank.gif'><a href="track.html">Format</a></li>
+						<li><img border='0' src='../themes/icon/icon_blank.gif'><a href="track.html">Content</a></li>
+					</ul>
+					</li>
+
+
+				</ul>
+				</li>
+				
+				<li>
+				<a href="track.html">View</a><br>
+				<ul>
+					<li><img border='0' src='../themes/icon/icon_normal.gif'> <a href='track.html'>Normal</a>  </li>
+					<li><img border='0' src='../themes/icon/icon_web.gif'> <a href="track.html">Web Layout</a> </li>
+					<li><img border='0' src='../themes/icon/icon_reading.gif'> <a href='track.html'>Reading Layout</a>  </li>
+					<li><img border='0' src='../themes/icon/icon_outline.gif'> <a href="track.html">Outline</a> </li>
+					<li><hr> </li>
+					<li><img border='0' src='../themes/icon/icon_docmap.gif'> <a href="track.html">Document Map</a> </li>
+					<li><img border='0' src='../themes/icon/icon_thumb.gif'> <a href="track.html">Thumbnail</a> </li>
+					<li><img border='0' src='../themes/icon/icon_hf.gif'> <a href="track.html">Header and Footer</a> </li>
+				</ul>
+				</li>
+
+				<li id='help'>
+				<a href="track.html">Help</a><br>
+				<ul>
+					<li><img border='0' src='../themes/icon/icon_help.gif'> <a href='track.html'>Online Help</a>  </li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href="track.html">Assistance</a> </li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href='track.html'>Check for Update</a>  </li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href="track.html">Register</a> </li>
+					<li><img border='0' src='../themes/icon/icon_blank.gif'> <a href="track.html">About Us</a> </li>
+
+				</ul>
+				</li>
+
+
+			</ul>
+	</div>
+
+		<br/>
+
+			<div id="menu1"></div>
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+			<div id="menu2"></div>
+
+		<br/>
+
+	<script type="text/javascript">
+
+		var ul = document.getElementById('myMenu');	// Point to Original menu internals
+
+		if (!Zapatec.Utils.getCookie('path1') && !Zapatec.Utils.getCookie('path2')) {
+			Zapatec.Utils.writeCookie('path2', 'zapatec-tree.item-75');
+		}
+
+		var div = document.getElementById('menu1');	// Div for DHTML Zapatec menu
+		var clone = ul.cloneNode(true);	// Clone Original menu internals 
+		clone.id = 'clonedMenu1';	// Set Menu id for Zapatec.Menu
+		div.appendChild(clone);	// Put Cloned menu in target div container
+		var menu1 = new Zapatec.Menu({source: 'clonedMenu1', zIndex: 20, theme: 'osx', pathCookie: 'path1'});  // Instantiate Zapatec Menu
+
+		div = document.getElementById('menu2');	// Div for DHTML Zapatec menu
+		clone = ul.cloneNode(true);	// Clone Original menu internals 
+		clone.id = 'clonedMenu2';	// Set Menu id for Zapatec.Menu
+		div.appendChild(clone);	// Put Cloned menu in target div container
+		var menu2 = new Zapatec.Menu({source: 'clonedMenu2', zIndex: 10, theme: 'office_blue', rememberPath: 'expand', pathCookie: 'path2'});  // Instantiate Zapatec Menu
+
+	</script>
+
+	<noscript>
+		<br/>
+		This page uses an <a href='http://www.zapatec.com/website/main/products/suite/'>
+		AJAX Component</a> - Zapatec DHTML Menu Widget, but your browser does not support Javascript.
+		<br/>
+		<br/>
+	</noscript>      
+		<br/><br/><br/>
+		<div class="footer" style='width: 778px; text-align:center; margin-top:2em'>
+		&copy; 2004-2007 <strong> <a href='http://www.zapatec.com/'>Zapatec, Inc.</a> </strong>
+		</div>
+</body>
+</html>

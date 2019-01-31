@@ -1,0 +1,66 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+    	<property name="show_sql">false</property>
+    	<!-- <property name="format_sql">true</property>
+		<property name="use_sql_comments">true</property> -->
+        <mapping class="org.parafia.model.User"/>
+        <mapping class="org.parafia.model.Role"/>
+        <mapping class="org.parafia.model.Mail"/>
+        <mapping class="org.parafia.model.MailFile"/>
+        <mapping class="org.parafia.model.Addressee"/>
+        <mapping class="org.parafia.model.Family"/>
+        
+        <mapping class="org.parafia.model.Person"/>
+        
+		<mapping class="org.parafia.model.Other"/>
+        <mapping class="org.parafia.model.Child"/>
+        <mapping class="org.parafia.model.Parent"/>
+        <mapping class="org.parafia.model.OtherWoFamily"/>
+        
+        <mapping class="org.parafia.model.Intention"/>
+        <mapping class="org.parafia.model.IntentionType"/>
+        <mapping class="org.parafia.model.IntentionTypeDuration"/>
+        <mapping class="org.parafia.model.IntentionAnnotation"/>
+        <mapping class="org.parafia.model.Celebrant"/>
+        <mapping class="org.parafia.model.printcards.Remaining"/>
+        <mapping class="org.parafia.model.printcards.Baptism"/>
+        <mapping class="org.parafia.model.printcards.BaptismChanges"/>
+        <mapping class="org.parafia.model.printcards.BaptismKnowAct"/>
+        <mapping class="org.parafia.model.printcards.BaptismPreparation"/>
+        <mapping class="org.parafia.model.printcards.BaptismWitness"/>
+        <mapping class="org.parafia.model.printcards.Confirmation"/>
+        <mapping class="org.parafia.model.printcards.Marriage"/>
+        <mapping class="org.parafia.model.printcards.Death"/>
+        <mapping class="org.parafia.model.printfiancees.AssistanceDelegation"/>
+        <mapping class="org.parafia.model.printfiancees.Dispensation"/>
+        <mapping class="org.parafia.model.printfiancees.Certificate"/>
+        <mapping class="org.parafia.model.printfiancees.LicenseAssistance"/>
+        <mapping class="org.parafia.model.PriestlyVisit"/>
+        <mapping class="org.parafia.model.Address"/>
+        <mapping class="org.parafia.model.dictionary.MarriageStatus"/>
+        <mapping class="org.parafia.model.dictionary.TakePart"/>
+        <mapping class="org.parafia.model.dictionary.Practising"/>
+        <mapping class="org.parafia.model.dictionary.BaptismPlace"/>
+        
+        <mapping class="org.parafia.model.FianceePair"/>
+        
+        <mapping class="org.parafia.model.InvestigationProtocole"/>
+        
+        <mapping class="org.parafia.model.Niche"/>
+        <mapping class="org.parafia.model.Columbarium"/>
+        
+        <mapping class="org.parafia.model.GraveNiche"/>
+        
+        <mapping class="org.parafia.model.Grave"/>
+        <mapping class="org.parafia.model.dictionary.GraveDoubled"/>
+        <mapping class="org.parafia.model.dictionary.GraveGrounded"/>
+        <mapping class="org.parafia.model.dictionary.GraveOwned"/>
+        <mapping class="org.parafia.model.GraveFile"/>
+        <mapping class="org.parafia.model.GraveLevel"/>
+        <mapping class="org.parafia.model.GraveOwner"/>
+        <mapping class="org.parafia.model.GravePerson"/>
+    </session-factory>
+</hibernate-configuration>

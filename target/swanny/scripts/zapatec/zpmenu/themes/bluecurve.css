@@ -1,0 +1,181 @@
+/* $Id: bluecurve.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/3d.css");
+
+/* Top and Sub menus */
+.mainZPseparator {margin-right:6px;}
+
+/* Top and Sub menus */
+.zpMenuBluecurve .zpMenu a,
+.zpMenuBluecurve .zpMenu .zpMenu-label {
+font-family: Tahoma, Heltvetica, Arial, sans-serif;
+color:  white;
+font-weight: bold;
+font-size: 11px;
+}
+
+/* Top and Sub menus */
+.zpMenuBluecurve .zpMenu .zpMenu-item-selected .zpMenu-label,
+.zpMenuBluecurve .zpMenu .zpMenu-item-selected a {
+color: black;
+}
+
+/* Top menu */
+.zpMenuBluecurve .zpMenu-vertical-mode .zpMenu-item,
+.zpMenuBluecurve .zpMenuContainer .zpMenu-item {
+height:22px; 
+background: url("bluecurve/middle.gif") repeat-x center;
+background-color: #F7F7F7;
+}
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item{
+width:100px;
+}
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer  {
+border: 0px;
+margin-top: 0px; /*so the drop down menu is flush with the main nav*/
+}
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenuContainer{
+margin-left:0px;
+}
+
+/* Sub menu - center portion*/
+.zpMenuBluecurve .zpMenu-vertical-mode .zpMenu-level-1,
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item {
+margin-top:0px;
+padding-top: 0px;
+/* No border
+border-left: 2px solid darkblue;
+border-right: 2px solid darkblue;
+*/
+background: #346885;
+padding:2px; /*space between each item in sub menu */
+padding-left:0px;
+color: #00008B;
+}
+
+
+.zpMenuBluecurve .zpMenuContainer .zpMenu-item-first {
+margin-top: 0px;
+background: url("bluecurve/first.gif") no-repeat left center;
+border: 0px;
+}
+.zpMenuBluecurve .zpMenuContainer .zpMenu-item-last {
+margin: 0px;
+background: url("bluecurve/last.gif") no-repeat right center;
+border: 0px;
+}
+/*selected rollover sub menu item - how do you make a rollover on the last item in the sub menu?*/
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-last .zpMenu-item-expanded  {
+background: white;
+padding:5px; /*sub items container size*/
+}
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu .zpMenu-item-selected .zpMenu-label, 
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu .zpMenu-item-selected a
+{
+color: black;
+background: white;
+}
+
+
+/*
+Change the background of each menu item
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item {	
+background:white;
+}
+*/
+
+.zpMenuBluecurve .zpMenu .zpMenu-item-selected .zpMenu-label, 
+.zpMenuBluecurve .zpMenu .zpMenu-item-selected a
+{
+color: black;
+}
+
+
+/*bottom sub menu part main one*/
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-last {
+/* No border
+border-bottom:2px solid darkblue;
+*/
+padding-bottom:3px;
+}
+
+/*top sub menu part*/
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-first {
+background: #346885;
+margin: 0px;
+padding-top:2px;
+/* No border
+border-top: 2px solid darkblue;
+border: 0px;
+border-left: 2px solid black;
+border-right: 2px solid black;
+*/
+}
+
+/*sub menu item*/
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item .zpMenu-label,
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-exapnded .zpMenu-label,
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label {
+background: #4080A2;
+/* width:150px; remove to fix margin left issues */
+padding:5px; /*sub items container size*/
+}
+
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item {
+padding-left:3px;
+}
+
+/*selected rollover sub menu item*/
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded .zpMenu-label {
+background: white;
+padding:5px; /*sub items container size*/
+}
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .icon{
+/* No icons */
+display:none;
+}
+
+/* -- vertical code -- */
+
+.zpMenuBluecurve .zpMenu-vertical-mode .zpMenu-item .zpMenu-label{
+padding-left: 0px;
+}
+
+.zpMenuBluecurve .zpMenu-vertical-mode .zpMenuContainer .zpMenu-item .zpMenu-label{
+padding-left: 0px;
+}
+
+.zpMenuBluecurve .zpMenu-vertical-mode .zpMenu-item-first {
+background: url("bluecurve/top.gif") no-repeat left top;
+margin: 0px;
+border: 0px;
+padding-top:5px;
+}
+
+.zpMenuBluecurve .zpMenu-vertical-mode .zpMenuContainer  {
+border: 0px;
+margin-top: 0px;
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label
+{
+background: url("bluecurve/arrow.gif") #4080A2 no-repeat center right;
+}
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-hr,
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-hr .zpMenu-label {
+background:black;
+height:1px;
+border:none;
+}
+
+.zpMenuBluecurve .zpMenuContainer .zpMenuContainer .zpMenu-item-hr .zpMenu-label {
+padding:0px;
+}

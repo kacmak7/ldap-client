@@ -1,0 +1,29 @@
+<decorators defaultdir="/decorators">
+    <excludes>
+        <pattern>/40*.jsp</pattern>
+        <pattern>/*ajax=true*</pattern>
+        <pattern>/scripts/dojo/*</pattern>
+        <pattern>/struts/dojo/*</pattern> 
+        <pattern>/resources/*</pattern>
+    </excludes> 
+    <decorator name="popup" page="popup.jsp">
+        <pattern>/mail/newMail.html*</pattern>
+        <pattern>/mail/editMail.html*</pattern>
+        <pattern>/mail/uploadDisplay.html*</pattern>
+        <pattern>/mail/addresseeEdit.html*</pattern>
+        <!-- <pattern>/yard/graveDetails.html*</pattern>-->
+        <pattern>/tomes/intentionsList.html*</pattern>
+        <pattern>/tomes/editIntention.html*</pattern>
+        <pattern>/tomes/celebrantsList.html*</pattern>
+        <pattern>/tomes/editCelebrant.html*</pattern>
+    </decorator>
+    <decorator name="popupwomessages" page="popupwomessages.jsp">
+        <pattern>/mail/fileupload.html*</pattern>
+        <pattern>/printbapcondeacertificate.html*</pattern>
+        <pattern>/printlicence.html*</pattern>
+        <pattern>/printLicenseAssistance.html*</pattern>
+    </decorator>
+    <decorator name="default" page="default.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+</decorators>

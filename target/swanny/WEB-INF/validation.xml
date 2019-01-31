@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN" "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+	<global>
+      <constant>
+        <constant-name>zip</constant-name>
+        <constant-value>^\d{5}\d*$</constant-value>
+      </constant>
+      <constant>
+        <constant-name>currency</constant-name>
+        <constant-value>^\d{1,3}(,?\d{1,3})*\.?(\d{1,2})?$</constant-value>
+      </constant>
+      <constant>
+        <constant-name>mailNumber</constant-name>
+        <constant-value>^[0-9]+\/20[01][0-9]$</constant-value>
+      </constant>
+      <constant>
+	        <constant-name>date</constant-name>
+	        <constant-value>^[0-3][0-9]-[0-1][0-9]-[12][019][0-9][0-9]$</constant-value>
+		</constant>
+	</global>
+
+	<formset>
+  <!--
+    Define form validation config in validation-forms.xml
+  -->
+		<form name="mail">
+		  	<!-- Client-side Javascript won't catch this in IE, but server-side will -->
+		  	<field property="file" depends="required">
+		  		<arg0 key="mail.file"/>
+		    </field>
+		    <field property="receiver" depends="required">
+		        <arg0 key="mail.receiver"/>
+		    </field>
+		    <field property="number" depends="required, mask">
+		        <arg0 key="mail.number"/>
+		        <msg name="mask" key="errors.invalidmailnumber"/>
+		        <var>
+					<var-name>mask</var-name>
+					<var-value>${mailNumber}</var-value>
+				</var>
+		    </field>
+		</form>
+		
+		<form name="editMail">
+		  	<!-- Client-side Javascript won't catch this in IE, but server-side will -->
+		    <field property="receiver" depends="required">
+		        <arg0 key="mail.receiver"/>
+		    </field>
+		    <field property="number" depends="required, mask">
+		        <arg0 key="mail.number"/>
+		        <msg name="mask" key="errors.invalidmailnumber"/>
+		        <var>
+					<var-name>mask</var-name>
+					<var-value>${mailNumber}</var-value>
+				</var>
+		    </field>
+		</form>
+		
+		<form name="user">
+			<field property="username"
+			       depends="required">
+			
+			    <arg0 key="user.username"/>
+			</field>
+			<field property="password"
+			       depends="required,twofields">
+			    <msg
+			      name="twofields"
+			      key="errors.twofields"/>
+			
+			    <arg0 key="user.password"/>
+			    <arg1 key="user.confirmPassword"/>
+			    <var>
+			      <var-name>secondProperty</var-name>
+			      <var-value>confirmPassword</var-value>
+			    </var>
+			</field>
+			<field property="confirmPassword"
+			       depends="required">
+			
+			    <arg0 key="user.confirmPassword"/>
+			</field>
+			<field property="firstName"
+			       depends="required">
+			
+			    <arg0 key="user.firstName"/>
+			</field>
+			<field property="lastName"
+			       depends="required">
+			
+			    <arg0 key="user.lastName"/>
+			</field>
+		</form>
+		
+		<form name="family">
+		    <!-- <field property="surname" depends="required">
+		        <arg0 key="print.family.surname"/>
+		    </field> -->
+		    <field property="address.street" depends="required">
+		        <arg0 key="print.family.street"/>
+		    </field>
+		    <field property="address.firstNumber" depends="required">
+		        <arg0 key="print.family.first-number"/>
+		    </field>
+		    
+		    <field property="husband.firstName" depends="requiredifothernull">
+		  		<arg0 key="print.family.first-name"/>
+		  		<arg1 key="print.family.first-name"/>
+		  		<var>
+		  			<var-name>secondField</var-name>
+		  			<var-value>wife.firstName</var-value>
+		  		</var>
+			</field>
+			
+			<field property="wife.firstName" depends="requiredifothernull">
+		  		<arg0 key="print.family.first-name"/>
+		  		<arg1 key="print.family.first-name"/>
+		  		<var>
+		  			<var-name>secondField</var-name>
+		  			<var-value>husband.firstName</var-value>
+		  		</var>
+			</field>
+		    
+		    <!-- <field property="husband.birthDate" depends="mask">
+                <arg key="print.family.birthdate"/>
+                <msg name="mask" key="errors.date"/>
+				<var>
+		  			<var-name>mask</var-name>
+		  			<var-value>${date}</var-value>
+		  		</var>
+            </field>
+            <field property="wife.birthDate" depends="mask">
+                <arg key="print.family.birthdate"/>
+                <msg name="mask" key="errors.date"/>
+				<var>
+		  			<var-name>mask</var-name>
+		  			<var-value>${date}</var-value>
+		  		</var>
+            </field> -->
+		</form>
+		
+		<form name="grave">
+			<field property="number">
+		        <arg0 key="grave.number"/>
+		    </field>
+		  	<!-- Client-side Javascript won't catch this in IE, but server-side will -->
+		</form>
+	</formset>
+</form-validation>

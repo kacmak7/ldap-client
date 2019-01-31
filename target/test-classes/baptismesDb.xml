@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<public.baptismes id="1" file_number="1" place="1"
+		confirmation_remarks="null" marriage_remarks="yes" other_remarks="null"
+		date="2017-09-19" reason="planned" />
+	<public.baptismes id="2" file_number="1" place="1"
+		confirmation_remarks="null" marriage_remarks="yes" other_remarks="null"
+		date="2017-09-19" reason="planned" />
+	<public.baptismes id="3" file_number="1" place="1"
+		confirmation_remarks="null" marriage_remarks="yes" other_remarks="null"
+		date="2017-09-19" reason="planned" />
+</dataset>
